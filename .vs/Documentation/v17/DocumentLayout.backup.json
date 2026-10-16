@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\kevin\\Documents\\GitHub\\Documentation\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1043A842-1248-D662-F550-80060A0D0941}|documentation.esproj|c:\\users\\kevin\\documents\\github\\documentation\\vite.config.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{1043A842-1248-D662-F550-80060A0D0941}|documentation.esproj|solutionrelative:vite.config.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1043A842-1248-D662-F550-80060A0D0941}|documentation.esproj|c:\\users\\kevin\\documents\\github\\documentation\\src\\main.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{1043A842-1248-D662-F550-80060A0D0941}|documentation.esproj|solutionrelative:src\\main.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
@@ -27,6 +31,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "vite.config.ts",
+              "DocumentMoniker": "C:\\Users\\kevin\\Documents\\GitHub\\Documentation\\vite.config.ts",
+              "RelativeDocumentMoniker": "vite.config.ts",
+              "ToolTip": "C:\\Users\\kevin\\Documents\\GitHub\\Documentation\\vite.config.ts",
+              "RelativeToolTip": "vite.config.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-10-16T22:01:00.5Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "main.tsx",
               "DocumentMoniker": "C:\\Users\\kevin\\Documents\\GitHub\\Documentation\\src\\main.tsx",
               "RelativeDocumentMoniker": "src\\main.tsx",
@@ -39,7 +56,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "App.tsx",
               "DocumentMoniker": "C:\\Users\\kevin\\Documents\\GitHub\\Documentation\\src\\App.tsx",
               "RelativeDocumentMoniker": "src\\App.tsx",
@@ -47,7 +64,8 @@
               "RelativeToolTip": "src\\App.tsx",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAG4AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-10-16T10:17:39.006Z"
+              "WhenOpened": "2026-10-16T10:17:39.006Z",
+              "EditorCaption": ""
             }
           ]
         }
