@@ -1,6 +1,5 @@
 {
   "name": "documentation",
-  "homepage": "https://KGhon.github.io/Documentation",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,9 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d list"
+    "preview": "vite preview"
   },
   "dependencies": {
     "react": "^19.2.8",
