@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "vite.config.ts",
               "ToolTip": "C:\\Users\\kevin\\Documents\\GitHub\\Documentation\\vite.config.ts",
               "RelativeToolTip": "vite.config.ts",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
               "WhenOpened": "2026-10-16T22:01:00.5Z",
               "EditorCaption": ""
@@ -51,8 +51,7 @@
               "RelativeToolTip": "src\\main.tsx",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-10-16T10:17:30.377Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-16T10:17:30.377Z"
             },
             {
               "$type": "Document",
@@ -64,8 +63,7 @@
               "RelativeToolTip": "src\\App.tsx",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAG4AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-10-16T10:17:39.006Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-16T10:17:39.006Z"
             }
           ]
         }
