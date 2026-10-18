@@ -1,0 +1,15 @@
+body:has(.doc-page) {
+    margin: 0;
+    padding: 0;
+}
+
+.doc-page {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    background-color: var(--bg-color);
+}

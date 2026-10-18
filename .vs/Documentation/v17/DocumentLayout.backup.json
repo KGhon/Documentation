@@ -1,7 +1,32 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\kevin\\Documents\\GitHub\\Documentation\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1043A842-1248-D662-F550-80060A0D0941}|documentation.esproj|c:\\users\\kevin\\documents\\github\\documentation\\vite.config.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{1043A842-1248-D662-F550-80060A0D0941}|documentation.esproj|solutionrelative:vite.config.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1043A842-1248-D662-F550-80060A0D0941}|documentation.esproj|c:\\users\\kevin\\documents\\github\\documentation\\src\\colorthemes.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{1043A842-1248-D662-F550-80060A0D0941}|documentation.esproj|solutionrelative:src\\colorthemes.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1043A842-1248-D662-F550-80060A0D0941}|documentation.esproj|c:\\users\\kevin\\documents\\github\\documentation\\src\\templates\\docpage.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{1043A842-1248-D662-F550-80060A0D0941}|documentation.esproj|solutionrelative:src\\templates\\docpage.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1043A842-1248-D662-F550-80060A0D0941}|documentation.esproj|c:\\users\\kevin\\documents\\github\\documentation\\src\\documentation.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{1043A842-1248-D662-F550-80060A0D0941}|documentation.esproj|solutionrelative:src\\documentation.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1043A842-1248-D662-F550-80060A0D0941}|documentation.esproj|c:\\users\\kevin\\documents\\github\\documentation\\src\\audioproduction\\guitoolkit.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{1043A842-1248-D662-F550-80060A0D0941}|documentation.esproj|solutionrelative:src\\audioproduction\\guitoolkit.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1043A842-1248-D662-F550-80060A0D0941}|documentation.esproj|c:\\users\\kevin\\documents\\github\\documentation\\src\\main.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{1043A842-1248-D662-F550-80060A0D0941}|documentation.esproj|solutionrelative:src\\main.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +34,89 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "vite.config.ts",
+              "DocumentMoniker": "C:\\Users\\kevin\\Documents\\GitHub\\Documentation\\vite.config.ts",
+              "RelativeDocumentMoniker": "vite.config.ts",
+              "ToolTip": "C:\\Users\\kevin\\Documents\\GitHub\\Documentation\\vite.config.ts",
+              "RelativeToolTip": "vite.config.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-10-18T08:59:37.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ColorThemes.css",
+              "DocumentMoniker": "C:\\Users\\kevin\\Documents\\GitHub\\Documentation\\src\\ColorThemes.css",
+              "RelativeDocumentMoniker": "src\\ColorThemes.css",
+              "ToolTip": "C:\\Users\\kevin\\Documents\\GitHub\\Documentation\\src\\ColorThemes.css",
+              "RelativeToolTip": "src\\ColorThemes.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-10-18T08:47:41.173Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DocPage.ts",
+              "DocumentMoniker": "C:\\Users\\kevin\\Documents\\GitHub\\Documentation\\src\\Templates\\DocPage.ts",
+              "RelativeDocumentMoniker": "src\\Templates\\DocPage.ts",
+              "ToolTip": "C:\\Users\\kevin\\Documents\\GitHub\\Documentation\\src\\Templates\\DocPage.ts",
+              "RelativeToolTip": "src\\Templates\\DocPage.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-10-18T07:32:03.073Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Documentation.css",
+              "DocumentMoniker": "C:\\Users\\kevin\\Documents\\GitHub\\Documentation\\src\\Documentation.css",
+              "RelativeDocumentMoniker": "src\\Documentation.css",
+              "ToolTip": "C:\\Users\\kevin\\Documents\\GitHub\\Documentation\\src\\Documentation.css",
+              "RelativeToolTip": "src\\Documentation.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-10-18T07:12:08.217Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GUIToolkit.ts",
+              "DocumentMoniker": "C:\\Users\\kevin\\Documents\\GitHub\\Documentation\\src\\AudioProduction\\GUIToolkit.ts",
+              "RelativeDocumentMoniker": "src\\AudioProduction\\GUIToolkit.ts",
+              "ToolTip": "C:\\Users\\kevin\\Documents\\GitHub\\Documentation\\src\\AudioProduction\\GUIToolkit.ts",
+              "RelativeToolTip": "src\\AudioProduction\\GUIToolkit.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-10-18T04:35:27.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "main.tsx",
+              "DocumentMoniker": "C:\\Users\\kevin\\Documents\\GitHub\\Documentation\\src\\main.tsx",
+              "RelativeDocumentMoniker": "src\\main.tsx",
+              "ToolTip": "C:\\Users\\kevin\\Documents\\GitHub\\Documentation\\src\\main.tsx",
+              "RelativeToolTip": "src\\main.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-10-18T03:50:42.635Z",
+              "EditorCaption": ""
             }
           ]
         }

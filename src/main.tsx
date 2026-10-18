@@ -1,10 +1,8 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+import './ColorThemes.css';
+import './Documentation.css';
+import { DocPage } from './Templates/DocPage.ts';
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+customElements.define('doc-page', DocPage, { extends: 'div' });
+
+const defaultPage: HTMLElement = new DocPage()
+document.body.appendChild(defaultPage);
