@@ -26,6 +26,7 @@ export class Folder extends HTMLDivElement
         this.foldButton.style.backgroundColor = "transparent";
         this.foldButton.style.fontSize = "24px";
         this.foldButton.textContent = "+";
+        this.foldButton.classList.add('folder-link');
         this.foldButton.addEventListener("click", () => {
             this.Toggle();
         });
@@ -38,15 +39,7 @@ export class Folder extends HTMLDivElement
             const link = document.createElement('a');
             link.textContent = headerName;
             link.href = headerLink;
-            link.style.textDecoration = "none";
-            link.addEventListener("mouseover", () =>
-            {
-                link.style.textDecoration = "underline";
-            });
-            link.addEventListener("mouseout", () =>
-            {
-                link.style.textDecoration = "none";
-            });
+            link.classList.add('folder-link');
             this.headerButton.appendChild(link);
         }
         else
@@ -57,7 +50,7 @@ export class Folder extends HTMLDivElement
                 this.Toggle();
             });
         }
-        this.headerButton.classList.add("folder-button");
+        this.headerButton.classList.add("folder-link");
         header.appendChild(this.headerButton);
 
         this.expandable = document.createElement('div');
@@ -77,21 +70,19 @@ export class Folder extends HTMLDivElement
         {
             this.foldButton.textContent = '+';
             this.expandable.classList.remove("open");
-            //this.elements.style.display = "none";
             this.open = false;
         }
         else
         {
             this.foldButton.textContent = '-';
             this.expandable.classList.add("open");
-            //this.elements.style.display = "flex";
             this.open = true;
         }
     }
 
     public AddElement(element: HTMLElement)
     {
-        element.classList.add("folder-element");
+        element.classList.add("folder-link", 'folder-element');
         this.elements.appendChild(element);
     }
 }

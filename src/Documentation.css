@@ -1,12 +1,45 @@
 html {
     font-family: Lato;
     font-size: 16px;
+    scroll-behavior: smooth;
+    overscroll-behavior: none;
+    overflow-x: hidden;
 }
 
-.folder-button {
+body {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.c1 {
+    font-size: 32px;
+    scroll-margin-top: 5vh;
+}
+
+.c2 {
+    font-size: 28px;
+    scroll-margin-top: 5vh;
+}
+
+.c3 {
+    font-size: 24px;
+    scroll-margin-top: 5vh;
+}
+
+.c4 {
+    font-size: inherit;
+}
+
+.c5{
+    font-size: inherit;
+}
+
+.folder-link {
     width: 100%;
     border: 0;
     text-align: left;
+    color: white;
     background-color: transparent;
     font-family: inherit;
     font-size: inherit;
@@ -14,22 +47,6 @@ html {
 
 .folder-element {
     margin: 0px 0px 0px 50px;
-}
-
-body:has(.doc-page) {
-    margin: 0;
-    padding: 0;
-}
-
-.doc-page {
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-grow: 1;
-    flex-direction: row;
-    background-color: var(--bg-color);
 }
 
 .expandable-wrapper {
@@ -45,4 +62,12 @@ body:has(.doc-page) {
 
 .expandable-content {
     min-height: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }

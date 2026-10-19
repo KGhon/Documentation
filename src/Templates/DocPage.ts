@@ -2,17 +2,25 @@ import '../Documentation.css';
 
 export class DocPage extends HTMLDivElement
 {
-    public pages: HTMLDivElement;
+    public navigation: HTMLDivElement;
     public content: HTMLDivElement;
     public tableOfContents: HTMLDivElement;
 
     public constructor()
     {
         super();
-        this.pages = document.createElement('div');
-        this.pages.style.flexDirection = "column";
-        this.pages.style.width = "100%";
-        this.appendChild(this.pages);
+
+        this.style.margin = "0";
+        this.style.padding = "0";
+        this.style.display = "flex";
+        this.style.flexGrow = "1";
+        this.style.flexDirection = "row";
+        this.style.backgroundColor = "var(--bg-color)";
+
+        this.navigation = document.createElement('div');
+        this.navigation.style.flexDirection = "column";
+        this.navigation.style.width = "100%";
+        this.appendChild(this.navigation);
         this.content = document.createElement('div');
         this.content.style.flexDirection = "column";
         this.content.style.width = "100%";
@@ -24,7 +32,7 @@ export class DocPage extends HTMLDivElement
         const text1: HTMLDivElement = document.createElement('div');
         text1.textContent = "Column 1";
         text1.style.textAlign = "center";
-        this.pages.appendChild(text1);
+        this.navigation.appendChild(text1);
         const text2: HTMLDivElement = document.createElement('div');
         text2.textContent = "Column 2";
         text2.style.textAlign = "center";
@@ -33,6 +41,5 @@ export class DocPage extends HTMLDivElement
         text3.textContent = "Column 3";
         text3.style.textAlign = "center"
         this.tableOfContents.appendChild(text3);
-        this.classList.add("doc-page");
     }
 }
