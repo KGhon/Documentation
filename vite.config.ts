@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite';
 import plugin from '@vitejs/plugin-react';
-import { resolve } from 'path';
+//import { resolve } from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -16,11 +16,5 @@ export default defineConfig({
     build: {
         outDir: 'docs',
         emptyOutDir: true,
-        rollupOptions: {
-            input: {
-                main: resolve(__dirname, 'index.html'),
-                GUIToolkit: resolve(__dirname, 'src/AudioProduction/GUIToolkit.html'),
-            },
-        },
     }
 })

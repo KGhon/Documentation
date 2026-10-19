@@ -6,7 +6,7 @@ export class DocPage extends HTMLDivElement
     public content: HTMLDivElement;
     public tableOfContents: HTMLDivElement;
 
-    constructor()
+    public constructor()
     {
         super();
         this.pages = document.createElement('div');
