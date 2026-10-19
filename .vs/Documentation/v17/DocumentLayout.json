@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\kevin\\Documents\\GitHub\\Documentation\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1043A842-1248-D662-F550-80060A0D0941}|documentation.esproj|c:\\users\\kevin\\documents\\github\\documentation\\vite.config.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{1043A842-1248-D662-F550-80060A0D0941}|documentation.esproj|solutionrelative:vite.config.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1043A842-1248-D662-F550-80060A0D0941}|documentation.esproj|c:\\users\\kevin\\documents\\github\\documentation\\src\\globals\\tableofcontents.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{1043A842-1248-D662-F550-80060A0D0941}|documentation.esproj|solutionrelative:src\\globals\\tableofcontents.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1043A842-1248-D662-F550-80060A0D0941}|documentation.esproj|c:\\users\\kevin\\documents\\github\\documentation\\src\\content\\audioproduction\\audioproduction.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{1043A842-1248-D662-F550-80060A0D0941}|documentation.esproj|solutionrelative:src\\content\\audioproduction\\audioproduction.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1043A842-1248-D662-F550-80060A0D0941}|documentation.esproj|c:\\users\\kevin\\documents\\github\\documentation\\vite.config.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{1043A842-1248-D662-F550-80060A0D0941}|documentation.esproj|solutionrelative:vite.config.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1043A842-1248-D662-F550-80060A0D0941}|documentation.esproj|c:\\users\\kevin\\documents\\github\\documentation\\src\\templates\\folder.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
@@ -46,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,7 +54,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "AudioProduction.ts",
               "DocumentMoniker": "C:\\Users\\kevin\\Documents\\GitHub\\Documentation\\src\\Content\\AudioProduction\\AudioProduction.ts",
               "RelativeDocumentMoniker": "src\\Content\\AudioProduction\\AudioProduction.ts",
@@ -62,8 +62,7 @@
               "RelativeToolTip": "src\\Content\\AudioProduction\\AudioProduction.ts",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-10-19T02:37:39.018Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-19T02:37:39.018Z"
             },
             {
               "$type": "Document",
@@ -75,12 +74,11 @@
               "RelativeToolTip": "src\\Templates\\Folder.ts",
               "ViewState": "AgIAABwAAAAAAAAAAAAYwCgAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-10-18T19:33:01.725Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-18T19:33:01.725Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "TableOfContents.ts",
               "DocumentMoniker": "C:\\Users\\kevin\\Documents\\GitHub\\Documentation\\src\\Globals\\TableOfContents.ts",
               "RelativeDocumentMoniker": "src\\Globals\\TableOfContents.ts",
@@ -93,13 +91,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "vite.config.ts",
               "DocumentMoniker": "C:\\Users\\kevin\\Documents\\GitHub\\Documentation\\vite.config.ts",
               "RelativeDocumentMoniker": "vite.config.ts",
               "ToolTip": "C:\\Users\\kevin\\Documents\\GitHub\\Documentation\\vite.config.ts",
               "RelativeToolTip": "vite.config.ts",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
               "WhenOpened": "2026-10-18T08:59:37.952Z",
               "EditorCaption": ""
@@ -114,8 +112,7 @@
               "RelativeToolTip": "src\\ColorThemes.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-10-18T08:47:41.173Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-18T08:47:41.173Z"
             },
             {
               "$type": "Document",
@@ -127,8 +124,7 @@
               "RelativeToolTip": "src\\Templates\\DocPage.ts",
               "ViewState": "AgIAAAcAAAAAAAAAAAAAAAgAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-10-18T07:32:03.073Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-18T07:32:03.073Z"
             },
             {
               "$type": "Document",
@@ -140,8 +136,7 @@
               "RelativeToolTip": "src\\Documentation.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-10-18T07:12:08.217Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-18T07:12:08.217Z"
             },
             {
               "$type": "Document",
@@ -153,8 +148,7 @@
               "RelativeToolTip": "src\\Content\\AudioProduction\\GUIToolkit.ts",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-10-18T04:35:27.985Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-18T04:35:27.985Z"
             },
             {
               "$type": "Document",
@@ -166,8 +160,7 @@
               "RelativeToolTip": "src\\main.tsx",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-10-18T03:50:42.635Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-18T03:50:42.635Z"
             }
           ]
         }
