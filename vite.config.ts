@@ -20,7 +20,9 @@ export default defineConfig({
             input: {
                 main: resolve(__dirname, 'index.html'),
                 AudioProduction: resolve(__dirname, 'pages/AudioProduction/index.html'),
-                GUIToolkit: resolve(__dirname, 'pages/AudioProduction/GUIToolkit/index.html'),
+                UnrealEngine: resolve(__dirname, 'pages/UnrealEngine/index.html'),
+                Unity: resolve(__dirname, 'pages/Unity/index.html'),
+                Godot: resolve(__dirname, 'pages/Godot/index.html'),
             },
         },
     }

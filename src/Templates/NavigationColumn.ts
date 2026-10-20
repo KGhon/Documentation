@@ -1,10 +1,9 @@
-import { Folder } from './Folder.ts';
+/*import { Folder } from './Folder.ts';*/
 import { Divider } from './Divider.ts';
-import { SitePages } from '../Globals/SitePages.ts'
 
 export class NavigationColumn extends HTMLDivElement
 {
-    private folders: Map<string, Folder> = new Map();
+    //private folders: Map<string, Folder> = new Map();
 
     public constructor()
     {
@@ -32,7 +31,7 @@ export class NavigationColumn extends HTMLDivElement
         const divider: Divider = document.createElement('div', { is: 'divider-element' }) as Divider;
         this.appendChild(divider);
     }
-
+    /*
     public connectedCallback()
     {
         for (const [key, value] of SitePages.pages)
@@ -71,6 +70,5 @@ export class NavigationColumn extends HTMLDivElement
             this.appendChild(value);
         }
     }
-
-
+    */
 }
