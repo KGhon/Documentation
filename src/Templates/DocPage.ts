@@ -5,9 +5,8 @@ import { TableOfContents } from './TableOfContents.ts';
 
 export class DocPage extends BasePage
 {
-    public navigation: HTMLDivElement;
-    public content: HTMLDivElement;
-    public tableOfContents: HTMLDivElement;
+    private navigationColumn: NavigationColumn;
+    private tableOfContents: TableOfContents;
 
     public constructor()
     {
@@ -22,10 +21,13 @@ export class DocPage extends BasePage
         postHeader.style.backgroundColor = "var(--bg-color)";
         this.appendChild(postHeader);
 
-        this.navigation = document.createElement('div');
-        this.navigation.style.flexDirection = "column";
-        this.navigation.style.width = "30%";
-        postHeader.appendChild(this.navigation);
+        const navigationDiv: HTMLDivElement = document.createElement('div');
+        navigationDiv.style.flexDirection = "column";
+        navigationDiv.style.width = "30%";
+        postHeader.appendChild(navigationDiv);
+
+        this.navigationColumn = document.createElement('div', { is: 'navigation-column' }) as NavigationColumn;
+        navigationDiv.appendChild(this.navigationColumn);
 
         this.content = document.createElement('div');
         this.content.style.padding = "20px";
@@ -33,19 +35,34 @@ export class DocPage extends BasePage
         this.content.style.width = "100%";
         postHeader.appendChild(this.content);
 
-        this.tableOfContents = document.createElement('div');
-        this.tableOfContents.style.flexDirection = "column";
-        this.tableOfContents.style.width = "25%";
-        postHeader.appendChild(this.tableOfContents);
+        const tableOfContentsDiv: HTMLDivElement = document.createElement('div');
+        tableOfContentsDiv.style.flexDirection = "column";
+        tableOfContentsDiv.style.width = "25%";
+        postHeader.appendChild(tableOfContentsDiv);
+
+        this.tableOfContents = document.createElement('div', { is: 'table-of-contents' }) as TableOfContents;
+        tableOfContentsDiv.appendChild(this.tableOfContents);
     }
 
-    public connectedCallback()
+    public ChangePage(pageName: string) : HTMLElement | null
     {
-        const navigationColumn: NavigationColumn = document.createElement('div', { is: 'navigation-column' }) as NavigationColumn;
-        this.navigation.appendChild(navigationColumn);
+        const currentPage: HTMLElement | null = super.ChangePage(pageName);
+        this.PopulateTableOfContents(pageName, currentPage);
+        return currentPage;
+    }
 
-        const tableOfContents: TableOfContents = document.createElement('div', { is: 'table-of-contents' }) as TableOfContents;
-        tableOfContents.SetTitle(document.title);
-        this.tableOfContents.appendChild(tableOfContents);
+    public PopulateNavigation(items: [string, string, boolean, boolean][])
+    {
+        this.navigationColumn.Populate(items, (pageName) => this.ChangePage(pageName));
+    }
+
+    private PopulateTableOfContents(pageName: string, startElement: HTMLElement | null)
+    {
+        if (startElement == null)
+        {
+            return;
+        }
+        this.tableOfContents.SetTitle(pageName);
+        this.tableOfContents.Populate(startElement!);
     }
 }

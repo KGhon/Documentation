@@ -8,7 +8,7 @@ export class Folder extends HTMLDivElement
     private expandable: HTMLDivElement;
     private elements: HTMLDivElement;
 
-    public constructor(headerName: string, headerLink: string = "")
+    public constructor(headerName: string, headerLink: HTMLAnchorElement | null)
     {
         super();
         this.style.display = "flex";
@@ -33,17 +33,15 @@ export class Folder extends HTMLDivElement
         header.appendChild(this.foldButton);
 
         this.headerButton = document.createElement('button');
-        if (headerLink != "")
+        if (headerLink != null)
         {
             this.headerButton.innerHTML = '';
-            const link = document.createElement('a');
-            link.textContent = headerName;
-            link.href = headerLink;
-            link.classList.add('folder-link');
-            this.headerButton.appendChild(link);
+            headerLink.classList.add('folder-link');
+            this.headerButton.appendChild(headerLink);
         }
         else
         {
+            this.headerButton.style.color = "white";
             this.headerButton.textContent = headerName;
             this.headerButton.addEventListener("click", () =>
             {

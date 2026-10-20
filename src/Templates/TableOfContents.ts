@@ -32,10 +32,10 @@ export class TableOfContents extends HTMLDivElement
         this.appendChild(divider);
     }
 
-    public connectedCallback()
+    public Populate(content: HTMLElement)
     {
-        let contentMatches: NodeListOf<HTMLElement> = document.querySelectorAll('.c1, .c2, .c3');
-        for (const match of contentMatches)
+        let matches: NodeListOf<HTMLElement> = content.querySelectorAll('.c1, .c2, .c3');
+        for (const match of matches)
         {
             const link: HTMLAnchorElement = document.createElement('a');
             link.textContent = match.textContent;

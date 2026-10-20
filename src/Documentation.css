@@ -71,6 +71,7 @@ body {
 a {
     color: aqua;
     text-decoration: none;
+    cursor: pointer;
 }
 
 a:hover {

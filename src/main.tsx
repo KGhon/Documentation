@@ -2,7 +2,7 @@ import './ColorThemes.css';
 import './Documentation.css';
 import './CustomElements.ts';
 
-const pagesPath = `${import.meta.env.BASE_URL}pages/`;
+const pagesPath = `${import.meta.env.BASE_URL}Pages/`;
 
 const audioProduction: HTMLAnchorElement = document.createElement('a');
 audioProduction.href = pagesPath + 'AudioProduction/';
