@@ -19,10 +19,10 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: resolve(__dirname, 'index.html'),
-                AudioProduction: resolve(__dirname, 'Pages/AudioProduction/index.html'),
-                UnrealEngine: resolve(__dirname, 'Pages/UnrealEngine/index.html'),
-                Unity: resolve(__dirname, 'Pages/Unity/index.html'),
-                Godot: resolve(__dirname, 'Pages/Godot/index.html'),
+                AudioProduction: resolve(__dirname, 'pages/AudioProduction/index.html'),
+                UnrealEngine: resolve(__dirname, 'pages/UnrealEngine/index.html'),
+                Unity: resolve(__dirname, 'pages/Unity/index.html'),
+                Godot: resolve(__dirname, 'pages/Godot/index.html'),
             },
         },
     }
