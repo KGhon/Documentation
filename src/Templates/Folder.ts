@@ -23,10 +23,10 @@ export class Folder extends HTMLDivElement
         this.foldButton.style.width = "20px";
         this.foldButton.style.border = "0px";
         this.foldButton.style.fontFamily = "Courier, monospace";
+        this.foldButton.style.color = "white";
         this.foldButton.style.backgroundColor = "transparent";
         this.foldButton.style.fontSize = "24px";
         this.foldButton.textContent = "+";
-        this.foldButton.classList.add('folder-link');
         this.foldButton.addEventListener("click", () => {
             this.Toggle();
         });

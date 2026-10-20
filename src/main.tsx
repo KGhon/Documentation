@@ -1,20 +1,20 @@
 import './ColorThemes.css';
 import './Documentation.css';
-import { Folder } from './Templates/Folder.ts'
+import { Folder } from './Templates/Folder.ts';
+import { Divider } from './Templates/Divider.ts';
 import { DocPage } from './Templates/DocPage.ts';
+import { Header } from './Templates/Header.ts';
 import { NavigationColumn } from './Templates/NavigationColumn.ts';
 import { TableOfContents } from './Templates/TableOfContents.ts';
 
-customElements.define('element-folder', Folder, { extends: 'div' });
+customElements.define('folder-element', Folder, { extends: 'div' });
+customElements.define('divider-element', Divider, { extends: 'div' });
 customElements.define('doc-page', DocPage, { extends: 'div' });
+customElements.define('header-bar', Header, { extends: 'div' });
 customElements.define('navigation-column', NavigationColumn, { extends: 'div' });
 customElements.define('table-of-contents', TableOfContents, { extends: 'div' });
 
 const docPage: DocPage = document.createElement('div', { is: 'doc-page' }) as DocPage;
-document.body.appendChild(docPage);
-
-const navigationColumn: NavigationColumn = new NavigationColumn();
-docPage.navigation.appendChild(navigationColumn);
 
 const test: HTMLParagraphElement = document.createElement('p');
 test.textContent = "A TOP LEVEL";
@@ -47,5 +47,4 @@ test5.textContent = "NEW";
 test5.classList.add('c1');
 docPage.content.appendChild(test5);
 
-const tableOfContents: HTMLElement = document.createElement('div', { is: 'table-of-contents' });
-docPage.tableOfContents.appendChild(tableOfContents);
+document.body.appendChild(docPage);

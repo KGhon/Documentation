@@ -1,3 +1,11 @@
+:root {
+    --header-height: 5vh;
+}
+
+* {
+    scroll-margin-top: calc(var(--header-height) + 4vh);
+}
+
 html {
     font-family: Lato;
     font-size: 16px;
@@ -9,22 +17,19 @@ html {
 body {
     margin: 0;
     padding: 0;
-    color: white;
+    color: var(--text-color);
 }
 
 .c1 {
     font-size: 32px;
-    scroll-margin-top: 5vh;
 }
 
 .c2 {
     font-size: 28px;
-    scroll-margin-top: 5vh;
 }
 
 .c3 {
     font-size: 24px;
-    scroll-margin-top: 5vh;
 }
 
 .c4 {
@@ -39,7 +44,6 @@ body {
     width: 100%;
     border: 0;
     text-align: left;
-    color: white;
     background-color: transparent;
     font-family: inherit;
     font-size: inherit;
@@ -65,9 +69,11 @@ body {
 }
 
 a {
+    color: aqua;
     text-decoration: none;
 }
 
 a:hover {
+    color: azure;
     text-decoration: underline;
 }

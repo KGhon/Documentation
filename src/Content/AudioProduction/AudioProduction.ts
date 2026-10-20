@@ -1,6 +1,6 @@
 import '../../ColorThemes.css';
 import '../../Documentation.css';
+import { DocPage } from '../../Templates/DocPage.ts';
 
-const label: HTMLLabelElement = document.createElement('label');
-label.textContent = "Audio Production";
-document.body.appendChild(label);
+const docPage: DocPage = document.createElement('div', { is: 'doc-page' }) as DocPage;
+document.body.appendChild(docPage);
