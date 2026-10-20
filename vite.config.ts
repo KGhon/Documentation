@@ -19,8 +19,8 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: resolve(__dirname, 'index.html'),
-                AudioProduction: resolve(__dirname, 'src/Content/AudioProduction/AudioProduction.html'),
-                GUIToolkit: resolve(__dirname, 'src/Content/AudioProduction/GUIToolkit.html'),
+                AudioProduction: resolve(__dirname, 'pages/AudioProduction/index.html'),
+                GUIToolkit: resolve(__dirname, 'pages/AudioProduction/GUIToolkit/index.html'),
             },
         },
     }

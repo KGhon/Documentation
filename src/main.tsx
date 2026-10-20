@@ -1,18 +1,7 @@
 import './ColorThemes.css';
 import './Documentation.css';
-import { Folder } from './Templates/Folder.ts';
-import { Divider } from './Templates/Divider.ts';
+import './CustomElements.ts';
 import { DocPage } from './Templates/DocPage.ts';
-import { Header } from './Templates/Header.ts';
-import { NavigationColumn } from './Templates/NavigationColumn.ts';
-import { TableOfContents } from './Templates/TableOfContents.ts';
-
-customElements.define('folder-element', Folder, { extends: 'div' });
-customElements.define('divider-element', Divider, { extends: 'div' });
-customElements.define('doc-page', DocPage, { extends: 'div' });
-customElements.define('header-bar', Header, { extends: 'div' });
-customElements.define('navigation-column', NavigationColumn, { extends: 'div' });
-customElements.define('table-of-contents', TableOfContents, { extends: 'div' });
 
 const docPage: DocPage = document.createElement('div', { is: 'doc-page' }) as DocPage;
 

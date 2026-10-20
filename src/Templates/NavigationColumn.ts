@@ -38,27 +38,31 @@ export class NavigationColumn extends HTMLDivElement
         for (const [key, value] of SitePages.pages)
         {
             let folder: Folder;
-            let path = SitePages.contentLocation + value[1] + '/' + value[0];
+            let path = SitePages.contentLocation + '/' + value + '/';
+            let fullPath = path;
+            if (key != value)
+            {
+                fullPath += key + '/';
+            }
+            if (import.meta.env.DEV)
+            {
+                fullPath += 'index.html';
+            }
+
             if (this.folders.has(path))
             {
                 folder = this.folders.get(path)!;
             }
             else
             {
-                if (key == value[0])
-                {
-                    folder = new Folder(value[0].replace(/([a-z])([A-Z])/g, '$1 $2').replace(/([A-Z]+)([A-Z][a-z])/g, '$1 $2'), path + '/' + key + '.html');
-                    this.folders.set(path, folder);
-                    continue;
-                }
-
-                folder = new Folder(value[0].replace(/([a-z])([A-Z])/g, '$1 $2').replace(/([A-Z]+)([A-Z][a-z])/g, '$1 $2'));
+                folder = new Folder(key.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/([A-Z]+)([A-Z][a-z])/g, '$1 $2'), fullPath);
                 this.folders.set(path, folder);
+                continue;
             }
 
             const link: HTMLAnchorElement = document.createElement('a');
             link.textContent = key.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/([A-Z]+)([A-Z][a-z])/g, '$1 $2');
-            link.href = path + '/' + key + '.html';
+            link.href = fullPath;
             folder.AddElement(link);
         }
 
