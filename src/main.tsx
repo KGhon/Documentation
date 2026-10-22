@@ -2,6 +2,8 @@ import './ColorThemes.css';
 import './Documentation.css';
 import './CustomElements.ts';
 
+document.body.style.backgroundColor = "black";
+
 const pagesPath = `${import.meta.env.BASE_URL}Pages/`;
 
 const audioProduction: HTMLAnchorElement = document.createElement('a');
