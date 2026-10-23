@@ -1,4 +1,4 @@
-export const testCode: string =
+export const testCode =
 `void UEditorUtilityWidgetSubclass::NativeConstruct()
 {
 	//Pass the PIE world if the widget is already open in the editor
