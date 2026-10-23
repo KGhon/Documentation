@@ -33,7 +33,7 @@ export class CodeBlock extends HTMLDivElement
         this.style.flexDirection = "column";
         this.style.borderStyle = "solid";
         this.style.borderWidth = "0px 4px 4px 4px";
-        this.style.borderColor = "#404040";
+        this.style.borderColor = "#505050";
 
         this.code = document.createElement('div');
         this.appendChild(this.code);
@@ -47,7 +47,7 @@ export class CodeBlock extends HTMLDivElement
             header.style.padding = " 4px 0px 4px 0px";
             header.style.display = "flex";
             header.style.flexDirection = "row";
-            header.style.backgroundColor = "#404040";
+            header.style.backgroundColor = "#505050";
             this.prepend(header)
 
             const headerName: HTMLLabelElement = document.createElement('label');

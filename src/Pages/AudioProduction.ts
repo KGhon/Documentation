@@ -4,6 +4,7 @@ import '../CustomElements.ts';
 import { DocPage } from '../Templates/DocPage.ts';
 import pages from '../../data/AudioProduction/pages.json';
 import { CodeBlock } from '../Templates/CodeBlock.ts';
+import { Table } from '../Templates/Table.ts';
 import * as data from "../../data/AudioProduction/GUIToolkit/Code.ts";
 
 const spa: DocPage = document.createElement('div', { is: 'doc-page' }) as DocPage;
@@ -18,5 +19,16 @@ guiToolkit.appendChild(text);
 const codeBlock: CodeBlock = document.createElement('div', { is: "code-block" }) as CodeBlock;
 codeBlock.Configure(data.testCode, "cpp", false);
 guiToolkit.appendChild(codeBlock);
+
+const table: Table = document.createElement('table', { is: 'table-element' }) as Table;
+let thing: string[][] = [
+    ["function one", "description one"],
+    ["function two", "description two"],
+    ["function three", "description three"],
+    ["function four", "description four"],
+    ["function five", "description five"],
+]
+table.Configure(thing);
+guiToolkit.appendChild(table);
 
 spa.AddContentPage("GUI Toolkit", guiToolkit);
