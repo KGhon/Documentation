@@ -7,7 +7,7 @@ import { CodeHighlighterPlugin } from "./src/CodeHighlighter.ts";
 export default defineConfig({
     plugins: [
         plugin(),
-        CodeHighlighterPlugin("./data"),
+        CodeHighlighterPlugin("./data")
     ],
     base: '/Documentation/', 
     appType: 'mpa',
