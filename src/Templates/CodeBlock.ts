@@ -1,26 +1,4 @@
 import "../Documentation.css";
-import { createHighlighterCore } from 'shiki/core'
-import type { HighlighterCore } from 'shiki/core';
-import { createJavaScriptRegexEngine } from 'shiki/engine/javascript';
-import darkplus from '@shikijs/themes/dark-plus'
-import csharp from '@shikijs/langs/csharp'
-import cpp from '@shikijs/langs/cpp'
-import lua from '@shikijs/langs/lua'
-
-let highlighter: HighlighterCore | null = null;
-
-async function GetHighlighter() : Promise<HighlighterCore>
-{
-    if (!highlighter)
-    {
-        highlighter = await createHighlighterCore({
-            themes: [darkplus],
-            langs: [csharp, cpp, lua],
-            engine: createJavaScriptRegexEngine()
-        });
-    }
-    return highlighter;
-}
 
 export class CodeBlock extends HTMLDivElement
 {
@@ -39,8 +17,9 @@ export class CodeBlock extends HTMLDivElement
         this.appendChild(this.code);
     }
 
-    public async Configure(code: string, language: string, canCopy: boolean, name: string = "", displayTheme: string = "dark-plus")
+    public async Configure(code: string, canCopy: boolean, name: string = "")// language: string, canCopy: boolean, displayTheme: string = "dark-plus")
     {
+        this.code.innerHTML = code;
         if (name != "" || canCopy)
         {
             const header: HTMLDivElement = document.createElement('div');
@@ -91,17 +70,6 @@ export class CodeBlock extends HTMLDivElement
         else
         {
             this.style.borderWidth = "4px";
-        }
-
-        const highlightedCode: string = await (await GetHighlighter()).codeToHtml(code, { lang: language, theme: displayTheme });
-        this.code.innerHTML = highlightedCode;
-
-        const pre = this.code.querySelector('pre');
-        if (pre)
-        {
-            pre.style.margin = "0";
-            pre.style.padding = "20px";
-            pre.style.tabSize = "4";
         }
     }
 }

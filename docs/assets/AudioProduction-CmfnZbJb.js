@@ -1,0 +1,30 @@
+import"./CustomElements-ilYOhWxx.js";var e={pages:[[`Audio Production`,``,!1,!0],[`GUI Toolkit`,`AudioProduction`,!0,!1]]},t=`<pre style="margin: 0; padding: 20px; tab-size: 4;" class="shiki dark-plus" style="background-color:#1E1E1E;color:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#569CD6">void</span><span style="color:#4EC9B0"> UEditorUtilityWidgetSubclass</span><span style="color:#D4D4D4">::</span><span style="color:#DCDCAA">NativeConstruct</span><span style="color:#D4D4D4">()</span></span>
+<span class="line"><span style="color:#D4D4D4">{</span></span>
+<span class="line"><span style="color:#6A9955">	//Pass the PIE world if the widget is already open in the editor</span></span>
+<span class="line"><span style="color:#4EC9B0">	FWorldDelegates</span><span style="color:#D4D4D4">::</span><span style="color:#4EC9B0">OnPreWorldInitialization</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">AddUObject</span><span style="color:#D4D4D4">(</span><span style="color:#569CD6">this</span><span style="color:#D4D4D4">, &#x26;</span><span style="color:#4EC9B0">UKEditorUtilityWidget</span><span style="color:#D4D4D4">::</span><span style="color:#9CDCFE">BeginPIE</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#4EC9B0">	FEditorDelegates</span><span style="color:#D4D4D4">::</span><span style="color:#4EC9B0">PrePIEEnded</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">AddUObject</span><span style="color:#D4D4D4">(</span><span style="color:#569CD6">this</span><span style="color:#D4D4D4">, &#x26;</span><span style="color:#4EC9B0">UKEditorUtilityWidget</span><span style="color:#D4D4D4">::</span><span style="color:#9CDCFE">OnEndPIE</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A9955">	//Get the PIE world if the widget is opened in the editor during PIE</span></span>
+<span class="line"><span style="color:#C586C0">	if</span><span style="color:#D4D4D4"> (</span><span style="color:#9CDCFE">GEditor</span><span style="color:#D4D4D4">-></span><span style="color:#9CDCFE">PlayWorld</span><span style="color:#D4D4D4">)</span></span>
+<span class="line"><span style="color:#D4D4D4">	{</span></span>
+<span class="line"><span style="color:#DCDCAA">		BeginPIE</span><span style="color:#D4D4D4">(</span><span style="color:#9CDCFE">GEditor</span><span style="color:#D4D4D4">-></span><span style="color:#9CDCFE">PlayWorld</span><span style="color:#D4D4D4">, </span><span style="color:#DCDCAA">FWorldInitializationValues</span><span style="color:#D4D4D4">());</span></span>
+<span class="line"><span style="color:#D4D4D4">	}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#4EC9B0">	Super</span><span style="color:#D4D4D4">::</span><span style="color:#DCDCAA">NativeConstruct</span><span style="color:#D4D4D4">();</span></span>
+<span class="line"><span style="color:#D4D4D4">}</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#569CD6">void</span><span style="color:#4EC9B0"> UEditorUtilityWidgetSubclass</span><span style="color:#D4D4D4">::</span><span style="color:#DCDCAA">NativeDestruct</span><span style="color:#D4D4D4">()</span></span>
+<span class="line"><span style="color:#D4D4D4">{</span></span>
+<span class="line"><span style="color:#4EC9B0">	FWorldDelegates</span><span style="color:#D4D4D4">::</span><span style="color:#4EC9B0">OnPreWorldInitialization</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">RemoveAll</span><span style="color:#D4D4D4">(</span><span style="color:#569CD6">this</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#4EC9B0">	FEditorDelegates</span><span style="color:#D4D4D4">::</span><span style="color:#4EC9B0">PrePIEEnded</span><span style="color:#D4D4D4">.</span><span style="color:#DCDCAA">RemoveAll</span><span style="color:#D4D4D4">(</span><span style="color:#569CD6">this</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#4EC9B0">	Super</span><span style="color:#D4D4D4">::</span><span style="color:#DCDCAA">NativeDestruct</span><span style="color:#D4D4D4">();</span></span>
+<span class="line"><span style="color:#D4D4D4">}</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#569CD6">void</span><span style="color:#4EC9B0"> UKEditorUtilityWidgetSubclass</span><span style="color:#D4D4D4">::</span><span style="color:#DCDCAA">BeginPIE</span><span style="color:#D4D4D4">(</span><span style="color:#9CDCFE">UWorld</span><span style="color:#D4D4D4">* </span><span style="color:#9CDCFE">world</span><span style="color:#D4D4D4">, </span><span style="color:#9CDCFE">FWorldInitializationValues</span><span style="color:#9CDCFE"> worldValues</span><span style="color:#D4D4D4">)</span></span>
+<span class="line"><span style="color:#D4D4D4">{</span></span>
+<span class="line"><span style="color:#6A9955">	//Pass the world to child widgets that will call SpawnDebugActor() using Blueprint</span></span>
+<span class="line"><span style="color:#DCDCAA">	OnBeginPIE</span><span style="color:#D4D4D4">(</span><span style="color:#9CDCFE">world</span><span style="color:#D4D4D4">);</span></span>
+<span class="line"><span style="color:#D4D4D4">}</span></span></code></pre>`,n=document.createElement(`div`,{is:`doc-page`});n.PopulateNavigation(e.pages),document.body.appendChild(n);var r=document.createElement(`div`),i=document.createElement(`label`);i.textContent=`GUI TOOLKIT`,r.appendChild(i);var a=document.createElement(`div`,{is:`code-block`});a.Configure(t,!1),r.appendChild(a);var o=document.createElement(`table`,{is:`table-element`});o.Configure([[`function one`,`description one`],[`function two`,`description two`],[`function three`,`description three`],[`function four`,`description four`],[`function five`,`description five`]]),r.appendChild(o),n.AddContentPage(`GUI Toolkit`,r);

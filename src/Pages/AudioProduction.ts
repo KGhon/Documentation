@@ -17,7 +17,7 @@ text.textContent = "GUI TOOLKIT";
 guiToolkit.appendChild(text);
 
 const codeBlock: CodeBlock = document.createElement('div', { is: "code-block" }) as CodeBlock;
-codeBlock.Configure(data.testCode, "cpp", false);
+codeBlock.Configure(data.testCode, false);
 guiToolkit.appendChild(codeBlock);
 
 const table: Table = document.createElement('table', { is: 'table-element' }) as Table;
