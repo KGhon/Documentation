@@ -1,7 +1,7 @@
 {
   "Test": [
     [
-      "<span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> ThisIsAFunction</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#4EC9B0\">UMyClass</span><span style=\"color:#569CD6\">*</span><span style=\"color:#9CDCFE\"> thing</span><span style=\"color:#D4D4D4\">)</span></span>",
+      "<span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> ChangingThis</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#4EC9B0\">UMyClass</span><span style=\"color:#569CD6\">*</span><span style=\"color:#9CDCFE\"> thing</span><span style=\"color:#D4D4D4\">)</span></span>",
       "This function does yada yada yada"
     ],
     [
