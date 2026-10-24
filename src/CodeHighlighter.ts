@@ -144,8 +144,8 @@ async function processDirectory(
             const isTxt = file.name.endsWith('.txt');
             const isCsv = file.name.endsWith('.csv');
 
-            // Matches: variableName.ext OR variableName.language.ext (e.g. Test.csv or Test.csharp.csv)
-            const match = file.name.match(/^(.+?)(?:\.(cpp|csharp|lua))?\.(txt|csv)$/i);
+            // Matches: variableName.ext OR variableName-language.ext (e.g. Test.csv or Test-csharp.csv)
+            const match = file.name.match(/^(.+?)(?:-(cpp|csharp|lua))?\.(txt|csv)$/i);
             if (!match) continue;
 
             const varName = match[1];
