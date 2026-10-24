@@ -1,13 +1,13 @@
 import { defineConfig } from 'vite';
 import plugin from '@vitejs/plugin-react';
 import { resolve } from 'path';
-import { CodeHighlighterPlugin } from "./src/CodeHighlighter.ts";
+import { HighlightCode } from "./src/CodeHighlighter.ts";
 
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [
         plugin(),
-        CodeHighlighterPlugin("./data")
+        HighlightCode("data")
     ],
     base: '/Documentation/', 
     appType: 'mpa',
@@ -22,11 +22,11 @@ export default defineConfig({
         emptyOutDir: true,
         rollupOptions: {
             input: {
-                main: resolve(__dirname, 'index.html'),
-                AudioProduction: resolve(__dirname, 'Pages/AudioProduction/index.html'),
-                UnrealEngine: resolve(__dirname, 'Pages/UnrealEngine/index.html'),
-                Unity: resolve(__dirname, 'Pages/Unity/index.html'),
-                Godot: resolve(__dirname, 'Pages/Godot/index.html'),
+                main: resolve(import.meta.dirname, 'index.html'),
+                AudioProduction: resolve(import.meta.dirname, 'Pages/AudioProduction/index.html'),
+                UnrealEngine: resolve(import.meta.dirname, 'Pages/UnrealEngine/index.html'),
+                Unity: resolve(import.meta.dirname, 'Pages/Unity/index.html'),
+                Godot: resolve(import.meta.dirname, 'Pages/Godot/index.html'),
             },
         },
     }

@@ -1,2 +1,2 @@
-"void ChangingThis(UMyClass* thing)", "This function does yada yada yada"
-"FString Lalala(bool* thing)", "Thinga ma bob"
+"void ChangingThis(UMyClass* thing)","This function does yada yada yada"
+"FString Lalala(bool* thing)","Thinga ma bob"
