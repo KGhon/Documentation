@@ -55,7 +55,7 @@ export class Table extends HTMLTableElement
                     cell.style.borderRightWidth = cellBorderWidth.toString() + "px";
                 }
                 cell.style.padding = "10px";
-                cell.textContent = content[i][j]
+                cell.innerHTML = content[i][j]
                 cell.classList.add('c4');
                 row.appendChild(cell);
             }

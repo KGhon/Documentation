@@ -26,6 +26,7 @@ async function GetHighlighter(): Promise<HighlighterCore>
     return highlighter;
 }
 
+// Used for full .txt code files (keeps the <pre> block styling)
 async function formatCodeToHtml(code: string, lang: SupportedLanguage): Promise<string>
 {
     const hl = await GetHighlighter();
@@ -37,75 +38,157 @@ async function formatCodeToHtml(code: string, lang: SupportedLanguage): Promise<
     );
 }
 
-async function getAllTsFiles(dir: string): Promise<string[]>
+// Used for .csv table cells (strips the outer <pre><code> wrapper to leave just the inner spans)
+async function formatCsvCellToHtml(code: string, lang: SupportedLanguage): Promise<string>
 {
-    let results: string[] = [];
+    const hl = await GetHighlighter();
+    const html = await hl.codeToHtml(code, { lang, theme: 'dark-plus' });
+
+    return html.replace(/^<pre[^>]*><code>([\s\S]*)<\/code><\/pre>$/, '$1');
+}
+
+// Robust CSV line parser that respects quotes
+function parseCsvLine(text: string): string[]
+{
+    const result: string[] = [];
+    let inQuotes = false;
+    let current = '';
+
+    for (let i = 0; i < text.length; i++)
+    {
+        const char = text[i];
+        if (char === '"' && (i === 0 || text[i - 1] !== '\\'))
+        {
+            inQuotes = !inQuotes;
+        }
+        else if (char === ',' && !inQuotes)
+        {
+            result.push(current.trim().replace(/^["']|["']$/g, ''));
+            current = '';
+        }
+        else
+        {
+            current += char;
+        }
+    }
+    result.push(current.trim().replace(/^["']|["']$/g, ''));
+    return result;
+}
+
+function parseCsvTo2DArray(csvText: string): string[][]
+{
+    const lines = csvText.trim().split(/\r?\n/);
+    return lines
+        .filter(line => line.trim().length > 0)
+        .map(line => parseCsvLine(line));
+}
+
+async function getTargetDirectories(dir: string): Promise<string[]>
+{
+    let dirs: string[] = [];
     try
     {
         const list = await fsPromises.readdir(dir, { withFileTypes: true });
+        let hasValidFiles = false;
+
         for (const file of list)
         {
             const res = path.resolve(dir, file.name);
             if (file.isDirectory())
             {
-                results = results.concat(await getAllTsFiles(res));
+                dirs = dirs.concat(await getTargetDirectories(res));
             }
-            else if (file.name.endsWith('.ts'))
+            else if (file.name.endsWith('.txt') || file.name.endsWith('.csv'))
             {
-                results.push(res);
+                hasValidFiles = true;
             }
+        }
+
+        if (hasValidFiles)
+        {
+            dirs.push(dir);
         }
     } catch (e)
     {
         // Directory might not exist yet
     }
-    return results;
+    return dirs;
 }
 
-async function processFileContent(
-    filePath: string,
-    absoluteDir: string
+async function processDirectory(
+    dirPath: string,
+    defaultLang: SupportedLanguage
 ): Promise<void>
 {
     try
     {
-        const code = await fsPromises.readFile(filePath, 'utf-8');
-        const normalizedId = filePath.replace(/\\/g, '/');
+        const list = await fsPromises.readdir(dirPath, { withFileTypes: true });
+        const targetFiles = list.filter(
+            file => !file.isDirectory() && (file.name.endsWith('.txt') || file.name.endsWith('.csv'))
+        );
 
-        if (!normalizedId.startsWith(absoluteDir) || !normalizedId.endsWith('.ts'))
+        if (targetFiles.length === 0)
         {
             return;
         }
 
-        const regex = /(?:(const|let|var)\s+)?([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*(?:(cpp|csharp|lua)\s*)?`((?:[^`\\]|\\.)*)`/g;
-        const matches = [...code.matchAll(regex)];
+        const folderName = path.basename(dirPath);
+        const parentDir = path.dirname(dirPath);
+        const jsonPath = path.join(parentDir, `${folderName}.json`);
 
-        const fileRecord: Record<string, string> = {};
+        const fileRecord: Record<string, any> = {};
 
-        if (matches.length > 0)
+        for (const file of targetFiles)
         {
-            for (const match of matches)
+            const filePath = path.join(dirPath, file.name);
+            const isTxt = file.name.endsWith('.txt');
+            const isCsv = file.name.endsWith('.csv');
+
+            // Matches: variableName.ext OR variableName.language.ext (e.g. Test.csv or Test.csharp.csv)
+            const match = file.name.match(/^(.+?)(?:\.(cpp|csharp|lua))?\.(txt|csv)$/i);
+            if (!match) continue;
+
+            const varName = match[1];
+            const fileLang = (match[2] ? match[2].toLowerCase() : defaultLang) as SupportedLanguage;
+            const content = await fsPromises.readFile(filePath, 'utf-8');
+
+            if (isTxt)
             {
-                const varName = match[2];
-                const lang = (match[3] || 'cpp') as SupportedLanguage;
-                const snippet = match[4] || '';
-                const htmlOutput = await formatCodeToHtml(snippet.trim(), lang);
+                const htmlOutput = await formatCodeToHtml(content.trim(), fileLang);
                 fileRecord[varName] = htmlOutput;
+            }
+            else if (isCsv)
+            {
+                const grid = parseCsvTo2DArray(content);
+
+                // Apply syntax highlighting directly to the first element of every row using the correct language
+                for (const row of grid)
+                {
+                    if (row.length > 0)
+                    {
+                        const firstItem = row[0] || '';
+                        row[0] = await formatCsvCellToHtml(firstItem.trim(), fileLang);
+                    }
+                }
+
+                fileRecord[varName] = grid;
             }
         }
 
-        const jsonPath = filePath.replace(/\.ts$/, '.json');
         await fsPromises.writeFile(jsonPath, JSON.stringify(fileRecord, null, 2), 'utf-8');
     } catch (err)
     {
-        console.error(`[CodeHighlighterPlugin] Error processing file ${filePath}:`, err);
+        console.error(`[CodeHighlighterPlugin] Error processing directory ${dirPath}:`, err);
     }
 }
 
 /**
  * Vite Plugin
  */
-export function CodeHighlighterPlugin(targetDirectory: string): Plugin
+export function CodeHighlighterPlugin(
+    targetDirectory: string,
+    defaultLang: SupportedLanguage = 'cpp'
+): Plugin
 {
     const absoluteDir = path.resolve(process.cwd(), targetDirectory).replace(/\\/g, '/');
 
@@ -114,56 +197,33 @@ export function CodeHighlighterPlugin(targetDirectory: string): Plugin
 
         async buildStart()
         {
-            const files = await getAllTsFiles(absoluteDir);
+            const dirs = await getTargetDirectories(absoluteDir);
 
-            for (const file of files)
+            for (const dir of dirs)
             {
-                this.addWatchFile(file);
-                await processFileContent(file, absoluteDir);
+                const list = await fsPromises.readdir(dir, { withFileTypes: true });
+                for (const file of list)
+                {
+                    if (file.name.endsWith('.txt') || file.name.endsWith('.csv'))
+                    {
+                        this.addWatchFile(path.join(dir, file.name));
+                    }
+                }
+                await processDirectory(dir, defaultLang);
             }
 
-            console.log(`[CodeHighlighterPlugin] Generated companion JSONs for ${files.length} files in ${targetDirectory}`);
+            console.log(`[CodeHighlighterPlugin] Generated companion JSONs for ${dirs.length} folders in ${targetDirectory}`);
         },
 
         async watchChange(id)
         {
             const normalizedId = id.replace(/\\/g, '/');
-            if (normalizedId.startsWith(absoluteDir) && normalizedId.endsWith('.ts'))
+            if (normalizedId.startsWith(absoluteDir) && (normalizedId.endsWith('.txt') || normalizedId.endsWith('.csv')))
             {
-                await processFileContent(id, absoluteDir);
-                console.log(`[CodeHighlighterPlugin] Updated JSON for: ${path.relative(absoluteDir, id)}`);
+                const dirPath = path.dirname(id);
+                await processDirectory(dirPath, defaultLang);
+                console.log(`[CodeHighlighterPlugin] Updated JSON for folder: ${path.basename(dirPath)}`);
             }
-        },
-
-        transform(code, id)
-        {
-            const normalizedId = id.replace(/\\/g, '/');
-
-            if (!normalizedId.startsWith(absoluteDir) || !normalizedId.endsWith('.ts'))
-            {
-                return null;
-            }
-
-            const regex = /(?:(const|let|var)\s+)?([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*(?:(cpp|csharp|lua)\s*)?`((?:[^`\\]|\\.)*)`/g;
-            const matches = [...code.matchAll(regex)];
-
-            if (matches.length === 0)
-            {
-                return null;
-            }
-
-            const jsonFileName = path.basename(id).replace(/\.ts$/, '.json');
-
-            const newCode = code.replace(regex, (_, declaration, varName) =>
-            {
-                const declPrefix = declaration ? `${declaration} ` : '';
-                return `${declPrefix}${varName} = __CODE_SNIPPETS__["${varName}"]`;
-            });
-
-            return {
-                code: `import __CODE_SNIPPETS__ from './${jsonFileName}';\n${newCode}`,
-                map: null
-            };
         }
     };
 }

@@ -1,5 +1,4 @@
-export const testCode =
-`void UEditorUtilityWidgetSubclass::NativeConstruct()
+void UEditorUtilityWidgetSubclass::NativeConstruct()
 {
 	//Pass the PIE world if the widget is already open in the editor
 	FWorldDelegates::OnPreWorldInitialization.AddUObject(this, &UKEditorUtilityWidget::BeginPIE);
@@ -28,4 +27,4 @@ void UKEditorUtilityWidgetSubclass::BeginPIE(UWorld* world, FWorldInitialization
 {
 	//Pass the world to child widgets that will call SpawnDebugActor() using Blueprint
 	OnBeginPIE(world);
-}`;
+}

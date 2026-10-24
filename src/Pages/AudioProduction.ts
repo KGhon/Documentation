@@ -5,7 +5,7 @@ import { DocPage } from '../Templates/DocPage.ts';
 import pages from '../../data/AudioProduction/pages.json';
 import { CodeBlock } from '../Templates/CodeBlock.ts';
 import { Table } from '../Templates/Table.ts';
-import * as GUIToolkitCode from "../../data/AudioProduction/GUIToolkit/GUIToolkit_Code.json";
+import * as GUIToolkitCode from "../../data/AudioProduction/GUIToolkit.json";
 
 const spa: DocPage = document.createElement('div', { is: 'doc-page' }) as DocPage;
 spa.PopulateNavigation(pages.pages as [string, string, boolean, boolean][]);
@@ -17,18 +17,11 @@ text.textContent = "GUI TOOLKIT";
 guiToolkit.appendChild(text);
 
 const codeBlock: CodeBlock = document.createElement('div', { is: "code-block" }) as CodeBlock;
-codeBlock.Configure(GUIToolkitCode.testCode, false);
+codeBlock.Configure(GUIToolkitCode.TestCode, false);
 guiToolkit.appendChild(codeBlock);
 
 const table: Table = document.createElement('table', { is: 'table-element' }) as Table;
-let thing: string[][] = [
-    ["function one", "description one"],
-    ["function two", "description two"],
-    ["function three", "description three"],
-    ["function four", "description four"],
-    ["function five", "description five"],
-]
-table.Configure(thing);
+table.Configure(GUIToolkitCode.Test);
 guiToolkit.appendChild(table);
 
 spa.AddContentPage("GUI Toolkit", guiToolkit);
