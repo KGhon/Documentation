@@ -4,7 +4,7 @@ import '../CustomElements.ts';
 import { DocPage } from '../Templates/DocPage.ts';
 import pages from '../../data/AudioProduction/pages.json';
 import { CodeBlock } from '../Templates/CodeBlock.ts';
-import { Table } from '../Templates/Table.ts';
+//import { Table } from '../Templates/Table.ts';
 import * as GUIToolkitCode from "../../data/AudioProduction/GUIToolkit.json";
 
 const spa: DocPage = document.createElement('div', { is: 'doc-page' }) as DocPage;
@@ -17,11 +17,7 @@ text.textContent = "GUI TOOLKIT";
 guiToolkit.appendChild(text);
 
 const codeBlock: CodeBlock = document.createElement('div', { is: "code-block" }) as CodeBlock;
-codeBlock.Configure(GUIToolkitCode.TestCode, false);
+codeBlock.Configure(GUIToolkitCode.Example, false);
 guiToolkit.appendChild(codeBlock);
-
-const table: Table = document.createElement('table', { is: 'table-element' }) as Table;
-table.Configure(GUIToolkitCode.Test);
-guiToolkit.appendChild(table);
 
 spa.AddContentPage("GUI Toolkit", guiToolkit);

@@ -1,0 +1,83 @@
+[ignore,#9CDCFE]
+[filename,#9CDCFE]
+[directory,#9CDCFE]
+[gui, #9CDCFE]
+[scaleContainer, #9CDCFE]
+[verticalContainer,#9CDCFE]
+[horizontalContainer,#9CDCFE]
+[button1,#9CDCFE]
+[text1,#9CDCFE]
+[button2,#9CDCFE]
+[text2,#9CDCFE]
+[displayText,#9CDCFE]
+[gfx,#F78279]
+[w,#F78279]
+[h,#F78279]
+--Store the GUIToolkit.lua file in the same location as the script that requires it. These lines load the GUIToolkit for use in this script.
+ignore, filename = reaper.get_action_context()
+directory = filename:match('^.+'..package.config:sub(1, 1))
+dofile(directory.."GUIToolkit_Kevin.lua")
+
+function SetDisplayedText(text)
+    displayText:SetText(text)
+end
+
+--Instantiate a native window.
+gfx.init("MyGUI", 400, 300, 0, 100, 100)
+
+--Instantiate a GUIContext.
+gui = GUIContext:New()
+
+--Instantiating a new UI element.
+scaleContainer = ScaleContainer:New("scale", 0, 0, gfx.w, gfx.h)
+
+--Configure desired settings on the UI element.
+scaleContainer:SetContentPadding(30, 30, 30, 30)
+scaleContainer:SetNormalColor(30, 30, 30, 1)
+
+--Set the root of the GUIContext instance.
+gui:SetRoot(scaleContainer)
+
+verticalContainer = VerticalContainer:New("vertical", 0, 0, gfx.w, gfx.h)
+verticalContainer:SetNormalColor(50, 50, 50, 1)
+
+--Make the UI element a child of another UI element.
+scaleContainer:AddChild(verticalContainer)
+
+horizontalContainer = HorizontalContainer:New("horizontal", 0, 0, gfx.w, 120)
+verticalContainer:AddChild(horizontalContainer)
+
+button1 = Button:New("button 1", 0, 0, gfx.w, gfx.h, false)
+button1:SetMargins(20, 20, 20, 20)
+button1:SetBorders(10, 10, 10, 10)
+button1:SetBorderColor(80, 80, 80, 1)
+--Assign a function to be called when certain UI events occur on a UI element. This event doesn't pass any values, but if it did you could receive them here to be used locally within the function body. ie. function(value1, value2, ...)
+button1:AssignOnClicked(
+    function()
+        displayText:SetText("Hello")
+    end
+)
+horizontalContainer:AddChild(button1)
+text1 = Text:New("text 1", 0, 0, gfx.w, gfx.h)
+text1:SetText("Hello")
+text1:SetFont(2)
+button1:AddChild(text1)
+
+--Use Duplicate() to more efficiently instantiate similar UI elements.
+button2 = button1:Duplicate()
+button2:AssignOnClicked(
+    function()
+        SetDisplayedText(text2:GetText())
+    end
+)
+horizontalContainer:AddChild(button2)
+text2 = Text:New("text 2", 0, 0, gfx.w, gfx.h)
+text2:SetText("World")
+button2:AddChild(text2)
+
+displayText = Text:New("display", 0, 0, gfx.w, gfx.h)
+displayText:SetText("Click a button")
+verticalContainer:AddChild(displayText)
+
+--Start running the GUIContext after all setup is complete
+gui:Init()
