@@ -20,24 +20,38 @@ body {
     color: var(--text-color);
 }
 
+p {
+    margin: 8px 0px 8px 0px;
+}
+
+ul {
+    margin: 8px 0px 8px 0px;
+}
+
 .c1 {
+    margin-top: 32px;
     font-size: 32px;
+    color: #C97CFC;
 }
 
 .c2 {
-    font-size: 28px;
+    margin-top: 16px;
+    font-size: 24px;
+    color: #E4C0FC;
 }
 
 .c3 {
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .c4 {
     font-size: inherit;
+    white-space: pre-wrap;
 }
 
-.c5{
+.c5 {
     font-size: inherit;
+    white-space: pre-wrap;
 }
 
 .folder-link {

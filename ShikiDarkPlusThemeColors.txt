@@ -1,0 +1,5 @@
+Lua
+keyword: #569CD6
+local variable: #9CDCFE
+class: #4EC9B0
+red: #F78279

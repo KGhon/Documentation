@@ -70,8 +70,6 @@ async function ProcessDirectory(dirPath: string, defaultLang: string): Promise<v
     for (const file of targetFiles)
     {
         const filePath = path.join(dirPath, file.name);
-        const isTxt = file.name.endsWith('.txt');
-        const isCsv = file.name.endsWith('.csv');
 
         const match = file.name.match(/^(.+?)-([a-z]+)\.(txt|csv)$/i);
         if (!match)
@@ -92,15 +90,30 @@ async function ProcessDirectory(dirPath: string, defaultLang: string): Promise<v
             }
         );
 
-        if (isTxt)
+        if (file.name.endsWith('.txt'))
         {
             let htmlOutput = await (await GetHighlighter()).codeToHtml(content.trim(), { lang: language, theme: 'dark-plus' });
             htmlOutput = htmlOutput.replace('<pre class="shiki', '<pre style="margin: 0; padding: 20px; tab-size: 4; white-space: pre-wrap; word-break: break-word;" class="shiki');
+
+            for (const highlight of postHighlights)
+            {
+                htmlOutput = htmlOutput.replace(
+                    new RegExp(
+                        `<span\\s+style\\s*=\\s*["'][^"']*color\\s*:\\s*[^"'>]*?["']>(\\s*${highlight[0]}\\s*)<\\/span>`,
+                        "g"
+                    ),
+                    (_fullMatch: string, capturedTerm: string) =>
+                    {
+                        return `<span style="color: ${highlight[1]}">${capturedTerm}</span>`;
+                    }
+                );
+            }
+
             fileRecord[match[1]] = htmlOutput;
         }
-        else if (isCsv)
+        else if (file.name.endsWith('.csv'))
         {
-            const data: string[][] = parse(content);
+            const data: string[][] = parse(content, { skipEmptyLines: true });
 
             for (const row of data)
             {
@@ -112,21 +125,24 @@ async function ProcessDirectory(dirPath: string, defaultLang: string): Promise<v
                 }
             }
 
-            fileRecord[match[1]] = data;
-        }
-
-        for (const highlight of postHighlights)
-        {
-            fileRecord[match[1]] = fileRecord[match[1]].replace(
-                new RegExp(
-                    `<span\\s+style\\s*=\\s*["'][^"']*color\\s*:\\s*[^"'>]*?["']>(\\s*${highlight[0]}\\s*)<\\/span>`,
-                    "g"
-                ),
-                (_fullMatch: string, capturedTerm: string) =>
+            for (const highlight of postHighlights)
+            {
+                for (const row of (data as string[][]))
                 {
-                    return `<span style="color: ${highlight[1]}">${capturedTerm}</span>`;
+                    row[0] = row[0].replace(
+                        new RegExp(
+                            `<span\\s+style\\s*=\\s*["'][^"']*color\\s*:\\s*[^"'>]*?["']>(\\s*${highlight[0]}\\s*)<\\/span>`,
+                            "g"
+                        ),
+                        (_fullMatch: string, capturedTerm: string) =>
+                        {
+                            return `<span style="color: ${highlight[1]}">${capturedTerm}</span>`;
+                        }
+                    );
                 }
-            );
+            }
+
+            fileRecord[match[1]] = data;
         }
     }
 

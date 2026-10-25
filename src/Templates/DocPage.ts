@@ -23,7 +23,7 @@ export class DocPage extends BasePage
 
         const navigationDiv: HTMLDivElement = document.createElement('div');
         navigationDiv.style.flexDirection = "column";
-        navigationDiv.style.width = "30%";
+        navigationDiv.style.width = "25%";
         postHeader.appendChild(navigationDiv);
 
         this.navigationColumn = document.createElement('div', { is: 'navigation-column' }) as NavigationColumn;

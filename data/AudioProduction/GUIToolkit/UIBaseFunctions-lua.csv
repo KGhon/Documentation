@@ -1,0 +1,23 @@
+[bool,#569CD6]
+[int,#569CD6]
+[float,#569CD6]
+[string,#569CD6]
+[UIBase,#4EC9B0]
+"function New(string id, int posX, int posY, int width, int height)","Constructor"
+"function Duplicate(string newID)","Use duplicate to quickly make a copy of any UI element previously created in code (not including children, event function assignments, or items/options)."
+"function AddChild()","Add a child to the UI element. Only HorizontalContainer, VerticalContainer, ScrollContainer, and TabContainer account for multiple children."
+"function RemoveChild()","Remove a child from the UI element."
+"function RemoveChildAtIndex(UIBase uiBase)","Remove a child from the UI element at the specified index."
+"function SetEnabled(bool enable)","Enable and disable input for the UI element."
+"function SetMargins(int left, int top, int right, int bottom)","Set the margins of the element in pixels, which shrink the element's area."
+"function SetBorders(int left, int top, int right, int bottom)","Set the borders of the element in pixels, which shrinks the element's area post-margins."
+"function SetContentPadding(int left, int top, int right, int bottom)","Set the content padding of the element in pixels, which shrinks the area of contained elements like an extra border applied before the child's margins."
+"function SetRatio(float ratio)","When the element is an immediate child of a HorizontalContainer or VerticalContainer, this element will be sized based on its ratio divided by the total ratio values of all immediate children."
+"function SetBorderColor(int red, int green, int blue, float alpha)","Set colors for the UI element. RGB values are on the number range 0-255 and alpha 0-1."
+"function SetNormalColor(int red, int green, int blue, float alpha)","Set colors for the UI element. RGB values are on the number range 0-255 and alpha 0-1."
+"function SetHoveredColor(int red, int green, int blue, float alpha)","Set colors for the UI element. RGB values are on the number range 0-255 and alpha 0-1."
+"function SetPressedColor(int red, int green, int blue, float alpha)","Set colors for the UI element. RGB values are on the number range 0-255 and alpha 0-1."
+"function SetDisabledColor(int red, int green, int blue, float alpha)","Set colors for the UI element. RGB values are on the number range 0-255 and alpha 0-1."
+"function SetActiveColor(int red, int green, int blue, float alpha)","Set colors for the UI element. RGB values are on the number range 0-255 and alpha 0-1."
+"function SetActiveHoveredColor(int red, int green, int blue, float alpha)","Set colors for the UI element. RGB values are on the number range 0-255 and alpha 0-1."
+"function SetActivePressedColor(int red, int green, int blue, float alpha)","Set colors for the UI element. RGB values are on the number range 0-255 and alpha 0-1."

@@ -1,0 +1,3 @@
+"function New()","Constructor"
+"function SetRoot()","Set the root UI element. All UI elements should be a descendant of the root."
+"function Init()","Call after all UI is setup."
