@@ -5,6 +5,7 @@ export class BasePage extends HTMLDivElement
     protected header: Header;
     protected content: HTMLDivElement;
     protected contentPages: Map<string, HTMLElement> = new Map<string, HTMLElement>;
+    protected currentPage: HTMLElement | null = null;
 
     public constructor()
     {
@@ -33,10 +34,15 @@ export class BasePage extends HTMLDivElement
     {
         if (this.contentPages.has(pageName))
         {
-            this.content.innerHTML = "";
             const page: HTMLElement = this.contentPages.get(pageName)!;
+            if (this.currentPage == page)
+            {
+                return null;
+            }
+            this.content.innerHTML = "";
             this.content.appendChild(page)
             window.history.pushState(pageName, '', pageName);
+            this.currentPage = page;
             return page;
         }
 

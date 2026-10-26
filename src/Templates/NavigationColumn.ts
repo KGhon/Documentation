@@ -3,6 +3,7 @@ import { Divider } from './Divider.ts';
 
 export class NavigationColumn extends HTMLDivElement
 {
+    private pageName: HTMLLabelElement;
     private folders: Map<string, Folder> = new Map();
 
     public constructor()
@@ -22,11 +23,11 @@ export class NavigationColumn extends HTMLDivElement
         this.style.borderColor = "var(--border-color)";
         this.style.boxSizing = "border-box";
 
-        const label: HTMLLabelElement = document.createElement('label');
-        label.style.textIndent = "20px";
-        label.style.fontSize = "24px";
-        label.textContent = "Site";
-        this.appendChild(label);
+        this.pageName = document.createElement('label');
+        this.pageName.style.textIndent = "20px";
+        this.pageName.style.fontSize = "24px";
+        this.pageName.textContent = "Site";
+        this.appendChild(this.pageName);
 
         const divider: Divider = document.createElement('div', { is: 'divider-element' }) as Divider;
         this.appendChild(divider);
@@ -37,7 +38,7 @@ export class NavigationColumn extends HTMLDivElement
         for (const [name, path, isLink, isFolder] of items)
         {
             let folder: Folder;
-            if (this.folders.has(path))
+            if (this.folders.has(path) && path != "")
             {
                 folder = this.folders.get(path)!;
                 if (isFolder)
@@ -100,6 +101,11 @@ export class NavigationColumn extends HTMLDivElement
                 {
                     const link: HTMLAnchorElement = document.createElement('a');
                     link.textContent = name;
+                    link.addEventListener("click", (evt) =>
+                    {
+                        evt.preventDefault()
+                        callback(name);
+                    });
                     this.appendChild(link);
                 }
             }
@@ -110,5 +116,10 @@ export class NavigationColumn extends HTMLDivElement
         {
             this.appendChild(value);
         }
+    }
+
+    public SetPageName(name: string)
+    {
+        this.pageName.textContent = name;
     }
 }

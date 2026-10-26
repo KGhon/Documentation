@@ -2,10 +2,10 @@ import { Divider } from './Divider.ts';
 
 export class TableOfContents extends HTMLDivElement
 {
+    private pageName: HTMLLabelElement;
     private indentation: number = 30;
-    private label: HTMLLabelElement;
 
-    public constructor(name:string)
+    public constructor()
     {
         super();
         this.style.padding = "8px";
@@ -22,11 +22,11 @@ export class TableOfContents extends HTMLDivElement
         this.style.borderColor = "var(--border-color)";
         this.style.boxSizing = "border-box";
 
-        this.label = document.createElement('label');
-        this.label.style.textIndent = "20px";
-        this.label.style.fontSize = "24px";
-        this.label.textContent = name;
-        this.appendChild(this.label);
+        this.pageName = document.createElement('label');
+        this.pageName.style.textIndent = "20px";
+        this.pageName.style.fontSize = "24px";
+        this.pageName.textContent = "Contents";
+        this.appendChild(this.pageName);
 
         const divider: Divider = document.createElement('div', { is: 'divider-element' }) as Divider;
         this.appendChild(divider);
@@ -59,8 +59,8 @@ export class TableOfContents extends HTMLDivElement
         }
     }
 
-    public SetTitle(name: string)
+    public SetPageName(name: string)
     {
-        this.label.textContent = name;
+        this.pageName.textContent = name;
     }
 }

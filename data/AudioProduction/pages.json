@@ -1,6 +1,6 @@
 {
   "pages": [
-    [ "Audio Production", "", false, true ],
+    ["Audio Production", "", false, true],
     [ "GUI Toolkit", "AudioProduction", true, false ]
   ]
 }

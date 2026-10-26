@@ -47,8 +47,18 @@ export class DocPage extends BasePage
     public ChangePage(pageName: string) : HTMLElement | null
     {
         const currentPage: HTMLElement | null = super.ChangePage(pageName);
+        if (currentPage == null)
+        {
+            return null;
+        }
+
         this.PopulateTableOfContents(pageName, currentPage);
         return currentPage;
+    }
+
+    public SetNavigationPageName(name: string)
+    {
+        this.navigationColumn.SetPageName(name);
     }
 
     public PopulateNavigation(items: [string, string, boolean, boolean][])
@@ -62,7 +72,7 @@ export class DocPage extends BasePage
         {
             return;
         }
-        this.tableOfContents.SetTitle(pageName);
+        this.tableOfContents.SetPageName(pageName);
         this.tableOfContents.Populate(startElement!);
     }
 }
