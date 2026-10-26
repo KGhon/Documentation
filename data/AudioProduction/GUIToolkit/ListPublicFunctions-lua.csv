@@ -1,0 +1,24 @@
+[bool,#569CD6]
+[int,#569CD6]
+[float,#569CD6]
+[string,#569CD6]
+[function, #C586C0]
+"function New(string id, int posX, int posY, int width, int height)","Constructor"
+"function AddItem(string item)","Append the list with a new item."
+"function RemoveItem(string item)","Remove an item with a matching name."
+"function RemoveItemIndex(int index)","Remove an item at the index."
+"function ClearItems()","Clear all items from the list."
+"function EnableMultiselection(bool enable)","Enable multiselection or disable to only allow one selection at a time."
+"function Select(int index)","Select an item."
+"function ClearSelection()","Clear all selected items."
+"function SetScrollValue(int value)","Set the scroll value in pixels."
+"function SetScrollSpeed(float speed)","Set the scroll speed multiplier value."
+"function SetScrollbarWidth(int width)","Set the width of the scrollbar in pixels."
+"function GetSelectionIndices() : {string} indices","Get the selected indices."
+"function GetItemAtIndex(int index) : string item","Get the name of the item at the index."
+"function AssignOnSelectionChanged(function func) : int index, string item, bool isSelected","Assign a function to be called when the selection changes."
+"function UnassignOnSelectionChanged(function func)","Unassign a function from being called when the selection changes."
+"function SetTextColor(int red, int green, int blue, float alpha)","Set color for the UI element. RGB values are on the number range 0-255 and alpha 0-1."
+"function SetScrollbarColor(int red, int green, int blue, float alpha)","Set color for the UI element. RGB values are on the number range 0-255 and alpha 0-1."
+"function SetScrollbarThumbColor(int red, int green, int blue, float alpha)","Set color for the UI element. RGB values are on the number range 0-255 and alpha 0-1."
+"function SetScrollbarPressedColor(int red, int green, int blue, float alpha)","Set color for the UI element. RGB values are on the number range 0-255 and alpha 0-1."

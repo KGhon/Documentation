@@ -1,0 +1,9 @@
+[int,#569CD6]
+[float,#569CD6]
+[string,#569CD6]
+"function New(string id, int posX, int posY, int width, int height)","Constructor"
+"function SetAlignment(string align)","Set the alignment of the text. Valid values are 'left', 'center', or 'right'."
+"function SetText(string text)","Set the displayed text."
+"function SetFont(int index)","Set the font index for the displayed text. 1 = Default, 2 = Subheader, 3 = Header (defined in the GUIContext class). See Reaper's documentation on the gfx.setfont() function."
+"function GetText() : string textValue","Get the displayed text."
+"function SetTextColor(int red, int green, int blue, float alpha)","Set the color of the displayed text. RGB values are on the number range 0-255 and alpha 0-1."

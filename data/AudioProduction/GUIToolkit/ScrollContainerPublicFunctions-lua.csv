@@ -1,0 +1,11 @@
+[int,#569CD6]
+[float,#569CD6]
+[string,#569CD6]
+"function New(string id, int posX, int posY, int width, int height)","Constructor"
+"function SetScrollValue(int value)","Set the scroll value of the container in pixels."
+"function SetScrollSpeed(float speed)","Set the scroll speed multiplier of the container."
+"function SetScrollbarWidth(int width)","Set the width of the scrollbar in pixels."
+"function SetSeparation(int separation)","Set vertical spacing between immediate child elements within the container in pixels."
+"function SetScrollbarColor(int red, int green, int blue, float alpha)","Set color for the UI element. RGB values are on the number range 0-255 and alpha 0-1."
+"function SetScrollbarThumbColor(int red, int green, int blue, float alpha)","Set color for the UI element. RGB values are on the number range 0-255 and alpha 0-1."
+"function SetScrollbarPressedColor(int red, int green, int blue, float alpha)","Set color for the UI element. RGB values are on the number range 0-255 and alpha 0-1."

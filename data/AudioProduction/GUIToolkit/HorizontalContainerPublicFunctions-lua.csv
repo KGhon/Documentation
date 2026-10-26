@@ -1,0 +1,4 @@
+[int,#569CD6]
+[string,#569CD6]
+"function New(string id, int posX, int posY, int width, int height)","Constructor"
+"function SetSeparation(int separation)","Set horizontal spacing between immediate child elements within the container in pixels."

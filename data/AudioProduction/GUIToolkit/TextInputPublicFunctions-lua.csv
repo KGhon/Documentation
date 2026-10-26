@@ -1,0 +1,12 @@
+[bool,#569CD6]
+[int,#569CD6]
+[float,#569CD6]
+[string,#569CD6]
+[function, #C586C0]
+"function New(string id, int posX, int posY, int width, int height)","Constructor"
+"function SetValue(string value)","Set the text value."
+"function SetFont(int index)","Set the font index for the displayed text. 1 = Default, 2 = Subheader, 3 = Header (defined in the GUIContext class). See Reaper's documentation on the gfx.setfont() function."
+"function GetValue() : string textValue","Get the text value."
+"function AssignOnTextChanged(function func) : string textValue","Assign a function to be called when the text changes."
+"function UnassignOnTextChanged(function func)","Unassign a function from being called when the text changes."
+"function SetTextColor(int red, int green, int blue, float alpha)","Set the color of the displayed text. RGB values are on the number range 0-255 and alpha 0-1."

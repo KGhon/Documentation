@@ -1,0 +1,15 @@
+[bool,#569CD6]
+[int,#569CD6]
+[float,#569CD6]
+[string,#569CD6]
+[function, #C586C0]
+"function New(string id, int posX, int posY, int width, int height)","Constructor"
+"function AddOption(string option)","Append a new option."
+"function RemoveOption(string option)","Remove an option with a matching name."
+"function ClearOptions()","Clear all options."
+"function Select(int index)","Select an option by index."
+"function SelectOption(string option)","Select an option by matching string."
+"function GetSelectedOption() : string option","Get the name of the selected option."
+"function GetSelectedIndex() : int index","Get the index of the selected option."
+"function AssignOnSelectionChanged(function func) : int index, string option","Assign a function to be called when the option selection changes."
+"function UnassignOnSelectionChanged(function func)","Unassign a function from being called when the option selection changes."

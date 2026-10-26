@@ -1,0 +1,11 @@
+[bool,#569CD6]
+[int,#569CD6]
+[float,#569CD6]
+[string,#569CD6]
+[function, #C586C0]
+"function New(string id, int posX, int posY, int width, int height, bool isToggle)","Constructor"
+"function GetToggled() : bool toggled","Get the toggled state of the button if it is a toggle."
+"function AssignOnClicked(function func)","Assign a function to be called when the button is clicked."
+"function AssignOnToggled(function func) : bool toggleValue","Assign a function to be called when the button is toggled."
+"function UnassignOnClicked(function func)","Unassign a function from being called when the button is clicked."
+"function UnassignOnToggled(function func)","Unassign a function from being called when the button is toggled."

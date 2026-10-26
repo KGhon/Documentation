@@ -1,0 +1,3 @@
+[int,#569CD6]
+[string,#569CD6]
+"function New(string id, int posX, int posY, int width, int height, int divWidth, int divHeight)","Constructor"

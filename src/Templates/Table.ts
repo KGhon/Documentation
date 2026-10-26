@@ -35,8 +35,8 @@ export class Table extends HTMLTableElement
                 }
                 else
                 {
-                    cell.style.borderTopWidth = cellBorderWidth.toString() + "px";
-                    cell.style.borderBottomWidth = cellBorderWidth.toString() + "px";
+                    cell.style.borderTopWidth = (cellBorderWidth / 2).toString() + "px";
+                    cell.style.borderBottomWidth = (cellBorderWidth / 2).toString() + "px";
                 }
 
                 if (j == 0)
@@ -51,8 +51,8 @@ export class Table extends HTMLTableElement
                 }
                 else
                 {
-                    cell.style.borderLeftWidth = cellBorderWidth.toString() + "px";
-                    cell.style.borderRightWidth = cellBorderWidth.toString() + "px";
+                    cell.style.borderLeftWidth = (cellBorderWidth / 2).toString() + "px";
+                    cell.style.borderRightWidth = (cellBorderWidth / 2).toString() + "px";
                 }
                 cell.style.padding = "10px";
                 cell.innerHTML = content[i][j]

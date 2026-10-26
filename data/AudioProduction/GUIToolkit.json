@@ -1,6 +1,90 @@
 {
+  "ButtonPublicFunctions": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> New</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">string</span><span style=\"color:#9CDCFE\"> id</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> posX</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> posY</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> width</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> height</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">bool</span><span style=\"color:#9CDCFE\"> isToggle</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Constructor"
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> GetToggled</span><span style=\"color:#D4D4D4\">() : </span><span style=\"color: #569CD6\">bool</span><span style=\"color:#9CDCFE\"> toggled</span></span></code>",
+      "Get the toggled state of the button if it is a toggle."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> AssignOnClicked</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #C586C0\">function</span><span style=\"color:#9CDCFE\"> func</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Assign a function to be called when the button is clicked."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> AssignOnToggled</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #C586C0\">function</span><span style=\"color:#9CDCFE\"> func</span><span style=\"color:#D4D4D4\">) : </span><span style=\"color: #569CD6\">bool</span><span style=\"color:#9CDCFE\"> toggleValue</span></span></code>",
+      "Assign a function to be called when the button is toggled."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> UnassignOnClicked</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #C586C0\">function</span><span style=\"color:#9CDCFE\"> func</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Unassign a function from being called when the button is clicked."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> UnassignOnToggled</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #C586C0\">function</span><span style=\"color:#9CDCFE\"> func</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Unassign a function from being called when the button is toggled."
+    ]
+  ],
+  "DividerPublicFunctions": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#C586C0\">function</span><span style=\"color:#DCDCAA\"> New</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">string</span><span style=\"color:#9CDCFE\"> id</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> posX</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> posY</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> width</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> height</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> divWidth</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> divHeight</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Constructor"
+    ]
+  ],
+  "DropdownPublicFunctions": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> New</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">string</span><span style=\"color:#9CDCFE\"> id</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> posX</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> posY</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> width</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> height</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Constructor"
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> AddOption</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">string</span><span style=\"color:#9CDCFE\"> option</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Append a new option."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> RemoveOption</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">string</span><span style=\"color:#9CDCFE\"> option</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Remove an option with a matching name."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> ClearOptions</span><span style=\"color:#D4D4D4\">()</span></span></code>",
+      "Clear all options."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> Select</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> index</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Select an option by index."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> SelectOption</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">string</span><span style=\"color:#9CDCFE\"> option</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Select an option by matching string."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> GetSelectedOption</span><span style=\"color:#D4D4D4\">() : </span><span style=\"color: #569CD6\">string</span><span style=\"color:#9CDCFE\"> option</span></span></code>",
+      "Get the name of the selected option."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> GetSelectedIndex</span><span style=\"color:#D4D4D4\">() : </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> index</span></span></code>",
+      "Get the index of the selected option."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> AssignOnSelectionChanged</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #C586C0\">function</span><span style=\"color:#9CDCFE\"> func</span><span style=\"color:#D4D4D4\">) : </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> index</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">string</span><span style=\"color:#9CDCFE\"> option</span></span></code>",
+      "Assign a function to be called when the option selection changes."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> UnassignOnSelectionChanged</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #C586C0\">function</span><span style=\"color:#9CDCFE\"> func</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Unassign a function from being called when the option selection changes."
+    ]
+  ],
   "Example": "<pre style=\"margin: 0; padding: 20px; tab-size: 4; white-space: pre-wrap; word-break: break-word;\" class=\"shiki dark-plus\" style=\"background-color:#1E1E1E;color:#D4D4D4\" tabindex=\"0\"><code><span class=\"line\"><span style=\"color:#6A9955\">--Store the GUIToolkit.lua file in the same location as the script that requires it. These lines load the GUIToolkit for use in this script.</span></span>\n<span class=\"line\"><span style=\"color: #9CDCFE\">ignore</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #9CDCFE\">filename</span><span style=\"color:#D4D4D4\"> = </span><span style=\"color:#9CDCFE\">reaper</span><span style=\"color:#D4D4D4\">.</span><span style=\"color:#DCDCAA\">get_action_context</span><span style=\"color:#D4D4D4\">()</span></span>\n<span class=\"line\"><span style=\"color: #9CDCFE\">directory</span><span style=\"color:#D4D4D4\"> = </span><span style=\"color: #9CDCFE\">filename</span><span style=\"color:#D4D4D4\">:</span><span style=\"color:#DCDCAA\">match</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#CE9178\">'^.+'</span><span style=\"color:#D4D4D4\">..</span><span style=\"color:#569CD6\">package.config</span><span style=\"color:#D4D4D4\">:</span><span style=\"color:#DCDCAA\">sub</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#B5CEA8\">1</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#B5CEA8\">1</span><span style=\"color:#D4D4D4\">))</span></span>\n<span class=\"line\"><span style=\"color:#DCDCAA\">dofile</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #9CDCFE\">directory</span><span style=\"color:#D4D4D4\">..</span><span style=\"color:#CE9178\">\"GUIToolkit_Kevin.lua\"</span><span style=\"color:#D4D4D4\">)</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"color:#C586C0\">function</span><span style=\"color:#DCDCAA\"> SetDisplayedText</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#9CDCFE\">text</span><span style=\"color:#D4D4D4\">)</span></span>\n<span class=\"line\"><span style=\"color: #9CDCFE\">    displayText</span><span style=\"color:#D4D4D4\">:</span><span style=\"color:#DCDCAA\">SetText</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#9CDCFE\">text</span><span style=\"color:#D4D4D4\">)</span></span>\n<span class=\"line\"><span style=\"color:#C586C0\">end</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"color:#6A9955\">--Instantiate a native window.</span></span>\n<span class=\"line\"><span style=\"color: #F78279\">gfx</span><span style=\"color:#D4D4D4\">.</span><span style=\"color:#DCDCAA\">init</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#CE9178\">\"MyGUI\"</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#B5CEA8\">400</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#B5CEA8\">300</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#B5CEA8\">0</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#B5CEA8\">100</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#B5CEA8\">100</span><span style=\"color:#D4D4D4\">)</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"color:#6A9955\">--Instantiate a GUIContext.</span></span>\n<span class=\"line\"><span style=\"color: #9CDCFE\">gui</span><span style=\"color:#D4D4D4\"> = </span><span style=\"color:#4EC9B0\">GUIContext</span><span style=\"color:#D4D4D4\">:</span><span style=\"color:#DCDCAA\">New</span><span style=\"color:#D4D4D4\">()</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"color:#6A9955\">--Instantiating a new UI element.</span></span>\n<span class=\"line\"><span style=\"color: #9CDCFE\">scaleContainer</span><span style=\"color:#D4D4D4\"> = </span><span style=\"color:#4EC9B0\">ScaleContainer</span><span style=\"color:#D4D4D4\">:</span><span style=\"color:#DCDCAA\">New</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#CE9178\">\"scale\"</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#B5CEA8\">0</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#B5CEA8\">0</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #F78279\">gfx</span><span style=\"color:#D4D4D4\">.</span><span style=\"color: #F78279\">w</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #F78279\">gfx</span><span style=\"color:#D4D4D4\">.</span><span style=\"color: #F78279\">h</span><span style=\"color:#D4D4D4\">)</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"color:#6A9955\">--Configure desired settings on the UI element.</span></span>\n<span class=\"line\"><span style=\"color: #9CDCFE\">scaleContainer</span><span style=\"color:#D4D4D4\">:</span><span style=\"color:#DCDCAA\">SetContentPadding</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#B5CEA8\">30</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#B5CEA8\">30</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#B5CEA8\">30</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#B5CEA8\">30</span><span style=\"color:#D4D4D4\">)</span></span>\n<span class=\"line\"><span style=\"color: #9CDCFE\">scaleContainer</span><span style=\"color:#D4D4D4\">:</span><span style=\"color:#DCDCAA\">SetNormalColor</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#B5CEA8\">30</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#B5CEA8\">30</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#B5CEA8\">30</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#B5CEA8\">1</span><span style=\"color:#D4D4D4\">)</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"color:#6A9955\">--Set the root of the GUIContext instance.</span></span>\n<span class=\"line\"><span style=\"color: #9CDCFE\">gui</span><span style=\"color:#D4D4D4\">:</span><span style=\"color:#DCDCAA\">SetRoot</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #9CDCFE\">scaleContainer</span><span style=\"color:#D4D4D4\">)</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"color: #9CDCFE\">verticalContainer</span><span style=\"color:#D4D4D4\"> = </span><span style=\"color:#4EC9B0\">VerticalContainer</span><span style=\"color:#D4D4D4\">:</span><span style=\"color:#DCDCAA\">New</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#CE9178\">\"vertical\"</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#B5CEA8\">0</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#B5CEA8\">0</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #F78279\">gfx</span><span style=\"color:#D4D4D4\">.</span><span style=\"color: #F78279\">w</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #F78279\">gfx</span><span style=\"color:#D4D4D4\">.</span><span style=\"color: #F78279\">h</span><span style=\"color:#D4D4D4\">)</span></span>\n<span class=\"line\"><span style=\"color: #9CDCFE\">verticalContainer</span><span style=\"color:#D4D4D4\">:</span><span style=\"color:#DCDCAA\">SetNormalColor</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#B5CEA8\">50</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#B5CEA8\">50</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#B5CEA8\">50</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#B5CEA8\">1</span><span style=\"color:#D4D4D4\">)</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"color:#6A9955\">--Make the UI element a child of another UI element.</span></span>\n<span class=\"line\"><span style=\"color: #9CDCFE\">scaleContainer</span><span style=\"color:#D4D4D4\">:</span><span style=\"color:#DCDCAA\">AddChild</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #9CDCFE\">verticalContainer</span><span style=\"color:#D4D4D4\">)</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"color: #9CDCFE\">horizontalContainer</span><span style=\"color:#D4D4D4\"> = </span><span style=\"color:#4EC9B0\">HorizontalContainer</span><span style=\"color:#D4D4D4\">:</span><span style=\"color:#DCDCAA\">New</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#CE9178\">\"horizontal\"</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#B5CEA8\">0</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#B5CEA8\">0</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #F78279\">gfx</span><span style=\"color:#D4D4D4\">.</span><span style=\"color: #F78279\">w</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#B5CEA8\">120</span><span style=\"color:#D4D4D4\">)</span></span>\n<span class=\"line\"><span style=\"color: #9CDCFE\">verticalContainer</span><span style=\"color:#D4D4D4\">:</span><span style=\"color:#DCDCAA\">AddChild</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #9CDCFE\">horizontalContainer</span><span style=\"color:#D4D4D4\">)</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"color: #9CDCFE\">button1</span><span style=\"color:#D4D4D4\"> = </span><span style=\"color:#4EC9B0\">Button</span><span style=\"color:#D4D4D4\">:</span><span style=\"color:#DCDCAA\">New</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#CE9178\">\"button 1\"</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#B5CEA8\">0</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#B5CEA8\">0</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #F78279\">gfx</span><span style=\"color:#D4D4D4\">.</span><span style=\"color: #F78279\">w</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #F78279\">gfx</span><span style=\"color:#D4D4D4\">.</span><span style=\"color: #F78279\">h</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#569CD6\">false</span><span style=\"color:#D4D4D4\">)</span></span>\n<span class=\"line\"><span style=\"color: #9CDCFE\">button1</span><span style=\"color:#D4D4D4\">:</span><span style=\"color:#DCDCAA\">SetMargins</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#B5CEA8\">20</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#B5CEA8\">20</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#B5CEA8\">20</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#B5CEA8\">20</span><span style=\"color:#D4D4D4\">)</span></span>\n<span class=\"line\"><span style=\"color: #9CDCFE\">button1</span><span style=\"color:#D4D4D4\">:</span><span style=\"color:#DCDCAA\">SetBorders</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#B5CEA8\">10</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#B5CEA8\">10</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#B5CEA8\">10</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#B5CEA8\">10</span><span style=\"color:#D4D4D4\">)</span></span>\n<span class=\"line\"><span style=\"color: #9CDCFE\">button1</span><span style=\"color:#D4D4D4\">:</span><span style=\"color:#DCDCAA\">SetBorderColor</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#B5CEA8\">80</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#B5CEA8\">80</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#B5CEA8\">80</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#B5CEA8\">1</span><span style=\"color:#D4D4D4\">)</span></span>\n<span class=\"line\"><span style=\"color:#6A9955\">--Assign a function to be called when certain UI events occur on a UI element. This event doesn't pass any values, but if it did you could receive them here to be used locally within the function body. ie. function(value1, value2, ...)</span></span>\n<span class=\"line\"><span style=\"color: #9CDCFE\">button1</span><span style=\"color:#D4D4D4\">:</span><span style=\"color:#DCDCAA\">AssignOnClicked</span><span style=\"color:#D4D4D4\">(</span></span>\n<span class=\"line\"><span style=\"color:#C586C0\">    function</span><span style=\"color:#D4D4D4\">()</span></span>\n<span class=\"line\"><span style=\"color: #9CDCFE\">        displayText</span><span style=\"color:#D4D4D4\">:</span><span style=\"color:#DCDCAA\">SetText</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#CE9178\">\"Hello\"</span><span style=\"color:#D4D4D4\">)</span></span>\n<span class=\"line\"><span style=\"color:#C586C0\">    end</span></span>\n<span class=\"line\"><span style=\"color:#D4D4D4\">)</span></span>\n<span class=\"line\"><span style=\"color: #9CDCFE\">horizontalContainer</span><span style=\"color:#D4D4D4\">:</span><span style=\"color:#DCDCAA\">AddChild</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #9CDCFE\">button1</span><span style=\"color:#D4D4D4\">)</span></span>\n<span class=\"line\"><span style=\"color: #9CDCFE\">text1</span><span style=\"color:#D4D4D4\"> = </span><span style=\"color:#4EC9B0\">Text</span><span style=\"color:#D4D4D4\">:</span><span style=\"color:#DCDCAA\">New</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#CE9178\">\"text 1\"</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#B5CEA8\">0</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#B5CEA8\">0</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #F78279\">gfx</span><span style=\"color:#D4D4D4\">.</span><span style=\"color: #F78279\">w</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #F78279\">gfx</span><span style=\"color:#D4D4D4\">.</span><span style=\"color: #F78279\">h</span><span style=\"color:#D4D4D4\">)</span></span>\n<span class=\"line\"><span style=\"color: #9CDCFE\">text1</span><span style=\"color:#D4D4D4\">:</span><span style=\"color:#DCDCAA\">SetText</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#CE9178\">\"Hello\"</span><span style=\"color:#D4D4D4\">)</span></span>\n<span class=\"line\"><span style=\"color: #9CDCFE\">text1</span><span style=\"color:#D4D4D4\">:</span><span style=\"color:#DCDCAA\">SetFont</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#B5CEA8\">2</span><span style=\"color:#D4D4D4\">)</span></span>\n<span class=\"line\"><span style=\"color: #9CDCFE\">button1</span><span style=\"color:#D4D4D4\">:</span><span style=\"color:#DCDCAA\">AddChild</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #9CDCFE\">text1</span><span style=\"color:#D4D4D4\">)</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"color:#6A9955\">--Use Duplicate() to more efficiently instantiate similar UI elements.</span></span>\n<span class=\"line\"><span style=\"color: #9CDCFE\">button2</span><span style=\"color:#D4D4D4\"> = </span><span style=\"color: #9CDCFE\">button1</span><span style=\"color:#D4D4D4\">:</span><span style=\"color:#DCDCAA\">Duplicate</span><span style=\"color:#D4D4D4\">()</span></span>\n<span class=\"line\"><span style=\"color: #9CDCFE\">button2</span><span style=\"color:#D4D4D4\">:</span><span style=\"color:#DCDCAA\">AssignOnClicked</span><span style=\"color:#D4D4D4\">(</span></span>\n<span class=\"line\"><span style=\"color:#C586C0\">    function</span><span style=\"color:#D4D4D4\">()</span></span>\n<span class=\"line\"><span style=\"color:#DCDCAA\">        SetDisplayedText</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #9CDCFE\">text2</span><span style=\"color:#D4D4D4\">:</span><span style=\"color:#DCDCAA\">GetText</span><span style=\"color:#D4D4D4\">())</span></span>\n<span class=\"line\"><span style=\"color:#C586C0\">    end</span></span>\n<span class=\"line\"><span style=\"color:#D4D4D4\">)</span></span>\n<span class=\"line\"><span style=\"color: #9CDCFE\">horizontalContainer</span><span style=\"color:#D4D4D4\">:</span><span style=\"color:#DCDCAA\">AddChild</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #9CDCFE\">button2</span><span style=\"color:#D4D4D4\">)</span></span>\n<span class=\"line\"><span style=\"color: #9CDCFE\">text2</span><span style=\"color:#D4D4D4\"> = </span><span style=\"color:#4EC9B0\">Text</span><span style=\"color:#D4D4D4\">:</span><span style=\"color:#DCDCAA\">New</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#CE9178\">\"text 2\"</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#B5CEA8\">0</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#B5CEA8\">0</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #F78279\">gfx</span><span style=\"color:#D4D4D4\">.</span><span style=\"color: #F78279\">w</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #F78279\">gfx</span><span style=\"color:#D4D4D4\">.</span><span style=\"color: #F78279\">h</span><span style=\"color:#D4D4D4\">)</span></span>\n<span class=\"line\"><span style=\"color: #9CDCFE\">text2</span><span style=\"color:#D4D4D4\">:</span><span style=\"color:#DCDCAA\">SetText</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#CE9178\">\"World\"</span><span style=\"color:#D4D4D4\">)</span></span>\n<span class=\"line\"><span style=\"color: #9CDCFE\">button2</span><span style=\"color:#D4D4D4\">:</span><span style=\"color:#DCDCAA\">AddChild</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #9CDCFE\">text2</span><span style=\"color:#D4D4D4\">)</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"color: #9CDCFE\">displayText</span><span style=\"color:#D4D4D4\"> = </span><span style=\"color:#4EC9B0\">Text</span><span style=\"color:#D4D4D4\">:</span><span style=\"color:#DCDCAA\">New</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#CE9178\">\"display\"</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#B5CEA8\">0</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#B5CEA8\">0</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #F78279\">gfx</span><span style=\"color:#D4D4D4\">.</span><span style=\"color: #F78279\">w</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #F78279\">gfx</span><span style=\"color:#D4D4D4\">.</span><span style=\"color: #F78279\">h</span><span style=\"color:#D4D4D4\">)</span></span>\n<span class=\"line\"><span style=\"color: #9CDCFE\">displayText</span><span style=\"color:#D4D4D4\">:</span><span style=\"color:#DCDCAA\">SetText</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#CE9178\">\"Click a button\"</span><span style=\"color:#D4D4D4\">)</span></span>\n<span class=\"line\"><span style=\"color: #9CDCFE\">verticalContainer</span><span style=\"color:#D4D4D4\">:</span><span style=\"color:#DCDCAA\">AddChild</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #9CDCFE\">displayText</span><span style=\"color:#D4D4D4\">)</span></span>\n<span class=\"line\"></span>\n<span class=\"line\"><span style=\"color:#6A9955\">--Start running the GUIContext after all setup is complete</span></span>\n<span class=\"line\"><span style=\"color: #9CDCFE\">gui</span><span style=\"color:#D4D4D4\">:</span><span style=\"color:#DCDCAA\">Init</span><span style=\"color:#D4D4D4\">()</span></span></code></pre>",
-  "GUIContextFunctions": [
+  "FolderPublicFunctions": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#C586C0\">function</span><span style=\"color:#DCDCAA\"> New</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">string</span><span style=\"color:#9CDCFE\"> id</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> posX</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> posY</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> width</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> height</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Constructor"
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#C586C0\">function</span><span style=\"color:#DCDCAA\"> SetName</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">string</span><span style=\"color:#9CDCFE\"> name</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Set the displayed name of the folder."
+    ]
+  ],
+  "GUIContextPublicFunctions": [
     [
       "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#C586C0\">function</span><span style=\"color:#DCDCAA\"> New</span><span style=\"color:#D4D4D4\">()</span></span></code>",
       "Constructor"
@@ -14,7 +98,255 @@
       "Call after all UI is setup."
     ]
   ],
-  "UIBaseFunctions": [
+  "HorizontalContainerPublicFunctions": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#C586C0\">function</span><span style=\"color:#DCDCAA\"> New</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">string</span><span style=\"color:#9CDCFE\"> id</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> posX</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> posY</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> width</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> height</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Constructor"
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#C586C0\">function</span><span style=\"color:#DCDCAA\"> SetSeparation</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> separation</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Set horizontal spacing between immediate child elements within the container in pixels."
+    ]
+  ],
+  "ListPublicFunctions": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> New</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">string</span><span style=\"color:#9CDCFE\"> id</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> posX</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> posY</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> width</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> height</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Constructor"
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> AddItem</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">string</span><span style=\"color:#9CDCFE\"> item</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Append the list with a new item."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> RemoveItem</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">string</span><span style=\"color:#9CDCFE\"> item</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Remove an item with a matching name."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> RemoveItemIndex</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> index</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Remove an item at the index."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> ClearItems</span><span style=\"color:#D4D4D4\">()</span></span></code>",
+      "Clear all items from the list."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> EnableMultiselection</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">bool</span><span style=\"color:#9CDCFE\"> enable</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Enable multiselection or disable to only allow one selection at a time."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> Select</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> index</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Select an item."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> ClearSelection</span><span style=\"color:#D4D4D4\">()</span></span></code>",
+      "Clear all selected items."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> SetScrollValue</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> value</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Set the scroll value in pixels."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> SetScrollSpeed</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">float</span><span style=\"color:#9CDCFE\"> speed</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Set the scroll speed multiplier value."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> SetScrollbarWidth</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> width</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Set the width of the scrollbar in pixels."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> GetSelectionIndices</span><span style=\"color:#D4D4D4\">() : {</span><span style=\"color: #569CD6\">string</span><span style=\"color:#D4D4D4\">} </span><span style=\"color:#9CDCFE\">indices</span></span></code>",
+      "Get the selected indices."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> GetItemAtIndex</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> index</span><span style=\"color:#D4D4D4\">) : </span><span style=\"color: #569CD6\">string</span><span style=\"color:#9CDCFE\"> item</span></span></code>",
+      "Get the name of the item at the index."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> AssignOnSelectionChanged</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #C586C0\">function</span><span style=\"color:#9CDCFE\"> func</span><span style=\"color:#D4D4D4\">) : </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> index</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">string</span><span style=\"color:#9CDCFE\"> item</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">bool</span><span style=\"color:#9CDCFE\"> isSelected</span></span></code>",
+      "Assign a function to be called when the selection changes."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> UnassignOnSelectionChanged</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #C586C0\">function</span><span style=\"color:#9CDCFE\"> func</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Unassign a function from being called when the selection changes."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> SetTextColor</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> red</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> green</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> blue</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">float</span><span style=\"color:#9CDCFE\"> alpha</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Set color for the UI element. RGB values are on the number range 0-255 and alpha 0-1."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> SetScrollbarColor</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> red</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> green</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> blue</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">float</span><span style=\"color:#9CDCFE\"> alpha</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Set color for the UI element. RGB values are on the number range 0-255 and alpha 0-1."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> SetScrollbarThumbColor</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> red</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> green</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> blue</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">float</span><span style=\"color:#9CDCFE\"> alpha</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Set color for the UI element. RGB values are on the number range 0-255 and alpha 0-1."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> SetScrollbarPressedColor</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> red</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> green</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> blue</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">float</span><span style=\"color:#9CDCFE\"> alpha</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Set color for the UI element. RGB values are on the number range 0-255 and alpha 0-1."
+    ]
+  ],
+  "NumericInputPublicFunctions": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> New</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">string</span><span style=\"color:#9CDCFE\"> id</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> posX</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> posY</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> width</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> height</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Constructor"
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> SetValue</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">float</span><span style=\"color:#9CDCFE\"> value</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Set the numeric value."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> SetMin</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">float</span><span style=\"color:#9CDCFE\"> min</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Set the minimum numeric clamp value."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> SetMax</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">float</span><span style=\"color:#9CDCFE\"> max</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Set the maximum numeric clamp value."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> SetFont</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> index</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Set the font index for the displayed text. 1 = Default, 2 = Subheader, 3 = Header (defined in the GUIContext class). See Reaper's documentation on the gfx.setfont() function."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> GetValue</span><span style=\"color:#D4D4D4\">() : </span><span style=\"color: #569CD6\">float</span><span style=\"color:#9CDCFE\"> value</span></span></code>",
+      "Get the numeric value."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> AssignOnValueChanged</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #C586C0\">function</span><span style=\"color:#9CDCFE\"> func</span><span style=\"color:#D4D4D4\">) : </span><span style=\"color: #569CD6\">float</span><span style=\"color:#9CDCFE\"> value</span></span></code>",
+      "Assign a function to be called when the value is changed."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> UnassignOnValueChanged</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #C586C0\">function</span><span style=\"color:#9CDCFE\"> func</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Unassign a function from being called when the value is changed."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> SetValueColor</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> red</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> green</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> blue</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">float</span><span style=\"color:#9CDCFE\"> alpha</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Set the color of the displayed value. RGB values are on the number range 0-255 and alpha 0-1."
+    ]
+  ],
+  "ScaleContainerPublicFunctions": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#C586C0\">function</span><span style=\"color:#DCDCAA\"> New</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">string</span><span style=\"color:#9CDCFE\"> id</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> posX</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> posY</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> width</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> height</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Constructor"
+    ]
+  ],
+  "ScrollContainerPublicFunctions": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#C586C0\">function</span><span style=\"color:#DCDCAA\"> New</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">string</span><span style=\"color:#9CDCFE\"> id</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> posX</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> posY</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> width</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> height</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Constructor"
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#C586C0\">function</span><span style=\"color:#DCDCAA\"> SetScrollValue</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> value</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Set the scroll value of the container in pixels."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#C586C0\">function</span><span style=\"color:#DCDCAA\"> SetScrollSpeed</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">float</span><span style=\"color:#9CDCFE\"> speed</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Set the scroll speed multiplier of the container."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#C586C0\">function</span><span style=\"color:#DCDCAA\"> SetScrollbarWidth</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> width</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Set the width of the scrollbar in pixels."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#C586C0\">function</span><span style=\"color:#DCDCAA\"> SetSeparation</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> separation</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Set vertical spacing between immediate child elements within the container in pixels."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#C586C0\">function</span><span style=\"color:#DCDCAA\"> SetScrollbarColor</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> red</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> green</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> blue</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">float</span><span style=\"color:#9CDCFE\"> alpha</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Set color for the UI element. RGB values are on the number range 0-255 and alpha 0-1."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#C586C0\">function</span><span style=\"color:#DCDCAA\"> SetScrollbarThumbColor</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> red</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> green</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> blue</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">float</span><span style=\"color:#9CDCFE\"> alpha</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Set color for the UI element. RGB values are on the number range 0-255 and alpha 0-1."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#C586C0\">function</span><span style=\"color:#DCDCAA\"> SetScrollbarPressedColor</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> red</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> green</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> blue</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">float</span><span style=\"color:#9CDCFE\"> alpha</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Set color for the UI element. RGB values are on the number range 0-255 and alpha 0-1."
+    ]
+  ],
+  "TabContainerPublicFunctions": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#C586C0\">function</span><span style=\"color:#DCDCAA\"> New</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">string</span><span style=\"color:#9CDCFE\"> id</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> posX</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> posY</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> width</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> height</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Constructor"
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#C586C0\">function</span><span style=\"color:#DCDCAA\"> SetActiveTab</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> index</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Sets the active tab for this container. The active tab contents are visible while all other tabs are not."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#C586C0\">function</span><span style=\"color:#DCDCAA\"> AddTabName</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">string</span><span style=\"color:#9CDCFE\"> name</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Append a tab name to the list of tab names. The index will be the total number of tab names at post-creation."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#C586C0\">function</span><span style=\"color:#DCDCAA\"> SetTabName</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">string</span><span style=\"color:#9CDCFE\"> name</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> index</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Set a tab name using an index. The index should be the index of the immediate child element."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#C586C0\">function</span><span style=\"color:#DCDCAA\"> SetTabHeight</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> height</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Set the height reserved for the tab area in pixels."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#C586C0\">function</span><span style=\"color:#DCDCAA\"> SetTextColor</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> red</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> green</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> blue</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> alpha</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Set the color of the tab name text. RGB values are on the number range 0-255 and alpha 0-1."
+    ]
+  ],
+  "TextInputPublicFunctions": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> New</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">string</span><span style=\"color:#9CDCFE\"> id</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> posX</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> posY</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> width</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> height</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Constructor"
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> SetValue</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">string</span><span style=\"color:#9CDCFE\"> value</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Set the text value."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> SetFont</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> index</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Set the font index for the displayed text. 1 = Default, 2 = Subheader, 3 = Header (defined in the GUIContext class). See Reaper's documentation on the gfx.setfont() function."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> GetValue</span><span style=\"color:#D4D4D4\">() : </span><span style=\"color: #569CD6\">string</span><span style=\"color:#9CDCFE\"> textValue</span></span></code>",
+      "Get the text value."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> AssignOnTextChanged</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #C586C0\">function</span><span style=\"color:#9CDCFE\"> func</span><span style=\"color:#D4D4D4\">) : </span><span style=\"color: #569CD6\">string</span><span style=\"color:#9CDCFE\"> textValue</span></span></code>",
+      "Assign a function to be called when the text changes."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> UnassignOnTextChanged</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #C586C0\">function</span><span style=\"color:#9CDCFE\"> func</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Unassign a function from being called when the text changes."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color: #C586C0\">function</span><span style=\"color:#DCDCAA\"> SetTextColor</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> red</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> green</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> blue</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">float</span><span style=\"color:#9CDCFE\"> alpha</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Set the color of the displayed text. RGB values are on the number range 0-255 and alpha 0-1."
+    ]
+  ],
+  "TextPublicFunctions": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#C586C0\">function</span><span style=\"color:#DCDCAA\"> New</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">string</span><span style=\"color:#9CDCFE\"> id</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> posX</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> posY</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> width</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> height</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Constructor"
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#C586C0\">function</span><span style=\"color:#DCDCAA\"> SetAlignment</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">string</span><span style=\"color:#9CDCFE\"> align</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Set the alignment of the text. Valid values are 'left', 'center', or 'right'."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#C586C0\">function</span><span style=\"color:#DCDCAA\"> SetText</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">string</span><span style=\"color:#9CDCFE\"> text</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Set the displayed text."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#C586C0\">function</span><span style=\"color:#DCDCAA\"> SetFont</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> index</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Set the font index for the displayed text. 1 = Default, 2 = Subheader, 3 = Header (defined in the GUIContext class). See Reaper's documentation on the gfx.setfont() function."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#C586C0\">function</span><span style=\"color:#DCDCAA\"> GetText</span><span style=\"color:#D4D4D4\">() : </span><span style=\"color: #569CD6\">string</span><span style=\"color:#9CDCFE\"> textValue</span></span></code>",
+      "Get the displayed text."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#C586C0\">function</span><span style=\"color:#DCDCAA\"> SetTextColor</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> red</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> green</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> blue</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">float</span><span style=\"color:#9CDCFE\"> alpha</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Set the color of the displayed text. RGB values are on the number range 0-255 and alpha 0-1."
+    ]
+  ],
+  "UIBasePublicFunctions": [
     [
       "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#C586C0\">function</span><span style=\"color:#DCDCAA\"> New</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">string</span><span style=\"color:#9CDCFE\"> id</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> posX</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> posY</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> width</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> height</span><span style=\"color:#D4D4D4\">)</span></span></code>",
       "Constructor"
@@ -57,35 +389,45 @@
     ],
     [
       "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#C586C0\">function</span><span style=\"color:#DCDCAA\"> SetBorderColor</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> red</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> green</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> blue</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">float</span><span style=\"color:#9CDCFE\"> alpha</span><span style=\"color:#D4D4D4\">)</span></span></code>",
-      "Set colors for the UI element. RGB values are on the number range 0-255 and alpha 0-1."
+      "Set color for the UI element. RGB values are on the number range 0-255 and alpha 0-1."
     ],
     [
       "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#C586C0\">function</span><span style=\"color:#DCDCAA\"> SetNormalColor</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> red</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> green</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> blue</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">float</span><span style=\"color:#9CDCFE\"> alpha</span><span style=\"color:#D4D4D4\">)</span></span></code>",
-      "Set colors for the UI element. RGB values are on the number range 0-255 and alpha 0-1."
+      "Set color for the UI element. RGB values are on the number range 0-255 and alpha 0-1."
     ],
     [
       "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#C586C0\">function</span><span style=\"color:#DCDCAA\"> SetHoveredColor</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> red</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> green</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> blue</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">float</span><span style=\"color:#9CDCFE\"> alpha</span><span style=\"color:#D4D4D4\">)</span></span></code>",
-      "Set colors for the UI element. RGB values are on the number range 0-255 and alpha 0-1."
+      "Set color for the UI element. RGB values are on the number range 0-255 and alpha 0-1."
     ],
     [
       "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#C586C0\">function</span><span style=\"color:#DCDCAA\"> SetPressedColor</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> red</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> green</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> blue</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">float</span><span style=\"color:#9CDCFE\"> alpha</span><span style=\"color:#D4D4D4\">)</span></span></code>",
-      "Set colors for the UI element. RGB values are on the number range 0-255 and alpha 0-1."
+      "Set color for the UI element. RGB values are on the number range 0-255 and alpha 0-1."
     ],
     [
       "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#C586C0\">function</span><span style=\"color:#DCDCAA\"> SetDisabledColor</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> red</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> green</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> blue</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">float</span><span style=\"color:#9CDCFE\"> alpha</span><span style=\"color:#D4D4D4\">)</span></span></code>",
-      "Set colors for the UI element. RGB values are on the number range 0-255 and alpha 0-1."
+      "Set color for the UI element. RGB values are on the number range 0-255 and alpha 0-1."
     ],
     [
       "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#C586C0\">function</span><span style=\"color:#DCDCAA\"> SetActiveColor</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> red</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> green</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> blue</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">float</span><span style=\"color:#9CDCFE\"> alpha</span><span style=\"color:#D4D4D4\">)</span></span></code>",
-      "Set colors for the UI element. RGB values are on the number range 0-255 and alpha 0-1."
+      "Set color for the UI element. RGB values are on the number range 0-255 and alpha 0-1."
     ],
     [
       "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#C586C0\">function</span><span style=\"color:#DCDCAA\"> SetActiveHoveredColor</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> red</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> green</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> blue</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">float</span><span style=\"color:#9CDCFE\"> alpha</span><span style=\"color:#D4D4D4\">)</span></span></code>",
-      "Set colors for the UI element. RGB values are on the number range 0-255 and alpha 0-1."
+      "Set color for the UI element. RGB values are on the number range 0-255 and alpha 0-1."
     ],
     [
       "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#C586C0\">function</span><span style=\"color:#DCDCAA\"> SetActivePressedColor</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> red</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> green</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> blue</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">float</span><span style=\"color:#9CDCFE\"> alpha</span><span style=\"color:#D4D4D4\">)</span></span></code>",
-      "Set colors for the UI element. RGB values are on the number range 0-255 and alpha 0-1."
+      "Set color for the UI element. RGB values are on the number range 0-255 and alpha 0-1."
+    ]
+  ],
+  "VerticalContainerPublicFunctions": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#C586C0\">function</span><span style=\"color:#DCDCAA\"> New</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">string</span><span style=\"color:#9CDCFE\"> id</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> posX</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> posY</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> width</span><span style=\"color:#D4D4D4\">, </span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> height</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Constructor"
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#C586C0\">function</span><span style=\"color:#DCDCAA\"> SetSeparation</span><span style=\"color:#D4D4D4\">(</span><span style=\"color: #569CD6\">int</span><span style=\"color:#9CDCFE\"> separation</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Set vertical spacing between immediate child elements within the container in pixels."
     ]
   ]
 }

@@ -1,0 +1,5 @@
+[int,#569CD6]
+[float,#569CD6]
+[string,#569CD6]
+"function New(string id, int posX, int posY, int width, int height)","Constructor"
+"function SetName(string name)","Set the displayed name of the folder."
