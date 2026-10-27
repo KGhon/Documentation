@@ -1,0 +1,5 @@
+{
+  "Title": "GUI Toolkit",
+  "Overview": "This GUI Toolkit provides classes to create simple GUIs for ReaScripts using native gfx code in Lua. UIs are built by constructing parent-child trees using the toolkit classes.",
+  "Dependencies": "<li>Reaper v7.76+</li>\r\n<li>The GUIToolkit_Kevin.lua file must be in the same location as any Reascript that wants to use it.</li>"
+}

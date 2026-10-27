@@ -1,6 +1,12 @@
 {
   "pages": [
-    ["Audio Production", "", false, true],
-    [ "GUI Toolkit", "AudioProduction", true, false ]
+    ["Reaper Scripts", "", false, true ],
+    [ "GUI Toolkit", "ReaperScripts", true, false ],
+    [ "MIDI Mixing Tool", "ReaperScripts", true, false ],
+    [ "Project Setup Helpers", "ReaperScripts", true, false ],
+    [ "Plugins", "", false, true ],
+    [ "MIDI Retriggerable Buffer", "Plugins", true, false ],
+    [ "Standalone Programs", "", false, true ],
+    [ "Placeholder Voice Over Generator", "StandalonePrograms", true, false ]
   ]
 }

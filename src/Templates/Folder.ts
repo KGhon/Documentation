@@ -20,12 +20,12 @@ export class Folder extends HTMLDivElement
         this.appendChild(header);
 
         this.foldButton = document.createElement('button');
-        this.foldButton.style.width = "20px";
+        this.foldButton.style.paddingTop = "2px";
         this.foldButton.style.border = "0px";
         this.foldButton.style.fontFamily = "Courier, monospace";
         this.foldButton.style.color = "white";
         this.foldButton.style.backgroundColor = "transparent";
-        this.foldButton.style.fontSize = "24px";
+        this.foldButton.style.transform = "scale(1.7)";
         this.foldButton.textContent = "+";
         this.foldButton.addEventListener("click", () => {
             this.Toggle();

@@ -25,11 +25,16 @@ p {
 }
 
 ul {
-    margin: 8px 0px 8px 0px;
+    margin: 0;
+    white-space: normal;
 }
 
 ul li::marker{
     font-size: 1.4rem;
+}
+
+.c0 {
+    font-size: 48px;
 }
 
 .c1 {

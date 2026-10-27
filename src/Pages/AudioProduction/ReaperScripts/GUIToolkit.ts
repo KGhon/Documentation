@@ -1,25 +1,28 @@
-import "../../Documentation.css"
-import { CodeBlock } from "../../Templates/CodeBlock.ts";
-import { Table } from "../../Templates/Table.ts";
-import * as code from "../../../data/AudioProduction/GUIToolkit.json";
+import "../../../Documentation.css"
+import { CodeBlock } from "../../../Templates/CodeBlock.ts";
+import { Table } from "../../../Templates/Table.ts";
+import * as textContent from "../../../../data/AudioProduction/GUIToolkit-text-generated.json";
+import * as code from "../../../../data/AudioProduction/GUIToolkit-code-generated.json";
 
 const root: HTMLDivElement = document.createElement("div");
 export function Construct(): HTMLDivElement
 {
+    const title: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c0" })) as HTMLParagraphElement;
+    title.innerHTML = textContent.Title;
+
+    root.appendChild(document.createElement('div', { is: 'divider-element' }));
+
     const overviewSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
     overviewSection.innerHTML = 'Overview';
 
     const overview: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
-    overview.innerHTML =
-`This GUI Toolkit provides classes to create simple GUIs for ReaScripts using native gfx code in Lua. UIs are built by constructing parent-child trees using the toolkit classes.`;
+    overview.innerHTML = textContent.Overview;
 
     const dependenciesSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
     dependenciesSection.innerHTML = 'Dependencies';
 
     const dependencies: HTMLUListElement = root.appendChild(Object.assign(document.createElement("ul"), { className: "c4", style: "white-space: normal" })) as HTMLUListElement;
-    dependencies.innerHTML =
-`<li>Reaper v7.76+</li>
-<li>The GUIToolkit_Kevin.lua file must be in the same location as any Reascript that wants to use it.</li>`;
+    dependencies.innerHTML = textContent.Dependencies;
 
     const exampleSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
     exampleSection.innerHTML = 'Example';

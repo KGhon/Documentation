@@ -37,7 +37,7 @@ export class DocPage extends BasePage
 
         const tableOfContentsDiv: HTMLDivElement = document.createElement('div');
         tableOfContentsDiv.style.flexDirection = "column";
-        tableOfContentsDiv.style.width = "20%";
+        tableOfContentsDiv.style.width = "25%";
         postHeader.appendChild(tableOfContentsDiv);
 
         this.tableOfContents = document.createElement('div', { is: 'table-of-contents' }) as TableOfContents;

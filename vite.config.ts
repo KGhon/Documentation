@@ -1,13 +1,11 @@
 import { defineConfig } from 'vite';
 import plugin from '@vitejs/plugin-react';
 import { resolve } from 'path';
-import { HighlightCode } from "./src/CodeHighlighter.ts";
 
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [
-        plugin(),
-        HighlightCode("data")
+        plugin()
     ],
     base: '/Documentation/', 
     appType: 'mpa',

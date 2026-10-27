@@ -24,8 +24,7 @@ export class NavigationColumn extends HTMLDivElement
         this.style.boxSizing = "border-box";
 
         this.pageName = document.createElement('label');
-        this.pageName.style.textIndent = "20px";
-        this.pageName.style.fontSize = "24px";
+        this.pageName.style.fontSize = "20px";
         this.pageName.textContent = "Site";
         this.appendChild(this.pageName);
 

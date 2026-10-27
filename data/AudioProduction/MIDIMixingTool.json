@@ -1,0 +1,28 @@
+{
+  "Setup": [
+    [ "MIDI Range Bottom", "The MIDI note to assign that starts the range. Wrapping when the number of imported files exceeds the MIDI range will return to this value." ],
+    [ "MIDI Range Top", "The highest MIDI note to assign before wrapping back to the bottom." ],
+    [ "Auto Arm Import Tracks", "Automatically arm new tracks to receive MIDI input." ],
+    [ "Reassign Selection", "Reassigns the MIDI notes of selected tracks sequentially. Note that MIDI assignment obeys folderization. This means tracks in folders will start their assignments from the MIDI Range Bottom." ],
+    [ "Reassign Folder", "Reassigns the MIDI notes for all child tracks of a folder." ]
+  ],
+
+  "Helpers": [
+    [ "Toggle Note Names", "Toggles the assigned note names on the tracks. The note names are added as visual aids, but when exporting using the track names they need to be removed so exported files maintain the same file name." ],
+    [ "Select Child Tracks", "When selecting a folder track, selects all child tracks. Helpful when Exporting With Tails." ],
+    [ "Select Child Media Items", "When selecting a folder track, selects all child media items. Helpful when Exporting Without Tails." ],
+    [ "Arm Child Tracks", "When selecting a folder track, arms all child tracks to receive MIDI input." ],
+    [ "Disarm Child Tracks", "When selecting a folder track, disarms all child tracks so they don't receive MIDI input." ],
+    [ "Set Selection Obey Note-Offs", "Setting obey note-offs on means a sampler will stop playing the sound file when the MIDI key is released. This is especially helpful for long sound files that you don't want to play for the full length every time you trigger them (ie. ambiances)." ],
+    [ "Set Selection Loop", "Setting loop on means a sampler will loop the sound file. This also automatically turns obey note-offs on as well." ],
+    [ "Set Selection Max Concurrent Voices", "By default, each sampler only allows one instance of the sound file to play and will stop and restart when retriggering the same MIDI note. If you want your sound triggers to be able to overlap, you can set the value to greater than 1." ]
+  ],
+
+  "MIDIGeneration": [
+    [ "Refresh Global MIDI Bus", "If a track named 'Global MIDI Bus' does not already exist in the project, one is created. The bus is then automatically configured to send MIDI to all currently existing tracks. If more tracks are added, simply click this button to set up MIDI sends to all tracks again." ],
+    [ "Generation Range Bottom", "The lowest MIDI note that will be generated." ],
+    [ "Generation Range Top", "The highest MIDI note that will be generated." ],
+    [ "Note Order", "<ul><li>Random - Notes will be generated in any order.</li><li>Sequential - Notes will be generated from lowest to highest.</li></ul>" ],
+    [ "Timing", "<ul><li>Random - Any time within the MIDI item is considered valid and all MIDI will be generated within the boundaries of the MIDI item.</li><li>Interval - All MIDI notes will be spaced exactly the same distance from each other by the Interval Min value (and the MIDI item will be extended if it is too short).</li><li>Range - Each MIDI note will be spaced at a random distance between the Interval Min and Interval Max from its neighbors.</li></ul>" ]
+  ]
+}

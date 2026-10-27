@@ -1,4 +1,3 @@
-import type { Plugin } from 'vite';
 import path from 'node:path';
 import fsPromises from 'node:fs/promises';
 import { parse } from "csv-parse/sync";
@@ -51,7 +50,7 @@ async function GetDirectories(dir: string): Promise<string[]>
     return dirs;
 }
 
-async function ProcessDirectory(dirPath: string, defaultLang: string): Promise<void>
+async function ProcessDirectory(dirPath: string): Promise<void>
 {
     const list = await fsPromises.readdir(dirPath, { withFileTypes: true });
     const targetFiles = list.filter(file => !file.isDirectory() && (file.name.endsWith('.txt') || file.name.endsWith('.csv')));
@@ -63,21 +62,20 @@ async function ProcessDirectory(dirPath: string, defaultLang: string): Promise<v
 
     const folderName = path.basename(dirPath);
     const parentDir = path.dirname(dirPath);
-    const jsonPath = path.join(parentDir, `${folderName}.json`);
-
+    const jsonPath = path.join(parentDir, `${folderName}-generated.json`);
     const fileRecord: Record<string, any> = {};
 
     for (const file of targetFiles)
     {
         const filePath = path.join(dirPath, file.name);
 
-        const match = file.name.match(/^(.+?)-([a-z]+)\.(txt|csv)$/i);
+        const match = file.name.match(/^(.+?)-(csharp|cpp|lua)\.(txt|csv)$/i);
         if (!match)
         {
             continue;
         }
 
-        const language = (match[2] ? match[2].toLowerCase() : defaultLang);
+        const language = match[2].toLowerCase();
         let content = await fsPromises.readFile(filePath, 'utf-8');
 
         let postHighlights: string[][] = [];
@@ -150,18 +148,17 @@ async function ProcessDirectory(dirPath: string, defaultLang: string): Promise<v
     console.log(`[CodeHighlighter] Updated JSON file with highlighted code: ${jsonPath}`);
 }
 
-export function HighlightCode(targetDirectory: string, defaultLang: string = 'csharp'): Plugin
+async function HighlightCode(targetDirectory: string)
 {
-    return {
-        name: 'vite-plugin-code-highlighter',
-
-        async buildStart()
+    const dirs = await GetDirectories(targetDirectory);
+    for (const dir of dirs)
+    {
+        if (!dir.endsWith("-code"))
         {
-            const dirs = await GetDirectories(targetDirectory);
-            for (const dir of dirs)
-            {
-                await ProcessDirectory(dir, defaultLang);
-            }
-        },
-    };
+            continue;
+        }
+        await ProcessDirectory(dir);
+    }
 }
+
+await HighlightCode("data");

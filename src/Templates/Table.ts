@@ -6,6 +6,7 @@ export class Table extends HTMLTableElement
     {
         super();
 
+        this.style.margin = "16px 0px 0px 0px";
         this.style.width = "100%";
         this.style.borderSpacing = "0px";
         this.style.tableLayout = "fixed";
