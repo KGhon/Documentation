@@ -32,7 +32,7 @@ export class NavigationColumn extends HTMLDivElement
         this.appendChild(divider);
     }
 
-    public Populate(items: [string, string, boolean, boolean][], callback: (pageName:string) => void)
+    public Populate(items: [string, string, boolean, boolean][], callback: (pageName:string, pushHistory: boolean) => void)
     {
         for (const [name, path, isLink, isFolder] of items)
         {
@@ -46,11 +46,12 @@ export class NavigationColumn extends HTMLDivElement
                     if (isLink)
                     {
                         const link: HTMLAnchorElement = document.createElement('a');
+                        link.href = window.location.origin;
                         link.textContent = name;
                         link.addEventListener("click", (evt) =>
                         {
                             evt.preventDefault()
-                            callback(name);
+                            callback(name.replace(/\s/g, ""), true);
                         });
                         newFolder = new Folder(name, link);
                     }
@@ -64,11 +65,12 @@ export class NavigationColumn extends HTMLDivElement
                 else
                 {
                     const link: HTMLAnchorElement = document.createElement('a');
+                    link.href = window.location.origin;
                     link.textContent = name;
                     link.addEventListener("click", (evt) =>
                     {
                         evt.preventDefault()
-                        callback(name);
+                        callback(name.replace(/\s/g, ""), true);
                     });
                     folder.AddElement(link);
                 }
@@ -81,11 +83,12 @@ export class NavigationColumn extends HTMLDivElement
                     if (isLink)
                     {
                         const link: HTMLAnchorElement = document.createElement('a');
+                        link.href = window.location.origin;
                         link.textContent = name;
                         link.addEventListener("click", (evt) =>
                         {
                             evt.preventDefault()
-                            callback(name);
+                            callback(name.replace(/\s/g, ""), true);
                         });
                         newFolder = new Folder(name, link);
                     }
@@ -99,11 +102,12 @@ export class NavigationColumn extends HTMLDivElement
                 else
                 {
                     const link: HTMLAnchorElement = document.createElement('a');
+                    link.href = window.location.origin;
                     link.textContent = name;
                     link.addEventListener("click", (evt) =>
                     {
                         evt.preventDefault()
-                        callback(name);
+                        callback(name.replace(/\s/g, ""), true);
                     });
                     this.appendChild(link);
                 }

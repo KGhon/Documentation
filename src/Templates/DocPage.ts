@@ -44,15 +44,16 @@ export class DocPage extends BasePage
         tableOfContentsDiv.appendChild(this.tableOfContents);
     }
 
-    public ChangePage(pageName: string) : HTMLElement | null
+    public ChangePage(pageName: string, pushHistory: boolean) : HTMLElement | null
     {
-        const currentPage: HTMLElement | null = super.ChangePage(pageName);
+        const currentPage: HTMLElement | null = super.ChangePage(pageName, pushHistory);
         if (currentPage == null)
         {
             return null;
         }
 
         this.PopulateTableOfContents(pageName, currentPage);
+        window.scrollTo({ top: 0, behavior: "instant" });
         return currentPage;
     }
 
@@ -63,7 +64,7 @@ export class DocPage extends BasePage
 
     public PopulateNavigation(items: [string, string, boolean, boolean][])
     {
-        this.navigationColumn.Populate(items, (pageName) => this.ChangePage(pageName));
+        this.navigationColumn.Populate(items, (pageName, pushHistory) => this.ChangePage(pageName, pushHistory));
     }
 
     private PopulateTableOfContents(pageName: string, startElement: HTMLElement | null)

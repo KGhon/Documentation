@@ -28,10 +28,7 @@ export function Construct(): HTMLDivElement
     exampleSection.innerHTML = 'Example';
 
     const example: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
-    example.innerHTML =
-`Below is a simple example of a GUI that positions two button that when pressed change some text.
-
-NOTE: Using gfx.w or gfx.h for the width and height parameters of a UI element constructor means the UI element will expand to fit the entire window or constraints of the parent element, if any. If given literal values, the element will size to the minimum of either the given values or the constraints of the parent.`;
+    example.innerHTML = textContent.Example;
 
     const exampleCode: CodeBlock = root.appendChild(document.createElement("div", { is: "code-block" })) as CodeBlock;
     exampleCode.Configure(code.Example, true, true, "Example.lua");
@@ -43,8 +40,7 @@ NOTE: Using gfx.w or gfx.h for the width and height parameters of a UI element c
     guiContextSection.innerHTML = 'GUIContext';
 
     const guiContext: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
-    guiContext.innerHTML =
-`The GUIContext is the first class that should be instantiated. It manages the root of the UI tree, an input handler, and is responsible for constantly updating the UI through the tree.`;
+    guiContext.innerHTML = textContent.GUIContext;
 
     const guiContextPublic: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
     guiContextPublic.innerHTML = "Public Functions";
@@ -56,8 +52,7 @@ NOTE: Using gfx.w or gfx.h for the width and height parameters of a UI element c
     uiBaseSection.innerHTML = 'UIBase';
 
     const uiBase: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
-    uiBase.innerHTML =
-`The base class upon which all other UI elements are built. Instantiating this class creates a UI element that allows child elements to control their own xy-position. These functions can be used on any UI element.`;
+    uiBase.innerHTML = textContent.UIBase;
 
     const uiBasePublic: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
     uiBasePublic.innerHTML = "Public Functions";
@@ -69,9 +64,7 @@ NOTE: Using gfx.w or gfx.h for the width and height parameters of a UI element c
     dividerSection.innerHTML = 'Divider';
 
     const divider: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
-    divider.innerHTML =
-`A simple UI element that draws a centered box.`;
-
+    divider.innerHTML = textContent.Divider;
     const dividerPublic: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
     dividerPublic.innerHTML = "Public Functions";
 
@@ -82,8 +75,7 @@ NOTE: Using gfx.w or gfx.h for the width and height parameters of a UI element c
     horizontalContainerSection.innerHTML = 'HorizontalContainer';
 
     const horizontalContainer: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
-    horizontalContainer.innerHTML =
-`This UI element distributes immediate child elements horizontally within the container's runtime width. This container takes into consideration child element ratio values.`;
+    horizontalContainer.innerHTML = textContent.HorizontalContainer;
 
     const horizontalContainerPublic: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
     horizontalContainerPublic.innerHTML = "Public Functions";
@@ -95,8 +87,7 @@ NOTE: Using gfx.w or gfx.h for the width and height parameters of a UI element c
     verticalContainerSection.innerHTML = 'VerticalContainer';
 
     const verticalContainer: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
-    verticalContainer.innerHTML =
-`This UI element distributes immediate child elements vertically within the container's runtime height.This container takes into consideration child element ratio values.`;
+    verticalContainer.innerHTML = textContent.VerticalContainer;
 
     const verticalContainerPublic: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
     verticalContainerPublic.innerHTML = "Public Functions";
@@ -108,9 +99,7 @@ NOTE: Using gfx.w or gfx.h for the width and height parameters of a UI element c
     scaleContainerSection.innerHTML = 'ScaleContainer';
 
     const scaleContainer: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
-    scaleContainer.innerHTML =
-`This UI element will scale immediate child elements to fit the runtime size of the container. It is meant to only hold one immediate child element.`;
-
+    scaleContainer.innerHTML = textContent.ScaleContainer;
     const scaleContainerPublic: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
     scaleContainerPublic.innerHTML = "Public Functions";
 
@@ -121,9 +110,7 @@ NOTE: Using gfx.w or gfx.h for the width and height parameters of a UI element c
     scrollContainerSection.innerHTML = 'ScrollContainer';
 
     const scrollContainer: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
-    scrollContainer.innerHTML =
-`This UI element will distribute immediate child elements vertically using their runtime height. If the combined height of the UI elments is larger than the viewable area of the container, the container can be scrolled.`;
-
+    scrollContainer.innerHTML = textContent.ScrollContainer;
     const scrollContainerPublic: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
     scrollContainerPublic.innerHTML = "Public Functions";
 
@@ -134,8 +121,7 @@ NOTE: Using gfx.w or gfx.h for the width and height parameters of a UI element c
     tabContainerSection.innerHTML = 'TabContainer';
 
     const tabContainer: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
-    tabContainer.innerHTML =
-`This UI element will distribute immediate child elements vertically using their runtime height. If the combined height of the UI elments is larger than the viewable area of the container, the container can be scrolled.`;
+    tabContainer.innerHTML = textContent.TabContainer;
 
     const tabContainerPublic: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
     tabContainerPublic.innerHTML = "Public Functions";
@@ -147,8 +133,7 @@ NOTE: Using gfx.w or gfx.h for the width and height parameters of a UI element c
     textSection.innerHTML = 'Text';
 
     const text: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
-    text.innerHTML =
-`This UI element only displays text.`;
+    text.innerHTML = textContent.Text;
 
     const textPublic: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
     textPublic.innerHTML = "Public Functions";
@@ -160,8 +145,7 @@ NOTE: Using gfx.w or gfx.h for the width and height parameters of a UI element c
     buttonSection.innerHTML = 'Button';
 
     const button: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
-    button.innerHTML =
-`This UI element can either be a click or toggle button.`;
+    button.innerHTML = textContent.Button;
 
     const buttonPublic: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
     buttonPublic.innerHTML = "Public Functions";
@@ -173,8 +157,7 @@ NOTE: Using gfx.w or gfx.h for the width and height parameters of a UI element c
     textInputSection.innerHTML = 'TextInput';
 
     const textInput: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
-    textInput.innerHTML =
-`This UI element holds a modifiable text value.`;
+    textInput.innerHTML = textContent.TextInput;
 
     const textInputPublic: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
     textInputPublic.innerHTML = "Public Functions";
@@ -186,9 +169,7 @@ NOTE: Using gfx.w or gfx.h for the width and height parameters of a UI element c
     numericInputSection.innerHTML = 'NumericInput';
 
     const numericInput: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
-    numericInput.innerHTML =
-`This UI element holds a modifiable numeric value.`;
-
+    numericInput.innerHTML = textContent.NumericInput;
     const numericInputPublic: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
     numericInputPublic.innerHTML = "Public Functions";
 
@@ -199,9 +180,7 @@ NOTE: Using gfx.w or gfx.h for the width and height parameters of a UI element c
     dropdownSection.innerHTML = 'Dropdown';
 
     const dropdown: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
-    dropdown.innerHTML =
-`This UI element creates a dropdown list of named options.`;
-
+    dropdown.innerHTML = textContent.Dropdown;
     const dropdownPublic: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
     dropdownPublic.innerHTML = "Public Functions";
 
@@ -212,8 +191,7 @@ NOTE: Using gfx.w or gfx.h for the width and height parameters of a UI element c
     listSection.innerHTML = 'List';
 
     const list: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
-    list.innerHTML =
-`This UI element creates a scrollable list of named items. It supports single selection and multiselection.`;
+    list.innerHTML = textContent.List;
 
     const listPublic: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
     listPublic.innerHTML = "Public Functions";
@@ -225,9 +203,7 @@ NOTE: Using gfx.w or gfx.h for the width and height parameters of a UI element c
     folerSection.innerHTML = 'Folder';
 
     const folder: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
-    folder.innerHTML =
-`This UI element can toggle showing and hiding its immedite child elements.`;
-
+    folder.innerHTML = textContent.Folder;
     const folderPublic: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
     folderPublic.innerHTML = "Public Functions";
 

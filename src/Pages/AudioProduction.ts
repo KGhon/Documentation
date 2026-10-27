@@ -14,8 +14,33 @@ spa.SetNavigationPageName("Audio Production");
 spa.PopulateNavigation(pages.pages as [string, string, boolean, boolean][]);
 document.body.appendChild(spa);
 
-spa.AddContentPage("GUI Toolkit", GUIToolkit.Construct());
-spa.AddContentPage("MIDI Mixing Tool", MIDIMixingTool.Construct());
-spa.AddContentPage("Project Setup Helpers", ProjectSetupHelpers.Construct());
-spa.AddContentPage("MIDI Retriggerable Buffer", MIDIRetriggerableBuffer.Construct());
-spa.AddContentPage("Placeholder Voice Over Generator", PlaceholderVoiceOverGenerator.Construct());
+window.addEventListener('popstate', (event) =>
+{
+    console.log(event.state);
+    const pageName = event.state;
+    if (pageName)
+    {
+        spa.ChangePage(pageName, false);
+    }
+    else
+    {
+        spa.ChangePage("Home", false);
+    }
+});
+
+spa.AddContentPage("Home", document.createElement("div"));
+spa.AddContentPage("GUIToolkit", GUIToolkit.Construct());
+spa.AddContentPage("MIDIMixingTool", MIDIMixingTool.Construct());
+spa.AddContentPage("ProjectSetupHelpers", ProjectSetupHelpers.Construct());
+spa.AddContentPage("MIDIRetriggerableBuffer", MIDIRetriggerableBuffer.Construct());
+spa.AddContentPage("PlaceholderVoiceOverGenerator", PlaceholderVoiceOverGenerator.Construct());
+
+const path = window.location.hash.replace('#', '');
+if (path)
+{
+    spa.ChangePage(path, false);
+}
+else
+{
+    spa.ChangePage("Home", false);
+}

@@ -30,7 +30,7 @@ export class BasePage extends HTMLDivElement
         this.contentPages.set(name, page);
     }
 
-    public ChangePage(pageName: string) : HTMLElement | null
+    public ChangePage(pageName: string, pushHistory: boolean) : HTMLElement | null
     {
         if (this.contentPages.has(pageName))
         {
@@ -41,7 +41,10 @@ export class BasePage extends HTMLDivElement
             }
             this.content.innerHTML = "";
             this.content.appendChild(page)
-            window.history.pushState(pageName, '', pageName);
+            if (pushHistory)
+            {
+                window.history.pushState(pageName, '', `#${pageName}`);
+            }
             this.currentPage = page;
             return page;
         }
