@@ -1,1 +1,0 @@
-import"./CustomElements-yrQDF3NS.js";var e=document.createElement(`div`,{is:`doc-page`});document.body.appendChild(e);

@@ -7,7 +7,7 @@ import * as GUIToolkit from "./AudioProduction/ReaperScripts/GUIToolkit.ts";
 import * as MIDIMixingTool from "./AudioProduction/ReaperScripts/MIDIMixingTool.ts";
 import * as ProjectSetupHelpers from "./AudioProduction/ReaperScripts/ProjectSetupHelpers.ts";
 import * as MIDIRetriggerableBuffer from "./AudioProduction/Plugins/MIDIRetriggerableBuffer.ts";
-import * as PlaceholderVoiceOverGenerator from "./AudioProduction/StandalonePrograms/PlaceholderVoiceOverGenerator.ts";
+import * as PlaceholderVoiceoverGenerator from "./AudioProduction/StandalonePrograms/PlaceholderVoiceoverGenerator.ts";
 
 const spa: DocPage = document.createElement('div', { is: 'doc-page' }) as DocPage;
 spa.SetNavigationPageName("Audio Production");
@@ -33,7 +33,7 @@ spa.AddContentPage("GUIToolkit", GUIToolkit.Construct());
 spa.AddContentPage("MIDIMixingTool", MIDIMixingTool.Construct());
 spa.AddContentPage("ProjectSetupHelpers", ProjectSetupHelpers.Construct());
 spa.AddContentPage("MIDIRetriggerableBuffer", MIDIRetriggerableBuffer.Construct());
-spa.AddContentPage("PlaceholderVoiceOverGenerator", PlaceholderVoiceOverGenerator.Construct());
+spa.AddContentPage("PlaceholderVoiceoverGenerator", PlaceholderVoiceoverGenerator.Construct());
 
 const path = window.location.hash.replace('#', '');
 if (path)

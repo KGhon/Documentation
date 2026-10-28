@@ -1,12 +1,12 @@
 {
   "pages": [
-    ["Reaper Scripts", "", false, true ],
-    [ "GUI Toolkit", "ReaperScripts", true, false ],
-    [ "MIDI Mixing Tool", "ReaperScripts", true, false ],
-    [ "Project Setup Helpers", "ReaperScripts", true, false ],
+    [ "ReaperScripts", "", false, true ],
+    [ "GUIToolkit", "ReaperScripts", true, false ],
+    [ "MIDIMixingTool", "ReaperScripts", true, false ],
+    [ "ProjectSetupHelpers", "ReaperScripts", true, false ],
     [ "Plugins", "", false, true ],
-    [ "MIDI Retriggerable Buffer", "Plugins", true, false ],
-    [ "Standalone Programs", "", false, true ],
-    [ "Placeholder Voice Over Generator", "StandalonePrograms", true, false ]
+    [ "MIDIRetriggerableBuffer", "Plugins", true, false ],
+    [ "StandalonePrograms", "", false, true ],
+    [ "PlaceholderVoiceoverGenerator", "StandalonePrograms", true, false ]
   ]
 }

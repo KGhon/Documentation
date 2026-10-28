@@ -1,0 +1,1 @@
+import"./CustomElements-C665A1Ef.js";var e=document.createElement(`div`,{is:`doc-page`});document.body.appendChild(e);

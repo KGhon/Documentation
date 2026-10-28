@@ -1,0 +1,17 @@
+{
+  "GenerateTracksFromCSV": [
+    [ "Column", "Choose what column of the CSV to read." ]
+  ],
+
+  "GenerateRegions": [
+    [ "Pad Region Start", "Pad the generated regions to start sooner than the earliest media item." ],
+    [ "Pad Region End", "Pad the generated regions to end later than the latest media item." ]
+  ],
+
+  "GenerateMarkersFromCSV": [
+    [ "Start Row", "The row of the CSV to start with (1 indexed)." ],
+    [ "Frame Rate", "The frame rate of the video that is synched to the CSV timecodes." ],
+    [ "Name Column", "Choose what column of the CSV has the name values for the markers." ],
+    [ "Time Column", "Choose what column of the CSV has the timecode values for the markers." ]
+  ]
+}

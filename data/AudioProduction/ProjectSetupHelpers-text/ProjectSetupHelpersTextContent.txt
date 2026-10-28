@@ -1,0 +1,18 @@
+[Title]
+Project Setup Helpers
+
+[Overview]
+A collection of helper tools to automate project setup for different uses.
+
+[Dependencies]
+<li>Reaper v7.76+</li>
+<li>The GUIToolkit_Kevin.lua file must be in the same location as any Reascript that wants to use it.</li>
+
+[GenerateTracksFromCSV]
+Batch generate tracks by reading from a CSV file. The tracks will be named after each CSV entry.
+
+[GenerateRegions]
+Batch generate regions for selected folder tracks. The regions will be named after each selected track. The region start and end points are automatically determined by the earliest and latest media item that belongs to a child track of each selected folder track.
+
+[GenerateMarkersFromCSV]
+This helper was primarily created to work alongside DaVinci Resolve to transfer accurate time synchs markers into Reaper. DaVinci Resolves provides an "Export Edit Index" option that will export all marker data into a CSV. This CSV can then be used with this helper to transfer those markers to Reaper. Timecodes are read using the format HH:MM:SS:Frames (DaVinci Resolve's CSV uses this format).

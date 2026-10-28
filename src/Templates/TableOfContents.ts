@@ -1,3 +1,4 @@
+import "../Documentation.css";
 import { Divider } from './Divider.ts';
 
 export class TableOfContents extends HTMLDivElement
@@ -67,6 +68,6 @@ export class TableOfContents extends HTMLDivElement
 
     public SetPageName(name: string)
     {
-        this.pageName.textContent = name;
+        this.pageName.textContent = name.replace(/([a-z0-9])([A-Z])|([A-Z]+)([A-Z][a-z])/g, '$1$3 $2$4');
     }
 }

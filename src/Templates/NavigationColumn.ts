@@ -1,3 +1,4 @@
+import "../Documentation.css";
 import { Folder } from './Folder.ts';
 import { Divider } from './Divider.ts';
 
@@ -36,6 +37,7 @@ export class NavigationColumn extends HTMLDivElement
     {
         for (const [name, path, isLink, isFolder] of items)
         {
+            const spacedName = name.replace(/([a-z0-9])([A-Z])|([A-Z]+)([A-Z][a-z])/g, '$1$3 $2$4');
             let folder: Folder;
             if (this.folders.has(path) && path != "")
             {
@@ -46,18 +48,18 @@ export class NavigationColumn extends HTMLDivElement
                     if (isLink)
                     {
                         const link: HTMLAnchorElement = document.createElement('a');
-                        link.href = window.location.origin;
-                        link.textContent = name;
+                        link.href = `#${name}`;
+                        link.textContent = spacedName;
                         link.addEventListener("click", (evt) =>
                         {
                             evt.preventDefault()
-                            callback(name.replace(/\s/g, ""), true);
+                            callback(name, true);
                         });
-                        newFolder = new Folder(name, link);
+                        newFolder = new Folder(spacedName, link);
                     }
                     else
                     {
-                        newFolder = new Folder(name, null);
+                        newFolder = new Folder(spacedName, null);
                     }
                     folder.AddElement(newFolder);
                     this.folders.set(path, newFolder);
@@ -65,12 +67,12 @@ export class NavigationColumn extends HTMLDivElement
                 else
                 {
                     const link: HTMLAnchorElement = document.createElement('a');
-                    link.href = window.location.origin;
-                    link.textContent = name;
+                    link.href = `#${name}`;
+                    link.textContent = spacedName;
                     link.addEventListener("click", (evt) =>
                     {
                         evt.preventDefault()
-                        callback(name.replace(/\s/g, ""), true);
+                        callback(name, true);
                     });
                     folder.AddElement(link);
                 }
@@ -83,31 +85,31 @@ export class NavigationColumn extends HTMLDivElement
                     if (isLink)
                     {
                         const link: HTMLAnchorElement = document.createElement('a');
-                        link.href = window.location.origin;
-                        link.textContent = name;
+                        link.href = `#${name}`;
+                        link.textContent = spacedName;
                         link.addEventListener("click", (evt) =>
                         {
                             evt.preventDefault()
-                            callback(name.replace(/\s/g, ""), true);
+                            callback(name, true);
                         });
-                        newFolder = new Folder(name, link);
+                        newFolder = new Folder(spacedName, link);
                     }
                     else
                     {
-                        newFolder = new Folder(name, null);
+                        newFolder = new Folder(spacedName, null);
                     }
                     this.appendChild(newFolder);
-                    this.folders.set(path + name.replace(/\s/g, ""), newFolder);
+                    this.folders.set(path + name, newFolder);
                 }
                 else
                 {
                     const link: HTMLAnchorElement = document.createElement('a');
-                    link.href = window.location.origin;
-                    link.textContent = name;
+                    link.href = `#${name}`;
+                    link.textContent = spacedName;
                     link.addEventListener("click", (evt) =>
                     {
                         evt.preventDefault()
-                        callback(name.replace(/\s/g, ""), true);
+                        callback(name, true);
                     });
                     this.appendChild(link);
                 }

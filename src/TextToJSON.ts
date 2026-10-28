@@ -64,7 +64,7 @@ async function ProcessDirectory(dirPath: string): Promise<void>
     }
 
     await fsPromises.writeFile(jsonPath, JSON.stringify(fileRecord, null, 2), 'utf-8');
-    console.log(`[TextToJSON] Updated JSON file with flat keys: ${jsonPath}`);
+    console.log(`[TextToJSON] Updated JSON file text variables: ${jsonPath}`);
 }
 
 async function ConvertTextToJSON(targetDirectory: string)

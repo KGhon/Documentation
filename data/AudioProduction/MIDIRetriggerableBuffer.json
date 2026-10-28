@@ -1,0 +1,9 @@
+{
+  "Settings": [
+    [ "Buffer Duration (seconds)", "Set the maximum amount of time that can be recorded into the audio buffer. New settings only take effect when recording is triggered with a black MIDI note." ],
+    [ "Max Voices", "Set the maximum number of concurrent retrigger voices before voice stealing kicks in." ],
+    [ "Voice Stealing", "<ul><li>On - The oldest retrigger voice will be stolen.</li><li>Off - Ignore any new triggers until a voice is available.</li></ul>" ],
+    [ "Retrigger Fade In (milliseconds)", "Adds a small fade in to prevent audible clicks when playing the buffer audio." ],
+    [ "Retrigger Fade Out (milliseconds)", "Adds a small fade out to prevent audible clicks when playing the buffer audio." ]
+  ]
+}
