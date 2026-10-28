@@ -4,21 +4,22 @@ export class Folder extends HTMLDivElement
 {
     private open: boolean = false;
     private foldButton: HTMLButtonElement;
-    private headerButton: HTMLButtonElement;
+    private header: HTMLDivElement;
+    private headerButton!: HTMLButtonElement;
     private expandable: HTMLDivElement;
     private elements: HTMLDivElement;
 
-    public constructor(headerName: string, headerLink: HTMLAnchorElement | null)
+    public constructor()
     {
         super();
         this.style.display = "flex";
         this.style.flexDirection = "column";
 
-        const header: HTMLDivElement = document.createElement('div');
-        header.style.display = "flex";
-        header.style.flexDirection = "row";
-        this.appendChild(header);
-
+        this.header = document.createElement('div');
+        this.header.style.display = "flex";
+        this.header.style.flexDirection = "row";
+        this.appendChild(this.header);
+        
         this.foldButton = document.createElement('button');
         this.foldButton.style.paddingTop = "2px";
         this.foldButton.style.border = "0px";
@@ -30,8 +31,21 @@ export class Folder extends HTMLDivElement
         this.foldButton.addEventListener("click", () => {
             this.Toggle();
         });
-        header.appendChild(this.foldButton);
+        this.header.appendChild(this.foldButton);
+        
+        this.expandable = document.createElement('div');
+        this.expandable.classList.add("expandable-wrapper");
+        this.appendChild(this.expandable);
 
+        this.elements = document.createElement('div');
+        this.elements.style.display = "flex";
+        this.elements.style.flexDirection = "column";
+        this.elements.classList.add("expandable-content");
+        this.expandable.appendChild(this.elements);
+    }
+
+    public Configure(headerName: string, headerLink: HTMLAnchorElement | null)
+    {
         this.headerButton = document.createElement('button');
         if (headerLink != null)
         {
@@ -49,17 +63,7 @@ export class Folder extends HTMLDivElement
             });
         }
         this.headerButton.classList.add("folder-link");
-        header.appendChild(this.headerButton);
-
-        this.expandable = document.createElement('div');
-        this.expandable.classList.add("expandable-wrapper");
-        this.appendChild(this.expandable);
-
-        this.elements = document.createElement('div');
-        this.elements.style.display = "flex";
-        this.elements.style.flexDirection = "column";
-        this.elements.classList.add("expandable-content");
-        this.expandable.appendChild(this.elements);
+        this.header.appendChild(this.headerButton);
     }
 
     public Toggle()

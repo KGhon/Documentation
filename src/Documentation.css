@@ -75,7 +75,7 @@ ul li::marker{
 
 .folder-element {
     padding: 0px 0px 0px 40px;
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 .expandable-wrapper {

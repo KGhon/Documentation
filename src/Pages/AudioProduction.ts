@@ -2,7 +2,7 @@ import '../ColorThemes.css';
 import '../Documentation.css';
 import '../CustomElements.ts';
 import { DocPage } from '../Templates/DocPage.ts';
-import pages from '../../data/AudioProduction/pages.json';
+import pages from '../../data/AudioProduction/AudioProduction-pages.json';
 import * as GUIToolkit from "./AudioProduction/ReaperScripts/GUIToolkit.ts";
 import * as MIDIMixingTool from "./AudioProduction/ReaperScripts/MIDIMixingTool.ts";
 import * as ProjectSetupHelpers from "./AudioProduction/ReaperScripts/ProjectSetupHelpers.ts";

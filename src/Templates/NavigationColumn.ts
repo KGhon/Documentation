@@ -55,14 +55,16 @@ export class NavigationColumn extends HTMLDivElement
                             evt.preventDefault()
                             callback(name, true);
                         });
-                        newFolder = new Folder(spacedName, link);
+                        newFolder = document.createElement("div", { is: "folder-element" }) as Folder;
+                        newFolder.Configure(spacedName, link);
                     }
                     else
                     {
-                        newFolder = new Folder(spacedName, null);
+                        newFolder = document.createElement("div", { is: "folder-element" }) as Folder;
+                        newFolder.Configure(spacedName, null);
                     }
                     folder.AddElement(newFolder);
-                    this.folders.set(path, newFolder);
+                    this.folders.set(path + name + "/", newFolder);
                 }
                 else
                 {
@@ -92,14 +94,16 @@ export class NavigationColumn extends HTMLDivElement
                             evt.preventDefault()
                             callback(name, true);
                         });
-                        newFolder = new Folder(spacedName, link);
+                        newFolder = document.createElement("div", { is: "folder-element" }) as Folder;
+                        newFolder.Configure(spacedName, link);
                     }
                     else
                     {
-                        newFolder = new Folder(spacedName, null);
+                        newFolder = document.createElement("div", { is: "folder-element" }) as Folder;
+                        newFolder.Configure(spacedName, null);
                     }
                     this.appendChild(newFolder);
-                    this.folders.set(path + name, newFolder);
+                    this.folders.set(path + name + "/", newFolder);
                 }
                 else
                 {
@@ -115,11 +119,6 @@ export class NavigationColumn extends HTMLDivElement
                 }
             }
 
-        }
-
-        for (const [_key, value] of this.folders)
-        {
-            this.appendChild(value);
         }
     }
 
