@@ -3,6 +3,7 @@ import '../Documentation.css';
 import '../CustomElements.ts';
 import { DocPage } from '../Templates/DocPage.ts';
 import pages from '../../data/Godot/Godot-pages.json';
+import * as TwineAnalyzer from "./Godot/TwineAnalyzer/TwineAnalyzer.ts";
 
 const spa: DocPage = document.createElement('div', { is: 'doc-page' }) as DocPage;
 spa.SetNavigationPageName("Godot");
@@ -19,11 +20,12 @@ window.addEventListener('popstate', (event) =>
     }
     else
     {
-        spa.ChangePage("Home", false);
+        spa.ChangePage("Godot", false);
     }
 });
 
-spa.AddContentPage("Home", document.createElement("div"));
+spa.AddContentPage("Godot", document.createElement("div"));
+spa.AddContentPage("TwineAnalyzer", TwineAnalyzer.Construct());
 
 const path = window.location.hash.replace('#', '');
 if (path)
@@ -32,5 +34,5 @@ if (path)
 }
 else
 {
-    spa.ChangePage("Home", false);
+    spa.ChangePage("Godot", false);
 }

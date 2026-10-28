@@ -10,22 +10,24 @@ export class CodeBlock extends HTMLDivElement
 
         this.style.display = "flex";
         this.style.flexDirection = "column";
-        this.style.margin = "20px 50px 0px 50px";
         this.style.borderStyle = "solid";
-        this.style.borderWidth = "0px 4px 4px 4px";
         this.style.borderColor = "#505050";
 
         this.code = document.createElement('div');
         this.appendChild(this.code);
     }
 
-    public async Configure(code: string, canCopy: boolean, isCompact: boolean, name: string = "")
+    public async Configure(code: string, canCopy: boolean, isCompact: boolean, name: string = "", borderWidth: number = 4, margin: string = "20px 50px 0px 50px", padding: string = "0")
     {
         this.code.innerHTML = code;
+        this.code.style.whiteSpace = "pre-wrap";
+        this.style.margin = margin;
+        this.style.padding = padding;
+        this.style.borderWidth = `0px ${borderWidth}px ${borderWidth}px ${borderWidth}px`;
         if (name != "" || canCopy || isCompact)
         {
             const header: HTMLDivElement = document.createElement('div');
-            header.style.padding = " 4px 0px 4px 0px";
+            header.style.padding = `${borderWidth}px 0px ${borderWidth}px 0px`;
             header.style.display = "flex";
             header.style.flexDirection = "row";
             header.style.backgroundColor = "#505050";
@@ -106,7 +108,7 @@ export class CodeBlock extends HTMLDivElement
         }
         else
         {
-            this.style.borderWidth = "4px";
+            this.style.borderWidth = `${borderWidth}px`;
         }
     }
 

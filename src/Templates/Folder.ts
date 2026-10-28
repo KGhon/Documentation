@@ -21,13 +21,11 @@ export class Folder extends HTMLDivElement
         this.appendChild(this.header);
         
         this.foldButton = document.createElement('button');
-        this.foldButton.style.paddingTop = "2px";
-        this.foldButton.style.border = "0px";
-        this.foldButton.style.fontFamily = "Courier, monospace";
+        this.foldButton.style.padding = "0";
+        this.foldButton.style.border = "0";
         this.foldButton.style.color = "white";
         this.foldButton.style.backgroundColor = "transparent";
-        this.foldButton.style.transform = "scale(1.7)";
-        this.foldButton.textContent = "+";
+        this.foldButton.textContent = "\u25B6";
         this.foldButton.addEventListener("click", () => {
             this.Toggle();
         });
@@ -70,13 +68,13 @@ export class Folder extends HTMLDivElement
     {
         if (this.open)
         {
-            this.foldButton.textContent = '+';
+            this.foldButton.textContent = '\u25B6';
             this.expandable.classList.remove("open");
             this.open = false;
         }
         else
         {
-            this.foldButton.textContent = '-';
+            this.foldButton.textContent = '\u25BD';
             this.expandable.classList.add("open");
             this.open = true;
         }

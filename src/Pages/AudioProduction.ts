@@ -24,11 +24,11 @@ window.addEventListener('popstate', (event) =>
     }
     else
     {
-        spa.ChangePage("Home", false);
+        spa.ChangePage("AudioProduction", false);
     }
 });
 
-spa.AddContentPage("Home", document.createElement("div"));
+spa.AddContentPage("AudioProduction", document.createElement("div"));
 spa.AddContentPage("GUIToolkit", GUIToolkit.Construct());
 spa.AddContentPage("MIDIMixingTool", MIDIMixingTool.Construct());
 spa.AddContentPage("ProjectSetupHelpers", ProjectSetupHelpers.Construct());
@@ -42,5 +42,5 @@ if (path)
 }
 else
 {
-    spa.ChangePage("Home", false);
+    spa.ChangePage("AudioProduction", false);
 }

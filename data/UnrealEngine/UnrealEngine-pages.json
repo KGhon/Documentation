@@ -1,12 +1,4 @@
 {
   "pages": [
-    [ "ReaperScripts", "", false, true ],
-    [ "GUIToolkit", "ReaperScripts", true, false ],
-    [ "MIDIMixingTool", "ReaperScripts", true, false ],
-    [ "ProjectSetupHelpers", "ReaperScripts", true, false ],
-    [ "Plugins", "", false, true ],
-    [ "MIDIRetriggerableBuffer", "Plugins", true, false ],
-    [ "StandalonePrograms", "", false, true ],
-    [ "PlaceholderVoiceoverGenerator", "StandalonePrograms", true, false ]
   ]
 }

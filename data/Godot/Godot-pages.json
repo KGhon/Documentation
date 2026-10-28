@@ -3,7 +3,6 @@
     [ "KDocumentationTools", "", true, true ],
     [ "Boards", "KDocumentationTools/", true, true ],
     [ "Extensions", "KDocumentationTools/", true, true ],
-    [ "TwineAnalyzer", "KDocumentationTools/", true, true ],
-    [ "TwineBatchAnalyzer", "KDocumentationTools/TwineAnalyzer/", true, false ]
+    [ "TwineAnalyzer", "KDocumentationTools/", true, false ]
   ]
 }

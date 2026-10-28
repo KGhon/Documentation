@@ -19,11 +19,11 @@ window.addEventListener('popstate', (event) =>
     }
     else
     {
-        spa.ChangePage("Home", false);
+        spa.ChangePage("UnrealEngine", false);
     }
 });
 
-spa.AddContentPage("Home", document.createElement("div"));
+spa.AddContentPage("UnrealEngine", document.createElement("div"));
 
 const path = window.location.hash.replace('#', '');
 if (path)
@@ -32,5 +32,5 @@ if (path)
 }
 else
 {
-    spa.ChangePage("Home", false);
+    spa.ChangePage("UnrealEngine", false);
 }

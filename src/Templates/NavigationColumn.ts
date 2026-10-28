@@ -39,6 +39,26 @@ export class NavigationColumn extends HTMLDivElement
         {
             const spacedName = name.replace(/([a-z0-9])([A-Z])|([A-Z]+)([A-Z][a-z])/g, '$1$3 $2$4');
             let folder: Folder;
+
+            const header: HTMLDivElement = document.createElement('div');
+            header.style.display = "flex";
+            header.style.flexDirection = "row";
+
+            const foldButton: HTMLDivElement = document.createElement('div');
+            foldButton.style.paddingRight = "10px";
+            foldButton.textContent = "\u25AA";
+            header.appendChild(foldButton);
+
+            const link: HTMLAnchorElement = document.createElement('a');
+            link.href = `#${name}`;
+            link.textContent = spacedName;
+            link.addEventListener("click", (evt) =>
+            {
+                evt.preventDefault()
+                callback(name, true);
+            });
+            header.appendChild(link);
+
             if (this.folders.has(path) && path != "")
             {
                 folder = this.folders.get(path)!;
@@ -47,14 +67,6 @@ export class NavigationColumn extends HTMLDivElement
                     let newFolder: Folder;
                     if (isLink)
                     {
-                        const link: HTMLAnchorElement = document.createElement('a');
-                        link.href = `#${name}`;
-                        link.textContent = spacedName;
-                        link.addEventListener("click", (evt) =>
-                        {
-                            evt.preventDefault()
-                            callback(name, true);
-                        });
                         newFolder = document.createElement("div", { is: "folder-element" }) as Folder;
                         newFolder.Configure(spacedName, link);
                     }
@@ -68,15 +80,7 @@ export class NavigationColumn extends HTMLDivElement
                 }
                 else
                 {
-                    const link: HTMLAnchorElement = document.createElement('a');
-                    link.href = `#${name}`;
-                    link.textContent = spacedName;
-                    link.addEventListener("click", (evt) =>
-                    {
-                        evt.preventDefault()
-                        callback(name, true);
-                    });
-                    folder.AddElement(link);
+                    folder.AddElement(header);
                 }
             }
             else
@@ -86,14 +90,6 @@ export class NavigationColumn extends HTMLDivElement
                     let newFolder: Folder;
                     if (isLink)
                     {
-                        const link: HTMLAnchorElement = document.createElement('a');
-                        link.href = `#${name}`;
-                        link.textContent = spacedName;
-                        link.addEventListener("click", (evt) =>
-                        {
-                            evt.preventDefault()
-                            callback(name, true);
-                        });
                         newFolder = document.createElement("div", { is: "folder-element" }) as Folder;
                         newFolder.Configure(spacedName, link);
                     }
@@ -107,18 +103,9 @@ export class NavigationColumn extends HTMLDivElement
                 }
                 else
                 {
-                    const link: HTMLAnchorElement = document.createElement('a');
-                    link.href = `#${name}`;
-                    link.textContent = spacedName;
-                    link.addEventListener("click", (evt) =>
-                    {
-                        evt.preventDefault()
-                        callback(name, true);
-                    });
-                    this.appendChild(link);
+                    this.appendChild(header);
                 }
             }
-
         }
     }
 
