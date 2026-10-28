@@ -1,16 +1,14 @@
 import "../../../Documentation.css"
+import { ContentPage } from "../../../Templates/ContentPage.ts";
 import { CodeBlock } from "../../../Templates/CodeBlock.ts";
 import { Table } from "../../../Templates/Table.ts";
-import * as textContent from "../../../../data/AudioProduction/GUIToolkit-text-generated.json";
-import * as code from "../../../../data/AudioProduction/GUIToolkit-code-generated.json";
+import * as textContent from "../../../../generated/GUIToolkit-text-generated.json";
+import * as code from "../../../../generated/GUIToolkit-code-generated.json";
 
-const root: HTMLDivElement = document.createElement("div");
 export function Construct(): HTMLDivElement
 {
-    const title: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c0" })) as HTMLParagraphElement;
-    title.innerHTML = textContent.Title;
-
-    root.appendChild(document.createElement('div', { is: 'divider-element' }));
+    const root: ContentPage = document.createElement("div", { is: "content-page" }) as ContentPage;
+    root.Configure(textContent.Title, textContent.Category);
 
     const overviewSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
     overviewSection.innerHTML = 'Overview';

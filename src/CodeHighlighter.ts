@@ -61,8 +61,7 @@ async function ProcessDirectory(dirPath: string): Promise<void>
     }
 
     const folderName = path.basename(dirPath);
-    const parentDir = path.dirname(dirPath);
-    const jsonPath = path.join(parentDir, `${folderName}-generated.json`);
+    const jsonPath = path.join("generated", `${folderName}-generated.json`);
     const fileRecord: Record<string, any> = {};
 
     for (const file of targetFiles)

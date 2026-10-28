@@ -1,0 +1,20 @@
+[Title]
+MIDI Retriggerable Buffer
+
+[Category]
+Plugins
+
+[Overview]
+The MIDI Retriggerable Buffer is a Reaper JSFX plugin that records a section of audio playback on a track that can then be retriggered like a sampler using MIDI. It is primarily useful for testing repetitive sounds during sound design without needing to render temporary audio files or copy paste in-progress sounds over and over any time a change is made.
+
+[Dependencies]
+<li>Reaper v7.76+ (may work with older versions)</li>
+
+[HowItWorks]
+Place the plugin on a track whose output you want to record into the buffer. Ideally the track is either a top level folder or an isolated track which audio can be routed to so MIDI can be easily placed on the track.
+
+To record into the buffer, make a MIDI item that plays any black note. During playback, this triggers recording the immediate audio input into the buffer (and will reset and overwrite the buffer any time it is triggered).
+
+The audio buffer can be played at any time by playing a white note, either using a MIDI item or hitting the key on a MIDI keyboard.
+
+A simple example would be sound designing footsteps and you want to test how the footsteps sound when synced to a reference video. Instead of copy pasting the sound (and any layers or automation plus variations), place MIDI at the time synchs and then record the sound into the buffer. Then if the sound is ever updated, all you need to do is re-record the buffer.

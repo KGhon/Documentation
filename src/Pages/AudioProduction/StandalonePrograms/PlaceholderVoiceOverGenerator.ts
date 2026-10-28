@@ -1,13 +1,11 @@
 import "../../../Documentation.css"
-import * as textContent from "../../../../data/AudioProduction/PlaceholderVoiceoverGenerator-text-generated.json";
+import { ContentPage } from "../../../Templates/ContentPage.ts";
+import * as textContent from "../../../../generated/PlaceholderVoiceoverGenerator-text-generated.json";
 
-const root: HTMLDivElement = document.createElement("div");
 export function Construct(): HTMLDivElement
 {
-    const title: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c0" })) as HTMLParagraphElement;
-    title.innerHTML = textContent.Title;
-
-    root.appendChild(document.createElement('div', { is: 'divider-element' }));
+    const root: ContentPage = document.createElement("div", { is: "content-page" }) as ContentPage;
+    root.Configure(textContent.Title, textContent.Category);
 
     const overviewSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
     overviewSection.innerHTML = 'Overview';

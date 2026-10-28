@@ -1,0 +1,7 @@
+{
+  "Title": "Placeholder Voiceover Generator",
+  "Category": "Standalone Program",
+  "Overview": "This standalone program utilizes Windows' built-in, legacy C# Speech API (SAPI) to generate placeholder voiceover audio files from CSV files. It is meant to help facilitate system implementation and testing regardless of voice over production timelines.",
+  "Dependencies": "<li> Windows OS</li>",
+  "HowItWorks": "To use the generator, run the executable on a Windows computer. Select what CSV files have lines you want to generate the audio files for. Depending on how your data is formatted in the CSV, you may need to change the \"Csv Line Column\" and the \"Csv File Name Column\" values (the first column is zero). Lines are the text that will be read in the audio file and file name determines the output file name.\r\n\r\nNOTE: The generator automatically overwrites any wav files with a name that already exists at the destination directory.\r\n\r\nOnce placeholder voiceover is created, it can be implemented and tested (ie. checking for typos or mismatches in hash keys). Then once the real voice over is ready, just replace the placeholder files with the real wavs and you're done!"
+}

@@ -3,7 +3,9 @@ import '../Documentation.css';
 import '../CustomElements.ts';
 import { DocPage } from '../Templates/DocPage.ts';
 import pages from '../../data/Godot/Godot-pages.json';
-import * as TwineAnalyzer from "./Godot/TwineAnalyzer/TwineAnalyzer.ts";
+import * as Boards from "./Godot/KDocumentationTools/Boards/Boards.ts";
+import * as Extensions from "./Godot/KDocumentationTools/Extensions/Extensions.ts";
+import * as TwineAnalyzer from "./Godot/KDocumentationTools/TwineAnalyzer/TwineAnalyzer.ts";
 
 const spa: DocPage = document.createElement('div', { is: 'doc-page' }) as DocPage;
 spa.SetNavigationPageName("Godot");
@@ -25,6 +27,8 @@ window.addEventListener('popstate', (event) =>
 });
 
 spa.AddContentPage("Godot", document.createElement("div"));
+spa.AddContentPage("Boards", Boards.Construct());
+spa.AddContentPage("Extensions", Extensions.Construct());
 spa.AddContentPage("TwineAnalyzer", TwineAnalyzer.Construct());
 
 const path = window.location.hash.replace('#', '');

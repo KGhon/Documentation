@@ -1,0 +1,22 @@
+{
+  "Title": "GUI Toolkit",
+  "Category": "Reaper Scripts",
+  "Overview": "This GUI Toolkit provides classes to create simple GUIs for ReaScripts using native gfx code in Lua. UIs are built by constructing parent-child trees using the toolkit classes.",
+  "Dependencies": "<li>Reaper v7.76+</li>\r\n<li>The GUIToolkit_Kevin.lua file must be in the same location as any Reascript that wants to use it.</li>",
+  "Example": "Below is a simple example of a GUI that positions two button that when pressed change some text.\r\n\r\nNOTE: Using gfx.w or gfx.h for the width and height parameters of a UI element constructor means the UI element will expand to fit the entire window or constraints of the parent element, if any. If given literal values, the element will size to the minimum of either the given values or the constraints of the parent.",
+  "GUIContext": "The GUIContext is the first class that should be instantiated. It manages the root of the UI tree, an input handler, and is responsible for constantly updating the UI through the tree.",
+  "UIBase": "The base class upon which all other UI elements are built. Instantiating this class creates a UI element that allows child elements to control their own xy-position. These functions can be used on any UI element.",
+  "Divider": "A simple UI element that draws a centered box.",
+  "HorizontalContainer": "This UI element distributes immediate child elements horizontally within the container's runtime width. This container takes into consideration child element ratio values.",
+  "VerticalContainer": "This UI element distributes immediate child elements vertically within the container's runtime height.This container takes into consideration child element ratio values.",
+  "ScaleContainer": "This UI element will scale immediate child elements to fit the runtime size of the container. It is meant to only hold one immediate child element.",
+  "ScrollContainer": "This UI element will distribute immediate child elements vertically using their runtime height. If the combined height of the UI elments is larger than the viewable area of the container, the container can be scrolled.",
+  "TabContainer": "This UI element creates an exclusive tab for each immediate child element. Tab selections uses the runtime width of the container and is not scrollable. Tab names use the string id of the UI element by default when the child element is initially added.",
+  "Text": "This UI element only displays text.",
+  "Button": "This UI element can either be a click or toggle button.",
+  "TextInput": "This UI element holds a modifiable text value.",
+  "NumericInput": "This UI element holds a modifiable numeric value.",
+  "Dropdown": "This UI element creates a dropdown list of named options.",
+  "List": "This UI element creates a scrollable list of named items. It supports single selection and multiselection.",
+  "Folder": "This UI element can toggle showing and hiding its immedite child elements."
+}

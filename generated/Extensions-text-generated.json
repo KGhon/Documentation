@@ -1,0 +1,6 @@
+{
+  "Title": "Extensions",
+  "Category": "KDocumentationTools",
+  "Overview": "overview",
+  "Dependencies": "<li>Godot 4.6.3</li>"
+}
