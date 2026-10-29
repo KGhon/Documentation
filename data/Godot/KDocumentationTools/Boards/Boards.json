@@ -1,0 +1,15 @@
+{
+  "Widgets": [
+    [ "Text", "The Text widget is used to display text tied to a Board. The widget displays using rich text, so BBCode in the source text will modify how the text is displayed." ],
+    [ "Text Reference", "The Text Reference widget is used to display text that is read from a .txt file in the project. The widget displays using rich text, so BBCode in the source text will modify how the text is displayed." ],
+    [ "Image", "The Image widget is used to display an image file in the project."],
+    [ "Board Reference", "The Board Reference widget is used to create a clickable link to open another Board."],
+    [ "Extension Reference", "The Extension Reference widget is used to display an Extension file inside of a Board. For display only. Extensions need to be set up correctly to disable editing when being displayed in a Board."],
+    [ "URL", "The URL widget is used to create a clickable link to open a web page."],
+    [ "Twine Analysis", "The Twine Analysis widget is used to create a clickable link to open a Twine Analysis."],
+    [ "Area", "The Area widget is used to label an area. Widgets within the area will be dragged with along with it."],
+    [ "Redirect", "The Redirect widget is used to organize the connectors between widgets."],
+    [ "Portal", "The Portal widget is used to create clickable links that will scroll the Board view to a Waypoint widget."],
+    [ "Waypoint", "The Waypoint widget is a simple marker used by Portal widgets as scroll destinations."]
+  ]
+}

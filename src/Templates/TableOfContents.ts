@@ -44,6 +44,15 @@ export class TableOfContents extends HTMLDivElement
         let matches: NodeListOf<HTMLElement> = content.querySelectorAll('.c1, .c2, .c3');
         for (const match of matches)
         {
+            const header: HTMLDivElement = document.createElement('div');
+            header.style.display = "flex";
+            header.style.flexDirection = "row";
+
+            const bulletPoint: HTMLDivElement = document.createElement('div');
+            bulletPoint.style.paddingRight = "10px";
+            bulletPoint.textContent = "\u25AA";
+            header.appendChild(bulletPoint);
+
             const link: HTMLAnchorElement = document.createElement('a');
             link.textContent = match.textContent;
             link.addEventListener("click", (evt) => {
@@ -52,17 +61,18 @@ export class TableOfContents extends HTMLDivElement
             });
             if (match.classList.contains('c1'))
             {
-                link.style.margin = '0px 0px 0px 0px';
+                header.style.margin = '0px 0px 0px 0px';
             }
             else if (match.classList.contains('c2'))
             {
-                link.style.margin = `0px 0px 0px ${this.indentation * 1}px`;
+                header.style.margin = `0px 0px 0px ${this.indentation * 1}px`;
             }
             else if (match.classList.contains('c3'))
             {
-                link.style.margin = `0px 0px 0px ${this.indentation * 2}px`;
+                header.style.margin = `0px 0px 0px ${this.indentation * 2}px`;
             }
-            this.links.appendChild(link);
+            header.appendChild(link);
+            this.links.appendChild(header);
         }
     }
 

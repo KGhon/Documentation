@@ -44,10 +44,10 @@ export class NavigationColumn extends HTMLDivElement
             header.style.display = "flex";
             header.style.flexDirection = "row";
 
-            const foldButton: HTMLDivElement = document.createElement('div');
-            foldButton.style.paddingRight = "10px";
-            foldButton.textContent = "\u25AA";
-            header.appendChild(foldButton);
+            const bulletPoint: HTMLDivElement = document.createElement('div');
+            bulletPoint.style.paddingRight = "10px";
+            bulletPoint.textContent = "\u25AA";
+            header.appendChild(bulletPoint);
 
             const link: HTMLAnchorElement = document.createElement('a');
             link.href = `#${name}`;

@@ -1,6 +1,8 @@
 import "../../../../Documentation.css"
 import { ContentPage } from "../../../../Templates/ContentPage.ts";
-import * as textContent from "../../../../../generated/TwineAnalyzer-text-generated.json";
+import { Table } from "../../../../Templates/Table.ts";
+import * as textContent from "../../../../../generated/Boards-text-generated.json";
+import * as content from "../../../../../data/Godot/KDocumentationTools/Boards/Boards.json";
 
 export function Construct(): HTMLDivElement
 {
@@ -18,6 +20,18 @@ export function Construct(): HTMLDivElement
 
     const dependencies: HTMLUListElement = root.appendChild(Object.assign(document.createElement("ul"), { className: "c4", style: "white-space: normal" })) as HTMLUListElement;
     dependencies.innerHTML = textContent.Dependencies;
+
+    const guideSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
+    guideSection.innerHTML = 'Guide';
+
+    const widgetsSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
+    widgetsSection.innerHTML = 'Widgets';
+
+    const widgetsTable: Table = root.appendChild(document.createElement("table", { is: "table-element" })) as Table;
+    widgetsTable.Configure(content.Widgets);
+
+    const makingCustomWidgetsSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
+    makingCustomWidgetsSection.innerHTML = 'Making Custom Widgets';
 
     return root;
 }

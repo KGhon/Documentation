@@ -8,7 +8,7 @@ KDocumentationTools
 The Twine Analyzer is a Twine HTML parser that lets you visualize, select, and export passages to other formats. It requires that your Twine stories follow specific markup for the parsing to work.
 
 [Dependencies]
-<li>Godot 4.6.3</li>
+<li>Godot 4.6.3 with C# support</li>
 
 [Navigation]
 The Twine Analyzer exists as a main screen plugin you can swap to at the top of Godot's editor window. Twine analyses can be opened in 3 ways in a Godot project:<ul>

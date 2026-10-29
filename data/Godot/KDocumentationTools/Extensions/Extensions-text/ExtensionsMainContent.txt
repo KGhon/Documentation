@@ -8,4 +8,4 @@ KDocumentationTools
 overview
 
 [Dependencies]
-<li>Godot 4.6.3</li>
+<li>Godot 4.6.3 with C# support</li>

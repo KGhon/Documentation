@@ -10,7 +10,7 @@ This standalone program utilizes Windows' built-in, legacy C# Speech API (SAPI) 
 [Dependencies]
 <li> Windows OS</li>
 
-[HowItWorks]
+[Guide]
 To use the generator, run the executable on a Windows computer. Select what CSV files have lines you want to generate the audio files for. Depending on how your data is formatted in the CSV, you may need to change the "Csv Line Column" and the "Csv File Name Column" values (the first column is zero). Lines are the text that will be read in the audio file and file name determines the output file name.
 
 NOTE: The generator automatically overwrites any wav files with a name that already exists at the destination directory.
