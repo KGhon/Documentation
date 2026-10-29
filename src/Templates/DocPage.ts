@@ -22,22 +22,34 @@ export class DocPage extends BasePage
         this.appendChild(postHeader);
 
         const navigationDiv: HTMLDivElement = document.createElement('div');
-        navigationDiv.style.flexDirection = "column";
         navigationDiv.style.width = "25%";
+        navigationDiv.style.position = "sticky";
+        navigationDiv.style.top = "var(--header-height)";
+        navigationDiv.style.height = "calc(100vh - var(--header-height))";
+        navigationDiv.style.maxHeight = "calc(100vh - var(--header-height))";
+        navigationDiv.style.overflowY = "auto";
+        navigationDiv.style.overflowX = "hidden";
+        navigationDiv.style.boxSizing = "border-box";
         postHeader.appendChild(navigationDiv);
 
         this.navigationColumn = document.createElement('div', { is: 'navigation-column' }) as NavigationColumn;
         navigationDiv.appendChild(this.navigationColumn);
 
         this.content = document.createElement('div');
-        this.content.style.padding = "20px";
+        this.content.style.padding = "10px";
         this.content.style.flexDirection = "column";
         this.content.style.width = "100%";
         postHeader.appendChild(this.content);
 
         const tableOfContentsDiv: HTMLDivElement = document.createElement('div');
-        tableOfContentsDiv.style.flexDirection = "column";
         tableOfContentsDiv.style.width = "25%";
+        tableOfContentsDiv.style.position = "sticky";
+        tableOfContentsDiv.style.top = "var(--header-height)";
+        tableOfContentsDiv.style.height = "calc(100vh - var(--header-height))";
+        tableOfContentsDiv.style.maxHeight = "calc(100vh - var(--header-height))";
+        tableOfContentsDiv.style.overflowY = "auto";
+        tableOfContentsDiv.style.overflowX = "hidden";
+        tableOfContentsDiv.style.boxSizing = "border-box";
         postHeader.appendChild(tableOfContentsDiv);
 
         this.tableOfContents = document.createElement('div', { is: 'table-of-contents' }) as TableOfContents;

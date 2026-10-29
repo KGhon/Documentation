@@ -5,7 +5,7 @@ Boards
 KDocumentationTools
 
 [Overview]
-overview
+Boards provides a whiteboard workspace within Godot utilizing its built-in GraphEdit, GraphNode, and UI tools. Create Boards as files and populate them with widgets on an infinite grid for planning and documentation. Boards can also be extended with custom widgets.
 
 [Dependencies]
 <li>Godot 4.6.3 with C# support</li>

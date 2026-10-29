@@ -9,6 +9,9 @@ export class Header extends HTMLDivElement
         this.style.flexDirection = "row";
         this.style.position = "sticky";
         this.style.top = "0";
+        this.style.height = "var(--header-height)";
+        this.style.maxHeight = "var(--header-height)";
+        this.style.boxSizing = "border-box";
         this.style.borderStyle = "solid";
         this.style.borderWidth = "2px";
         this.style.borderColor = "var(--border-color)";

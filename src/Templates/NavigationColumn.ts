@@ -13,10 +13,7 @@ export class NavigationColumn extends HTMLDivElement
         this.style.padding = "8px";
         this.style.display = "flex";
         this.style.flexDirection = "column";
-        this.style.position = "sticky";
-        this.style.top = "5vh";
-        this.style.height = "calc(100vh - var(--header-height))";
-        this.style.maxHeight = "calc(100vh - var(--header - height))";
+        this.style.height = "100%";
         this.style.overflowY = "auto";
         this.style.overflowX = "hidden";
         this.style.borderStyle = "solid";
