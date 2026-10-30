@@ -51,6 +51,33 @@ export function Construct(): HTMLDivElement
     const extensionScene: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     extensionScene.innerHTML = textContent.ExtensionScene;
 
+    const inspectableSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
+    inspectableSection.innerHTML = "Inspectables"
+
+    const inspectable: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
+    inspectable.innerHTML = textContent.Inspectables;
+
+    const exampleInspectable: CodeBlock = root.appendChild(document.createElement("div", { is: "code-block" })) as CodeBlock;
+    exampleInspectable.Configure(code.ExampleInspectable, true, false);
+
+    const inspectableDataSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
+    inspectableDataSection.innerHTML = "Inspectable Data"
+
+    const inspectableData: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
+    inspectableData.innerHTML = textContent.InspectableDataClass;
+
+    const inspectorClassSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
+    inspectorClassSection.innerHTML = "Inspector Class"
+
+    const inspectorClass: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
+    inspectorClass.innerHTML = textContent.InspectorClass;
+
+    const inspectorSceneSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
+    inspectorSceneSection.innerHTML = "Inspector Scene"
+
+    const inspectorScene: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
+    inspectorScene.innerHTML = textContent.InspectorScene;
+
     const savingDataSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
     savingDataSection.innerHTML = "Saving Data"
 

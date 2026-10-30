@@ -90,7 +90,7 @@ async function ProcessDirectory(dirPath: string): Promise<void>
         if (file.name.endsWith('.txt'))
         {
             let htmlOutput = await (await GetHighlighter()).codeToHtml(content.trim(), { lang: language, theme: 'dark-plus' });
-            htmlOutput = htmlOutput.replace('<pre class="shiki', '<pre style="margin: 0; padding: 20px; tab-size: 4; white-space: pre-wrap; word-break: break-word;" class="shiki');
+            htmlOutput = htmlOutput.replace('<pre class="shiki', '<pre style="margin: 0; padding: 20px; tab-size: 4;" class="shiki');
 
             for (const highlight of postHighlights)
             {

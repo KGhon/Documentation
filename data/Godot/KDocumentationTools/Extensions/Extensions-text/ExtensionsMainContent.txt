@@ -19,19 +19,32 @@ Extension windows are split up into two sections. On the left is the extension U
 To create a new extension, you'll need to create several subclasses:<ul>
 <li>KDTExtensionResourceBase</li>
 <li>KDTExtensionBase</li>
+<li>KDTExtensionInspectableDataBase</li>
 <li>KDTExtensionInspector</li>
 
 [ExtensionResource]
-Your extension Resource subclass should inherit from KDTExtensionResourceBase. You must override and define the PackedScene variable named 'extensionTemplate' with the scene that contains all the functionality of the extension. Add any data as 'Export' public variables that your extension will need to save that is not tied to a UI element (ie. data that is stored on the extension class and not the UI node classes).
+Your extension Resource should inherit from KDTExtensionResourceBase. You must override and define the PackedScene variable named 'extensionTemplate' with the scene that contains all the functionality of the extension. Add any data as 'Export' public variables that your extension will need to save that is not tied to a UI element (ie. data that is stored on the extension class and not the UI node classes).
 
 [ExtensionClass]
-class
+Your extension class should inherit from KDTExtensionBase and handle the basic functionality of your extension scene. The extension class can implement the OnInitialize() virtual function to handle setup. The OnSave() and OnLoad() virtual functions are provided if you need to save data directly to the extensions Resource. Cast the 'resource' variable to your extension Resource to set and get data. Since you will probably be allowing UI nodes handle themselves, save and load will need to be handled on their individual node classes (see Saving Data below).
 
 [ExtensionScene]
+Then extension scene can be built like any UI normal UI node tree. The only requirements are that the root node should have your extension script attached and any custom classes need to be marked with the 'Tool' attribute. This scene is the scene you assign to the 'extensionTemplate' variable in the extension Resource.
+
+[Inspectables]
+If you want UI nodes in your extension to be inspectable using right click, you'll need to implement receiving input and passing the an extension inspector up to the Extension editor. Here is a simple example:
+
+[InspectableDataClass]
+data
+
+[InspectorClass]
+inspector
+
+[InspectorScene]
 scene
 
 [SavingData]
-If your extension scene includes custom UI node classes, you'll need to manually implement saving and loading using the ISaveable interface on each custom class. When saving, extensions automatically gather data to store by iterating though all nodes in the scene tree that implement the interface. You must implement the Save(), Load(), and GetSaveDataClass(). The GetSaveDataClass() function returns the type of class to use for saving your cusotm UI data. In the Save() and Load() functions cast the save data parameter to the save data class you use in the GetSaveDataClass() function. Once cast, you can then set or get saved data.
+If your extension scene includes custom UI node classes or instantiates nodes at runtime, you'll need to manually implement saving and loading using the ISaveable interface on each custom class. When saving, extensions automatically gather data to store by iterating though all nodes in the scene tree that implement the interface. You must implement the Save(), Load(), and GetSaveDataClass(). The GetSaveDataClass() function returns the type of class to use for saving your cusotm UI data. In the Save() and Load() functions cast the save data parameter to the save data class you use in the GetSaveDataClass() function. Once cast, you can then set or get saved data.
 
 [HookingUpUndoRedo]
-In order for data changes on custom UI node classes to be part of the UndoRedo history, you'll implement the IUndoable interface. SetUndoRedo() is the only function yoe need to implement to automatically receive the UndoRedo reference for use in your class. You also need to modify data in your class using Godot's Callables. Here is a simple example taken from the ChecklistElement class:
+In order for data changes on custom UI node classes to be part of the UndoRedo history, you must implement the IUndoable interface. SetUndoRedo() is the only function you need to implement to automatically receive the UndoRedo reference for use in your class. If you have classes that are not nodes, you'll need to have a node that does receive the UndoRedo reference manually pass it on. You also need to modify data in your class using Godot's Callables. Here is a simple example taken from the ChecklistElement class:

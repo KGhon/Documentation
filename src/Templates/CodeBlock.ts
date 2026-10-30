@@ -8,8 +8,8 @@ export class CodeBlock extends HTMLDivElement
     {
         super();
 
-        this.style.display = "flex";
-        this.style.flexDirection = "column";
+        this.style.display = "grid";
+        this.style.boxSizing = "border-box";
         this.style.borderStyle = "solid";
         this.style.borderColor = "#505050";
 
@@ -20,7 +20,10 @@ export class CodeBlock extends HTMLDivElement
     public async Configure(code: string, canCopy: boolean, isCompact: boolean, name: string = "", borderWidth: number = 4, margin: string = "20px 50px 0px 50px", padding: string = "0")
     {
         this.code.innerHTML = code;
-        this.code.style.whiteSpace = "pre-wrap";
+        this.code.style.display = "grid";
+        this.code.style.width = "100%";
+        this.code.style.overflowX = "auto";
+        this.code.style.boxSizing = "border-box";
         this.style.margin = margin;
         this.style.padding = padding;
         this.style.borderWidth = `0px ${borderWidth}px ${borderWidth}px ${borderWidth}px`;
@@ -120,7 +123,7 @@ export class CodeBlock extends HTMLDivElement
         if (!this.isExpanded)
         {
             this.code.style.height = "auto";
-            this.code.style.overflowY = "none";
+            this.code.style.overflowY = "";
             this.isExpanded = true;
         }
         else
