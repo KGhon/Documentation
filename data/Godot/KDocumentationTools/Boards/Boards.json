@@ -10,6 +10,7 @@
     [ "Area", "The Area widget is used to label an area. Widgets within the area will be dragged with along with it."],
     [ "Redirect", "The Redirect widget is used to organize the connectors between widgets."],
     [ "Portal", "The Portal widget is used to create clickable links that will scroll the Board view to a Waypoint widget."],
-    [ "Waypoint", "The Waypoint widget is a simple marker used by Portal widgets as scroll destinations."]
+    [ "Waypoint", "The Waypoint widget is a simple marker used by Portal widgets as scroll destinations." ],
+    [ "Draw", "The Draw widget is created by clicking the brush icon in the top right corner and then using right click on the grid. Each drawing can hold multiple lines. Drawing without a Draw widget selected will automatically create a new widget. Having a Draw widget selected will add to that widget's drawing."]
   ]
 }
