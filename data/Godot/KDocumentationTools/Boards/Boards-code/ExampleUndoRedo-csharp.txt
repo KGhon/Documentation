@@ -1,0 +1,29 @@
+[Callable,#4EC9B0]
+[Helpers,#4EC9B0]
+[UndoRedo,#4EC9B0]
+[MergeMode,#B5CEA8]
+[Ends,#D4D4D4]
+public void SetText(string text)
+{
+	string previousText = _richTextLabel.Text;
+	if (previousText == text)
+	{
+		return;
+	}
+
+	Callable doMethod = Callable.From(() =>
+	{
+		_richTextLabel.Text = text;
+	});
+	doMethod.Call();
+
+	if (undoRedo != null)
+	{
+		Callable undoMethod = Callable.From(() =>
+		{
+			_richTextLabel.Text = previousText;
+		});
+
+		Helpers.CommitUndoRedoAction(undoRedo, UndoRedo.MergeMode.Ends, Title + ": Set text", doMethod, undoMethod);
+	}
+}

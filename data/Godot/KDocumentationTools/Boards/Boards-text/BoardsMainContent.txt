@@ -5,7 +5,7 @@ Boards
 KDocumentationTools
 
 [Overview]
-Boards provides a whiteboard workspace within Godot utilizing its built-in GraphEdit, GraphNode, and UI tools. Create Boards assets and populate them with widgets on an infinite grid for planning and documentation. Boards can also be extended with custom widgets.
+Boards provides a whiteboard workspace within Godot utilizing its built-in GraphEdit, GraphNode, and UI tools. Create Board assets and populate them with widgets on an infinite grid for planning and documentation. Boards can also be extended with custom widgets.
 
 [Dependencies]
 <li>Godot 4.6.3 with C# support</li>
@@ -50,3 +50,6 @@ The OnRefresh() virtual function is provided to get data from the widget to repo
 
 [WidgetInspectorScene]
 Your widget inspector scene is responsible for displaying interactable UI to pass data to your widget using your inspector class. This is the scene that should be assigned in your widget scene so it will automatically be constructed when clicking on the widget in a Board. Attach your widget inspector class script to the root node and construct the UI inside of the 'Add Here' node.
+
+[HookingUpUndoRedo]
+In order for data changes on your widget to be part of the UndoRedo history, you'll need to modify values using Godot's Callables along with the 'undoRedo' variable provided in the base widget class. Here is a simple example taken from the Text widget:

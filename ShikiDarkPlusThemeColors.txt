@@ -1,3 +1,8 @@
+Csharp
+default: #D4D4D4
+type: #4EC9B0
+enum: #B5CEA8
+
 Lua
 keyword: #569CD6
 local variable: #9CDCFE

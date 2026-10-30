@@ -1,6 +1,13 @@
 {
   "Title": "Extensions",
   "Category": "KDocumentationTools",
-  "Overview": "overview",
-  "Dependencies": "<li>Godot 4.6.3 with C# support</li>"
+  "Overview": "Extensions are a set of classes meant to be used to create additional documentation tools and assets within Godot that can be used in the editor alongside Boards.",
+  "Dependencies": "<li>Godot 4.6.3 with C# support</li>",
+  "Guide": "Extensions are Resources. Use extensions by opening the create Resource window and selecting an extension class (inherits from KDTExtensionResourceBase). You can create multiple files based on the extension that each hold separate, unique data. To view and modify the data in the extension, simply double click the Resource file to open it in a new tab in the KDT Extension Editor. Extensions can also be viewed on Boards using the Extension Reference widget. It's recommended that extensions be read only when viewed in Boards.\r\n\r\nExtension windows are split up into two sections. On the left is the extension UI and on the right a section for editing inspectable UI elements, toggling between viewing as an embedded tab or window, and a notes area. Based on how the extension is set up, selecting UI elements can populate the inspectable area to allow nesting data inside the UI element.",
+  "MakingCustomExtensions": "To create a new extension, you'll need to create several subclasses:<ul>\r\n<li>KDTExtensionResourceBase</li>\r\n<li>KDTExtensionBase</li>\r\n<li>KDTExtensionInspector</li>",
+  "ExtensionResource": "Your extension Resource subclass should inherit from KDTExtensionResourceBase. You must override and define the PackedScene variable named 'extensionTemplate' with the scene that contains all the functionality of the extension. Add any data as 'Export' public variables that your extension will need to save that is not tied to a UI element (ie. data that is stored on the extension class and not the UI node classes).",
+  "ExtensionClass": "class",
+  "ExtensionScene": "scene",
+  "SavingData": "If your extension scene includes custom UI node classes, you'll need to manually implement saving and loading using the ISaveable interface on each custom class. When saving, extensions automatically gather data to store by iterating though all nodes in the scene tree that implement the interface. You must implement the Save(), Load(), and GetSaveDataClass(). The GetSaveDataClass() function returns the type of class to use for saving your cusotm UI data. In the Save() and Load() functions cast the save data parameter to the save data class you use in the GetSaveDataClass() function. Once cast, you can then set or get saved data.",
+  "HookingUpUndoRedo": "In order for data changes on custom UI node classes to be part of the UndoRedo history, you'll implement the IUndoable interface. SetUndoRedo() is the only function yoe need to implement to automatically receive the UndoRedo reference for use in your class. You also need to modify data in your class using Godot's Callables. Here is a simple example taken from the ChecklistElement class:"
 }

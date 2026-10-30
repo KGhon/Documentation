@@ -76,35 +76,38 @@ export class CodeBlock extends HTMLDivElement
                 header.appendChild(expand);
             }
 
-            const copy: HTMLButtonElement = document.createElement('button');
-            copy.style.color = "white";
-            copy.style.backgroundColor = "#555555";
-            copy.style.borderStyle = "solid";
-            copy.style.borderWidth = "2px";
-            copy.style.borderColor = "#707070";
-            copy.textContent = "Copy";
-            copy.classList.add("c4");
-            copy.addEventListener("click", () =>
+            if (canCopy)
             {
-                navigator.clipboard.writeText(code);
-            });
-            copy.addEventListener("mousedown", () =>
-            {
-                copy.style.backgroundColor = "#888888";
-            });
-            copy.addEventListener("mouseup", () =>
-            {
-                copy.style.backgroundColor = "#707070";
-            });
-            copy.addEventListener("mouseover", () =>
-            {
-                copy.style.backgroundColor = "#707070";
-            });
-            copy.addEventListener("mouseout", () =>
-            {
+                const copy: HTMLButtonElement = document.createElement('button');
+                copy.style.color = "white";
                 copy.style.backgroundColor = "#555555";
-            });
-            header.appendChild(copy);
+                copy.style.borderStyle = "solid";
+                copy.style.borderWidth = "2px";
+                copy.style.borderColor = "#707070";
+                copy.textContent = "Copy";
+                copy.classList.add("c4");
+                copy.addEventListener("click", () =>
+                {
+                    navigator.clipboard.writeText(code);
+                });
+                copy.addEventListener("mousedown", () =>
+                {
+                    copy.style.backgroundColor = "#888888";
+                });
+                copy.addEventListener("mouseup", () =>
+                {
+                    copy.style.backgroundColor = "#707070";
+                });
+                copy.addEventListener("mouseover", () =>
+                {
+                    copy.style.backgroundColor = "#707070";
+                });
+                copy.addEventListener("mouseout", () =>
+                {
+                    copy.style.backgroundColor = "#555555";
+                });
+                header.appendChild(copy);
+            }
         }
         else
         {

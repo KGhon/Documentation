@@ -1,8 +1,10 @@
 import "../../../../Documentation.css"
 import { ContentPage } from "../../../../Templates/ContentPage.ts";
 import { Table } from "../../../../Templates/Table.ts";
+import { CodeBlock } from "../../../../Templates/CodeBlock.ts";
 import * as textContent from "../../../../../generated/Boards-text-generated.json";
 import * as content from "../../../../../data/Godot/KDocumentationTools/Boards/Boards.json";
+import * as code from "../../../../../generated/Boards-code-generated.json";
 
 export function Construct(): HTMLDivElement
 {
@@ -71,6 +73,15 @@ export function Construct(): HTMLDivElement
 
     const inspectorScene: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     inspectorScene.innerHTML = textContent.WidgetInspectorScene;
+
+    const hookingUpUndoRedoSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
+    hookingUpUndoRedoSection.innerHTML = 'Hooking Up UndoRedo';
+
+    const hookingUpUndoRedo: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
+    hookingUpUndoRedo.innerHTML = textContent.HookingUpUndoRedo;
+
+    const exampleUndoRedo: CodeBlock = root.appendChild(document.createElement("div", { is: "code-block" })) as CodeBlock;
+    exampleUndoRedo.Configure(code.ExampleUndoRedo, true, false);
 
     return root;
 }
