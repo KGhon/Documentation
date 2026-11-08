@@ -19,3 +19,9 @@ Batch generate regions for selected folder tracks. The regions will be named aft
 
 [GenerateMarkersFromCSV]
 This helper was primarily created to work alongside DaVinci Resolve to transfer accurate time synchs markers into Reaper. DaVinci Resolves provides an "Export Edit Index" option that will export all marker data into a CSV. This CSV can then be used with this helper to transfer those markers to Reaper. Timecodes are read using the format HH:MM:SS:Frames (DaVinci Resolve's CSV uses this format).
+
+[GenerateVOTracksFromCSV]
+Batch generate tracks by reading from a CSV file. The tracks will be named after each CSV entry.
+
+[Affix]
+Modify selected track names by applying prefix or suffix.

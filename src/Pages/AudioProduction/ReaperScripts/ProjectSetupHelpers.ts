@@ -57,5 +57,26 @@ export function Construct(): HTMLDivElement
     const generateMarkersFromCSVTable: Table = root.appendChild(Object.assign(document.createElement("table", { is: "table-element" }), { className: "c4" })) as Table;
     generateMarkersFromCSVTable.Configure(content.GenerateMarkersFromCSV);
 
+    const voiceoverSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
+    voiceoverSection.innerHTML = 'Voiceover';
+
+    const generateVOTracksFromCSVSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
+    generateVOTracksFromCSVSection.innerHTML = 'Generate Tracks From CSV';
+
+    const generateVOTracksFromCSV: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
+    generateVOTracksFromCSV.innerHTML = textContent.GenerateVOTracksFromCSV;
+
+    const generateVOTracksFromCSVTable: Table = root.appendChild(Object.assign(document.createElement("table", { is: "table-element" }), { className: "c4" })) as Table;
+    generateVOTracksFromCSVTable.Configure(content.GenerateTracksFromCSV);
+
+    const affixSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
+    affixSection.innerHTML = 'Affix Selected Track Names';
+
+    const affix: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
+    affix.innerHTML = textContent.Affix;
+
+    const affixTable: Table = root.appendChild(Object.assign(document.createElement("table", { is: "table-element" }), { className: "c4" })) as Table;
+    affixTable.Configure(content.Affix);
+
     return root;
 }
