@@ -25,3 +25,11 @@ Batch generate tracks by reading from a CSV file. The tracks will be named after
 
 [Affix]
 Modify selected track names by applying prefix or suffix.
+
+[RemoveAffix]
+Modify selected track names by removing the prefix or suffix if it exists.
+
+[VoiceoverFileSplittingTip]
+When splitting a combined voiceover file into individual voice line files, use 'Generate Tracks From CSV' to create a unique track named after each of the file names you've pulled from your documentation spreadsheet. Use 'Prefix/Suffix Selected Track Names' to add a prefix or suffix if you want to differentiate the names of the files you're about to render (ie. 'raw_'). Move each clipped voice line onto its respective track. When rendering, set 'Selected media items' as the source. Then use the '$track' wildcard for the file name. Render.
+
+If you are importing to do further processing on the individual voice line files, Reaper will automatically name tracks after the file name. If you added a prefix or suffix, use 'Remove Prefix/Suffix From Selected Track Names'. You can then use 'Generate Regions' from the Sound Design section get create regions for batch rendering processed voice lines.

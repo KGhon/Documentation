@@ -16,6 +16,10 @@
   ],
 
   "Affix": [
-    [ "Affix", "The text to either add as a prefix or suffix to the selected track names."]
+    [ "Affix", "The text to either add as a prefix or suffix to the selected track names." ]
+  ],
+
+  "RemoveAffix": [
+    [ "Affix", "The text prefix or suffix to remove from the selected track names." ]
   ]
 }

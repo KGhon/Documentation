@@ -78,5 +78,20 @@ export function Construct(): HTMLDivElement
     const affixTable: Table = root.appendChild(Object.assign(document.createElement("table", { is: "table-element" }), { className: "c4" })) as Table;
     affixTable.Configure(content.Affix);
 
+    const removeAffixSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
+    removeAffixSection.innerHTML = 'Remove Affix From Selected Track Names';
+
+    const removeAffix: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
+    removeAffix.innerHTML = textContent.RemoveAffix;
+
+    const removeAffixTable: Table = root.appendChild(Object.assign(document.createElement("table", { is: "table-element" }), { className: "c4" })) as Table;
+    removeAffixTable.Configure(content.RemoveAffix);
+
+    const voiceoverFileSplittingTipSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
+    voiceoverFileSplittingTipSection.innerHTML = 'Voiceover File Splitting Tip';
+
+    const voiceoverFileSplittingTip: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
+    voiceoverFileSplittingTip.innerHTML = textContent.VoiceoverFileSplittingTip;
+
     return root;
 }
