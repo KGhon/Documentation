@@ -3,6 +3,7 @@ import '../Documentation.css';
 import '../CustomElements.ts';
 import { DocPage } from '../Templates/DocPage.ts';
 import pages from '../../data/Unity/Unity-pages.json';
+import * as FMODWwiseScriptableObjectGenerator from "../Pages/Unity/FMODWwiseScriptableObjectGenerator/FMODWwiseScriptableObjectGenerator.ts"; 
 
 const spa: DocPage = document.createElement('div', { is: 'doc-page' }) as DocPage;
 spa.SetNavigationPageName("Unity");
@@ -24,6 +25,7 @@ window.addEventListener('popstate', (event) =>
 });
 
 spa.AddContentPage("Unity", document.createElement("div"));
+spa.AddContentPage("FMOD-WwiseScriptableObjectGenerator", FMODWwiseScriptableObjectGenerator.Construct());
 
 const path = window.location.hash.replace('#', '');
 if (path)

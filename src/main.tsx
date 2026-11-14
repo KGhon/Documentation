@@ -8,13 +8,9 @@ import godotPages from "../data/Godot/Godot-pages.json";
 import { Header } from "./Templates/Header.ts";
 import { NavigationColumn } from"./Templates/NavigationColumn.ts";
 
-function LoadPage(section: string, pageName: string, pushHistory: boolean)
+function LoadPage(section: string, pageName: string)
 {
     window.location.href = pagesPath + section + "/" + `#${pageName}`;
-    if (pushHistory)
-    {
-        window.history.pushState(pageName, '', pagesPath + + section + "/" + `#${pageName}`);
-    }
 }
 
 document.body.style.backgroundColor = "var(--bg-color)";
@@ -36,7 +32,7 @@ audioProductionNavigation.style.height = "auto";
 audioProductionNavigation.style.borderWidth = "2px 1px 2px 2px";
 audioProductionNavigation.style.overflow = "hidden";
 audioProductionNavigation.SetPageName("Audio Production");
-audioProductionNavigation.Populate(audioProductionPages.pages as [string, string, boolean, boolean][], (pageName: string, pushHistory: boolean) => LoadPage("AudioProduction", pageName, pushHistory));
+audioProductionNavigation.Populate(audioProductionPages.pages as [string, string, boolean, boolean][], (pageName: string, pushHistory: boolean) => LoadPage("AudioProduction", pageName));
 audioProductionNavigation.SetAllFoldersExpand(true);
 navigationSections.appendChild(audioProductionNavigation);
 
@@ -45,7 +41,7 @@ unrealEngineNavigation.style.height = "auto";
 unrealEngineNavigation.style.borderWidth = "2px 1px 2px 1px";
 unrealEngineNavigation.style.overflow = "hidden";
 unrealEngineNavigation.SetPageName("Unreal Engine");
-unrealEngineNavigation.Populate(unrealEnginePages.pages as [string, string, boolean, boolean][], (pageName: string, pushHistory: boolean) => LoadPage("UnrealEngine", pageName, pushHistory));
+unrealEngineNavigation.Populate(unrealEnginePages.pages as [string, string, boolean, boolean][], (pageName: string, pushHistory: boolean) => LoadPage("UnrealEngine", pageName));
 unrealEngineNavigation.SetAllFoldersExpand(true);
 navigationSections.appendChild(unrealEngineNavigation);
 
@@ -54,7 +50,7 @@ unityNavigation.style.height = "auto";
 unityNavigation.style.borderWidth = "2px 1px 2px 1px";
 unityNavigation.style.overflow = "hidden";
 unityNavigation.SetPageName("Unity");
-unityNavigation.Populate(unityPages.pages as [string, string, boolean, boolean][], (pageName: string, pushHistory: boolean) => LoadPage("Unity", pageName, pushHistory));
+unityNavigation.Populate(unityPages.pages as [string, string, boolean, boolean][], (pageName: string, pushHistory: boolean) => LoadPage("Unity", pageName));
 unityNavigation.SetAllFoldersExpand(true);
 navigationSections.appendChild(unityNavigation);
 
@@ -63,6 +59,6 @@ godotNavigation.style.height = "auto";
 godotNavigation.style.borderWidth = "2px 2px 2px 1px";
 godotNavigation.style.overflow = "hidden";
 godotNavigation.SetPageName("Godot");
-godotNavigation.Populate(godotPages.pages as [string, string, boolean, boolean][], (pageName: string, pushHistory: boolean) => LoadPage("Godot", pageName, pushHistory));
+godotNavigation.Populate(godotPages.pages as [string, string, boolean, boolean][], (pageName: string, pushHistory: boolean) => LoadPage("Godot", pageName));
 godotNavigation.SetAllFoldersExpand(true);
 navigationSections.appendChild(godotNavigation);

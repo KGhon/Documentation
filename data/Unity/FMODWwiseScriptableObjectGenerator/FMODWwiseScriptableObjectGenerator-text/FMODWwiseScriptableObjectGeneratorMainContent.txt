@@ -1,0 +1,35 @@
+[Title]
+FMOD-Wwise ScriptableObject Generator
+
+[Category]
+KEditorTools
+
+[Overview]
+These scriptable object generator scripts can be used to quickly create scriptable objects that hold references to audio events in the project soundbanks. Using a scriptable object setup can help centralize audio event references and avoid fragile strings when using Unity's animation event parameters. The scriptable object class used for generation must as least hold a public event reference. Additional data can be added to the scriptable object class to pass more parameters to an animation event.
+
+[Dependencies]
+<li> Unity +</li>
+
+[Setup]
+Import the scripts that matches the audio middleware being used in the project:
+
+<ul>
+<li>FMODScriptableObjectGenerator.cs</li>
+<li>FMODEventSO.cs (only if you aren't using your own scriptable object class)</li></ul>
+			or
+
+<ul>
+<li>WWISEScriptableObjectGenerator.cs</li>
+<li>WWISEEventSO.cs (only if you aren't using your own scriptable object class)</li></ul>
+To activate these scripts in the editor, you must open each code file and remove the '//' to uncomment the '#define' on line 1. If you are using your own scriptable object class, you also need to replace the type references and casts to FMODEventSO/WWiseEventSO with your custom class that holds an event reference. You can then open the Scriptable Object Generator window at
+
+<i>Tools > KEditorTools > middleware name > Scriptable Object Generator.</i>
+
+[Usage]
+The editor window for this tool allows you to find and select events from the middleware soundbanks and auto-generate scriptable objects that hold a reference to each selected event. Generated scriptable objects are automatically named after the event they are generated from.
+
+To choose where the scriptable objects will be generated, you can input a directory path or browse for a destination folder. The destination must be inside the Unity project's "Assets" folder. If the directory does not yet exist, it will be automatically created upon generation.
+
+You can also mimic your middleware event folder structure when generating. There are two modes that can be selected using the 'Construct Folders Top Down?' checkbox:<ul>
+<li>On - The folder structure will be constructed starting with the highest level folder at your chosen destination. The numeric input on the left, now titled 'Exclude Top Down Folder Depth', indicates what folders from the top you want to EXCLUDE for the generation. In example, if your event has the path 'Event / Music / MyEvent' and you set the value to 1, the Event folder will be ignored and only the Music folder will be generated with your event inside. A value of -1 will exclude all folders and generate all selected events at the destination folder.</li>
+<li>Off - The folder structure will be constructed starting with the lowest level folder at your chosen destination. The numeric input on the left, now titled 'Include Bottom Up Folder Height', indicates what folders from the bottom you want to INCLUDE for the generation. In example, if your event has the path 'Event / Music / MyEvent' and you set the value to 1, the Music folder will be generated with your event inside because it is the first level folder. A value of -1 will include all folders, essentially copying your entire middleware folder structure into the destination folder.</li></ul>

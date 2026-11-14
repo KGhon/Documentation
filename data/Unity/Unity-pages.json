@@ -1,6 +1,7 @@
 {
   "pages": [
     [ "KAttrility", "", true, true ],
-    [ "FMOD-WwiseScriptableObjectGenerator", "", true, false]
+    [ "KEditorTools", "", false, true],
+    [ "FMOD-WwiseScriptableObjectGenerator", "KEditorTools/", true, false]
   ]
 }
