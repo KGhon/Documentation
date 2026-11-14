@@ -13,6 +13,7 @@ export class NavigationColumn extends HTMLDivElement
         this.style.padding = "8px";
         this.style.display = "flex";
         this.style.flexDirection = "column";
+        this.style.width = "100%";
         this.style.height = "100%";
         this.style.overflowY = "auto";
         this.style.overflowX = "hidden";
@@ -109,5 +110,23 @@ export class NavigationColumn extends HTMLDivElement
     public SetPageName(name: string)
     {
         this.pageName.textContent = name;
+    }
+
+    public SetAllFoldersExpand(isExpanded: boolean)
+    {
+        if (isExpanded)
+        {
+            for (const folder of this.folders.values())
+            {
+                folder.Expand();
+            }
+        }
+        else
+        {
+            for (const folder of this.folders.values())
+            {
+                folder.Fold();
+            }
+        }
     }
 }

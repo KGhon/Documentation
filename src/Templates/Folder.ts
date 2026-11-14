@@ -68,16 +68,26 @@ export class Folder extends HTMLDivElement
     {
         if (this.open)
         {
-            this.foldButton.textContent = '\u25B6';
-            this.expandable.classList.remove("open");
-            this.open = false;
+            this.Fold();
         }
         else
         {
-            this.foldButton.textContent = '\u25BD';
-            this.expandable.classList.add("open");
-            this.open = true;
+            this.Expand();
         }
+    }
+
+    public Expand()
+    {
+        this.foldButton.textContent = '\u25BD';
+        this.expandable.classList.add("open");
+        this.open = true;
+    }
+
+    public Fold()
+    {
+        this.foldButton.textContent = '\u25B6';
+        this.expandable.classList.remove("open");
+        this.open = false;
     }
 
     public AddElement(element: HTMLElement)

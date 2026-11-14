@@ -1,4 +1,6 @@
 {
   "pages": [
+    [ "KAttrility", "", true, true ],
+    [ "FMOD-WwiseScriptableObjectGenerator", "", true, false]
   ]
 }

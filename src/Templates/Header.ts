@@ -1,3 +1,5 @@
+import "../Documentation.css";
+
 export class Header extends HTMLDivElement
 {
     public constructor()
@@ -16,10 +18,27 @@ export class Header extends HTMLDivElement
         this.style.borderWidth = "2px";
         this.style.borderColor = "var(--border-color)";
         this.style.backgroundColor = "var(--header-bg-color)";
-    }
 
-    public connectedCallback()
-    {
-
+        const homeButton: HTMLButtonElement = document.createElement("button");
+        homeButton.style.fontSize = "24px";
+        homeButton.textContent = "Home";
+        homeButton.style.borderStyle = "solid";
+        homeButton.style.borderColor = "transparent";
+        homeButton.style.color = "var(--text-color";
+        homeButton.style.backgroundColor = "transparent";
+        homeButton.addEventListener("mouseover", () =>
+        {
+            homeButton.style.cursor = "pointer";
+            homeButton.style.backgroundColor = "#4F4F4F";
+        });
+        homeButton.addEventListener("mouseout", () =>
+        {
+            homeButton.style.backgroundColor = "transparent";
+        });
+        homeButton.addEventListener("click", () =>
+        {
+            window.location.href = `${import.meta.env.BASE_URL}`;
+        });
+        this.appendChild(homeButton);
     }
 }
