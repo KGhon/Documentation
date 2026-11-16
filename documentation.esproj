@@ -9,6 +9,6 @@
     <BuildOutputFolder>$(MSBuildProjectDirectory)\dist</BuildOutputFolder>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="generated\" />
+    <Folder Include="data\UnrealEngine\KAudioSystem\KAudioSystem-code\" />
   </ItemGroup>
 </Project>

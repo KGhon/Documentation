@@ -1,5 +1,18 @@
 {
   "pages": [
-    [ "KAudioSystem", "", true, true]
+    [ "KAudioMixDesk", "", true, true ],
+    [ "KAudioSystem", "", true, true ],
+    [ "AudioSuperComponent", "KAudioSystem/", true, false ],
+    [ "KDebugTools", "", true, true ],
+    [ "KDialogueSystem", "", true, true ],
+    [ "KFundamentals", "", true, true ],
+    [ "KGameFramework", "", true, true ],
+    [ "GameManagement", "KGameFramework/", true, true ],
+    [ "LevelManagement", "KGameFramework/", true, true ],
+    [ "SaveSystem", "KGameFramework/", true, true ],
+    [ "QuestSystem", "KGameFramework/", true, true ],
+    [ "InventorySystem", "KGameFramework/", true, true ],
+    [ "UISystem", "KGameFramework/", true, true ],
+    [ "KMotionSandbox", "", true, true ]
   ]
 }

@@ -1,0 +1,11 @@
+[Title]
+UAudioSuperComponent
+
+[Category]
+K Audio System
+
+[Inheritance]
+UAudioComponent
+
+[Overview]
+overview

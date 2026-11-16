@@ -5,7 +5,7 @@ Extensions
 KDocumentationTools
 
 [Overview]
-Extensions are a set of classes meant to be used to create additional documentation tools and assets within Godot that can be used in the editor alongside Boards.
+Extensions are a set of classes meant to be used for creating additional documentation tools and assets within Godot.
 
 [Dependencies]
 <li>Godot 4.6.3 with C# support</li>

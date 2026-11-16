@@ -3,6 +3,7 @@ import '../Documentation.css';
 import '../CustomElements.ts';
 import { DocPage } from '../Templates/DocPage.ts';
 import pages from '../../data/Godot/Godot-pages.json';
+import * as NavigationError from "./NavigationError.ts";
 import * as Boards from "./Godot/KDocumentationTools/Boards/Boards.ts";
 import * as Extensions from "./Godot/KDocumentationTools/Extensions/Extensions.ts";
 import * as TwineAnalyzer from "./Godot/KDocumentationTools/TwineAnalyzer/TwineAnalyzer.ts";
@@ -14,19 +15,27 @@ document.body.appendChild(spa);
 
 window.addEventListener('popstate', (event) =>
 {
-    console.log(event.state);
     const pageName = event.state;
     if (pageName)
     {
         spa.ChangePage(pageName, false);
     }
+});
+
+window.addEventListener('hashchange', () =>
+{
+    const path = window.location.hash.replace('#', '');
+    if (path)
+    {
+        spa.ChangePage(path, false);
+    }
     else
     {
-        spa.ChangePage("Godot", false);
+        spa.ChangePage("NavigationError", false);
     }
 });
 
-spa.AddContentPage("Godot", document.createElement("div"));
+spa.AddContentPage("NavigationError", NavigationError.Construct());
 spa.AddContentPage("Boards", Boards.Construct());
 spa.AddContentPage("Extensions", Extensions.Construct());
 spa.AddContentPage("TwineAnalyzer", TwineAnalyzer.Construct());
@@ -38,5 +47,5 @@ if (path)
 }
 else
 {
-    spa.ChangePage("Godot", false);
+    spa.ChangePage("NavigationError", false);
 }

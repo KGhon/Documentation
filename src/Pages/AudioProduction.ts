@@ -3,6 +3,7 @@ import '../Documentation.css';
 import '../CustomElements.ts';
 import { DocPage } from '../Templates/DocPage.ts';
 import pages from '../../data/AudioProduction/AudioProduction-pages.json';
+import * as NavigationError from "./NavigationError.ts";
 import * as GUIToolkit from "./AudioProduction/ReaperScripts/GUIToolkit.ts";
 import * as MIDIMixingTool from "./AudioProduction/ReaperScripts/MIDIMixingTool.ts";
 import * as ProjectSetupHelpers from "./AudioProduction/ReaperScripts/ProjectSetupHelpers.ts";
@@ -16,19 +17,27 @@ document.body.appendChild(spa);
 
 window.addEventListener('popstate', (event) =>
 {
-    console.log(event.state);
     const pageName = event.state;
     if (pageName)
     {
         spa.ChangePage(pageName, false);
     }
+});
+
+window.addEventListener('hashchange', () =>
+{
+    const path = window.location.hash.replace('#', '');
+    if (path)
+    {
+        spa.ChangePage(path, false);
+    }
     else
     {
-        spa.ChangePage("AudioProduction", false);
+        spa.ChangePage("NavigationError", false);
     }
 });
 
-spa.AddContentPage("AudioProduction", document.createElement("div"));
+spa.AddContentPage("NavigationError", NavigationError.Construct());
 spa.AddContentPage("GUIToolkit", GUIToolkit.Construct());
 spa.AddContentPage("MIDIMixingTool", MIDIMixingTool.Construct());
 spa.AddContentPage("ProjectSetupHelpers", ProjectSetupHelpers.Construct());
@@ -42,5 +51,5 @@ if (path)
 }
 else
 {
-    spa.ChangePage("AudioProduction", false);
+    spa.ChangePage("NavigationError", false);
 }

@@ -36,7 +36,7 @@ export function Construct(): HTMLDivElement
     widgetsSection.innerHTML = 'Widgets';
 
     const widgetsTable: Table = root.appendChild(document.createElement("table", { is: "table-element" })) as Table;
-    widgetsTable.Configure(content.Widgets);
+    widgetsTable.Configure(content.Widgets, true);
 
     const makingCustomWidgetsSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
     makingCustomWidgetsSection.innerHTML = 'Making Custom Widgets';

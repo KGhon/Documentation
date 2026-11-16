@@ -34,7 +34,7 @@ export function Construct(): HTMLDivElement
     setup.innerHTML = textContent.Setup;
 
     const setupTable: Table = root.appendChild(Object.assign(document.createElement("table", { is: "table-element" }), { className: "c4" })) as Table;
-    setupTable.Configure(content.Setup);
+    setupTable.Configure(content.Setup, true);
 
     const helpersSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
     helpersSection.innerHTML = 'Helpers';
@@ -43,7 +43,7 @@ export function Construct(): HTMLDivElement
     helpers.innerHTML = textContent.Helpers;
 
     const helpersTable: Table = root.appendChild(Object.assign(document.createElement("table", { is: "table-element" }), { className: "c4" })) as Table;
-    helpersTable.Configure(content.Helpers);
+    helpersTable.Configure(content.Helpers, true);
 
     const midiGenerationSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
     midiGenerationSection.innerHTML = 'MIDI Generation';
@@ -52,7 +52,7 @@ export function Construct(): HTMLDivElement
     midiGeneration.innerHTML = textContent.MIDIGeneration;
 
     const midiGenerationTable: Table = root.appendChild(Object.assign(document.createElement("table", { is: "table-element" }), { className: "c4" })) as Table;
-    midiGenerationTable.Configure(content.MIDIGeneration);
+    midiGenerationTable.Configure(content.MIDIGeneration, true);
 
     const exportStrategiesSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
     exportStrategiesSection.innerHTML = 'Export Strategies';

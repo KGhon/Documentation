@@ -44,7 +44,7 @@ export function Construct(): HTMLDivElement
     guiContextPublic.innerHTML = "Public Functions";
 
     const guiContextPublicFunctions: Table = root.appendChild(document.createElement("table", { is: "table-element" })) as Table;
-    guiContextPublicFunctions.Configure(code.GUIContextPublicFunctions);
+    guiContextPublicFunctions.Configure(code.GUIContextPublicFunctions, true);
 
     const uiBaseSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
     uiBaseSection.innerHTML = 'UIBase';

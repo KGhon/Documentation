@@ -8,7 +8,7 @@ KEditorTools
 These scriptable object generator scripts can be used to quickly create scriptable objects that hold references to audio events in the project soundbanks. Using a scriptable object setup can help centralize audio event references and avoid fragile strings when using Unity's animation event parameters. The scriptable object class used for generation must as least hold a public event reference. Additional data can be added to the scriptable object class to pass more parameters to an animation event.
 
 [Dependencies]
-<li> Unity +</li>
+<li>Unity 6000.3.13f1+</li>
 
 [Setup]
 Import the scripts that matches the audio middleware being used in the project:
@@ -21,7 +21,7 @@ Import the scripts that matches the audio middleware being used in the project:
 <ul>
 <li>WWISEScriptableObjectGenerator.cs</li>
 <li>WWISEEventSO.cs (only if you aren't using your own scriptable object class)</li></ul>
-To activate these scripts in the editor, you must open each code file and remove the '//' to uncomment the '#define' on line 1. If you are using your own scriptable object class, you also need to replace the type references and casts to FMODEventSO/WWiseEventSO with your custom class that holds an event reference. You can then open the Scriptable Object Generator window at
+To activate these scripts in the editor, you must open each code file and remove the '//' to uncomment the '#define' on line 1. If you are using your own scriptable object class you also need to replace the FMODEventSO/WWISEEventSO type references in the scriptable object generator scripts. You can then open the Scriptable Object Generator window at
 
 <i>Tools > KEditorTools > middleware name > Scriptable Object Generator.</i>
 

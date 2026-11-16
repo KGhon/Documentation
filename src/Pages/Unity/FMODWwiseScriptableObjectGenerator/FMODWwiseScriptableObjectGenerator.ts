@@ -1,6 +1,6 @@
 import "../../../Documentation.css"
 import { ContentPage } from "../../../Templates/ContentPage.ts";
-import * as textContent from "../../../../generated/FMODWwiseScriptableObjectGenerator-text-generated.json";
+import * as textContent from "../../../../generated/FMODWWISEScriptableObjectGenerator-text-generated.json";
 
 export function Construct(): HTMLDivElement
 {

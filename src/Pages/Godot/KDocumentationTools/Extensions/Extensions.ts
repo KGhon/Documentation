@@ -91,7 +91,7 @@ export function Construct(): HTMLDivElement
     hookingUpUndoRedo.innerHTML = textContent.HookingUpUndoRedo;
 
     const exampleUndoRedo: CodeBlock = root.appendChild(document.createElement("div", { is: "code-block" })) as CodeBlock;
-    exampleUndoRedo.Configure(code.ExampleUndoRedo, true, false);
+    exampleUndoRedo.Configure(code.ExampleUndoRedo, true, true);
 
     return root;
 }

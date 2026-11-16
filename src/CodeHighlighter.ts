@@ -78,14 +78,11 @@ async function ProcessDirectory(dirPath: string): Promise<void>
         let content = await fsPromises.readFile(filePath, 'utf-8');
 
         let postHighlights: string[][] = [];
-        content = content.replace(
-            /^[^\r\n]*\[\s*([^,\]]+?)\s*,\s*([^,\]]+?)\s*\][^\r\n]*/gm,
-            (_fullLine: string, term: string, color: string) =>
-            {
-                postHighlights.push([term, color]);
-                return '';
-            }
-        );
+        content = content.replace(/^[^\r\n]*\[\s*([^,\]]+?)\s*,\s*([^,\]]+?)\s*\][^\r\n]*/gm, (_fullLine: string, term: string, color: string) =>
+        {
+            postHighlights.push([term, color]);
+            return '';
+        });
 
         if (file.name.endsWith('.txt'))
         {
@@ -94,16 +91,10 @@ async function ProcessDirectory(dirPath: string): Promise<void>
 
             for (const highlight of postHighlights)
             {
-                htmlOutput = htmlOutput.replace(
-                    new RegExp(
-                        `<span\\s+style\\s*=\\s*["'][^"']*color\\s*:\\s*[^"'>]*?["']>(\\s*${highlight[0]}\\s*)<\\/span>`,
-                        "g"
-                    ),
-                    (_fullMatch: string, capturedTerm: string) =>
-                    {
-                        return `<span style="color: ${highlight[1]}">${capturedTerm}</span>`;
-                    }
-                );
+                htmlOutput = htmlOutput.replace(new RegExp(`<span\\s+style\\s*=\\s*["'][^"']*color\\s*:\\s*[^"'>]*?["']>(\\s*${highlight[0]}\\s*)<\\/span>`, "g"), (_fullMatch: string, capturedTerm: string) =>
+                {
+                    return `<span style="color: ${highlight[1]}">${capturedTerm}</span>`;
+                });
             }
 
             fileRecord[match[1]] = htmlOutput;
@@ -126,16 +117,10 @@ async function ProcessDirectory(dirPath: string): Promise<void>
             {
                 for (const row of (data as string[][]))
                 {
-                    row[0] = row[0].replace(
-                        new RegExp(
-                            `<span\\s+style\\s*=\\s*["'][^"']*color\\s*:\\s*[^"'>]*?["']>(\\s*${highlight[0]}\\s*)<\\/span>`,
-                            "g"
-                        ),
-                        (_fullMatch: string, capturedTerm: string) =>
-                        {
-                            return `<span style="color: ${highlight[1]}">${capturedTerm}</span>`;
-                        }
-                    );
+                    row[0] = row[0].replace(new RegExp(`<span\\s+style\\s*=\\s*["'][^"']*color\\s*:\\s*[^"'>]*?["']>(\\s*${highlight[0]}\\s*)<\\/span>`, "g"), (_fullMatch: string, capturedTerm: string) =>
+                    {
+                        return `<span style="color: ${highlight[1]}">${capturedTerm}</span>`;
+                    });
                 }
             }
 

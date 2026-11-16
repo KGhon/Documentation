@@ -17,9 +17,9 @@ export class ContentPage extends HTMLDivElement
         this.titles.style.display = "flex";
         this.titles.style.flexDirection = "column";
 
-        this.titleDiv = this.titles.appendChild(Object.assign(document.createElement("p"), { className: "c0" })) as HTMLParagraphElement;
+        this.titleDiv = this.titles.appendChild(Object.assign(document.createElement("div"), { className: "c0" })) as HTMLParagraphElement;
 
-        this.category = header.appendChild(document.createElement("p")) as HTMLParagraphElement;
+        this.category = header.appendChild(document.createElement("div")) as HTMLParagraphElement;
         this.category.style.display = "flex";
         this.category.style.flexDirection = "column";
         this.category.style.justifyContent = "flex-end";
@@ -34,7 +34,8 @@ export class ContentPage extends HTMLDivElement
         this.category.innerHTML = pageCategory;
         if (pageSubtitle != "")
         {
-            const subtitle: HTMLParagraphElement = this.titles.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
+            const subtitle: HTMLParagraphElement = this.titles.appendChild(document.createElement("div")) as HTMLParagraphElement;
+            subtitle.style.fontSize = "20px";
             subtitle.innerHTML = pageSubtitle;
         }
     }

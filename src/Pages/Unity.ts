@@ -3,7 +3,8 @@ import '../Documentation.css';
 import '../CustomElements.ts';
 import { DocPage } from '../Templates/DocPage.ts';
 import pages from '../../data/Unity/Unity-pages.json';
-import * as FMODWwiseScriptableObjectGenerator from "../Pages/Unity/FMODWwiseScriptableObjectGenerator/FMODWwiseScriptableObjectGenerator.ts"; 
+import * as NavigationError from "./NavigationError.ts";
+import * as FMODWWISEScriptableObjectGenerator from "../Pages/Unity/FMODWWISEScriptableObjectGenerator/FMODWWISEScriptableObjectGenerator.ts"; 
 
 const spa: DocPage = document.createElement('div', { is: 'doc-page' }) as DocPage;
 spa.SetNavigationPageName("Unity");
@@ -12,20 +13,28 @@ document.body.appendChild(spa);
 
 window.addEventListener('popstate', (event) =>
 {
-    console.log(event.state);
     const pageName = event.state;
     if (pageName)
     {
         spa.ChangePage(pageName, false);
     }
+});
+
+window.addEventListener('hashchange', () =>
+{
+    const path = window.location.hash.replace('#', '');
+    if (path)
+    {
+        spa.ChangePage(path, false);
+    }
     else
     {
-        spa.ChangePage("Unity", false);
+        spa.ChangePage("NavigationError", false);
     }
 });
 
-spa.AddContentPage("Unity", document.createElement("div"));
-spa.AddContentPage("FMOD-WwiseScriptableObjectGenerator", FMODWwiseScriptableObjectGenerator.Construct());
+spa.AddContentPage("NavigationError", NavigationError.Construct());
+spa.AddContentPage("FMOD-WWISEScriptableObjectGenerator", FMODWWISEScriptableObjectGenerator.Construct());
 
 const path = window.location.hash.replace('#', '');
 if (path)
@@ -34,5 +43,5 @@ if (path)
 }
 else
 {
-    spa.ChangePage("Unity", false);
+    spa.ChangePage("NavigationError", false);
 }

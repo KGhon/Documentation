@@ -30,7 +30,7 @@ export function Construct(): HTMLDivElement
     settingsSection.innerHTML = 'Settings';
 
     const settingsTable: Table = root.appendChild(Object.assign(document.createElement("table", { is: "table-element" }), { className: "c4" })) as Table;
-    settingsTable.Configure(content.Settings);
+    settingsTable.Configure(content.Settings, true);
 
     return root;
 }
