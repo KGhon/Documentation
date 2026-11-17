@@ -1,6 +1,6 @@
 {
   "pages": [
-    [ "KDocumentationTools", "", true, true ],
+    [ "KDocumentationTools", "", false, true ],
     [ "Boards", "KDocumentationTools/", true, false ],
     [ "Extensions", "KDocumentationTools/", true, false ],
     [ "TwineAnalyzer", "KDocumentationTools/", true, false ]

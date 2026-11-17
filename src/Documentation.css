@@ -104,6 +104,18 @@ a:hover {
     text-decoration: underline;
 }
 
+.placeholder-a{
+    color: inherit;
+    cursor: default;
+    text-decoration: none;
+}
+
+.placeholder-a:hover{
+        color: inherit;
+    cursor: default;
+    text-decoration: none;
+}
+
 .header-button {
     font-size: 24px;
     color: var(--text-color);
@@ -113,6 +125,25 @@ a:hover {
 }
 
 .header-button:hover{
+    cursor: pointer;
+    background-color: #4F4F4F;
+}
+
+.selector-button {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 24px;
+    color: var(--text-color);
+    background-color: #1A1A1A;
+    border-style: solid;
+    border-left-width: 0px;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 1px;
+    border-color: var(--border-color);
+}
+
+.selector-button:hover{
     cursor: pointer;
     background-color: #4F4F4F;
 }

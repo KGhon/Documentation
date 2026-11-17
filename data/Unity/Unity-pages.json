@@ -1,8 +1,8 @@
 {
   "pages": [
-    [ "KAttrilitySystem", "", true, true ],
+    [ "KAttrilitySystem", "", false, true ],
     [ "KEditorTools", "", false, true ],
     [ "FMOD-WWISEScriptableObjectGenerator", "KEditorTools/", true, false ],
-    [ "KGameFramework", "", true, true ]
+    [ "KGameFramework", "", false, true ]
   ]
 }

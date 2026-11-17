@@ -40,7 +40,7 @@ export class DocPage extends BasePage
         this.navigationDiv.appendChild(this.navigationColumn);
 
         this.content = document.createElement('div');
-        this.content.style.padding = "10px";
+        this.content.style.padding = "16px";
         this.content.style.flexDirection = "column";
         this.content.style.width = "100%";
         this.content.style.height = "calc(100vh - var(--header-height))";

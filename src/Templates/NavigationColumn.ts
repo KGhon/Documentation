@@ -48,13 +48,20 @@ export class NavigationColumn extends HTMLDivElement
             header.appendChild(bulletPoint);
 
             const link: HTMLAnchorElement = document.createElement('a');
-            link.href = `#${name}`;
             link.textContent = spacedName;
-            link.addEventListener("click", (evt) =>
+            if (isLink)
             {
-                evt.preventDefault()
-                callback(name, true);
-            });
+                link.href = `#${name}`;
+                link.addEventListener("click", (evt) =>
+                {
+                    evt.preventDefault()
+                    callback(name, true);
+                });
+            }
+            else
+            {
+                link.classList.add("placeholder-a");
+            }
             header.appendChild(link);
 
             if (this.folders.has(path) && path != "")

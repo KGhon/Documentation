@@ -1,20 +1,150 @@
 {
   "pages": [
-    [ "KAudioMixDesk", "", true, true ],
-    [ "KAudioSystem", "", true, true ],
+    [ "KAudioMixDesk", "", false, true ],
+
+    [ "KAudioSystem", "", false, true ],
+
     [ "Classes", "KAudioSystem/", false, true ],
-    [ "KAudioSystemStatics", "KAudioSystem/Classes/", true, false ],
+    [ "AudioAgent", "KAudioSystem/Classes/", false, false ],
+    [ "AudioEnvironment", "KAudioSystem/Classes/", false, false ],
+    [ "AudioEvent", "KAudioSystem/Classes/", false, false ],
+    [ "AudioFloatParameter", "KAudioSystem/Classes/", false, false ],
+    [ "AudioGroupParameter", "KAudioSystem/Classes/", false, false ],
+    [ "AudioListener", "KAudioSystem/Classes/", false, false ],
+    [ "AudioManagerSubsystem", "KAudioSystem/Classes/", false, false ],
+    [ "AudioMixerManager", "KAudioSystem/Classes/", false, false ],
     [ "AudioSuperComponent", "KAudioSystem/Classes/", true, false ],
-    [ "KDebugTools", "", true, true ],
-    [ "KDialogueSystem", "", true, true ],
-    [ "KFundamentals", "", true, true ],
-    [ "KGameFramework", "", true, true ],
-    [ "GameManagement", "KGameFramework/", true, true ],
-    [ "LevelManagement", "KGameFramework/", true, true ],
-    [ "SaveSystem", "KGameFramework/", true, true ],
-    [ "QuestSystem", "KGameFramework/", true, true ],
-    [ "InventorySystem", "KGameFramework/", true, true ],
-    [ "UISystem", "KGameFramework/", true, true ],
-    [ "KMotionSandbox", "", true, true ]
+    [ "AudioSwitchParameter", "KAudioSystem/Classes/", false, false ],
+    [ "MusicClassification", "KAudioSystem/Classes/", false, false ],
+    [ "MusicLayout", "KAudioSystem/Classes/", false, false ],
+    [ "MusicManager", "KAudioSystem/Classes/", false, false ],
+    [ "MusicSegment", "KAudioSystem/Classes/", false, false ],
+    [ "KAudioSystemStatics", "KAudioSystem/Classes/", true, false ],
+
+    [ "Structs", "KAudioSystem/", false, true ],
+    [ "AudioEventCommand", "KAudioSystem/Structs/", false, false ],
+    [ "MusicTransitionInstruction", "KAudioSystem/Structs/", false, false ],
+    [ "MusicTransitionInstructionOverride", "KAudioSystem/Structs/", false, false ],
+
+    [ "Enums", "KAudioSystem/", false, true ],
+    [ "SoundInstanceLimitRule", "KAudioSystem/Enums/", false, false ],
+    [ "SoundLimitResponse", "KAudioSystem/Enums/", false, false ],
+    [ "SoundStealRule", "KAudioSystem/Enums/", false, false ],
+    [ "MusicTransitionCue", "KAudioSystem/Enums/", false, false ],
+    [ "MusicOutgoingStopBehavior", "KAudioSystem/Enums/", false, false ],
+    [ "AudioEventCommandScope", "KAudioSystem/Enums/", false, false ],
+    [ "AudioStopBehavior", "KAudioSystem/Enums/", false, false ],
+
+    [ "KDebugTools", "", false, true ],
+
+    [ "Classes", "KDebugTools/", false, true ],
+    [ "KBlueprintConsoleCommands", "KDebugTools/Classes/", false, false ],
+    [ "KDebugDocker", "KDebugTools/Classes/", false, false ],
+    [ "KEditorUtilityWidget", "KDebugTools/Classes/", false, false ],
+    [ "KDebugManagerSubsystem", "KDebugTools/Classes/", false, false ],
+    [ "KDebugWidget", "KDebugTools/Classes/", false, false ],
+
+    [ "KDialogueSystem", "", false, true ],
+
+    [ "Classes", "KDialogueSystem/", false, true ],
+    [ "DialogueBranch", "KDialogueSystem/Classes/", false, false ],
+    [ "DialogueManagerSubsystem", "KDialogueSystem/Classes/", false, false ],
+    [ "DialoguePath", "KDialogueSystem/Classes/", false, false ],
+    [ "DialogueStep", "KDialogueSystem/Classes/", false, false ],
+    [ "DialogueTree", "KDialogueSystem/Classes/", false, false ],
+    [ "KCameraDirector", "KDialogueSystem/Classes/", false, false ],
+
+    [ "Structs", "KDialogueSystem/", false, true ],
+    [ "DialogueChoice", "KDialogueSystem/Structs/", false, false ],
+    [ "DialogueInstruction", "KDialogueSystem/Structs/", false, false ],
+
+    [ "Enums", "KDialogueSystem/", false, true ],
+    [ "DialogueResponse", "KDialogueSystem/Enums/", false, false ],
+
+    [ "KFundamentals", "", false, true ],
+
+    [ "Classes", "KFundamentals/", false, true ],
+    [ "BlueprintSingleton", "KFundamentals/Classes/", false, false ],
+
+    [ "KGameFramework", "", false, true ],
+
+    [ "GameManagement", "KGameFramework/", false, true ],
+    [ "Classes", "KGameFramework/GameManagement/", false, true ],
+    [ "GameManagerSubsystem", "KGameFramework/GameManagement/", false, false ],
+    [ "GameStateInterface", "KGameFramework/GameManagement/", false, false ],
+    [ "KGameState", "KGameFramework/GameManagement/", false, false ],
+
+    [ "LevelManagement", "KGameFramework/", false, true ],
+    [ "Classes", "KGameFramework/LevelManagement/", false, true ],
+    [ "LevelManagerSubsystem", "KGameFramework/LevelManagement/", false, false ],
+
+    [ "SaveSystem", "KGameFramework/", false, true ],
+    [ "Classes", "KGameFramework/SaveSystem/", false, true ],
+    [ "KSaveGame", "KGameFramework/SaveSystem/", false, false ],
+    [ "SaveAgent", "KGameFramework/SaveSystem/", false, false ],
+    [ "SaveInterface", "KGameFramework/SaveSystem/", false, false ],
+    [ "SaveManagerSubsystem", "KGameFramework/SaveSystem/", false, false ],
+
+    [ "QuestSystem", "KGameFramework/", false, true ],
+    [ "Classes", "KGameFramework/QuestSystem/", false, true ],
+    [ "QuestBlock", "KGameFramework/QuestSystem/", false, false ],
+    [ "QuestBlockID", "KGameFramework/QuestSystem/", false, false ],
+    [ "QuestGraph", "KGameFramework/QuestSystem/", false, false ],
+    [ "QuestGraphID", "KGameFramework/QuestSystem/", false, false ],
+    [ "QuestManagerSubsystem", "KGameFramework/QuestSystem/", false, false ],
+    [ "QuestObjective", "KGameFramework/QuestSystem/", false, false ],
+    [ "QuestObjectiveFloatCounter", "KGameFramework/QuestSystem/", false, false ],
+    [ "QuestObjectiveID", "KGameFramework/QuestSystem/", false, false ],
+    [ "SharedQuestDataObject", "KGameFramework/QuestSystem/", false, false ],
+
+    [ "Enums", "KGameFramework/QuestSystem/", false, true ],
+    [ "QuestState", "KGameFramework/QuestSystem/Enums/", false, false ],
+
+    [ "InventorySystem", "KGameFramework/", false, true ],
+    [ "Classes", "KGameFramework/InventorySystem/", false, true ],
+
+
+    [ "UISystem", "KGameFramework/", false, true ],
+    [ "Classes", "KGameFramework/UISystem/", false, true ],
+    [ "UIManagerSubsystem", "KGameFramework/UISystem/", false, false ],
+
+    [ "KMotionSandbox", "", false, true ],
+    [ "Classes", "KMotionSandbox/", false, true ],
+    [ "AudioTrigger", "KMotionSandbox/Classes/", false, false ],
+    [ "ForceVolume", "KMotionSandbox/Classes/", false, false ],
+    [ "Projectile", "KMotionSandbox/Classes/", false, false ],
+    [ "ProjectileSpawner", "KMotionSandbox/Classes/", false, false ],
+    [ "TriggerCollider", "KMotionSandbox/Classes/", false, false ],
+
+    [ "HelpfulStuff", "", false, true ],
+
+    [ "Cpp", "HelpfulStuff/", false, true ],
+    [ "PluginModuleDependencies", "HelpfulStuff/Cpp/", false, false ],
+    [ "SubscribingToEditorDelegates", "HelpfulStuff/Cpp/", false, false ],
+    [ "SpawningActorsFromAnEditorUtilityWidgetThatAreRuntimeOnly", "HelpfulStuff/Cpp/", false, false ],
+    [ "AddToMessageLog", "HelpfulStuff/Cpp/", false, false ],
+    [ "PrintBlueprintCallstack", "HelpfulStuff/Cpp/", false, false ],
+    [ "AddConsoleCommands", "HelpfulStuff/Cpp/", false, false ],
+    [ "AddConsoleCommandsWithArgs", "HelpfulStuff/Cpp/", false, false ],
+    [ "AddEditorToolbarDropdownMenu", "HelpfulStuff/Cpp/", false, false ],
+    [ "AddConstrainedEqualsBlueprintNode", "HelpfulStuff/Cpp/", false, false ],
+    [ "OverridingGetWorldForUObjects", "HelpfulStuff/Cpp/", false, false ],
+    [ "UPROPERTYLegacyEnumsThatArentDeclaredEnumClass", "HelpfulStuff/Cpp/", false, false ],
+    [ "QuartzClock", "HelpfulStuff/Cpp/", false, false ],
+    [ "QuartsSynchronizedEventsAndStructs", "HelpfulStuff/Cpp/", false, false ],
+
+    [ "Blueprints", "HelpfulStuff/", false, true ],
+    [ "GettingTheClassDefaultObject", "HelpfulStuff/Blueprints/", false, false ],
+    [ "CollectingAssetOrBlueprintsForFutureModificationOrSpawning", "HelpfulStuff/Blueprints/", false, false ],
+
+    [ "Troubleshooting", "HelpfulStuff/", false, true ],
+    [ "Target.csNeedsToBeUpdatedManually", "HelpfulStuff/Troubleshooting/", false, false ],
+    [ "FunctionsNotAppearingOrCannotBeUsedInRuntimeEditorUtilityWidgetInsideAPlugin", "HelpfulStuff/Troubleshooting/", false, false ],
+    [ "SubsystemInitializingInUnexpectedOrder", "HelpfulStuff/Troubleshooting/", false, false ],
+    [ "SavingDefaultValuesForDeveloperSettingsThatConfigCanOverwrite", "HelpfulStuff/Troubleshooting/", false, false ],
+    [ "InitializeSubsystemDependenciesInSameTier", "HelpfulStuff/Troubleshooting/", false, false ],
+
+    [ "Miscellaneous", "HelpfulStuff/", false, true ],
+    [ "Built-inAudioConsoleCommands", "HelpfulStuff/Miscellaneous/", false, false ]
   ]
 }
