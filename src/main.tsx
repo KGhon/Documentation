@@ -74,7 +74,7 @@ document.body.appendChild(navigationSections);
 const selectorDiv: HTMLDivElement = document.createElement("div");
 selectorDiv.style.display = "flex";
 selectorDiv.style.flexDirection = "column";
-selectorDiv.style.minWidth = "25%";
+selectorDiv.style.minWidth = "15%";
 selectorDiv.style.position = "sticky";
 selectorDiv.style.top = "var(--header-height)";
 selectorDiv.style.height = "calc(100vh - var(--header-height))";
@@ -89,7 +89,7 @@ selectorDiv.style.borderColor = "var(--border-color)";
 navigationSections.appendChild(selectorDiv);
 
 const selectionDiv: HTMLDivElement = document.createElement("div");
-selectionDiv.style.width = "75%";
+selectionDiv.style.width = "85%";
 navigationSections.appendChild(selectionDiv);
 
 RegisterSelectorButton("Audio Production", audioProductionNavigation);
