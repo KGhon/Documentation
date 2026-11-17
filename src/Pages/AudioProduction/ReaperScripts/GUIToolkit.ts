@@ -1,7 +1,7 @@
 import "../../../Documentation.css"
 import { ContentPage } from "../../../Templates/ContentPage.ts";
 import { CodeBlock } from "../../../Templates/CodeBlock.ts";
-import { Table } from "../../../Templates/Table.ts";
+import { Table, ColumnSpacing } from "../../../Templates/Table.ts";
 import * as textContent from "../../../../generated/GUIToolkit-text-generated.json";
 import * as code from "../../../../generated/GUIToolkit-code-generated.json";
 
@@ -44,7 +44,7 @@ export function Construct(): HTMLDivElement
     guiContextPublic.innerHTML = "Public Functions";
 
     const guiContextPublicFunctions: Table = root.appendChild(document.createElement("table", { is: "table-element" })) as Table;
-    guiContextPublicFunctions.Configure(code.GUIContextPublicFunctions, true);
+    guiContextPublicFunctions.Configure(code.GUIContextPublicFunctions, ColumnSpacing.Compact);
 
     const uiBaseSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
     uiBaseSection.innerHTML = 'UIBase';

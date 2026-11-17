@@ -1,6 +1,6 @@
 import "../../../Documentation.css"
 import { ContentPage } from "../../../Templates/ContentPage.ts";
-import { Table } from "../../../Templates/Table.ts";
+import { Table, ColumnSpacing } from "../../../Templates/Table.ts";
 import * as textContent from "../../../../generated/KAudioSystem-text-generated.json";
 
 export function Construct(): HTMLDivElement
@@ -21,7 +21,7 @@ export function Construct(): HTMLDivElement
     gameplayParametersSystemSection.innerHTML = 'Gameplay Parameters System';
 
     const gameplayParametersSystemClasses: Table = root.appendChild(document.createElement("table", { is: "table-element" })) as Table;
-    gameplayParametersSystemClasses.Configure(textContent.GameplayParametersSystemClasses, true);
+    gameplayParametersSystemClasses.Configure(textContent.GameplayParametersSystemClasses, ColumnSpacing.Compact);
     /*
     const dependenciesSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
     dependenciesSection.innerHTML = 'Dependencies';

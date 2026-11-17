@@ -103,3 +103,16 @@ a:hover {
     color: azure;
     text-decoration: underline;
 }
+
+.header-button {
+    font-size: 24px;
+    color: var(--text-color);
+    background-color: transparent;
+    border-style: solid;
+    border-color: transparent;
+}
+
+.header-button:hover{
+    cursor: pointer;
+    background-color: #4F4F4F;
+}

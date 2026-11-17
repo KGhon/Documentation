@@ -1,1 +1,3 @@
+"{UnrealEngine/#KAudioSystemStatics,KAudioSystemStatics}","This class provides global static functions for other game systems to call to interact with the KAudioSystem."
+
 "{UnrealEngine/#AudioSuperComponent,AudioSuperComponent}","An AudioSuperComponent inherits from the built-in audio component class provided by Unreal Engine and extends the class to be able to receive game parameters from the audio system. These are the main building blocks of the audio system logic for audio implementors and they should be thought of as decision-makers that determine what to do when game parameter information is received."

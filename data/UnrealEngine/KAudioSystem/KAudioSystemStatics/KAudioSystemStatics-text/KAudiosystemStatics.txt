@@ -1,0 +1,11 @@
+[Title]
+UKAudioSystemStatics
+
+[Category]
+K Audio System
+
+[Inheritance]
+UBlueprintFunctionLibrary
+
+[Overview]
+These static functions are the main way other game systems interact with the KAudioSystem.

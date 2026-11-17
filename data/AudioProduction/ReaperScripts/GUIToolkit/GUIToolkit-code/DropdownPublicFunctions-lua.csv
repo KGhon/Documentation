@@ -2,7 +2,7 @@
 [int,#569CD6]
 [float,#569CD6]
 [string,#569CD6]
-[function, #C586C0]
+[function,#C586C0]
 "function New(string id, int posX, int posY, int width, int height)","Constructor"
 "function AddOption(string option)","Append a new option."
 "function RemoveOption(string option)","Remove an option with a matching name."

@@ -1,6 +1,6 @@
 import "../../../../Documentation.css"
 import { ContentPage } from "../../../../Templates/ContentPage.ts";
-import { Table } from "../../../../Templates/Table.ts";
+import { Table, ColumnSpacing } from "../../../../Templates/Table.ts";
 import { CodeBlock } from "../../../../Templates/CodeBlock.ts";
 import * as textContent from "../../../../../generated/Boards-text-generated.json";
 import * as content from "../../../../../data/Godot/KDocumentationTools/Boards/Boards.json";
@@ -36,7 +36,7 @@ export function Construct(): HTMLDivElement
     widgetsSection.innerHTML = 'Widgets';
 
     const widgetsTable: Table = root.appendChild(document.createElement("table", { is: "table-element" })) as Table;
-    widgetsTable.Configure(content.Widgets, true);
+    widgetsTable.Configure(content.Widgets, ColumnSpacing.Compact);
 
     const makingCustomWidgetsSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
     makingCustomWidgetsSection.innerHTML = 'Making Custom Widgets';

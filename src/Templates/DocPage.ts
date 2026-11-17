@@ -5,8 +5,12 @@ import { TableOfContents } from './TableOfContents.ts';
 
 export class DocPage extends BasePage
 {
+    private navigationDiv: HTMLDivElement;
     private navigationColumn: NavigationColumn;
+    private tableOfContentsDiv: HTMLDivElement;
     private tableOfContents: TableOfContents;
+    private navigationIsVisible: boolean = true;
+    private tableOfContentsIsVisible: boolean = true;
 
     public constructor()
     {
@@ -21,39 +25,78 @@ export class DocPage extends BasePage
         postHeader.style.backgroundColor = "var(--bg-color)";
         this.appendChild(postHeader);
 
-        const navigationDiv: HTMLDivElement = document.createElement('div');
-        navigationDiv.style.width = "25%";
-        navigationDiv.style.position = "sticky";
-        navigationDiv.style.top = "var(--header-height)";
-        navigationDiv.style.height = "calc(100vh - var(--header-height))";
-        navigationDiv.style.maxHeight = "calc(100vh - var(--header-height))";
-        navigationDiv.style.overflowY = "auto";
-        navigationDiv.style.overflowX = "hidden";
-        navigationDiv.style.boxSizing = "border-box";
-        postHeader.appendChild(navigationDiv);
+        this.navigationDiv = document.createElement('div');
+        this.navigationDiv.style.width = "25%";
+        this.navigationDiv.style.position = "sticky";
+        this.navigationDiv.style.top = "var(--header-height)";
+        this.navigationDiv.style.height = "calc(100vh - var(--header-height))";
+        this.navigationDiv.style.maxHeight = "calc(100vh - var(--header-height))";
+        this.navigationDiv.style.overflowY = "auto";
+        this.navigationDiv.style.overflowX = "hidden";
+        this.navigationDiv.style.boxSizing = "border-box";
+        postHeader.appendChild(this.navigationDiv);
 
         this.navigationColumn = document.createElement('div', { is: 'navigation-column' }) as NavigationColumn;
-        navigationDiv.appendChild(this.navigationColumn);
+        this.navigationDiv.appendChild(this.navigationColumn);
 
         this.content = document.createElement('div');
         this.content.style.padding = "10px";
         this.content.style.flexDirection = "column";
         this.content.style.width = "100%";
+        this.content.style.height = "calc(100vh - var(--header-height))";
+        this.content.style.maxHeight = "calc(100vh - var(--header-height))";
+        this.content.style.boxSizing = "border-box";
         postHeader.appendChild(this.content);
 
-        const tableOfContentsDiv: HTMLDivElement = document.createElement('div');
-        tableOfContentsDiv.style.width = "25%";
-        tableOfContentsDiv.style.position = "sticky";
-        tableOfContentsDiv.style.top = "var(--header-height)";
-        tableOfContentsDiv.style.height = "calc(100vh - var(--header-height))";
-        tableOfContentsDiv.style.maxHeight = "calc(100vh - var(--header-height))";
-        tableOfContentsDiv.style.overflowY = "auto";
-        tableOfContentsDiv.style.overflowX = "hidden";
-        tableOfContentsDiv.style.boxSizing = "border-box";
-        postHeader.appendChild(tableOfContentsDiv);
+        this.tableOfContentsDiv = document.createElement('div');
+        this.tableOfContentsDiv.style.width = "25%";
+        this.tableOfContentsDiv.style.position = "sticky";
+        this.tableOfContentsDiv.style.top = "var(--header-height)";
+        this.tableOfContentsDiv.style.height = "calc(100vh - var(--header-height))";
+        this.tableOfContentsDiv.style.maxHeight = "calc(100vh - var(--header-height))";
+        this.tableOfContentsDiv.style.overflowY = "auto";
+        this.tableOfContentsDiv.style.overflowX = "hidden";
+        this.tableOfContentsDiv.style.boxSizing = "border-box";
+        postHeader.appendChild(this.tableOfContentsDiv);
 
         this.tableOfContents = document.createElement('div', { is: 'table-of-contents' }) as TableOfContents;
-        tableOfContentsDiv.appendChild(this.tableOfContents);
+        this.tableOfContentsDiv.appendChild(this.tableOfContents);
+
+        const toggleNavigation: HTMLButtonElement = document.createElement("button");
+        toggleNavigation.textContent = "Navigation";
+        toggleNavigation.style.color = "#C97CFC";
+        toggleNavigation.classList.add("header-button");
+        toggleNavigation.addEventListener("click", () =>
+        {
+            this.ToggleNavigation();
+            if (this.navigationIsVisible)
+            {
+                toggleNavigation.style.color = "#C97CFC";
+            }
+            else
+            {
+                toggleNavigation.style.color = "inherit";
+            }
+        });
+        this.header.AddElement(toggleNavigation);
+
+        const toggleTableOfContents: HTMLButtonElement = document.createElement("button");
+        toggleTableOfContents.textContent = "Contents";
+        toggleTableOfContents.style.color = "#C97CFC";
+        toggleTableOfContents.classList.add("header-button");
+        toggleTableOfContents.addEventListener("click", () =>
+        {
+            this.ToggleTableOfContents();
+            if (this.tableOfContentsIsVisible)
+            {
+                toggleTableOfContents.style.color = "#C97CFC";
+            }
+            else
+            {
+                toggleTableOfContents.style.color = "inherit";
+            }
+        });
+        this.header.AddElement(toggleTableOfContents);
     }
 
     public ChangePage(pageName: string, pushHistory: boolean) : HTMLElement | null
@@ -87,5 +130,38 @@ export class DocPage extends BasePage
         }
         this.tableOfContents.SetPageName(pageName);
         this.tableOfContents.Populate(startElement!);
+    }
+
+    public ToggleNavigation()
+    {
+        if (this.navigationIsVisible)
+        {
+            this.navigationDiv.style.display = "none";
+            this.navigationIsVisible = false;
+        }
+        else
+        {
+            this.navigationDiv.style.display = "";
+            this.navigationIsVisible = true;
+        }
+    }
+
+    public ToggleTableOfContents()
+    {
+        if (this.tableOfContentsIsVisible)
+        {
+            this.tableOfContentsDiv.style.display = "none";
+            this.tableOfContentsIsVisible = false;
+        }
+        else
+        {
+            this.tableOfContentsDiv.style.display = "";
+            this.tableOfContentsIsVisible = true;
+        }
+    }
+
+    public AddHeaderElement(element: HTMLElement)
+    {
+        this.header.AddElement(element);
     }
 }

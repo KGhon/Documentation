@@ -1,0 +1,11 @@
+"void RequestPlaySound(UObject* WorldContext, AActor* actor, TSubclassOf<UAudioSuperComponentBase> sound, FVector location, FRotator rotation, bool attach, USceneComponent* attachTarget);","BlueprintCallable
+Attempts to play the requested sound. Requests can be denied based on the sound limit settings in the KAudioSystem."
+
+"void RequestStopSound(UObject* WorldContext, AActor actor, TSubclassOf<UAudioSuperComponentBase> sound, EAudioStopBehavior stopBehavior, float fadeOutDuration, bool includeAll)","BlueprintCallable
+Stops either the first or all matching sound(s) linked to the calling actor."
+
+"void RequestPauseSound(UObject* WorldContext, AActor* actor, TSubclassOf<UAudioSuperComponentBase> sound, bool includeAll)","BlueprintCallable
+Pauses either the first or all matching sound(s) linked to the calling actor."
+
+"void RequestUnpauseSound(UObject* WorldContext, AActor* actor, TSubclassOf<UAudioSuperComponentBase> sound, bool includAll)","BlueprintCallable
+Unpauses either the first or all matching sound(s) linked to the calling actor."

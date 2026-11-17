@@ -3,7 +3,7 @@ import fsPromises from 'node:fs/promises';
 import { parse } from "csv-parse/sync";
 import { createHighlighterCore } from 'shiki/core';
 import type { HighlighterCore } from 'shiki/core';
-import { createJavaScriptRegexEngine } from 'shiki/engine/javascript';
+import { createOnigurumaEngine } from 'shiki/engine/oniguruma'
 import darkplus from '@shikijs/themes/dark-plus';
 import csharp from '@shikijs/langs/csharp';
 import cpp from '@shikijs/langs/cpp';
@@ -18,7 +18,7 @@ async function GetHighlighter(): Promise<HighlighterCore>
         highlighter = await createHighlighterCore({
             themes: [darkplus],
             langs: [csharp, cpp, lua],
-            engine: createJavaScriptRegexEngine(),
+            engine: createOnigurumaEngine(import('shiki/wasm')),
         });
     }
     return highlighter;
@@ -91,11 +91,16 @@ async function ProcessDirectory(dirPath: string): Promise<void>
 
             for (const highlight of postHighlights)
             {
-                htmlOutput = htmlOutput.replace(new RegExp(`<span\\s+style\\s*=\\s*["'][^"']*color\\s*:\\s*[^"'>]*?["']>(\\s*${highlight[0]}\\s*)<\\/span>`, "g"), (_fullMatch: string, capturedTerm: string) =>
+                htmlOutput = htmlOutput.replace(new RegExp(`<span\\s+style\\s*=\\s*["'][^"']*color\\s*:\\s*[^"'>]*?["']>(\\s*${highlight[0]}\\s*)<\\/span>|(\\b${highlight[0]}\\b)`, "g"), (_fullMatch: string, _capturedTerm: string) =>
                 {
-                    return `<span style="color: ${highlight[1]}">${capturedTerm}</span>`;
+                    return `<span style="color:${highlight[1]}">${highlight[0]}</span>`;
                 });
             }
+
+            htmlOutput = htmlOutput.replace(new RegExp(`<span\\s+style\\s*=\\s*["'][^"']*color\\s*:\\s*[^"'>]*?["']>(\\s*[*]\\s*)<\\/span>`, "g"), (_fullMatch: string, _capturedTerm: string) =>
+            {
+                return `<span style="color:#D4D4D4">*</span>`;
+            });
 
             fileRecord[match[1]] = htmlOutput;
         }
@@ -117,11 +122,19 @@ async function ProcessDirectory(dirPath: string): Promise<void>
             {
                 for (const row of (data as string[][]))
                 {
-                    row[0] = row[0].replace(new RegExp(`<span\\s+style\\s*=\\s*["'][^"']*color\\s*:\\s*[^"'>]*?["']>(\\s*${highlight[0]}\\s*)<\\/span>`, "g"), (_fullMatch: string, capturedTerm: string) =>
+                    row[0] = row[0].replace(new RegExp(`<span\\s+style\\s*=\\s*["'][^"']*color\\s*:\\s*[^"'>]*?["']>(\\s*${highlight[0]}\\s*)<\\/span>|(\\b${highlight[0]}\\b)`, "g"), (_fullMatch: string, _capturedTerm: string) =>
                     {
-                        return `<span style="color: ${highlight[1]}">${capturedTerm}</span>`;
+                        return `<span style="color:${highlight[1]}">${highlight[0]}</span>`;
                     });
                 }
+            }
+
+            for (const row of (data as string[][]))
+            {
+                row[0] = row[0].replace(new RegExp(`<span\\s+style\\s*=\\s*["'][^"']*color\\s*:\\s*[^"'>]*?["']>(\\s*[*]\\s*)<\\/span>`, "g"), (_fullMatch: string, _capturedTerm: string) =>
+                {
+                    return `<span style="color:#D4D4D4">*</span>`;
+                });
             }
 
             fileRecord[match[1]] = data;

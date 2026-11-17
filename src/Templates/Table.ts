@@ -1,5 +1,11 @@
 import "../Documentation.css";
 
+export const ColumnSpacing = {
+    Equal: 0,
+    Compact: 1,
+    Extend: 2
+} as const
+
 export class Table extends HTMLTableElement
 {
     public constructor()
@@ -12,18 +18,26 @@ export class Table extends HTMLTableElement
         this.style.tableLayout = "fixed";
     }
 
-    public Configure(content: string[][], compactFirstColumn: boolean = false, cellBorderWidth: number = 2, cellBorderColor: string = "#505050")
+    public Configure(content: string[][], compactFirstColumn: number = ColumnSpacing.Equal, cellBorderWidth: number = 2, cellBorderColor: string = "#505050")
     {
-        if (compactFirstColumn)
+        const colGroup = document.createElement('colgroup');
+        const col1 = document.createElement('col');
+        const col2 = document.createElement("col");
+        col1.style.width = "50%";
+        col2.style.width = "50%";
+        colGroup.appendChild(col1);
+        colGroup.appendChild(col2);
+        this.appendChild(colGroup);
+        switch (compactFirstColumn)
         {
-            const colGroup = document.createElement('colgroup');
-            const col1 = document.createElement('col');
-            const col2 = document.createElement("col");
-            col1.style.width = "25%";
-            col2.style.width = "75%";
-            colGroup.appendChild(col1);
-            colGroup.appendChild(col2);
-            this.appendChild(colGroup);
+            case ColumnSpacing.Compact:
+                col1.style.width = "25%";
+                col2.style.width = "75%";
+                break;
+            case ColumnSpacing.Extend:
+                col1.style.width = "75%";
+                col2.style.width = "25%";
+                break;
         }
 
         for (let i = 0; i < content.length; i++)

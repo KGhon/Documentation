@@ -5,6 +5,7 @@ import { DocPage } from '../Templates/DocPage.ts';
 import pages from '../../data/UnrealEngine/UnrealEngine-pages.json';
 import * as NavigationError from "./NavigationError.ts";
 import * as KAudioSystem from "./UnrealEngine/KAudioSystem/KAudioSystem.ts";
+import * as KAudioSystemStatics from "./UnrealEngine/KAudioSystem/KAudioSystemStatics.ts";
 import * as AudioSuperComponent from "./UnrealEngine/KAudioSystem/AudioSuperComponent.ts";
 
 const spa: DocPage = document.createElement('div', { is: 'doc-page' }) as DocPage;
@@ -36,6 +37,7 @@ window.addEventListener('hashchange', () =>
 
 spa.AddContentPage("NavigationError", NavigationError.Construct());
 spa.AddContentPage("KAudioSystem", KAudioSystem.Construct());
+spa.AddContentPage("KAudioSystemStatics", KAudioSystemStatics.Construct());
 spa.AddContentPage("AudioSuperComponent", AudioSuperComponent.Construct());
 
 const path = window.location.hash.replace('#', '');

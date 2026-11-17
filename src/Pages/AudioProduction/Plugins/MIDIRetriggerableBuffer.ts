@@ -1,6 +1,6 @@
 import "../../../Documentation.css"
 import { ContentPage } from "../../../Templates/ContentPage.ts";
-import { Table } from "../../../Templates/Table.ts";
+import { Table, ColumnSpacing } from "../../../Templates/Table.ts";
 import * as textContent from "../../../../generated/MIDIRetriggerableBuffer-text-generated.json";
 import * as content from "../../../../data/AudioProduction/Plugins/MIDIRetriggerableBuffer/MIDIRetriggerableBuffer.json"
 
@@ -30,7 +30,7 @@ export function Construct(): HTMLDivElement
     settingsSection.innerHTML = 'Settings';
 
     const settingsTable: Table = root.appendChild(Object.assign(document.createElement("table", { is: "table-element" }), { className: "c4" })) as Table;
-    settingsTable.Configure(content.Settings, true);
+    settingsTable.Configure(content.Settings, ColumnSpacing.Compact);
 
     return root;
 }

@@ -2,7 +2,9 @@
   "pages": [
     [ "KAudioMixDesk", "", true, true ],
     [ "KAudioSystem", "", true, true ],
-    [ "AudioSuperComponent", "KAudioSystem/", true, false ],
+    [ "Classes", "KAudioSystem/", false, true ],
+    [ "KAudioSystemStatics", "KAudioSystem/Classes/", true, false ],
+    [ "AudioSuperComponent", "KAudioSystem/Classes/", true, false ],
     [ "KDebugTools", "", true, true ],
     [ "KDialogueSystem", "", true, true ],
     [ "KFundamentals", "", true, true ],
