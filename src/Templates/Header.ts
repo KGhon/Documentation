@@ -1,14 +1,13 @@
 import "../Documentation.css";
 
-export class Header extends HTMLDivElement
+export class Header extends HTMLElement
 {
-    private left: HTMLDivElement;
-    private center: HTMLDivElement;
-    private right: HTMLDivElement;
+    private left!: HTMLDivElement;
+    private center!: HTMLDivElement;
+    private right!: HTMLDivElement;
 
-    public constructor()
+    public connectedCallback()
     {
-        super();
         this.style.width = "100vw";
         this.style.minHeight = "var(--header-height)";
         this.style.display = "grid";

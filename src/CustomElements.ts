@@ -14,6 +14,6 @@ customElements.define('code-block', CodeBlock, { extends: 'div' });
 customElements.define('table-element', Table, { extends: 'table' });
 customElements.define('doc-page', DocPage, { extends: 'div' });
 customElements.define("content-page", ContentPage, { extends: "div" });
-customElements.define('header-bar', Header, { extends: 'div' });
-customElements.define('navigation-column', NavigationColumn, { extends: 'div' });
+customElements.define("header-bar", Header);
+customElements.define("navigation-column", NavigationColumn, { extends: "div"});
 customElements.define('table-of-contents', TableOfContents, { extends: 'div' });

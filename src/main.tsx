@@ -58,7 +58,7 @@ godotNavigation.style.borderWidth = "0px";
 godotNavigation.SetPageName("Godot");
 godotNavigation.Populate(godotPages.pages as [string, string, boolean, boolean][], (pageName: string, _: boolean) => LoadPage("Godot", pageName));
 
-const header: Header = document.createElement('div', { is: 'header-bar' }) as Header;
+const header: Header = document.createElement("header-bar") as Header;
 document.body.appendChild(header);
 
 const underConstruction: HTMLDivElement = document.createElement("div");

@@ -1,0 +1,1 @@
+import"./CustomElements-Xng8PLRA.js";function e(){let e=document.createElement(`div`,{is:`content-page`});return e.Configure(`Oops! You shouldn't be seeing this!`,`Navigation Error`),e}export{e as t};
