@@ -1,15 +1,15 @@
 import './ColorThemes.css';
 import './Documentation.css';
 import './CustomElements.ts';
-//import audioProductionPages from "../data/AudioProduction/AudioProduction-pages.json";
-//import unrealEnginePages from "../data/UnrealEngine/UnrealEngine-pages.json";
-//import unityPages from "../data/Unity/Unity-pages.json";
-//import godotPages from "../data/Godot/Godot-pages.json";
+import audioProductionPages from "../data/AudioProduction/AudioProduction-pages.json";
+import unrealEnginePages from "../data/UnrealEngine/UnrealEngine-pages.json";
+import unityPages from "../data/Unity/Unity-pages.json";
+import godotPages from "../data/Godot/Godot-pages.json";
 import { Header } from "./Templates/Header.ts";
-//import { NavigationColumn } from"./Templates/NavigationColumn.ts";
+import { NavigationColumn } from"./Templates/NavigationColumn.ts";
 
-//const selectors: HTMLButtonElement[] = [];
-/*
+const selectors: HTMLButtonElement[] = [];
+
 function LoadPage(section: string, pageName: string)
 {
     window.location.href = pagesPath + section + "/" + `#${pageName}`;
@@ -57,14 +57,14 @@ const godotNavigation: NavigationColumn = document.createElement("div", { is: "n
 godotNavigation.style.borderWidth = "0px";
 godotNavigation.SetPageName("Godot");
 godotNavigation.Populate(godotPages.pages as [string, string, boolean, boolean][], (pageName: string, _: boolean) => LoadPage("Godot", pageName));
-*/
-const header: Header = document.createElement("header-bar") as Header;
+
+const header: Header = document.createElement("div", { is: "header-bar" }) as Header;
 document.body.appendChild(header);
 
 const underConstruction: HTMLDivElement = document.createElement("div");
 underConstruction.textContent = "This site is currently under construction and migration";
 header.AddElement(underConstruction);
-/*
+
 const navigationSections: HTMLDivElement = document.createElement("div");
 navigationSections.style.display = "flex";
 navigationSections.style.flexDirection = "row";
@@ -96,4 +96,3 @@ RegisterSelectorButton("Audio Production", audioProductionNavigation);
 RegisterSelectorButton("Unreal Engine", unrealEngineNavigation);
 RegisterSelectorButton("Unity", unityNavigation);
 RegisterSelectorButton("Godot", godotNavigation);
-*/

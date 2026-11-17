@@ -18,7 +18,7 @@ export class BasePage extends HTMLDivElement
         this.style.flexDirection = "column";
         this.style.backgroundColor = "var(--bg-color)";
 
-        this.header = document.createElement("header-bar") as Header;
+        this.header = document.createElement("div", { is: "header-bar" }) as Header;
         this.appendChild(this.header);
 
         this.content = document.createElement('div');

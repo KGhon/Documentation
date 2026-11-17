@@ -1,6 +1,6 @@
 import "../Documentation.css";
 
-export class Header extends HTMLElement
+export class Header extends HTMLDivElement
 {
     private left!: HTMLDivElement;
     private center!: HTMLDivElement;
