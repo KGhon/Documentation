@@ -4,9 +4,10 @@ import { CodeBlock } from "../../../../Templates/CodeBlock.ts";
 import * as textContent from "../../../../../generated/Extensions-text-generated.json";
 import * as code from "../../../../../generated/Extensions-code-generated.json"
 
-export function Construct(): HTMLDivElement
+export function Construct(): HTMLElement
 {
-    const root: ContentPage = document.createElement("div", { is: "content-page" }) as ContentPage;
+    const root: ContentPage = document.createElement("content-page") as ContentPage;
+    root.Init();
     root.Configure(textContent.Title, textContent.Category);
 
     const overviewSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
@@ -57,7 +58,8 @@ export function Construct(): HTMLDivElement
     const inspectable: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     inspectable.innerHTML = textContent.Inspectables;
 
-    const exampleInspectable: CodeBlock = root.appendChild(document.createElement("div", { is: "code-block" })) as CodeBlock;
+    const exampleInspectable: CodeBlock = root.appendChild(document.createElement("code-block")) as CodeBlock;
+    exampleInspectable.Init();
     exampleInspectable.Configure(code.ExampleInspectable, true, false);
 
     const inspectableDataSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
@@ -90,7 +92,8 @@ export function Construct(): HTMLDivElement
     const hookingUpUndoRedo: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     hookingUpUndoRedo.innerHTML = textContent.HookingUpUndoRedo;
 
-    const exampleUndoRedo: CodeBlock = root.appendChild(document.createElement("div", { is: "code-block" })) as CodeBlock;
+    const exampleUndoRedo: CodeBlock = root.appendChild(document.createElement("code-block")) as CodeBlock;
+    exampleUndoRedo.Init();
     exampleUndoRedo.Configure(code.ExampleUndoRedo, true, true);
 
     return root;

@@ -1,20 +1,23 @@
 import "../Documentation.css";
 
-export class CodeBlock extends HTMLDivElement
+export class CodeBlock extends HTMLElement
 {
-    private code: HTMLDivElement;
+    private root!: HTMLDivElement;
+    private code!: HTMLDivElement;
     private isExpanded: boolean = false;
-    public constructor()
-    {
-        super();
 
-        this.style.display = "grid";
-        this.style.boxSizing = "border-box";
-        this.style.borderStyle = "solid";
-        this.style.borderColor = "#505050";
+    public Init()
+    {
+        this.root = document.createElement("div");
+        this.appendChild(this.root);
+
+        this.root.style.display = "grid";
+        this.root.style.boxSizing = "border-box";
+        this.root.style.borderStyle = "solid";
+        this.root.style.borderColor = "#505050";
 
         this.code = document.createElement('div');
-        this.appendChild(this.code);
+        this.root.appendChild(this.code);
     }
 
     public async Configure(code: string, canCopy: boolean, isCompact: boolean, name: string = "", borderWidth: number = 4, margin: string = "20px 50px 0px 50px", padding: string = "0")
@@ -24,9 +27,9 @@ export class CodeBlock extends HTMLDivElement
         this.code.style.width = "100%";
         this.code.style.overflowX = "auto";
         this.code.style.boxSizing = "border-box";
-        this.style.margin = margin;
-        this.style.padding = padding;
-        this.style.borderWidth = `0px ${borderWidth}px ${borderWidth}px ${borderWidth}px`;
+        this.root.style.margin = margin;
+        this.root.style.padding = padding;
+        this.root.style.borderWidth = `0px ${borderWidth}px ${borderWidth}px ${borderWidth}px`;
         if (name != "" || canCopy || isCompact)
         {
             const header: HTMLDivElement = document.createElement('div');
@@ -34,7 +37,7 @@ export class CodeBlock extends HTMLDivElement
             header.style.display = "flex";
             header.style.flexDirection = "row";
             header.style.backgroundColor = "#505050";
-            this.prepend(header)
+            this.root.prepend(header)
 
             const headerName: HTMLLabelElement = document.createElement('label');
             headerName.style.display = "flex";
@@ -114,7 +117,7 @@ export class CodeBlock extends HTMLDivElement
         }
         else
         {
-            this.style.borderWidth = `${borderWidth}px`;
+            this.root.style.borderWidth = `${borderWidth}px`;
         }
     }
 

@@ -4,9 +4,10 @@ import { Table, ColumnSpacing } from "../../../Templates/Table.ts";
 import * as textContent from "../../../../generated/ProjectSetupHelpers-text-generated.json";
 import * as content from "../../../../data/AudioProduction/ReaperScripts/ProjectSetupHelpers/ProjrectSetupHelpers.json";
 
-export function Construct(): HTMLDivElement
+export function Construct(): HTMLElement
 {
-    const root: ContentPage = document.createElement("div", { is: "content-page" }) as ContentPage;
+    const root: ContentPage = document.createElement("content-page") as ContentPage;
+    root.Init();
     root.Configure(textContent.Title, textContent.Category);
 
     const overviewSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
@@ -33,7 +34,8 @@ export function Construct(): HTMLDivElement
     const generateTracksFromCSV: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     generateTracksFromCSV.innerHTML = textContent.GenerateTracksFromCSV;
 
-    const generateTracksFromCSVTable: Table = root.appendChild(Object.assign(document.createElement("table", { is: "table-element" }), { className: "c4" })) as Table;
+    const generateTracksFromCSVTable: Table = root.appendChild(Object.assign(document.createElement("table-element"), { className: "c4" })) as Table;
+    generateTracksFromCSVTable.Init();
     generateTracksFromCSVTable.Configure(content.GenerateTracksFromCSV, ColumnSpacing.Compact);
 
     const generateRegionsSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
@@ -42,7 +44,8 @@ export function Construct(): HTMLDivElement
     const generateRegions: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     generateRegions.innerHTML = textContent.GenerateRegions;
 
-    const generateRegionsTable: Table = root.appendChild(Object.assign(document.createElement("table", { is: "table-element" }), { className: "c4" })) as Table;
+    const generateRegionsTable: Table = root.appendChild(Object.assign(document.createElement("table-element"), { className: "c4" })) as Table;
+    generateRegionsTable.Init();
     generateRegionsTable.Configure(content.GenerateRegions, ColumnSpacing.Compact);
 
     const generalSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
@@ -54,7 +57,8 @@ export function Construct(): HTMLDivElement
     const generateMarkersFromCSV: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     generateMarkersFromCSV.innerHTML = textContent.GenerateMarkersFromCSV;
 
-    const generateMarkersFromCSVTable: Table = root.appendChild(Object.assign(document.createElement("table", { is: "table-element" }), { className: "c4" })) as Table;
+    const generateMarkersFromCSVTable: Table = root.appendChild(Object.assign(document.createElement("table-element"), { className: "c4" })) as Table;
+    generateMarkersFromCSVTable.Init();
     generateMarkersFromCSVTable.Configure(content.GenerateMarkersFromCSV, ColumnSpacing.Compact);
 
     const voiceoverSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
@@ -66,7 +70,8 @@ export function Construct(): HTMLDivElement
     const generateVOTracksFromCSV: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     generateVOTracksFromCSV.innerHTML = textContent.GenerateVOTracksFromCSV;
 
-    const generateVOTracksFromCSVTable: Table = root.appendChild(Object.assign(document.createElement("table", { is: "table-element" }), { className: "c4" })) as Table;
+    const generateVOTracksFromCSVTable: Table = root.appendChild(Object.assign(document.createElement("table-element"), { className: "c4" })) as Table;
+    generateVOTracksFromCSVTable.Init();
     generateVOTracksFromCSVTable.Configure(content.GenerateTracksFromCSV, ColumnSpacing.Compact);
 
     const affixSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
@@ -75,7 +80,8 @@ export function Construct(): HTMLDivElement
     const affix: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     affix.innerHTML = textContent.Affix;
 
-    const affixTable: Table = root.appendChild(Object.assign(document.createElement("table", { is: "table-element" }), { className: "c4" })) as Table;
+    const affixTable: Table = root.appendChild(Object.assign(document.createElement("table-element"), { className: "c4" })) as Table;
+    affixTable.Init();
     affixTable.Configure(content.Affix, ColumnSpacing.Compact);
 
     const removeAffixSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
@@ -84,7 +90,8 @@ export function Construct(): HTMLDivElement
     const removeAffix: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     removeAffix.innerHTML = textContent.RemoveAffix;
 
-    const removeAffixTable: Table = root.appendChild(Object.assign(document.createElement("table", { is: "table-element" }), { className: "c4" })) as Table;
+    const removeAffixTable: Table = root.appendChild(Object.assign(document.createElement("table-element"), { className: "c4" })) as Table;
+    removeAffixTable.Init();
     removeAffixTable.Configure(content.RemoveAffix, ColumnSpacing.Compact);
 
     const voiceoverFileSplittingTipSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;

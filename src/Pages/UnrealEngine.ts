@@ -8,7 +8,8 @@ import * as KAudioSystem from "./UnrealEngine/KAudioSystem/KAudioSystem.ts";
 import * as KAudioSystemStatics from "./UnrealEngine/KAudioSystem/KAudioSystemStatics.ts";
 import * as AudioSuperComponent from "./UnrealEngine/KAudioSystem/AudioSuperComponent.ts";
 
-const spa: DocPage = document.createElement('div', { is: 'doc-page' }) as DocPage;
+const spa: DocPage = document.createElement("doc-page") as DocPage;
+spa.Init();
 spa.SetNavigationPageName("Unreal Engine");
 spa.PopulateNavigation(pages.pages as [string, string, boolean, boolean][]);
 document.body.appendChild(spa);

@@ -38,27 +38,32 @@ document.body.style.backgroundColor = "var(--bg-color)";
 
 const pagesPath = `${import.meta.env.BASE_URL}Pages/`;
 
-const audioProductionNavigation: NavigationColumn = document.createElement("div", { is: "navigation-column" }) as NavigationColumn;
+const audioProductionNavigation: NavigationColumn = document.createElement("navigation-column") as NavigationColumn;
+audioProductionNavigation.Init();
 audioProductionNavigation.style.borderWidth = "0px";
 audioProductionNavigation.SetPageName("Audio Production");
 audioProductionNavigation.Populate(audioProductionPages.pages as [string, string, boolean, boolean][], (pageName: string, _: boolean) => LoadPage("AudioProduction", pageName));
 
-const unrealEngineNavigation: NavigationColumn = document.createElement("div", { is: "navigation-column" }) as NavigationColumn;
+const unrealEngineNavigation: NavigationColumn = document.createElement("navigation-column") as NavigationColumn;
+unrealEngineNavigation.Init();
 unrealEngineNavigation.style.borderWidth = "0px";
 unrealEngineNavigation.SetPageName("Unreal Engine");
 unrealEngineNavigation.Populate(unrealEnginePages.pages as [string, string, boolean, boolean][], (pageName: string, _: boolean) => LoadPage("UnrealEngine", pageName));
 
-const unityNavigation: NavigationColumn = document.createElement("div", { is: "navigation-column" }) as NavigationColumn;
+const unityNavigation: NavigationColumn = document.createElement("navigation-column") as NavigationColumn;
+unityNavigation.Init();
 unityNavigation.style.borderWidth = "0px";
 unityNavigation.SetPageName("Unity");
 unityNavigation.Populate(unityPages.pages as [string, string, boolean, boolean][], (pageName: string, _: boolean) => LoadPage("Unity", pageName));
 
-const godotNavigation: NavigationColumn = document.createElement("div", { is: "navigation-column" }) as NavigationColumn;
+const godotNavigation: NavigationColumn = document.createElement("navigation-column") as NavigationColumn;
+godotNavigation.Init();
 godotNavigation.style.borderWidth = "0px";
 godotNavigation.SetPageName("Godot");
 godotNavigation.Populate(godotPages.pages as [string, string, boolean, boolean][], (pageName: string, _: boolean) => LoadPage("Godot", pageName));
 
-const header: Header = document.createElement("div", { is: "header-bar" }) as Header;
+const header: Header = document.createElement("header-bar") as Header;
+header.Init();
 document.body.appendChild(header);
 
 const underConstruction: HTMLDivElement = document.createElement("div");

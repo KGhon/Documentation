@@ -6,7 +6,8 @@ import pages from '../../data/Unity/Unity-pages.json';
 import * as NavigationError from "./NavigationError.ts";
 import * as FMODWWISEScriptableObjectGenerator from "../Pages/Unity/FMODWWISEScriptableObjectGenerator/FMODWWISEScriptableObjectGenerator.ts"; 
 
-const spa: DocPage = document.createElement('div', { is: 'doc-page' }) as DocPage;
+const spa: DocPage = document.createElement("doc-page") as DocPage;
+spa.Init();
 spa.SetNavigationPageName("Unity");
 spa.PopulateNavigation(pages.pages as [string, string, boolean, boolean][]);
 document.body.appendChild(spa);

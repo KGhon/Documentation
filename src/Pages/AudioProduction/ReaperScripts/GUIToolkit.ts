@@ -5,9 +5,10 @@ import { Table, ColumnSpacing } from "../../../Templates/Table.ts";
 import * as textContent from "../../../../generated/GUIToolkit-text-generated.json";
 import * as code from "../../../../generated/GUIToolkit-code-generated.json";
 
-export function Construct(): HTMLDivElement
+export function Construct(): HTMLElement
 {
-    const root: ContentPage = document.createElement("div", { is: "content-page" }) as ContentPage;
+    const root: ContentPage = document.createElement("content-page") as ContentPage;
+    root.Init();
     root.Configure(textContent.Title, textContent.Category);
 
     const overviewSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
@@ -28,7 +29,8 @@ export function Construct(): HTMLDivElement
     const example: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     example.innerHTML = textContent.Example;
 
-    const exampleCode: CodeBlock = root.appendChild(document.createElement("div", { is: "code-block" })) as CodeBlock;
+    const exampleCode: CodeBlock = root.appendChild(document.createElement("code-block")) as CodeBlock;
+    exampleCode.Init();
     exampleCode.Configure(code.Example, true, true, "Example.lua");
 
     const classesSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
@@ -43,7 +45,8 @@ export function Construct(): HTMLDivElement
     const guiContextPublic: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
     guiContextPublic.innerHTML = "Public Functions";
 
-    const guiContextPublicFunctions: Table = root.appendChild(document.createElement("table", { is: "table-element" })) as Table;
+    const guiContextPublicFunctions: Table = root.appendChild(document.createElement("table-element")) as Table;
+    guiContextPublicFunctions.Init();
     guiContextPublicFunctions.Configure(code.GUIContextPublicFunctions, ColumnSpacing.Compact);
 
     const uiBaseSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
@@ -55,7 +58,8 @@ export function Construct(): HTMLDivElement
     const uiBasePublic: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
     uiBasePublic.innerHTML = "Public Functions";
 
-    const uiBasePublicFunctions: Table = root.appendChild(document.createElement("table", { is: "table-element" })) as Table;
+    const uiBasePublicFunctions: Table = root.appendChild(document.createElement("table-element")) as Table;
+    uiBasePublicFunctions.Init();
     uiBasePublicFunctions.Configure(code.UIBasePublicFunctions);
 
     const dividerSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
@@ -66,7 +70,8 @@ export function Construct(): HTMLDivElement
     const dividerPublic: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
     dividerPublic.innerHTML = "Public Functions";
 
-    const dividerPublicFunctions: Table = root.appendChild(document.createElement("table", { is: "table-element" })) as Table;
+    const dividerPublicFunctions: Table = root.appendChild(document.createElement("table-element")) as Table;
+    dividerPublicFunctions.Init();
     dividerPublicFunctions.Configure(code.DividerPublicFunctions);
 
     const horizontalContainerSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
@@ -78,7 +83,8 @@ export function Construct(): HTMLDivElement
     const horizontalContainerPublic: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
     horizontalContainerPublic.innerHTML = "Public Functions";
 
-    const horizontalContainerPublicFunctions: Table = root.appendChild(document.createElement("table", { is: "table-element" })) as Table;
+    const horizontalContainerPublicFunctions: Table = root.appendChild(document.createElement("table-element")) as Table;
+    horizontalContainerPublicFunctions.Init();
     horizontalContainerPublicFunctions.Configure(code.HorizontalContainerPublicFunctions);
 
     const verticalContainerSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
@@ -90,7 +96,8 @@ export function Construct(): HTMLDivElement
     const verticalContainerPublic: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
     verticalContainerPublic.innerHTML = "Public Functions";
 
-    const verticalContainerPublicFunctions: Table = root.appendChild(document.createElement("table", { is: "table-element" })) as Table;
+    const verticalContainerPublicFunctions: Table = root.appendChild(document.createElement("table-element")) as Table;
+    verticalContainerPublicFunctions.Init();
     verticalContainerPublicFunctions.Configure(code.VerticalContainerPublicFunctions);
 
     const scaleContainerSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
@@ -101,7 +108,8 @@ export function Construct(): HTMLDivElement
     const scaleContainerPublic: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
     scaleContainerPublic.innerHTML = "Public Functions";
 
-    const scaleContainerPublicFunctions: Table = root.appendChild(document.createElement("table", { is: "table-element" })) as Table;
+    const scaleContainerPublicFunctions: Table = root.appendChild(document.createElement("table-element")) as Table;
+    scaleContainerPublicFunctions.Init();
     scaleContainerPublicFunctions.Configure(code.ScaleContainerPublicFunctions);
 
     const scrollContainerSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
@@ -112,7 +120,8 @@ export function Construct(): HTMLDivElement
     const scrollContainerPublic: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
     scrollContainerPublic.innerHTML = "Public Functions";
 
-    const scrollContainerPublicFunctions: Table = root.appendChild(document.createElement("table", { is: "table-element" })) as Table;
+    const scrollContainerPublicFunctions: Table = root.appendChild(document.createElement("table-element")) as Table;
+    scrollContainerPublicFunctions.Init();
     scrollContainerPublicFunctions.Configure(code.ScrollContainerPublicFunctions);
 
     const tabContainerSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
@@ -124,7 +133,8 @@ export function Construct(): HTMLDivElement
     const tabContainerPublic: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
     tabContainerPublic.innerHTML = "Public Functions";
 
-    const tabContainerPublicFunctions: Table = root.appendChild(document.createElement("table", { is: "table-element" })) as Table;
+    const tabContainerPublicFunctions: Table = root.appendChild(document.createElement("table-element")) as Table;
+    tabContainerPublicFunctions.Init();
     tabContainerPublicFunctions.Configure(code.TabContainerPublicFunctions);
 
     const textSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
@@ -136,7 +146,8 @@ export function Construct(): HTMLDivElement
     const textPublic: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
     textPublic.innerHTML = "Public Functions";
 
-    const textPublicFunctions: Table = root.appendChild(document.createElement("table", { is: "table-element" })) as Table;
+    const textPublicFunctions: Table = root.appendChild(document.createElement("table-element")) as Table;
+    textPublicFunctions.Init();
     textPublicFunctions.Configure(code.TextPublicFunctions);
 
     const buttonSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
@@ -148,7 +159,8 @@ export function Construct(): HTMLDivElement
     const buttonPublic: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
     buttonPublic.innerHTML = "Public Functions";
 
-    const buttonPublicFunctions: Table = root.appendChild(document.createElement("table", { is: "table-element" })) as Table;
+    const buttonPublicFunctions: Table = root.appendChild(document.createElement("table-element")) as Table;
+    buttonPublicFunctions.Init();
     buttonPublicFunctions.Configure(code.ButtonPublicFunctions);
 
     const textInputSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
@@ -160,7 +172,8 @@ export function Construct(): HTMLDivElement
     const textInputPublic: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
     textInputPublic.innerHTML = "Public Functions";
 
-    const textInputPublicFunctions: Table = root.appendChild(document.createElement("table", { is: "table-element" })) as Table;
+    const textInputPublicFunctions: Table = root.appendChild(document.createElement("table-element")) as Table;
+    textInputPublicFunctions.Init();
     textInputPublicFunctions.Configure(code.TextInputPublicFunctions);
 
     const numericInputSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
@@ -171,7 +184,8 @@ export function Construct(): HTMLDivElement
     const numericInputPublic: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
     numericInputPublic.innerHTML = "Public Functions";
 
-    const numericInputPublicFunctions: Table = root.appendChild(document.createElement("table", { is: "table-element" })) as Table;
+    const numericInputPublicFunctions: Table = root.appendChild(document.createElement("table-element")) as Table;
+    numericInputPublicFunctions.Init();
     numericInputPublicFunctions.Configure(code.NumericInputPublicFunctions);
 
     const dropdownSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
@@ -182,7 +196,8 @@ export function Construct(): HTMLDivElement
     const dropdownPublic: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
     dropdownPublic.innerHTML = "Public Functions";
 
-    const dropdownPublicFunctions: Table = root.appendChild(document.createElement("table", { is: "table-element" })) as Table;
+    const dropdownPublicFunctions: Table = root.appendChild(document.createElement("table-element")) as Table;
+    dropdownPublicFunctions.Init();
     dropdownPublicFunctions.Configure(code.DropdownPublicFunctions);
 
     const listSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
@@ -194,7 +209,8 @@ export function Construct(): HTMLDivElement
     const listPublic: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
     listPublic.innerHTML = "Public Functions";
 
-    const listPublicFunctions: Table = root.appendChild(document.createElement("table", { is: "table-element" })) as Table;
+    const listPublicFunctions: Table = root.appendChild(document.createElement("table-element")) as Table;
+    listPublicFunctions.Init();
     listPublicFunctions.Configure(code.ListPublicFunctions);
 
     const folerSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
@@ -205,7 +221,8 @@ export function Construct(): HTMLDivElement
     const folderPublic: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
     folderPublic.innerHTML = "Public Functions";
 
-    const folderPublicFunctions: Table = root.appendChild(document.createElement("table", { is: "table-element" })) as Table;
+    const folderPublicFunctions: Table = root.appendChild(document.createElement("table-element")) as Table;
+    folderPublicFunctions.Init();
     folderPublicFunctions.Configure(code.FolderPublicFunctions);
 
     return root;

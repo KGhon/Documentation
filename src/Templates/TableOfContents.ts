@@ -1,38 +1,47 @@
 import "../Documentation.css";
 import { Divider } from './Divider.ts';
 
-export class TableOfContents extends HTMLDivElement
+export class TableOfContents extends HTMLElement
 {
-    private pageName: HTMLLabelElement;
-    private links: HTMLDivElement;
+    private root!: HTMLDivElement;
+    private pageName!: HTMLLabelElement;
+    private links!: HTMLDivElement;
     private indentation: number = 30;
 
-    public constructor()
+    public Init()
     {
-        super();
-        this.style.padding = "8px";
-        this.style.display = "flex";
-        this.style.flexDirection = "column";
+        this.style.display = "block";
+        this.style.width = "100%";
         this.style.height = "100%";
-        this.style.overflowY = "auto";
-        this.style.overflowX = "hidden";
-        this.style.borderStyle = "solid";
-        this.style.borderWidth = "0px 0px 0px 2px";
-        this.style.borderColor = "var(--border-color)";
         this.style.boxSizing = "border-box";
+
+        this.root = document.createElement("div");
+        this.root.style.width = "100%";
+        this.root.style.height = "100%";
+        this.root.style.padding = "8px";
+        this.root.style.display = "block";
+        this.root.style.flexDirection = "column";
+        this.root.style.overflowY = "auto";
+        this.root.style.overflowX = "hidden";
+        this.root.style.borderStyle = "solid";
+        this.root.style.borderWidth = "0px 0px 0px 2px";
+        this.root.style.borderColor = "var(--border-color)";
+        this.root.style.boxSizing = "border-box";
+        this.appendChild(this.root);
 
         this.pageName = document.createElement('label');
         this.pageName.style.fontSize = "20px";
         this.pageName.textContent = "Contents";
-        this.appendChild(this.pageName);
+        this.root.appendChild(this.pageName);
 
-        const divider: Divider = document.createElement('div', { is: 'divider-element' }) as Divider;
-        this.appendChild(divider);
+        const divider: Divider = document.createElement("divider-element") as Divider;
+        divider.Init();
+        this.root.appendChild(divider);
 
         this.links = document.createElement("div");
         this.links.style.display = "flex";
         this.links.style.flexDirection = "column";
-        this.appendChild(this.links);
+        this.root.appendChild(this.links);
     }
 
     public Populate(content: HTMLElement)

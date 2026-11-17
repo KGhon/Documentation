@@ -1,24 +1,27 @@
 import '../Documentation.css';
 
-export class Folder extends HTMLDivElement
+export class Folder extends HTMLElement
 {
+    private root!: HTMLDivElement;
     private open: boolean = false;
-    private foldButton: HTMLButtonElement;
-    private header: HTMLDivElement;
+    private foldButton!: HTMLButtonElement;
+    private header!: HTMLDivElement;
     private headerButton!: HTMLButtonElement;
-    private expandable: HTMLDivElement;
-    private elements: HTMLDivElement;
+    private expandable!: HTMLDivElement;
+    private elements!: HTMLDivElement;
 
-    public constructor()
+    public Init()
     {
-        super();
-        this.style.display = "flex";
-        this.style.flexDirection = "column";
+        this.root = document.createElement("div");
+        this.appendChild(this.root);
+
+        this.root.style.display = "flex";
+        this.root.style.flexDirection = "column";
 
         this.header = document.createElement('div');
         this.header.style.display = "flex";
         this.header.style.flexDirection = "row";
-        this.appendChild(this.header);
+        this.root.appendChild(this.header);
         
         this.foldButton = document.createElement('button');
         this.foldButton.style.padding = "0";
@@ -33,7 +36,7 @@ export class Folder extends HTMLDivElement
         
         this.expandable = document.createElement('div');
         this.expandable.classList.add("expandable-wrapper");
-        this.appendChild(this.expandable);
+        this.root.appendChild(this.expandable);
 
         this.elements = document.createElement('div');
         this.elements.style.display = "flex";

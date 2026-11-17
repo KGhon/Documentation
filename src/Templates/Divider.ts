@@ -1,15 +1,13 @@
-export class Divider extends HTMLDivElement
+export class Divider extends HTMLElement
 {
-    public constructor()
+    private root!: HTMLDivElement;
+
+    public Init()
     {
-        super();
+        this.root = document.createElement("div");
+        this.appendChild(this.root);
 
-        this.style.height = "2px";
-        this.style.backgroundColor = "white";
-    }
-
-    public connectedCallback()
-    {
-
+        this.root.style.height = "2px";
+        this.root.style.backgroundColor = "white";
     }
 }

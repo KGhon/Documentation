@@ -6,9 +6,10 @@ import * as textContent from "../../../../../generated/Boards-text-generated.jso
 import * as content from "../../../../../data/Godot/KDocumentationTools/Boards/Boards.json";
 import * as code from "../../../../../generated/Boards-code-generated.json";
 
-export function Construct(): HTMLDivElement
+export function Construct(): HTMLElement
 {
-    const root: ContentPage = document.createElement("div", { is: "content-page" }) as ContentPage;
+    const root: ContentPage = document.createElement("content-page") as ContentPage;
+    root.Init();
     root.Configure(textContent.Title, textContent.Category);
 
     const overviewSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
@@ -35,7 +36,8 @@ export function Construct(): HTMLDivElement
     const widgetsSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
     widgetsSection.innerHTML = 'Widgets';
 
-    const widgetsTable: Table = root.appendChild(document.createElement("table", { is: "table-element" })) as Table;
+    const widgetsTable: Table = root.appendChild(document.createElement("table-element")) as Table;
+    widgetsTable.Init();
     widgetsTable.Configure(content.Widgets, ColumnSpacing.Compact);
 
     const makingCustomWidgetsSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
@@ -80,7 +82,8 @@ export function Construct(): HTMLDivElement
     const hookingUpUndoRedo: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     hookingUpUndoRedo.innerHTML = textContent.HookingUpUndoRedo;
 
-    const exampleUndoRedo: CodeBlock = root.appendChild(document.createElement("div", { is: "code-block" })) as CodeBlock;
+    const exampleUndoRedo: CodeBlock = root.appendChild(document.createElement("code-block")) as CodeBlock;
+    exampleUndoRedo.Init();
     exampleUndoRedo.Configure(code.ExampleUndoRedo, true, false);
 
     return root;

@@ -1,16 +1,15 @@
 import { Header } from './Header.ts';
 
-export class BasePage extends HTMLDivElement
+export class BasePage extends HTMLElement
 {
-    protected header: Header;
-    protected content: HTMLDivElement;
+    protected root!: HTMLDivElement;
+    protected header!: Header;
+    protected content!: HTMLDivElement;
     protected contentPages: Map<string, HTMLElement> = new Map<string, HTMLElement>;
     protected currentPage: HTMLElement | null = null;
 
-    public constructor()
+    public Init()
     {
-        super();
-
         this.style.margin = "0";
         this.style.padding = "0";
         this.style.display = "flex";
@@ -18,11 +17,17 @@ export class BasePage extends HTMLDivElement
         this.style.flexDirection = "column";
         this.style.backgroundColor = "var(--bg-color)";
 
-        this.header = document.createElement("div", { is: "header-bar" }) as Header;
-        this.appendChild(this.header);
+        this.root = document.createElement("div");
+        this.root.style.width = "100%";
+        this.root.style.boxSizing = "border-box";
+        this.appendChild(this.root);
+
+        this.header = document.createElement("header-bar") as Header;
+        this.header.Init();
+        this.root.appendChild(this.header);
 
         this.content = document.createElement('div');
-        this.appendChild(this.content);
+        this.root.appendChild(this.content);
     }
 
     public AddContentPage(name: string, page: HTMLElement)

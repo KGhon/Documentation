@@ -4,9 +4,10 @@ import { Table, ColumnSpacing } from "../../../Templates/Table.ts";
 import * as textContent from "../../../../generated/MIDIMixingTool-text-generated.json"
 import * as content from "../../../../data/AudioProduction/ReaperScripts/MIDIMixingTool/MIDIMixingTool.json";
 
-export function Construct(): HTMLDivElement
+export function Construct(): HTMLElement
 {
-    const root: ContentPage = document.createElement("div", { is: "content-page" }) as ContentPage;
+    const root: ContentPage = document.createElement("content-page") as ContentPage;
+    root.Init();
     root.Configure(textContent.Title, textContent.Category);
 
     const overviewSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
@@ -33,7 +34,8 @@ export function Construct(): HTMLDivElement
     const setup: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     setup.innerHTML = textContent.Setup;
 
-    const setupTable: Table = root.appendChild(Object.assign(document.createElement("table", { is: "table-element" }), { className: "c4" })) as Table;
+    const setupTable: Table = root.appendChild(Object.assign(document.createElement("table-element"), { className: "c4" })) as Table;
+    setupTable.Init();
     setupTable.Configure(content.Setup, ColumnSpacing.Compact);
 
     const helpersSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
@@ -42,7 +44,8 @@ export function Construct(): HTMLDivElement
     const helpers: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     helpers.innerHTML = textContent.Helpers;
 
-    const helpersTable: Table = root.appendChild(Object.assign(document.createElement("table", { is: "table-element" }), { className: "c4" })) as Table;
+    const helpersTable: Table = root.appendChild(Object.assign(document.createElement("table-element"), { className: "c4" })) as Table;
+    helpersTable.Init();
     helpersTable.Configure(content.Helpers, ColumnSpacing.Compact);
 
     const midiGenerationSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
@@ -51,7 +54,8 @@ export function Construct(): HTMLDivElement
     const midiGeneration: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     midiGeneration.innerHTML = textContent.MIDIGeneration;
 
-    const midiGenerationTable: Table = root.appendChild(Object.assign(document.createElement("table", { is: "table-element" }), { className: "c4" })) as Table;
+    const midiGenerationTable: Table = root.appendChild(Object.assign(document.createElement("table-element"), { className: "c4" })) as Table;
+    midiGenerationTable.Init();
     midiGenerationTable.Configure(content.MIDIGeneration, ColumnSpacing.Compact);
 
     const exportStrategiesSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;

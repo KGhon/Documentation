@@ -2,9 +2,10 @@ import "../../../Documentation.css"
 import { ContentPage } from "../../../Templates/ContentPage.ts";
 import * as textContent from "../../../../generated/AudioSuperComponent-text-generated.json";
 
-export function Construct(): HTMLDivElement
+export function Construct(): HTMLElement
 {
-    const root: ContentPage = document.createElement("div", { is: "content-page" }) as ContentPage;
+    const root: ContentPage = document.createElement("content-page") as ContentPage;
+    root.Init();
     root.Configure(textContent.Title, textContent.Category, textContent.Inheritance);
 
     const overviewSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;

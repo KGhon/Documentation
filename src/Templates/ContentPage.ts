@@ -1,15 +1,19 @@
 import "../Documentation.css";
+import { Divider } from "./Divider.ts";
 
-export class ContentPage extends HTMLDivElement
+export class ContentPage extends HTMLElement
 {
-    private titles: HTMLDivElement;
-    private titleDiv: HTMLParagraphElement;
-    private category: HTMLParagraphElement;
+    private root!: HTMLDivElement;
+    private titles!: HTMLDivElement;
+    private titleDiv!: HTMLParagraphElement;
+    private category!: HTMLParagraphElement;
 
-    public constructor()
+    public Init()
     {
-        super();
-        const header: HTMLDivElement = this.appendChild(document.createElement("div")) as HTMLDivElement;
+        this.root = document.createElement("div");
+        this.appendChild(this.root);
+
+        const header: HTMLDivElement = this.root.appendChild(document.createElement("div")) as HTMLDivElement;
         header.style.display = "flex";
         header.style.justifyContent = "space-between";
 
@@ -25,7 +29,9 @@ export class ContentPage extends HTMLDivElement
         this.category.style.justifyContent = "flex-end";
         this.category.style.fontSize = "24px";
 
-        this.appendChild(document.createElement('div', { is: 'divider-element' }));
+        const divider: Divider = document.createElement("divider-element") as Divider;
+        divider.Init();
+        this.root.appendChild(divider);
     }
 
     public Configure(pageTitle: string, pageCategory: string, pageSubtitle: string = "")

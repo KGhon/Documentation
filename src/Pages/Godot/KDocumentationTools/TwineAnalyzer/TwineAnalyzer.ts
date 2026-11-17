@@ -3,9 +3,10 @@ import { ContentPage } from "../../../../Templates/ContentPage.ts";
 import { CodeBlock } from "../../../../Templates/CodeBlock.ts";
 import * as textContent from "../../../../../generated/TwineAnalyzer-text-generated.json";
 
-export function Construct(): HTMLDivElement
+export function Construct(): HTMLElement
 {
-    const root: ContentPage = document.createElement("div", { is: "content-page" }) as ContentPage;
+    const root: ContentPage = document.createElement("content-page") as ContentPage;
+    root.Init();
     root.Configure(textContent.Title, textContent.Category);
 
     const overviewSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
@@ -59,7 +60,8 @@ export function Construct(): HTMLDivElement
     const variableSheet: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     variableSheet.innerHTML = textContent.VariableSheet;
 
-    const variableSheetExample: CodeBlock = root.appendChild(document.createElement("div", { is: "code-block" })) as CodeBlock;
+    const variableSheetExample: CodeBlock = root.appendChild(document.createElement("code-block")) as CodeBlock;
+    variableSheetExample.Init();
     variableSheetExample.Configure(textContent.VariableSheetExample, false, false, "", 2, "20px 0px 0px 0px", "10px");
 
     const speakerSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
@@ -68,7 +70,8 @@ export function Construct(): HTMLDivElement
     const speaker: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     speaker.innerHTML = textContent.Speaker;
 
-    const speakerExample: CodeBlock = root.appendChild(document.createElement("div", { is: "code-block"})) as CodeBlock;
+    const speakerExample: CodeBlock = root.appendChild(document.createElement("code-block")) as CodeBlock;
+    speakerExample.Init();
     speakerExample.Configure(textContent.SpeakerExample, false, false, "", 2, "20px 0px 0px 0px", "10px");
 
     const receiverSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
@@ -77,7 +80,8 @@ export function Construct(): HTMLDivElement
     const receiver: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     receiver.innerHTML = textContent.Receiver;
 
-    const receiverExample: CodeBlock = root.appendChild(document.createElement("div", { is: "code-block" })) as CodeBlock;
+    const receiverExample: CodeBlock = root.appendChild(document.createElement("code-block")) as CodeBlock;
+    receiverExample.Init();
     receiverExample.Configure(textContent.ReceiverExample, false, false, "", 2, "20px 0px 0px 0px", "10px");
 
     const descriptionsSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
@@ -86,7 +90,8 @@ export function Construct(): HTMLDivElement
     const descriptions: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     descriptions.innerHTML = textContent.Descriptions;
 
-    const descriptionExample: CodeBlock = root.appendChild(document.createElement("div", { is: "code-block" })) as CodeBlock;
+    const descriptionExample: CodeBlock = root.appendChild(document.createElement("code-block")) as CodeBlock;
+    descriptionExample.Init();
     descriptionExample.Configure(textContent.DescriptionExample, false, false, "", 2, "20px 0px 0px 0px", "10px");
 
     const directionSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
@@ -95,7 +100,8 @@ export function Construct(): HTMLDivElement
     const direction: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     direction.innerHTML = textContent.Directions;
 
-    const directionExample: CodeBlock = root.appendChild(document.createElement("div", { is: "code-block" })) as CodeBlock;
+    const directionExample: CodeBlock = root.appendChild(document.createElement("code-block")) as CodeBlock;
+    directionExample.Init();
     directionExample.Configure(textContent.DirectionExample, false, false, "", 2, "20px 0px 0px 0px", "10px");
 
     const locationsSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
@@ -104,7 +110,8 @@ export function Construct(): HTMLDivElement
     const locations: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     locations.innerHTML = textContent.Locations;
 
-    const locationExample: CodeBlock = root.appendChild(document.createElement("div", { is: "code-block" })) as CodeBlock;
+    const locationExample: CodeBlock = root.appendChild(document.createElement("code-block")) as CodeBlock;
+    locationExample.Init();
     locationExample.Configure(textContent.LocationExample, false, false, "", 2, "20px 0px 0px 0px", "10px");
 
     const twineBatchExporterSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;

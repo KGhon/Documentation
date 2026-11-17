@@ -6,16 +6,19 @@ export const ColumnSpacing = {
     Extend: 2
 } as const
 
-export class Table extends HTMLTableElement
+export class Table extends HTMLElement
 {
-    public constructor()
-    {
-        super();
+    private root!: HTMLTableElement;
 
-        this.style.margin = "16px 0px 0px 0px";
-        this.style.width = "100%";
-        this.style.borderSpacing = "0px";
-        this.style.tableLayout = "fixed";
+    public Init()
+    {
+        this.root = document.createElement("table");
+        this.appendChild(this.root);
+
+        this.root.style.margin = "16px 0px 0px 0px";
+        this.root.style.width = "100%";
+        this.root.style.borderSpacing = "0px";
+        this.root.style.tableLayout = "fixed";
     }
 
     public Configure(content: string[][], compactFirstColumn: number = ColumnSpacing.Equal, cellBorderWidth: number = 2, cellBorderColor: string = "#505050")
@@ -27,7 +30,7 @@ export class Table extends HTMLTableElement
         col2.style.width = "50%";
         colGroup.appendChild(col1);
         colGroup.appendChild(col2);
-        this.appendChild(colGroup);
+        this.root.appendChild(colGroup);
         switch (compactFirstColumn)
         {
             case ColumnSpacing.Compact:
@@ -43,7 +46,7 @@ export class Table extends HTMLTableElement
         for (let i = 0; i < content.length; i++)
         {
             const row: HTMLTableRowElement = document.createElement('tr');
-            this.appendChild(row);
+            this.root.appendChild(row);
             for (let j = 0; j < content[i].length; j++)
             {
                 const cell: HTMLTableCellElement = document.createElement('td');

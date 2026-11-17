@@ -10,7 +10,8 @@ import * as ProjectSetupHelpers from "./AudioProduction/ReaperScripts/ProjectSet
 import * as MIDIRetriggerableBuffer from "./AudioProduction/Plugins/MIDIRetriggerableBuffer.ts";
 import * as PlaceholderVoiceoverGenerator from "./AudioProduction/StandalonePrograms/PlaceholderVoiceoverGenerator.ts";
 
-const spa: DocPage = document.createElement('div', { is: 'doc-page' }) as DocPage;
+const spa: DocPage = document.createElement("doc-page") as DocPage;
+spa.Init();
 spa.SetNavigationPageName("Audio Production");
 spa.PopulateNavigation(pages.pages as [string, string, boolean, boolean][]);
 document.body.appendChild(spa);

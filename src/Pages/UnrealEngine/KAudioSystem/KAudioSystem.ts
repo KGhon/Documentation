@@ -3,9 +3,10 @@ import { ContentPage } from "../../../Templates/ContentPage.ts";
 import { Table, ColumnSpacing } from "../../../Templates/Table.ts";
 import * as textContent from "../../../../generated/KAudioSystem-text-generated.json";
 
-export function Construct(): HTMLDivElement
+export function Construct(): HTMLElement
 {
-    const root: ContentPage = document.createElement("div", { is: "content-page" }) as ContentPage;
+    const root: ContentPage = document.createElement("content-page") as ContentPage;
+    root.Init();
     root.Configure(textContent.Title, textContent.Category);
 
     const overviewSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
@@ -20,7 +21,8 @@ export function Construct(): HTMLDivElement
     const gameplayParametersSystemSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
     gameplayParametersSystemSection.innerHTML = 'Gameplay Parameters System';
 
-    const gameplayParametersSystemClasses: Table = root.appendChild(document.createElement("table", { is: "table-element" })) as Table;
+    const gameplayParametersSystemClasses: Table = root.appendChild(document.createElement("table-element")) as Table;
+    gameplayParametersSystemClasses.Init();
     gameplayParametersSystemClasses.Configure(textContent.GameplayParametersSystemClasses, ColumnSpacing.Compact);
     /*
     const dependenciesSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;

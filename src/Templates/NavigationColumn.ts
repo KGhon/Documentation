@@ -2,33 +2,41 @@ import "../Documentation.css";
 import { Folder } from './Folder.ts';
 import { Divider } from './Divider.ts';
 
-export class NavigationColumn extends HTMLDivElement
+export class NavigationColumn extends HTMLElement
 {
-    private pageName: HTMLLabelElement;
+    private root!: HTMLDivElement;
+    private pageName!: HTMLLabelElement;
     private folders: Map<string, Folder> = new Map();
 
-    public constructor()
+    public Init()
     {
-        super();
-        this.style.padding = "8px";
-        this.style.display = "flex";
-        this.style.flexDirection = "column";
+        this.style.display = "block";
         this.style.width = "100%";
         this.style.height = "100%";
-        this.style.overflowY = "auto";
-        this.style.overflowX = "hidden";
-        this.style.borderStyle = "solid";
-        this.style.borderWidth = "0px 2px 0px 0px";
-        this.style.borderColor = "var(--border-color)";
         this.style.boxSizing = "border-box";
+
+        this.root = document.createElement("div");
+        this.root.style.width = "100%";
+        this.root.style.height = "100%";
+        this.root.style.padding = "8px";
+        this.root.style.display = "block";
+        this.root.style.flexDirection = "column";
+        this.root.style.overflowY = "auto";
+        this.root.style.overflowX = "hidden";
+        this.root.style.borderStyle = "solid";
+        this.root.style.borderWidth = "0px 2px 0px 0px";
+        this.root.style.borderColor = "var(--border-color)";
+        this.root.style.boxSizing = "border-box";
+        this.appendChild(this.root);
 
         this.pageName = document.createElement('label');
         this.pageName.style.fontSize = "20px";
         this.pageName.textContent = "Site";
-        this.appendChild(this.pageName);
+        this.root.appendChild(this.pageName);
 
-        const divider: Divider = document.createElement('div', { is: 'divider-element' }) as Divider;
-        this.appendChild(divider);
+        const divider: Divider = document.createElement("divider-element") as Divider;
+        divider.Init();
+        this.root.appendChild(divider);
     }
 
     public Populate(items: [string, string, boolean, boolean][], callback: (pageName:string, pushHistory: boolean) => void)
@@ -72,12 +80,14 @@ export class NavigationColumn extends HTMLDivElement
                     let newFolder: Folder;
                     if (isLink)
                     {
-                        newFolder = document.createElement("div", { is: "folder-element" }) as Folder;
+                        newFolder = document.createElement("folder-element") as Folder;
+                        newFolder.Init();
                         newFolder.Configure(spacedName, link);
                     }
                     else
                     {
-                        newFolder = document.createElement("div", { is: "folder-element" }) as Folder;
+                        newFolder = document.createElement("folder-element") as Folder;
+                        newFolder.Init();
                         newFolder.Configure(spacedName, null);
                     }
                     folder.AddElement(newFolder);
@@ -95,20 +105,22 @@ export class NavigationColumn extends HTMLDivElement
                     let newFolder: Folder;
                     if (isLink)
                     {
-                        newFolder = document.createElement("div", { is: "folder-element" }) as Folder;
+                        newFolder = document.createElement("folder-element") as Folder;
+                        newFolder.Init();
                         newFolder.Configure(spacedName, link);
                     }
                     else
                     {
-                        newFolder = document.createElement("div", { is: "folder-element" }) as Folder;
+                        newFolder = document.createElement("folder-element") as Folder;
+                        newFolder.Init();
                         newFolder.Configure(spacedName, null);
                     }
-                    this.appendChild(newFolder);
+                    this.root.appendChild(newFolder);
                     this.folders.set(path + name + "/", newFolder);
                 }
                 else
                 {
-                    this.appendChild(header);
+                    this.root.appendChild(header);
                 }
             }
         }

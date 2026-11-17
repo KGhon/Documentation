@@ -8,7 +8,8 @@ import * as Boards from "./Godot/KDocumentationTools/Boards/Boards.ts";
 import * as Extensions from "./Godot/KDocumentationTools/Extensions/Extensions.ts";
 import * as TwineAnalyzer from "./Godot/KDocumentationTools/TwineAnalyzer/TwineAnalyzer.ts";
 
-const spa: DocPage = document.createElement('div', { is: 'doc-page' }) as DocPage;
+const spa: DocPage = document.createElement("doc-page") as DocPage;
+spa.Init();
 spa.SetNavigationPageName("Godot");
 spa.PopulateNavigation(pages.pages as [string, string, boolean, boolean][]);
 document.body.appendChild(spa);

@@ -4,9 +4,10 @@ import { Table, ColumnSpacing } from "../../../Templates/Table.ts";
 import * as textContent from "../../../../generated/MIDIRetriggerableBuffer-text-generated.json";
 import * as content from "../../../../data/AudioProduction/Plugins/MIDIRetriggerableBuffer/MIDIRetriggerableBuffer.json"
 
-export function Construct(): HTMLDivElement
+export function Construct(): HTMLElement
 {
-    const root: ContentPage = document.createElement("div", { is: "content-page" }) as ContentPage;
+    const root: ContentPage = document.createElement("content-page") as ContentPage;
+    root.Init();
     root.Configure(textContent.Title, textContent.Category);
 
     const overviewSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
@@ -29,7 +30,8 @@ export function Construct(): HTMLDivElement
     const settingsSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
     settingsSection.innerHTML = 'Settings';
 
-    const settingsTable: Table = root.appendChild(Object.assign(document.createElement("table", { is: "table-element" }), { className: "c4" })) as Table;
+    const settingsTable: Table = root.appendChild(Object.assign(document.createElement("table-element"), { className: "c4" })) as Table;
+    settingsTable.Init();
     settingsTable.Configure(content.Settings, ColumnSpacing.Compact);
 
     return root;
