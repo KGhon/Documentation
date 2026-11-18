@@ -1,5 +1,11 @@
 import "../Documentation.css";
 
+export const HeaderSection = {
+    Left: 0,
+    Center: 1,
+    Right: 2
+} as const
+
 export class Header extends HTMLElement
 {
     private root!: HTMLDivElement;
@@ -55,8 +61,19 @@ export class Header extends HTMLElement
         this.left.appendChild(homeButton);
     }
 
-    public AddElement(element: HTMLElement)
+    public AddElement(section: number, element: HTMLElement)
     {
-        this.center.appendChild(element);
+        switch (section)
+        {
+            case HeaderSection.Left:
+                this.left.appendChild(element);
+                break;
+            case HeaderSection.Center:
+                this.center.appendChild(element);
+                break;
+            case HeaderSection.Right:
+                this.right.appendChild(element);
+                break;
+        }
     }
 }

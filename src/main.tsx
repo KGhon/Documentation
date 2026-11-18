@@ -1,11 +1,12 @@
 import './ColorThemes.css';
 import './Documentation.css';
+import "./main.css";
 import './CustomElements.ts';
 import audioProductionPages from "../data/AudioProduction/AudioProduction-pages.json";
 import unrealEnginePages from "../data/UnrealEngine/UnrealEngine-pages.json";
 import unityPages from "../data/Unity/Unity-pages.json";
 import godotPages from "../data/Godot/Godot-pages.json";
-import { Header } from "./Templates/Header.ts";
+import { Header, HeaderSection } from "./Templates/Header.ts";
 import { NavigationColumn } from"./Templates/NavigationColumn.ts";
 
 const selectors: HTMLButtonElement[] = [];
@@ -24,11 +25,13 @@ function RegisterSelectorButton(displayedText: string, shownSelection: HTMLEleme
     {
         selectionDiv.innerHTML = "";
         selectionDiv.appendChild(shownSelection);
+        selectorDiv.classList.remove("open");
         for (const button of selectors)
         {
             button.style.color = "inherit";
         }
         selector.style.color = "#C97CFC";
+        drawerButton.classList.remove("open");
     });
     selectors.push(selector);
     selectorDiv.appendChild(selector);
@@ -66,35 +69,39 @@ const header: Header = document.createElement("header-bar") as Header;
 header.Init();
 document.body.appendChild(header);
 
+const drawerButton: HTMLButtonElement = document.createElement("button");
+drawerButton.textContent = "Nav";
+drawerButton.classList.add("main__drawer-button");
+drawerButton.classList.add("header-button");
+drawerButton.addEventListener("click", () =>
+{
+    if (selectorDiv.classList.contains("open"))
+    {
+        selectorDiv.classList.remove("open");
+        drawerButton.classList.remove("open");
+    }
+    else
+    {
+        selectorDiv.classList.add("open");
+        drawerButton.classList.add("open");
+    }
+});
+header.AddElement(HeaderSection.Left, drawerButton);
+
 const underConstruction: HTMLDivElement = document.createElement("div");
 underConstruction.textContent = "This site is currently under construction and migration";
-header.AddElement(underConstruction);
+header.AddElement(HeaderSection.Center, underConstruction);
 
 const navigationSections: HTMLDivElement = document.createElement("div");
-navigationSections.style.display = "flex";
-navigationSections.style.flexDirection = "row";
-navigationSections.style.width = "100%";
+navigationSections.classList.add("main__navigation-sections");
 document.body.appendChild(navigationSections);
 
 const selectorDiv: HTMLDivElement = document.createElement("div");
-selectorDiv.style.display = "flex";
-selectorDiv.style.flexDirection = "column";
-selectorDiv.style.minWidth = "15%";
-selectorDiv.style.position = "sticky";
-selectorDiv.style.top = "var(--header-height)";
-selectorDiv.style.height = "calc(100vh - var(--header-height))";
-selectorDiv.style.maxHeight = "calc(100vh - var(--header-height))";
-selectorDiv.style.overflowY = "auto";
-selectorDiv.style.overflowX = "hidden";
-selectorDiv.style.boxSizing = "border-box";
-selectorDiv.style.borderStyle = "solid";
-selectorDiv.style.borderWidth = "0px";
-selectorDiv.style.borderRightWidth = "2px";
-selectorDiv.style.borderColor = "var(--border-color)";
+selectorDiv.classList.add("main__drawer-left");
 navigationSections.appendChild(selectorDiv);
 
 const selectionDiv: HTMLDivElement = document.createElement("div");
-selectionDiv.style.width = "85%";
+selectionDiv.classList.add("main__selection-div");
 navigationSections.appendChild(selectionDiv);
 
 RegisterSelectorButton("Audio Production", audioProductionNavigation);

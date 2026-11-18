@@ -44,7 +44,7 @@ export class TableOfContents extends HTMLElement
         this.root.appendChild(this.links);
     }
 
-    public Populate(content: HTMLElement)
+    public Populate(content: HTMLElement, callback:() => void)
     {
         this.links.innerHTML = "";
         let matches: NodeListOf<HTMLElement> = content.querySelectorAll('.c1, .c2, .c3');
@@ -64,6 +64,7 @@ export class TableOfContents extends HTMLElement
             link.addEventListener("click", (evt) => {
                 evt.preventDefault()
                 match.scrollIntoView({ block: 'start' });
+                callback();
             });
             if (match.classList.contains('c1'))
             {

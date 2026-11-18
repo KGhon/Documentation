@@ -1,5 +1,7 @@
 import '../Documentation.css';
+import "./DocPage.css";
 import { BasePage } from './BasePage.ts';
+import { HeaderSection } from "./Header.ts";
 import { NavigationColumn } from './NavigationColumn.ts';
 import { TableOfContents } from './TableOfContents.ts';
 
@@ -9,8 +11,6 @@ export class DocPage extends BasePage
     private navigationColumn!: NavigationColumn;
     private tableOfContentsDiv!: HTMLDivElement;
     private tableOfContents!: TableOfContents;
-    private navigationIsVisible: boolean = true;
-    private tableOfContentsIsVisible: boolean = true;
 
     public Init()
     {
@@ -24,15 +24,7 @@ export class DocPage extends BasePage
         this.root.appendChild(postHeader);
 
         this.navigationDiv = document.createElement('div');
-        this.navigationDiv.style.width = "25%";
-        this.navigationDiv.style.position = "sticky";
-        this.navigationDiv.style.top = "var(--header-height)";
-        this.navigationDiv.style.alignSelf = "flex-start";
-        this.navigationDiv.style.height = "calc(100vh - var(--header-height))";
-        this.navigationDiv.style.maxHeight = "calc(100vh - var(--header-height))";
-        this.navigationDiv.style.overflowY = "auto";
-        this.navigationDiv.style.overflowX = "hidden";
-        this.navigationDiv.style.boxSizing = "border-box";
+        this.navigationDiv.classList.add("doc-page__drawer-left");
         postHeader.appendChild(this.navigationDiv);
 
         this.navigationColumn = document.createElement("navigation-column") as NavigationColumn;
@@ -47,15 +39,7 @@ export class DocPage extends BasePage
         postHeader.appendChild(this.content);
 
         this.tableOfContentsDiv = document.createElement('div');
-        this.tableOfContentsDiv.style.width = "25%";
-        this.tableOfContentsDiv.style.position = "sticky";
-        this.tableOfContentsDiv.style.top = "var(--header-height)";
-        this.tableOfContentsDiv.style.alignSelf = "flex-start";
-        this.tableOfContentsDiv.style.height = "calc(100vh - var(--header-height))";
-        this.tableOfContentsDiv.style.maxHeight = "calc(100vh - var(--header-height))";
-        this.tableOfContentsDiv.style.overflowY = "auto";
-        this.tableOfContentsDiv.style.overflowX = "hidden";
-        this.tableOfContentsDiv.style.boxSizing = "border-box";
+        this.tableOfContentsDiv.classList.add("doc-page__drawer-right");
         postHeader.appendChild(this.tableOfContentsDiv);
 
         this.tableOfContents = document.createElement("table-of-contents") as TableOfContents;
@@ -64,39 +48,37 @@ export class DocPage extends BasePage
 
         const toggleNavigation: HTMLButtonElement = document.createElement("button");
         toggleNavigation.textContent = "Navigation";
-        toggleNavigation.style.color = "#C97CFC";
         toggleNavigation.classList.add("header-button");
         toggleNavigation.addEventListener("click", () =>
         {
             this.ToggleNavigation();
-            if (this.navigationIsVisible)
+            if (this.navigationDiv.classList.contains("open"))
             {
-                toggleNavigation.style.color = "#C97CFC";
+                toggleNavigation.classList.add("open");
             }
             else
             {
-                toggleNavigation.style.color = "inherit";
+                toggleNavigation.classList.remove("open");
             }
         });
-        this.header.AddElement(toggleNavigation);
+        this.header.AddElement(HeaderSection.Center, toggleNavigation);
 
         const toggleTableOfContents: HTMLButtonElement = document.createElement("button");
         toggleTableOfContents.textContent = "Contents";
-        toggleTableOfContents.style.color = "#C97CFC";
         toggleTableOfContents.classList.add("header-button");
         toggleTableOfContents.addEventListener("click", () =>
         {
             this.ToggleTableOfContents();
-            if (this.tableOfContentsIsVisible)
+            if (this.tableOfContentsDiv.classList.contains("open"))
             {
-                toggleTableOfContents.style.color = "#C97CFC";
+                toggleTableOfContents.classList.add("open");
             }
             else
             {
-                toggleTableOfContents.style.color = "inherit";
+                toggleTableOfContents.classList.remove("open");
             }
         });
-        this.header.AddElement(toggleTableOfContents);
+        this.header.AddElement(HeaderSection.Center, toggleTableOfContents);
     }
 
     public ChangePage(pageName: string, pushHistory: boolean) : HTMLElement | null
@@ -109,6 +91,8 @@ export class DocPage extends BasePage
 
         this.PopulateTableOfContents(pageName, currentPage);
         window.scrollTo({ top: 0, behavior: "instant" });
+        this.navigationDiv.classList.remove("open");
+        this.tableOfContentsDiv.classList.remove("open");
         return currentPage;
     }
 
@@ -129,39 +113,47 @@ export class DocPage extends BasePage
             return;
         }
         this.tableOfContents.SetPageName(pageName);
-        this.tableOfContents.Populate(startElement!);
+        this.tableOfContents.Populate(startElement!, () =>
+        {
+            this.navigationDiv.classList.remove("open");
+            this.tableOfContentsDiv.classList.remove("open");
+        });
     }
 
     public ToggleNavigation()
     {
-        if (this.navigationIsVisible)
+        if (this.navigationDiv.classList.contains("open"))
         {
-            this.navigationDiv.style.display = "none";
-            this.navigationIsVisible = false;
+            this.navigationDiv.classList.remove("open");
         }
         else
         {
-            this.navigationDiv.style.display = "";
-            this.navigationIsVisible = true;
+            this.navigationDiv.classList.add("open");
+            if (window.matchMedia("(max-width: 768px)").matches)
+            {
+                this.tableOfContentsDiv.classList.remove("open");
+            }
         }
     }
 
     public ToggleTableOfContents()
     {
-        if (this.tableOfContentsIsVisible)
+        if (this.tableOfContentsDiv.classList.contains("open"))
         {
-            this.tableOfContentsDiv.style.display = "none";
-            this.tableOfContentsIsVisible = false;
+            this.tableOfContentsDiv.classList.remove("open");
         }
         else
         {
-            this.tableOfContentsDiv.style.display = "";
-            this.tableOfContentsIsVisible = true;
+            this.tableOfContentsDiv.classList.add("open");
+            if (window.matchMedia("(max-width: 768px)").matches)
+            {
+                this.navigationDiv.classList.remove("open");
+            }
         }
     }
 
-    public AddHeaderElement(element: HTMLElement)
+    public AddHeaderElement(section:number, element: HTMLElement)
     {
-        this.header.AddElement(element);
+        this.header.AddElement(section, element);
     }
 }

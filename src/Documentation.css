@@ -117,6 +117,7 @@ a:hover {
 }
 
 .header-button {
+    height: 100%;
     font-size: 24px;
     color: var(--text-color);
     background-color: transparent;
@@ -128,6 +129,10 @@ a:hover {
     cursor: pointer;
     background-color: #4F4F4F;
 }
+
+    .header-button.open {
+        color: #C97CFC;
+    }
 
 .selector-button {
     padding-top: 8px;
