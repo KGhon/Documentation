@@ -1,9 +1,9 @@
 :root {
-    --header-height: 5dvh;
+    --header-height: 5vh;
 }
 
 * {
-    scroll-margin-top: calc(var(--header-height) + 4dvh);
+    scroll-margin-top: calc(var(--header-height) + 4vh);
 }
 
 html {

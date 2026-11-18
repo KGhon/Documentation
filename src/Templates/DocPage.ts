@@ -9,8 +9,10 @@ export class DocPage extends BasePage
 {
     private navigationDiv!: HTMLDivElement;
     private navigationColumn!: NavigationColumn;
+    private navigationButton!: HTMLButtonElement;
     private tableOfContentsDiv!: HTMLDivElement;
     private tableOfContents!: TableOfContents;
+    private tableOfContentsButton!: HTMLButtonElement;
 
     public Init()
     {
@@ -46,39 +48,35 @@ export class DocPage extends BasePage
         this.tableOfContents.Init();
         this.tableOfContentsDiv.appendChild(this.tableOfContents);
 
-        const toggleNavigation: HTMLButtonElement = document.createElement("button");
-        toggleNavigation.textContent = "Navigation";
-        toggleNavigation.classList.add("header-button");
-        toggleNavigation.addEventListener("click", () =>
+        this.navigationButton = document.createElement("button");
+        this.navigationButton.textContent = "Navigation";
+        this.navigationButton.classList.add("header-button");
+        this.navigationButton.addEventListener("click", () =>
         {
             this.ToggleNavigation();
-            if (this.navigationDiv.classList.contains("open"))
-            {
-                toggleNavigation.classList.add("open");
-            }
-            else
-            {
-                toggleNavigation.classList.remove("open");
-            }
         });
-        this.header.AddElement(HeaderSection.Center, toggleNavigation);
+        this.header.AddElement(HeaderSection.Center, this.navigationButton);
 
-        const toggleTableOfContents: HTMLButtonElement = document.createElement("button");
-        toggleTableOfContents.textContent = "Contents";
-        toggleTableOfContents.classList.add("header-button");
-        toggleTableOfContents.addEventListener("click", () =>
+        this.tableOfContentsButton = document.createElement("button");
+        this.tableOfContentsButton.textContent = "Contents";
+        this.tableOfContentsButton.classList.add("header-button");
+        this.tableOfContentsButton.addEventListener("click", () =>
         {
             this.ToggleTableOfContents();
-            if (this.tableOfContentsDiv.classList.contains("open"))
+        });
+        this.header.AddElement(HeaderSection.Center, this.tableOfContentsButton);
+
+        const mediaQuery = window.matchMedia('(max-width: 768px)');
+        mediaQuery.addEventListener('change', (evt: MediaQueryListEvent) =>
+        {
+            if (evt.matches)
             {
-                toggleTableOfContents.classList.add("open");
-            }
-            else
-            {
-                toggleTableOfContents.classList.remove("open");
+                this.navigationDiv.classList.remove("open");
+                this.navigationButton.classList.remove("open");
+                this.tableOfContentsDiv.classList.remove("open");
+                this.tableOfContentsButton.classList.remove("open");
             }
         });
-        this.header.AddElement(HeaderSection.Center, toggleTableOfContents);
     }
 
     public ChangePage(pageName: string, pushHistory: boolean) : HTMLElement | null
@@ -91,8 +89,13 @@ export class DocPage extends BasePage
 
         this.PopulateTableOfContents(pageName, currentPage);
         window.scrollTo({ top: 0, behavior: "instant" });
-        this.navigationDiv.classList.remove("open");
-        this.tableOfContentsDiv.classList.remove("open");
+        if (window.matchMedia("(max-width: 768px)").matches)
+        {
+            this.navigationDiv.classList.remove("open");
+            this.navigationButton.classList.remove("open");
+            this.tableOfContentsDiv.classList.remove("open");
+            this.tableOfContentsButton.classList.remove("open");
+        }
         return currentPage;
     }
 
@@ -115,8 +118,13 @@ export class DocPage extends BasePage
         this.tableOfContents.SetPageName(pageName);
         this.tableOfContents.Populate(startElement!, () =>
         {
-            this.navigationDiv.classList.remove("open");
-            this.tableOfContentsDiv.classList.remove("open");
+            if (window.matchMedia("(max-width: 768px)").matches)
+            {
+                this.navigationDiv.classList.remove("open");
+                this.navigationButton.classList.remove("open");
+                this.tableOfContentsDiv.classList.remove("open");
+                this.tableOfContentsButton.classList.remove("open");
+            }
         });
     }
 
@@ -125,13 +133,16 @@ export class DocPage extends BasePage
         if (this.navigationDiv.classList.contains("open"))
         {
             this.navigationDiv.classList.remove("open");
+            this.navigationButton.classList.remove("open");
         }
         else
         {
             this.navigationDiv.classList.add("open");
+            this.navigationButton.classList.add("open");
             if (window.matchMedia("(max-width: 768px)").matches)
             {
                 this.tableOfContentsDiv.classList.remove("open");
+                this.tableOfContentsButton.classList.remove("open");
             }
         }
     }
@@ -141,13 +152,16 @@ export class DocPage extends BasePage
         if (this.tableOfContentsDiv.classList.contains("open"))
         {
             this.tableOfContentsDiv.classList.remove("open");
+            this.tableOfContentsButton.classList.remove("open");
         }
         else
         {
             this.tableOfContentsDiv.classList.add("open");
+            this.tableOfContentsButton.classList.add("open");
             if (window.matchMedia("(max-width: 768px)").matches)
             {
                 this.navigationDiv.classList.remove("open");
+                this.navigationButton.classList.remove("open");
             }
         }
     }

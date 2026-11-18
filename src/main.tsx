@@ -108,3 +108,19 @@ RegisterSelectorButton("Audio Production", audioProductionNavigation);
 RegisterSelectorButton("Unreal Engine", unrealEngineNavigation);
 RegisterSelectorButton("Unity", unityNavigation);
 RegisterSelectorButton("Godot", godotNavigation);
+
+if (window.matchMedia("(max-width: 768px)").matches)
+{
+    selectorDiv.classList.add("open");
+    drawerButton.classList.add("open");
+}
+
+const mediaQuery = window.matchMedia('(max-width: 768px)');
+mediaQuery.addEventListener('change', (evt: MediaQueryListEvent) =>
+{
+    if (evt.matches)
+    {
+        selectorDiv.classList.remove("open");
+        drawerButton.classList.remove("open");
+    }
+});
