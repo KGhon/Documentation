@@ -1,0 +1,6 @@
+.code-block__root {
+    display: grid;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color:#505050;
+}

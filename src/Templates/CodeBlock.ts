@@ -1,4 +1,5 @@
 import "../Documentation.css";
+import "./CodeBlock.css";
 
 export class CodeBlock extends HTMLElement
 {
@@ -9,18 +10,14 @@ export class CodeBlock extends HTMLElement
     public Init()
     {
         this.root = document.createElement("div");
+        this.root.classList.add("code-block__root");
         this.appendChild(this.root);
-
-        this.root.style.display = "grid";
-        this.root.style.boxSizing = "border-box";
-        this.root.style.borderStyle = "solid";
-        this.root.style.borderColor = "#505050";
 
         this.code = document.createElement('div');
         this.root.appendChild(this.code);
     }
 
-    public async Configure(code: string, canCopy: boolean, isCompact: boolean, name: string = "", borderWidth: number = 4, margin: string = "20px 50px 0px 50px", padding: string = "0")
+    public async Configure(code: string, canCopy: boolean, isCompact: boolean, name: string = "", borderWidth: number = 4, margin: string = "1.25rem 2% 0 2%", padding: string = "0")
     {
         this.code.innerHTML = code;
         this.code.style.display = "grid";

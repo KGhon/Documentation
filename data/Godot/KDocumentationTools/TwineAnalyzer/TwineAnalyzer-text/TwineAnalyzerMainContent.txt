@@ -44,7 +44,7 @@ This syntax is used to parse the file for data as well as formatting when analyz
 The starting node must be a node called 'VariableSheet'. Use this node to define variables for things like characters and their names. Adding a prefix to your variable can also provide additional sorting when doing analysis.
 
 [VariableSheetExample]
-&lt;&lt;set $char_mc="themaincharacter"&gt;&gt;
+<<set $char_mc="themaincharacter">>
 
 [Speaker]
 A speaker is enclosed between two sets of 3 dashes.

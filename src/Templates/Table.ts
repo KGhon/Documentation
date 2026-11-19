@@ -1,4 +1,5 @@
 import "../Documentation.css";
+import "./Table.css";
 
 export const ColumnSpacing = {
     Equal: 0,
@@ -13,80 +14,44 @@ export class Table extends HTMLElement
     public Init()
     {
         this.root = document.createElement("table");
+        this.root.classList.add("table__root");
         this.appendChild(this.root);
-
-        this.root.style.margin = "16px 0px 0px 0px";
-        this.root.style.width = "100%";
-        this.root.style.borderSpacing = "0px";
-        this.root.style.tableLayout = "fixed";
     }
 
-    public Configure(content: string[][], compactFirstColumn: number = ColumnSpacing.Equal, cellBorderWidth: number = 2, cellBorderColor: string = "#505050")
+    public Configure(content: string[][], compactFirstColumn: number = ColumnSpacing.Equal)
     {
-        const colGroup = document.createElement('colgroup');
-        const col1 = document.createElement('col');
+        const colGroup = document.createElement("colgroup");
+        const col1 = document.createElement("col");
         const col2 = document.createElement("col");
-        col1.style.width = "50%";
-        col2.style.width = "50%";
         colGroup.appendChild(col1);
         colGroup.appendChild(col2);
         this.root.appendChild(colGroup);
         switch (compactFirstColumn)
         {
+            default:
+                col1.classList.add("table__column-equal");
+                col2.classList.add("table__column-equal");
+                break;
             case ColumnSpacing.Compact:
-                col1.style.width = "25%";
-                col2.style.width = "75%";
+                col1.classList.add("table__column-compact");
+                col2.classList.add("table__column-extend");
                 break;
             case ColumnSpacing.Extend:
-                col1.style.width = "75%";
-                col2.style.width = "25%";
+                col1.classList.add("table__column-extend");
+                col2.classList.add("table__column-compact");
                 break;
         }
 
         for (let i = 0; i < content.length; i++)
         {
-            const row: HTMLTableRowElement = document.createElement('tr');
+            const row: HTMLTableRowElement = document.createElement("tr");
             this.root.appendChild(row);
             for (let j = 0; j < content[i].length; j++)
             {
-                const cell: HTMLTableCellElement = document.createElement('td');
-                cell.style.borderStyle = "solid";
-                cell.style.borderColor = cellBorderColor;
-                if (i == 0)
-                {
-                    cell.style.borderTopWidth = cellBorderWidth.toString() + "px";
-                    cell.style.borderBottomWidth = (cellBorderWidth / 2).toString() + "px";
-
-                }
-                else if (i == content.length - 1)
-                {
-                    cell.style.borderTopWidth = (cellBorderWidth / 2).toString() + "px";
-                    cell.style.borderBottomWidth = cellBorderWidth.toString() + "px";
-                }
-                else
-                {
-                    cell.style.borderTopWidth = (cellBorderWidth / 2).toString() + "px";
-                    cell.style.borderBottomWidth = (cellBorderWidth / 2).toString() + "px";
-                }
-
-                if (j == 0)
-                {
-                    cell.style.borderLeftWidth = cellBorderWidth.toString() + "px";
-                    cell.style.borderRightWidth = (cellBorderWidth / 2).toString() + "px";
-                }
-                else if (j == content[i].length - 1)
-                {
-                    cell.style.borderLeftWidth = (cellBorderWidth / 2).toString() + "px";
-                    cell.style.borderRightWidth = cellBorderWidth.toString() + "px";
-                }
-                else
-                {
-                    cell.style.borderLeftWidth = (cellBorderWidth / 2).toString() + "px";
-                    cell.style.borderRightWidth = (cellBorderWidth / 2).toString() + "px";
-                }
-                cell.style.padding = "10px";
+                const cell: HTMLTableCellElement = document.createElement("td");
+                cell.classList.add("table__cell");
                 cell.innerHTML = content[i][j]
-                cell.classList.add('c4');
+                cell.classList.add("c4");
                 row.appendChild(cell);
             }
         }

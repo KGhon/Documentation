@@ -1,14 +1,10 @@
-:root {
-    --header-height: 5vh;
-}
-
 * {
     scroll-margin-top: calc(var(--header-height) + 4vh);
 }
 
 html {
     font-family: Lato;
-    font-size: 16px;
+    font-size: 1rem;
     scroll-behavior: smooth;
     overscroll-behavior: none;
     overflow-x: hidden;
@@ -21,7 +17,7 @@ body {
 }
 
 p {
-    margin: 8px 0px 8px 0px;
+    margin: 0.5rem 0 0.5rem 0;
 }
 
 ul {
@@ -34,63 +30,70 @@ ul li::marker{
 }
 
 .c0 {
-    font-size: 48px;
+    font-family: inherit;
+    font-size: 2.5rem;
 }
 
 .c1 {
-    margin-top: 32px;
-    font-size: 32px;
+    margin-top: 1rem;
+    font-family: inherit;
+    font-size: 2rem;
     color: #C97CFC;
 }
 
 .c2 {
-    margin-top: 16px;
-    font-size: 24px;
+    margin-top: 0.5rem;
+    font-family: inherit;
+    font-size: 1.5rem;
     color: #E4C0FC;
 }
 
 .c3 {
-    margin-top: 16px;
-    font-size: 20px;
+    margin-top: 0.5rem;
+    font-family: inherit;
+    font-size: 1.25rem;
 }
 
 .c4 {
-    font-size: inherit;
+    font-family: inherit;
+    font-size: 1rem;
     white-space: pre-wrap;
 }
 
 .c5 {
-    font-size: inherit;
+    font-family: inherit;
+    font-size: 1rem;
     white-space: pre-wrap;
 }
 
-.folder-link {
-    width: 100%;
-    border: 0;
-    text-align: left;
-    background-color: transparent;
+@property --highlight-gradient-percent {
+    syntax: "<percentage>";
+    initial-value: 0%;
+    inherits: false;
+}
+
+.highlightable {
+    background: linear-gradient(to right, #64288C 0%, transparent var(--highlight-gradient-percent));
+    transition: --highlight-gradient-percent 0.1s linear;
+}
+
+    .highlightable:hover {
+        --highlight-gradient-percent: 110%;
+    }
+
+.drawer-c0 * {
     font-family: inherit;
-    font-size: inherit;
+    font-size: 2rem;
 }
 
-.folder-element {
-    padding: 0px 0px 0px 40px;
-    box-sizing: border-box;
+.drawer-c1 * {
+    font-family: inherit;
+    font-size: 1.5rem;
 }
 
-.expandable-wrapper {
-    display: grid;
-    grid-template-rows: 0fr;
-    transition: grid-template-rows 0.1s ease-out;
-    overflow: hidden;
-}
-
-.expandable-wrapper.open {
-    grid-template-rows: 1fr;
-}
-
-.expandable-content {
-    min-height: 0;
+.drawer-c2 * {
+    font-family: inherit;
+    font-size: 1rem;
 }
 
 a {
@@ -104,6 +107,11 @@ a:hover {
     text-decoration: underline;
 }
 
+.fill-a {
+    display:block;
+    flex: 1;
+}
+
 .placeholder-a{
     color: inherit;
     cursor: default;
@@ -111,14 +119,14 @@ a:hover {
 }
 
 .placeholder-a:hover{
-        color: inherit;
+    color: inherit;
     cursor: default;
     text-decoration: none;
 }
 
 .header-button {
     height: 100%;
-    font-size: 24px;
+    font-size: 1.5rem;
     color: var(--text-color);
     background-color: transparent;
     border-style: solid;
@@ -135,9 +143,9 @@ a:hover {
     }
 
 .selector-button {
-    padding-top: 8px;
-    padding-bottom: 8px;
-    font-size: 24px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.5rem;
     color: var(--text-color);
     background-color: #1A1A1A;
     border-style: solid;
@@ -148,7 +156,39 @@ a:hover {
     border-color: var(--border-color);
 }
 
-.selector-button:hover{
-    cursor: pointer;
-    background-color: #4F4F4F;
+    .selector-button:hover {
+        cursor: pointer;
+    }
+
+@media (min-width: 768px) {
+    .c0 {
+        font-size: 3rem;
+    }
+
+    .c1 {
+        margin-top: 2rem;
+        font-size: 2rem;
+    }
+
+    .c2 {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .c3 {
+        margin-top: 1rem;
+        font-size: 1.25rem;
+    }
+
+    .drawer-c0 * {
+        font-size: 1rem;
+    }
+
+    .drawer-c1 * {
+        font-size: 1rem;
+    }
+
+    .drawer-c2 * {
+        font-size: 1rem;
+    }
 }

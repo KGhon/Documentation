@@ -1,33 +1,34 @@
 import "../Documentation.css";
+import "./ContentPage.css";
 import { Divider } from "./Divider.ts";
 
 export class ContentPage extends HTMLElement
 {
     private root!: HTMLDivElement;
-    private titles!: HTMLDivElement;
-    private titleDiv!: HTMLParagraphElement;
-    private category!: HTMLParagraphElement;
+    private titlesDiv!: HTMLDivElement;
+    private pageName!: HTMLDivElement;
+    private category!: HTMLDivElement;
 
     public Init()
     {
         this.root = document.createElement("div");
         this.appendChild(this.root);
 
-        const header: HTMLDivElement = this.root.appendChild(document.createElement("div")) as HTMLDivElement;
-        header.style.display = "flex";
-        header.style.justifyContent = "space-between";
+        const header: HTMLDivElement = document.createElement("div") as HTMLDivElement;
+        header.classList.add("content-page__header");
+        this.root.appendChild(header);
 
-        this.titles = header.appendChild(document.createElement("div")) as HTMLDivElement;
-        this.titles.style.display = "flex";
-        this.titles.style.flexDirection = "column";
+        this.titlesDiv = document.createElement("div") as HTMLDivElement;
+        this.titlesDiv.classList.add("content-page__titles-div");
+        header.appendChild(this.titlesDiv);
 
-        this.titleDiv = this.titles.appendChild(Object.assign(document.createElement("div"), { className: "c0" })) as HTMLParagraphElement;
+        this.pageName = document.createElement("div") as HTMLDivElement;
+        this.pageName.classList.add("c0");
+        this.titlesDiv.appendChild(this.pageName);
 
-        this.category = header.appendChild(document.createElement("div")) as HTMLParagraphElement;
-        this.category.style.display = "flex";
-        this.category.style.flexDirection = "column";
-        this.category.style.justifyContent = "flex-end";
-        this.category.style.fontSize = "24px";
+        this.category = document.createElement("div") as HTMLDivElement;
+        this.category.classList.add("content-page__category");
+        header.appendChild(this.category);
 
         const divider: Divider = document.createElement("divider-element") as Divider;
         divider.Init();
@@ -36,13 +37,14 @@ export class ContentPage extends HTMLElement
 
     public Configure(pageTitle: string, pageCategory: string, pageSubtitle: string = "")
     {
-        this.titleDiv.innerHTML = pageTitle;
-        this.category.innerHTML = pageCategory;
+        this.pageName.textContent = pageTitle;
+        this.category.textContent = pageCategory;
         if (pageSubtitle != "")
         {
-            const subtitle: HTMLParagraphElement = this.titles.appendChild(document.createElement("div")) as HTMLParagraphElement;
-            subtitle.style.fontSize = "20px";
-            subtitle.innerHTML = pageSubtitle;
+            const subtitle: HTMLDivElement = document.createElement("div") as HTMLDivElement;
+            subtitle.textContent = pageSubtitle;
+            subtitle.classList.add("content-page__subtitle");
+            this.titlesDiv.appendChild(subtitle);
         }
     }
 }

@@ -1,0 +1,36 @@
+.table__root {
+    margin: 1rem 0 0 0;
+    width: 100%;
+    border-spacing: 0;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.table__column-equal {
+    width: 50%;
+}
+
+.table__column-compact {
+    width: 50%;
+}
+
+.table__column-extend {
+    width: 50%;
+}
+
+.table__cell {
+    padding: 0.625rem;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #505050;
+}
+
+@media (min-width: 768px) {
+    .table__column-compact {
+        width: 25%;
+    }
+
+    .table__column-extend {
+        width: 75%;
+    }
+}

@@ -1,0 +1,53 @@
+.folder__root {
+    display: flex;
+    flex-direction: column;
+}
+
+.folder__header {
+    display: flex;
+    flex-direction: row;
+}
+
+.folder__bullet {
+    padding: 0;
+    border: 0;
+    color: white;
+    background-color: transparent;
+}
+
+.folder__button {
+    width: 100%;
+    border: 0;
+    text-align: left;
+    color: white;
+    background-color: transparent;
+}
+
+.folder__link {
+    width: 100%;
+    border: 0;
+    text-align: left;
+    background-color: transparent;
+}
+
+.folder__element {
+    margin: 0 0 0 2.25rem;
+    box-sizing: border-box;
+}
+
+.folder__expandable-wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.1s ease-out;
+    overflow: hidden;
+}
+
+    .folder__expandable-wrapper.open {
+        grid-template-rows: 1fr;
+    }
+
+.folder__expandable-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}

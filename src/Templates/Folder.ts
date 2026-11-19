@@ -1,5 +1,5 @@
-import '../Documentation.css';
-
+import "../Documentation.css";
+import "./Folder.css";
 export class Folder extends HTMLElement
 {
     private root!: HTMLDivElement;
@@ -13,57 +13,48 @@ export class Folder extends HTMLElement
     public Init()
     {
         this.root = document.createElement("div");
+        this.root.classList.add("folder__root");
         this.appendChild(this.root);
 
-        this.root.style.display = "flex";
-        this.root.style.flexDirection = "column";
-
-        this.header = document.createElement('div');
-        this.header.style.display = "flex";
-        this.header.style.flexDirection = "row";
+        this.header = document.createElement("div");
+        this.header.classList.add("folder__header");
         this.root.appendChild(this.header);
         
-        this.foldButton = document.createElement('button');
-        this.foldButton.style.padding = "0";
-        this.foldButton.style.border = "0";
-        this.foldButton.style.color = "white";
-        this.foldButton.style.backgroundColor = "transparent";
+        this.foldButton = document.createElement("button");
         this.foldButton.textContent = "\u25B6";
+        this.foldButton.classList.add("folder__bullet");
         this.foldButton.addEventListener("click", () => {
             this.Toggle();
         });
         this.header.appendChild(this.foldButton);
         
-        this.expandable = document.createElement('div');
-        this.expandable.classList.add("expandable-wrapper");
+        this.expandable = document.createElement("div");
+        this.expandable.classList.add("folder__expandable-wrapper");
         this.root.appendChild(this.expandable);
 
-        this.elements = document.createElement('div');
-        this.elements.style.display = "flex";
-        this.elements.style.flexDirection = "column";
-        this.elements.classList.add("expandable-content");
+        this.elements = document.createElement("div");
+        this.elements.classList.add("folder__expandable-content");
         this.expandable.appendChild(this.elements);
     }
 
     public Configure(headerName: string, headerLink: HTMLAnchorElement | null)
     {
-        this.headerButton = document.createElement('button');
+        this.headerButton = document.createElement("button");
         if (headerLink != null)
         {
-            this.headerButton.innerHTML = '';
-            headerLink.classList.add('folder-link');
+            this.headerButton.innerHTML = "";
+            headerLink.classList.add("folder__link");
             this.headerButton.appendChild(headerLink);
         }
         else
         {
-            this.headerButton.style.color = "white";
             this.headerButton.textContent = headerName;
+            this.headerButton.classList.add("folder__button");
             this.headerButton.addEventListener("click", () =>
             {
                 this.Toggle();
             });
         }
-        this.headerButton.classList.add("folder-link");
         this.header.appendChild(this.headerButton);
     }
 
@@ -81,21 +72,21 @@ export class Folder extends HTMLElement
 
     public Expand()
     {
-        this.foldButton.textContent = '\u25BD';
+        this.foldButton.textContent = "\u25BD";
         this.expandable.classList.add("open");
         this.open = true;
     }
 
     public Fold()
     {
-        this.foldButton.textContent = '\u25B6';
+        this.foldButton.textContent = "\u25B6";
         this.expandable.classList.remove("open");
         this.open = false;
     }
 
     public AddElement(element: HTMLElement)
     {
-        element.classList.add("folder-link", 'folder-element');
+        element.classList.add("folder__link", "folder__element");
         this.elements.appendChild(element);
     }
 }

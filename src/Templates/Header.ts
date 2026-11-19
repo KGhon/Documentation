@@ -1,4 +1,5 @@
 import "../Documentation.css";
+import "./Header.css";
 
 export const HeaderSection = {
     Left: 0,
@@ -15,40 +16,22 @@ export class Header extends HTMLElement
 
     public Init()
     {
-        this.style.width = "100vw";
-        this.style.minHeight = "var(--header-height)";
-        this.style.position = "sticky";
-        this.style.top = "0";
-        this.style.height = "var(--header-height)";
-        this.style.maxHeight = "var(--header-height)";
+        this.classList.add("header");
 
         this.root = document.createElement("div");
-        this.root.style.display = "grid";
-        this.root.style.gridTemplateColumns = "1fr auto 1fr";
-        this.root.style.alignItems = "center";
-        this.root.style.boxSizing = "border-box";
-        this.root.style.borderStyle = "solid";
-        this.root.style.borderWidth = "2px";
-        this.root.style.borderColor = "var(--border-color)";
-        this.root.style.backgroundColor = "var(--header-bg-color)";
+        this.root.classList.add("header__root");
         this.appendChild(this.root);
 
         this.left = document.createElement("div");
-        this.left.style.display = "flex";
-        this.left.style.flexDirection = "row";
-        this.left.style.alignItems = "center";
+        this.left.classList.add("header__section");
         this.root.appendChild(this.left);
 
         this.center = document.createElement("div");
-        this.center.style.display = "flex";
-        this.center.style.flexDirection = "row";
-        this.center.style.alignItems = "center";
+        this.center.classList.add("header__section");
         this.root.appendChild(this.center);
 
         this.right = document.createElement("div");
-        this.right.style.display = "flex";
-        this.right.style.flexDirection = "row";
-        this.right.style.alignItems = "center";
+        this.right.classList.add("header__section");
         this.root.appendChild(this.right);
 
         const homeButton: HTMLButtonElement = document.createElement("button");

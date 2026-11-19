@@ -1,0 +1,13 @@
+.block__root {
+    margin-top: 1.125rem;
+    width: 100%;
+    background-color: #1E1E1E;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: #505050;
+    overflow-x: auto;
+    box-sizing: border-box;
+    padding: 0.625rem;
+    border-width: 2px;
+    white-space: nowrap;
+}

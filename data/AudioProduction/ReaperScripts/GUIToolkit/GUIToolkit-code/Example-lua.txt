@@ -51,7 +51,8 @@ button1 = Button:New("button 1", 0, 0, gfx.w, gfx.h, false)
 button1:SetMargins(20, 20, 20, 20)
 button1:SetBorders(10, 10, 10, 10)
 button1:SetBorderColor(80, 80, 80, 1)
---Assign a function to be called when certain UI events occur on a UI element. This event doesn't pass any values, but if it did you could receive them here to be used locally within the function body. ie. function(value1, value2, ...)
+--Assign a function to be called when certain UI events occur on a UI element. This event doesn't pass any values,
+--but if it did you could receive them here to be used locally within the function body. ie. function(value1, value2, ...)
 button1:AssignOnClicked(
     function()
         displayText:SetText("Hello")

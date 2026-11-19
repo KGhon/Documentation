@@ -1,0 +1,21 @@
+.content-page__header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-page__titles-div {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+
+.content-page__category {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-size: 1.5rem;
+}
+
+.content-page__subtitle {
+    font-size: 1.125rem;
+}

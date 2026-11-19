@@ -21,6 +21,7 @@ function RegisterSelectorButton(displayedText: string, shownSelection: HTMLEleme
     const selector: HTMLButtonElement = document.createElement("button");
     selector.textContent = displayedText;
     selector.classList.add("selector-button");
+    selector.classList.add("highlightable");
     selector.addEventListener("click", () =>
     {
         selectionDiv.innerHTML = "";

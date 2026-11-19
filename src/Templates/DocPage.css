@@ -54,6 +54,7 @@
         left: auto;
         top: var(--header-height);
         width: 0;
+        transition: width 0.2s linear;
         top: var(--header-height);
         align-self: flex-start;
         height: calc(100vh - var(--header-height));
@@ -72,6 +73,7 @@
         right: auto;
         top: var(--header-height);
         width: 0;
+        transition: width 0.2s linear;
         top: var(--header-height);
         align-self: flex-start;
         height: calc(100vh - var(--header-height));

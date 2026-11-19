@@ -1,3 +1,5 @@
+import "./Divider.css";
+
 export class Divider extends HTMLElement
 {
     private root!: HTMLDivElement;
@@ -5,9 +7,7 @@ export class Divider extends HTMLElement
     public Init()
     {
         this.root = document.createElement("div");
+        this.root.classList.add("divider__root");
         this.appendChild(this.root);
-
-        this.root.style.height = "2px";
-        this.root.style.backgroundColor = "white";
     }
 }

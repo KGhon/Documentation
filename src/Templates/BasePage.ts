@@ -1,3 +1,4 @@
+import "./BasePage.css";
 import { Header } from './Header.ts';
 
 export class BasePage extends HTMLElement
@@ -10,16 +11,10 @@ export class BasePage extends HTMLElement
 
     public Init()
     {
-        this.style.margin = "0";
-        this.style.padding = "0";
-        this.style.display = "flex";
-        this.style.flexGrow = "1";
-        this.style.flexDirection = "column";
-        this.style.backgroundColor = "var(--bg-color)";
+        this.classList.add("base-page");
 
         this.root = document.createElement("div");
-        this.root.style.width = "100%";
-        this.root.style.boxSizing = "border-box";
+        this.root.classList.add("base-page__root");
         this.appendChild(this.root);
 
         this.header = document.createElement("header-bar") as Header;

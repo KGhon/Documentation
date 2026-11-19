@@ -9,7 +9,7 @@
   "Export": "<ul><li>CsvLines - Export all lines from selected passages for the selected characters CSV files.The data is formatted as Line,Speaker,Receiver,Direction. A line is considered any text that is not enclosed in Syntax.</li>\r\n<li>Script - Exports the selected passages as a text file with script formatting, removing all parsing syntax and adjusting text like a screenplay (all text is still left aligned unlike the Script view in the Twine Analyzer).</li></ul>",
   "TwineMarkup": "This syntax is used to parse the file for data as well as formatting when analyzing passages from a Twine story so they can be viewed like a traditional screenplay format.",
   "VariableSheet": "The starting node must be a node called 'VariableSheet'. Use this node to define variables for things like characters and their names. Adding a prefix to your variable can also provide additional sorting when doing analysis.",
-  "VariableSheetExample": "&lt;&lt;set $char_mc=\"themaincharacter\"&gt;&gt;",
+  "VariableSheetExample": "<<set $char_mc=\"themaincharacter\">>",
   "Speaker": "A speaker is enclosed between two sets of 3 dashes.",
   "SpeakerExample": "---$char_speaker---",
   "Receiver": "A receiver directly follows the speaker inside the dashes and separated by 3 underscores.",
