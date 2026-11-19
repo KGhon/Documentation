@@ -1,6 +1,55 @@
 .code-block__root {
+    margin: 1.125rem 2% 0 2%;
     display: grid;
+    border-width: 2px;
     box-sizing: border-box;
     border-style: solid;
-    border-color:#505050;
+    border-color: #404040;
 }
+
+.code-block__header {
+    padding: 0.250rem 0.625rem 0.250rem 0.625rem;
+    display: flex;
+    flex-direction: row;
+    background-color: #404040;
+}
+
+.code-block__name {
+    display: flex;
+    flex-grow: 1;
+    text-indent: 1rem;
+}
+
+.code-block__code {
+    padding: 0.625rem;
+    display: grid;
+    width: 100%;
+    overflow-x: auto;
+    box-sizing: border-box;
+}
+
+    .code-block__code.compact {
+        height: 18.75rem;
+        overflow-y: auto;
+    }
+
+    .code-block__code.expand {
+        height: auto;
+        overflow-y: hidden;
+    }
+
+.code-block__button {
+    color: white;
+    background-color: #555555;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #707070;
+}
+
+    .code-block__button:hover {
+        background-color: #707070;
+    }
+
+    .code-block__button:active {
+        background-color: #888888;
+    }

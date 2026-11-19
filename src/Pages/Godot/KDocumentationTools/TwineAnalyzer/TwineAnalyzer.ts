@@ -10,52 +10,52 @@ export function Construct(): HTMLElement
     root.Configure(textContent.Title, textContent.Category);
 
     const overviewSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
-    overviewSection.innerHTML = 'Overview';
+    overviewSection.innerHTML = "Overview";
 
     const overview: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     overview.innerHTML = textContent.Overview;
 
     const dependenciesSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
-    dependenciesSection.innerHTML = 'Dependencies';
+    dependenciesSection.innerHTML = "Dependencies";
 
     const dependencies: HTMLUListElement = root.appendChild(Object.assign(document.createElement("ul"), { className: "c4", style: "white-space: normal" })) as HTMLUListElement;
     dependencies.innerHTML = textContent.Dependencies;
 
     const guideSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
-    guideSection.innerHTML = 'Guide';
+    guideSection.innerHTML = "Guide";
 
     const navigationSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
-    navigationSection.innerHTML = 'Navigation';
+    navigationSection.innerHTML = "Navigation";
 
     const navigation: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     navigation.innerHTML = textContent.Navigation;
 
     const additionalContextMenuSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
-    additionalContextMenuSection.innerHTML = 'Additional Context Menu Items';
+    additionalContextMenuSection.innerHTML = "Additional Context Menu Items";
 
     const additionalContextMenu: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     additionalContextMenu.innerHTML = textContent.AdditionalContextMenuItems;
 
     const featuresSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
-    featuresSection.innerHTML = 'Features';
+    featuresSection.innerHTML = "Features";
 
     const features: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     features.innerHTML = textContent.Features;
 
     const exportSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
-    exportSection.innerHTML = 'Export';
+    exportSection.innerHTML = "Export";
 
     const exporting: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     exporting.innerHTML = textContent.Export;
 
     const twineMarkupSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
-    twineMarkupSection.innerHTML = 'Twine Markup';
+    twineMarkupSection.innerHTML = "Twine Markup";
 
     const twineMarkup: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     twineMarkup.innerHTML = textContent.TwineMarkup;
 
     const variableSheetSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
-    variableSheetSection.innerHTML = 'Variable Sheet';
+    variableSheetSection.innerHTML = "Variable Sheet";
 
     const variableSheet: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     variableSheet.innerHTML = textContent.VariableSheet;
@@ -65,7 +65,7 @@ export function Construct(): HTMLElement
     variableSheetExample.SetText(textContent.VariableSheetExample);
 
     const speakerSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
-    speakerSection.innerHTML = 'Speaker';
+    speakerSection.innerHTML = "Speaker";
 
     const speaker: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     speaker.innerHTML = textContent.Speaker;
@@ -75,7 +75,7 @@ export function Construct(): HTMLElement
     speakerExample.SetText(textContent.SpeakerExample);
 
     const receiverSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
-    receiverSection.innerHTML = 'Receiver';
+    receiverSection.innerHTML = "Receiver";
 
     const receiver: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     receiver.innerHTML = textContent.Receiver;
@@ -85,7 +85,7 @@ export function Construct(): HTMLElement
     receiverExample.SetText(textContent.ReceiverExample);
 
     const descriptionsSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
-    descriptionsSection.innerHTML = 'Descriptions';
+    descriptionsSection.innerHTML = "Descriptions";
 
     const descriptions: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     descriptions.innerHTML = textContent.Descriptions;
@@ -95,7 +95,7 @@ export function Construct(): HTMLElement
     descriptionExample.SetText(textContent.DescriptionExample);
 
     const directionSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
-    directionSection.innerHTML = 'Directions';
+    directionSection.innerHTML = "Directions";
 
     const direction: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     direction.innerHTML = textContent.Directions;
@@ -105,7 +105,7 @@ export function Construct(): HTMLElement
     directionExample.SetText(textContent.DirectionExample);
 
     const locationsSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
-    locationsSection.innerHTML = 'Locations';
+    locationsSection.innerHTML = "Locations";
 
     const locations: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     locations.innerHTML = textContent.Locations;
@@ -115,7 +115,7 @@ export function Construct(): HTMLElement
     locationExample.SetText(textContent.LocationExample);
 
     const twineBatchExporterSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
-    twineBatchExporterSection.innerHTML = 'Twine Batch Exporter';
+    twineBatchExporterSection.innerHTML = "Twine Batch Exporter";
 
     const twineBatchExporter: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     twineBatchExporter.innerHTML = textContent.TwineBatchExporter;

@@ -11,13 +11,13 @@ export function Construct(): HTMLElement
     root.Configure(textContent.Title, textContent.Category, textContent.Inheritance);
 
     const overviewSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
-    overviewSection.innerHTML = 'Overview';
+    overviewSection.innerHTML = "Overview";
     
     const overview: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     overview.innerHTML = textContent.Overview;
 
     const publicFunctionsSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
-    publicFunctionsSection.innerHTML = 'Public Functions';
+    publicFunctionsSection.innerHTML = "Public Functions";
 
     const publicFunctions: Table = root.appendChild(document.createElement("table-element")) as Table;
     publicFunctions.Init();

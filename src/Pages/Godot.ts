@@ -1,8 +1,8 @@
-import '../ColorThemes.css';
-import '../Documentation.css';
-import '../CustomElements.ts';
-import { DocPage } from '../Templates/DocPage.ts';
-import pages from '../../data/Godot/Godot-pages.json';
+import "../ColorThemes.css";
+import "../Documentation.css";
+import "../CustomElements.ts";
+import { DocPage } from "../Templates/DocPage.ts";
+import pages from "../../data/Godot/Godot-pages.json";
 import * as NavigationError from "./NavigationError.ts";
 import * as Boards from "./Godot/KDocumentationTools/Boards/Boards.ts";
 import * as Extensions from "./Godot/KDocumentationTools/Extensions/Extensions.ts";
@@ -14,7 +14,7 @@ spa.SetNavigationPageName("Godot");
 spa.PopulateNavigation(pages.pages as [string, string, boolean, boolean][]);
 document.body.appendChild(spa);
 
-window.addEventListener('popstate', (event) =>
+window.addEventListener("popstate", (event) =>
 {
     const pageName = event.state;
     if (pageName)
@@ -23,9 +23,9 @@ window.addEventListener('popstate', (event) =>
     }
 });
 
-window.addEventListener('hashchange', () =>
+window.addEventListener("hashchange", () =>
 {
-    const path = window.location.hash.replace('#', '');
+    const path = window.location.hash.replace("#", "");
     if (path)
     {
         spa.ChangePage(path, false);
@@ -41,7 +41,7 @@ spa.AddContentPage("Boards", Boards.Construct());
 spa.AddContentPage("Extensions", Extensions.Construct());
 spa.AddContentPage("TwineAnalyzer", TwineAnalyzer.Construct());
 
-const path = window.location.hash.replace('#', '');
+const path = window.location.hash.replace("#", "");
 if (path)
 {
     spa.ChangePage(path, false);

@@ -1,9 +1,9 @@
-import '../Documentation.css';
+import "../Documentation.css";
 import "./DocPage.css";
-import { BasePage } from './BasePage.ts';
+import { BasePage } from "./BasePage.ts";
 import { HeaderSection } from "./Header.ts";
-import { NavigationColumn } from './NavigationColumn.ts';
-import { TableOfContents } from './TableOfContents.ts';
+import { NavigationColumn } from "./NavigationColumn.ts";
+import { TableOfContents } from "./TableOfContents.ts";
 
 export class DocPage extends BasePage
 {
@@ -17,15 +17,11 @@ export class DocPage extends BasePage
     public Init()
     {
         super.Init();
-        const postHeader: HTMLDivElement = document.createElement('div');
-        postHeader.style.margin = "0";
-        postHeader.style.padding = "0";
-        postHeader.style.display = "flex";
-        postHeader.style.flexDirection = "row";
-        postHeader.style.backgroundColor = "var(--bg-color)";
+        const postHeader: HTMLDivElement = document.createElement("div");
+        postHeader.classList.add("doc-page__post-header");
         this.root.appendChild(postHeader);
 
-        this.navigationDiv = document.createElement('div');
+        this.navigationDiv = document.createElement("div");
         this.navigationDiv.classList.add("doc-page__drawer-left");
         postHeader.appendChild(this.navigationDiv);
 
@@ -33,14 +29,11 @@ export class DocPage extends BasePage
         this.navigationColumn.Init();
         this.navigationDiv.appendChild(this.navigationColumn);
 
-        this.content = document.createElement('div');
-        this.content.style.padding = "16px";
-        this.content.style.flexDirection = "column";
-        this.content.style.width = "100%";
-        this.content.style.boxSizing = "border-box";
+        this.content = document.createElement("div");
+        this.content.classList.add("doc-page__content");
         postHeader.appendChild(this.content);
 
-        this.tableOfContentsDiv = document.createElement('div');
+        this.tableOfContentsDiv = document.createElement("div");
         this.tableOfContentsDiv.classList.add("doc-page__drawer-right");
         postHeader.appendChild(this.tableOfContentsDiv);
 
@@ -66,8 +59,8 @@ export class DocPage extends BasePage
         });
         this.header.AddElement(HeaderSection.Center, this.tableOfContentsButton);
 
-        const mediaQuery = window.matchMedia('(max-width: 768px)');
-        mediaQuery.addEventListener('change', (evt: MediaQueryListEvent) =>
+        const mediaQuery = window.matchMedia("(max-width: 768px)");
+        mediaQuery.addEventListener("change", (evt: MediaQueryListEvent) =>
         {
             if (evt.matches)
             {

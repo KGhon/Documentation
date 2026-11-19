@@ -31,7 +31,7 @@ ul li::marker{
 
 .c0 {
     font-family: inherit;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .c1 {
@@ -58,12 +58,14 @@ ul li::marker{
     font-family: inherit;
     font-size: 1rem;
     white-space: pre-wrap;
+    overflow-wrap: break-word
 }
 
 .c5 {
     font-family: inherit;
     font-size: 1rem;
     white-space: pre-wrap;
+    overflow-wrap: break-word
 }
 
 @property --highlight-gradient-percent {
@@ -73,7 +75,7 @@ ul li::marker{
 }
 
 .highlightable {
-    background: linear-gradient(to right, #64288C 0%, transparent var(--highlight-gradient-percent));
+    background: linear-gradient(to left, #64288C 0%, transparent var(--highlight-gradient-percent));
     transition: --highlight-gradient-percent 0.1s linear;
 }
 

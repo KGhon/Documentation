@@ -1,5 +1,5 @@
 import "./BasePage.css";
-import { Header } from './Header.ts';
+import { Header } from "./Header.ts";
 
 export class BasePage extends HTMLElement
 {
@@ -21,7 +21,7 @@ export class BasePage extends HTMLElement
         this.header.Init();
         this.root.appendChild(this.header);
 
-        this.content = document.createElement('div');
+        this.content = document.createElement("div");
         this.root.appendChild(this.content);
     }
 
@@ -43,7 +43,7 @@ export class BasePage extends HTMLElement
             this.content.appendChild(page)
             if (pushHistory)
             {
-                window.history.pushState(pageName, '', `#${pageName}`);
+                window.history.pushState(pageName, "", `#${pageName}`);
             }
             this.currentPage = page;
             return page;

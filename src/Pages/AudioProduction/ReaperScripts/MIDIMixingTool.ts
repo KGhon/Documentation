@@ -11,25 +11,25 @@ export function Construct(): HTMLElement
     root.Configure(textContent.Title, textContent.Category);
 
     const overviewSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
-    overviewSection.innerHTML = 'Overview';
+    overviewSection.innerHTML = "Overview";
 
     const overview: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     overview.innerHTML = textContent.Overview;
 
     const dependenciesSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
-    dependenciesSection.innerHTML = 'Dependencies';
+    dependenciesSection.innerHTML = "Dependencies";
 
     const dependencies: HTMLUListElement = root.appendChild(Object.assign(document.createElement("ul"), { className: "c4", style: "white-space: normal" })) as HTMLUListElement;
     dependencies.innerHTML = textContent.Dependencies;
 
     const guideSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
-    guideSection.innerHTML = 'Guide';
+    guideSection.innerHTML = "Guide";
 
     const guide: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     guide.innerHTML = textContent.Guide;
 
     const setupSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
-    setupSection.innerHTML = 'Setup';
+    setupSection.innerHTML = "Setup";
 
     const setup: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     setup.innerHTML = textContent.Setup;
@@ -39,7 +39,7 @@ export function Construct(): HTMLElement
     setupTable.Configure(content.Setup, ColumnSpacing.Compact);
 
     const helpersSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
-    helpersSection.innerHTML = 'Helpers';
+    helpersSection.innerHTML = "Helpers";
 
     const helpers: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     helpers.innerHTML = textContent.Helpers;
@@ -49,7 +49,7 @@ export function Construct(): HTMLElement
     helpersTable.Configure(content.Helpers, ColumnSpacing.Compact);
 
     const midiGenerationSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
-    midiGenerationSection.innerHTML = 'MIDI Generation';
+    midiGenerationSection.innerHTML = "MIDI Generation";
 
     const midiGeneration: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     midiGeneration.innerHTML = textContent.MIDIGeneration;
@@ -59,16 +59,16 @@ export function Construct(): HTMLElement
     midiGenerationTable.Configure(content.MIDIGeneration, ColumnSpacing.Compact);
 
     const exportStrategiesSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
-    exportStrategiesSection.innerHTML = 'Export Strategies';
+    exportStrategiesSection.innerHTML = "Export Strategies";
 
     const exportWithTailsSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
-    exportWithTailsSection.innerHTML = 'Export With Tails';
+    exportWithTailsSection.innerHTML = "Export With Tails";
 
     const exporWithTails: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     exporWithTails.innerHTML = textContent.ExportWithTails;
 
     const exportWithoutTailsSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
-    exportWithoutTailsSection.innerHTML = 'Export Without Tails';
+    exportWithoutTailsSection.innerHTML = "Export Without Tails";
 
     const exportWithoutTails: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     exportWithoutTails.innerHTML = textContent.ExportWithoutTails;

@@ -12,19 +12,19 @@ export function Construct(): HTMLElement
     root.Configure(textContent.Title, textContent.Category);
 
     const overviewSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
-    overviewSection.innerHTML = 'Overview';
+    overviewSection.innerHTML = "Overview";
 
     const overview: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     overview.innerHTML = textContent.Overview;
 
     const dependenciesSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
-    dependenciesSection.innerHTML = 'Dependencies';
+    dependenciesSection.innerHTML = "Dependencies";
 
     const dependencies: HTMLUListElement = root.appendChild(Object.assign(document.createElement("ul"), { className: "c4", style: "white-space: normal" })) as HTMLUListElement;
     dependencies.innerHTML = textContent.Dependencies;
 
     const exampleSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
-    exampleSection.innerHTML = 'Example';
+    exampleSection.innerHTML = "Example";
 
     const example: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     example.innerHTML = textContent.Example;
@@ -34,10 +34,10 @@ export function Construct(): HTMLElement
     exampleCode.Configure(code.Example, true, true, "Example.lua");
 
     const classesSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
-    classesSection.innerHTML = 'Classes';
+    classesSection.innerHTML = "Classes";
 
     const guiContextSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
-    guiContextSection.innerHTML = 'GUIContext';
+    guiContextSection.innerHTML = "GUIContext";
 
     const guiContext: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     guiContext.innerHTML = textContent.GUIContext;
@@ -50,7 +50,7 @@ export function Construct(): HTMLElement
     guiContextPublicFunctions.Configure(code.GUIContextPublicFunctions, ColumnSpacing.Compact);
 
     const uiBaseSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
-    uiBaseSection.innerHTML = 'UIBase';
+    uiBaseSection.innerHTML = "UIBase";
 
     const uiBase: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     uiBase.innerHTML = textContent.UIBase;
@@ -63,7 +63,7 @@ export function Construct(): HTMLElement
     uiBasePublicFunctions.Configure(code.UIBasePublicFunctions);
 
     const dividerSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
-    dividerSection.innerHTML = 'Divider';
+    dividerSection.innerHTML = "Divider";
 
     const divider: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     divider.innerHTML = textContent.Divider;
@@ -75,7 +75,7 @@ export function Construct(): HTMLElement
     dividerPublicFunctions.Configure(code.DividerPublicFunctions);
 
     const horizontalContainerSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
-    horizontalContainerSection.innerHTML = 'HorizontalContainer';
+    horizontalContainerSection.innerHTML = "HorizontalContainer";
 
     const horizontalContainer: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     horizontalContainer.innerHTML = textContent.HorizontalContainer;
@@ -88,7 +88,7 @@ export function Construct(): HTMLElement
     horizontalContainerPublicFunctions.Configure(code.HorizontalContainerPublicFunctions);
 
     const verticalContainerSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
-    verticalContainerSection.innerHTML = 'VerticalContainer';
+    verticalContainerSection.innerHTML = "VerticalContainer";
 
     const verticalContainer: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     verticalContainer.innerHTML = textContent.VerticalContainer;
@@ -101,7 +101,7 @@ export function Construct(): HTMLElement
     verticalContainerPublicFunctions.Configure(code.VerticalContainerPublicFunctions);
 
     const scaleContainerSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
-    scaleContainerSection.innerHTML = 'ScaleContainer';
+    scaleContainerSection.innerHTML = "ScaleContainer";
 
     const scaleContainer: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     scaleContainer.innerHTML = textContent.ScaleContainer;
@@ -113,7 +113,7 @@ export function Construct(): HTMLElement
     scaleContainerPublicFunctions.Configure(code.ScaleContainerPublicFunctions);
 
     const scrollContainerSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
-    scrollContainerSection.innerHTML = 'ScrollContainer';
+    scrollContainerSection.innerHTML = "ScrollContainer";
 
     const scrollContainer: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     scrollContainer.innerHTML = textContent.ScrollContainer;
@@ -125,7 +125,7 @@ export function Construct(): HTMLElement
     scrollContainerPublicFunctions.Configure(code.ScrollContainerPublicFunctions);
 
     const tabContainerSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
-    tabContainerSection.innerHTML = 'TabContainer';
+    tabContainerSection.innerHTML = "TabContainer";
 
     const tabContainer: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     tabContainer.innerHTML = textContent.TabContainer;
@@ -138,7 +138,7 @@ export function Construct(): HTMLElement
     tabContainerPublicFunctions.Configure(code.TabContainerPublicFunctions);
 
     const textSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
-    textSection.innerHTML = 'Text';
+    textSection.innerHTML = "Text";
 
     const text: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     text.innerHTML = textContent.Text;
@@ -151,7 +151,7 @@ export function Construct(): HTMLElement
     textPublicFunctions.Configure(code.TextPublicFunctions);
 
     const buttonSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
-    buttonSection.innerHTML = 'Button';
+    buttonSection.innerHTML = "Button";
 
     const button: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     button.innerHTML = textContent.Button;
@@ -164,7 +164,7 @@ export function Construct(): HTMLElement
     buttonPublicFunctions.Configure(code.ButtonPublicFunctions);
 
     const textInputSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
-    textInputSection.innerHTML = 'TextInput';
+    textInputSection.innerHTML = "TextInput";
 
     const textInput: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     textInput.innerHTML = textContent.TextInput;
@@ -177,7 +177,7 @@ export function Construct(): HTMLElement
     textInputPublicFunctions.Configure(code.TextInputPublicFunctions);
 
     const numericInputSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
-    numericInputSection.innerHTML = 'NumericInput';
+    numericInputSection.innerHTML = "NumericInput";
 
     const numericInput: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     numericInput.innerHTML = textContent.NumericInput;
@@ -189,7 +189,7 @@ export function Construct(): HTMLElement
     numericInputPublicFunctions.Configure(code.NumericInputPublicFunctions);
 
     const dropdownSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
-    dropdownSection.innerHTML = 'Dropdown';
+    dropdownSection.innerHTML = "Dropdown";
 
     const dropdown: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     dropdown.innerHTML = textContent.Dropdown;
@@ -201,7 +201,7 @@ export function Construct(): HTMLElement
     dropdownPublicFunctions.Configure(code.DropdownPublicFunctions);
 
     const listSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
-    listSection.innerHTML = 'List';
+    listSection.innerHTML = "List";
 
     const list: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     list.innerHTML = textContent.List;
@@ -214,7 +214,7 @@ export function Construct(): HTMLElement
     listPublicFunctions.Configure(code.ListPublicFunctions);
 
     const folerSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
-    folerSection.innerHTML = 'Folder';
+    folerSection.innerHTML = "Folder";
 
     const folder: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     folder.innerHTML = textContent.Folder;

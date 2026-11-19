@@ -1,13 +1,13 @@
-import './ColorThemes.css';
-import './Documentation.css';
+import "./ColorThemes.css";
+import "./Documentation.css";
 import "./main.css";
-import './CustomElements.ts';
+import "./CustomElements.ts";
 import audioProductionPages from "../data/AudioProduction/AudioProduction-pages.json";
 import unrealEnginePages from "../data/UnrealEngine/UnrealEngine-pages.json";
 import unityPages from "../data/Unity/Unity-pages.json";
 import godotPages from "../data/Godot/Godot-pages.json";
 import { Header, HeaderSection } from "./Templates/Header.ts";
-import { NavigationColumn } from"./Templates/NavigationColumn.ts";
+import { NavigationColumn } from "./Templates/NavigationColumn.ts";
 
 const selectors: HTMLButtonElement[] = [];
 
@@ -116,8 +116,8 @@ if (window.matchMedia("(max-width: 768px)").matches)
     drawerButton.classList.add("open");
 }
 
-const mediaQuery = window.matchMedia('(max-width: 768px)');
-mediaQuery.addEventListener('change', (evt: MediaQueryListEvent) =>
+const mediaQuery = window.matchMedia("(max-width: 768px)");
+mediaQuery.addEventListener("change", (evt: MediaQueryListEvent) =>
 {
     if (evt.matches)
     {

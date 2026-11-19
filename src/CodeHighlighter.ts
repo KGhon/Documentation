@@ -1,13 +1,13 @@
-import path from 'node:path';
-import fsPromises from 'node:fs/promises';
+import path from "node:path";
+import fsPromises from "node:fs/promises";
 import { parse } from "csv-parse/sync";
-import { createHighlighterCore } from 'shiki/core';
-import type { HighlighterCore } from 'shiki/core';
-import { createOnigurumaEngine } from 'shiki/engine/oniguruma'
-import darkplus from '@shikijs/themes/dark-plus';
-import csharp from '@shikijs/langs/csharp';
-import cpp from '@shikijs/langs/cpp';
-import lua from '@shikijs/langs/lua';
+import { createHighlighterCore } from "shiki/core";
+import type { HighlighterCore } from "shiki/core";
+import { createOnigurumaEngine } from "shiki/engine/oniguruma"
+import darkplus from "@shikijs/themes/dark-plus";
+import csharp from "@shikijs/langs/csharp";
+import cpp from "@shikijs/langs/cpp";
+import lua from "@shikijs/langs/lua";
 
 let highlighter: HighlighterCore | null = null;
 
@@ -18,7 +18,7 @@ async function GetHighlighter(): Promise<HighlighterCore>
         highlighter = await createHighlighterCore({
             themes: [darkplus],
             langs: [csharp, cpp, lua],
-            engine: createOnigurumaEngine(import('shiki/wasm')),
+            engine: createOnigurumaEngine(import("shiki/wasm")),
         });
     }
     return highlighter;
@@ -37,7 +37,7 @@ async function GetDirectories(dir: string): Promise<string[]>
         {
             dirs = dirs.concat(await GetDirectories(res));
         }
-        else if (file.name.endsWith('.txt') || file.name.endsWith('.csv'))
+        else if (file.name.endsWith(".txt") || file.name.endsWith(".csv"))
         {
             hasValidFiles = true;
         }
@@ -53,7 +53,7 @@ async function GetDirectories(dir: string): Promise<string[]>
 async function ProcessDirectory(dirPath: string): Promise<void>
 {
     const list = await fsPromises.readdir(dirPath, { withFileTypes: true });
-    const targetFiles = list.filter(file => !file.isDirectory() && (file.name.endsWith('.txt') || file.name.endsWith('.csv')));
+    const targetFiles = list.filter(file => !file.isDirectory() && (file.name.endsWith(".txt") || file.name.endsWith(".csv")));
 
     if (targetFiles.length <= 0)
     {
@@ -75,16 +75,16 @@ async function ProcessDirectory(dirPath: string): Promise<void>
         }
 
         const language = match[2].toLowerCase();
-        let content = await fsPromises.readFile(filePath, 'utf-8');
+        let content = await fsPromises.readFile(filePath, "utf-8");
 
         let postHighlights: string[][] = [];
         content = content.replace(/^[^\r\n]*\[\s*([^,\]]+?)\s*,\s*([^,\]]+?)\s*\][^\r\n]*/gm, (_fullLine: string, term: string, color: string) =>
         {
             postHighlights.push([term, color]);
-            return '';
+            return "";
         });
 
-        if (file.name.endsWith('.txt'))
+        if (file.name.endsWith(".txt"))
         {
             let htmlOutput = await (await GetHighlighter()).codeToHtml(content.trim(), { lang: language, theme: 'dark-plus' });
             htmlOutput = htmlOutput.replace('<pre class="shiki', '<pre style="margin: 0; padding: 20px; tab-size: 4;" class="shiki');
@@ -104,7 +104,7 @@ async function ProcessDirectory(dirPath: string): Promise<void>
 
             fileRecord[match[1]] = htmlOutput;
         }
-        else if (file.name.endsWith('.csv'))
+        else if (file.name.endsWith(".csv"))
         {
             const data: string[][] = parse(content, { skipEmptyLines: true });
 
@@ -112,8 +112,8 @@ async function ProcessDirectory(dirPath: string): Promise<void>
             {
                 if (row.length > 0)
                 {
-                    row[0] = await (await GetHighlighter()).codeToHtml(row[0].trim(), { lang: language, theme: 'dark-plus' });
-                    row[0] = row[0].replace(/^<pre[^>]*><code>([\s\S]*)<\/code><\/pre>$/, '$1');
+                    row[0] = await (await GetHighlighter()).codeToHtml(row[0].trim(), { lang: language, theme: "dark-plus" });
+                    row[0] = row[0].replace(/^<pre[^>]*><code>([\s\S]*)<\/code><\/pre>$/, "$1");
                     row[0] = `<code style="white-space: pre-wrap; word-break: break-word;">${row[0]}</code>`;
                 }
             }
@@ -141,7 +141,7 @@ async function ProcessDirectory(dirPath: string): Promise<void>
         }
     }
 
-    await fsPromises.writeFile(jsonPath, JSON.stringify(fileRecord, null, 2), 'utf-8');
+    await fsPromises.writeFile(jsonPath, JSON.stringify(fileRecord, null, 2), "utf-8");
     console.log(`[CodeHighlighter] Updated JSON file with highlighted code: ${jsonPath}`);
 }
 
