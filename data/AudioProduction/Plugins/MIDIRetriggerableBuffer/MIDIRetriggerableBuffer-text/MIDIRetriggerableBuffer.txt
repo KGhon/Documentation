@@ -1,8 +1,8 @@
 [Title]
 MIDI Retriggerable Buffer
 
-[Category]
-Plugins
+[Definitions]
+<b>Category:</b> Plugins
 
 [Overview]
 The MIDI Retriggerable Buffer is a Reaper JSFX plugin that records a section of audio playback on a track that can then be retriggered like a sampler using MIDI. It is primarily useful for testing repetitive sounds during sound design without needing to render temporary audio files or copy paste in-progress sounds over and over any time a change is made.

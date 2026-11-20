@@ -7,7 +7,6 @@
 }
 
 .doc-page__content {
-    padding: 1rem;
     flex-direction: column;
     width: 100%;
     box-sizing: border-box;

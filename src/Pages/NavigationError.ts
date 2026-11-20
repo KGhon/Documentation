@@ -5,7 +5,7 @@ export function Construct(): HTMLElement
 {
     const root: ContentPage = document.createElement("content-page") as ContentPage;
     root.Init();
-    root.Configure("Oops! You shouldn't be seeing this!", "Navigation Error");
+    root.Configure("Oops! You shouldn't be seeing this!");
 
     return root;
 }

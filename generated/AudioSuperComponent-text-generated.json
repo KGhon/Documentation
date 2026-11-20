@@ -1,6 +1,6 @@
 {
   "Title": "UAudioSuperComponent",
-  "Category": "K Audio System",
+  "Definitions": "<b>Inherits:</b> UAudioComponent\r\n<b>Category:</b> K Audio System",
   "Inheritance": "UAudioComponent",
   "Overview": "overview"
 }

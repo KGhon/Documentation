@@ -1,8 +1,8 @@
 [Title]
 Placeholder Voiceover Generator
 
-[Category]
-Standalone Program
+[Definitions]
+<b>Category:</b> Standalone Program
 
 [Overview]
 This standalone program utilizes Windows' built-in, legacy C# Speech API (SAPI) to generate placeholder voiceover audio files from CSV files. It is meant to help facilitate system implementation and testing regardless of voice over production timelines.

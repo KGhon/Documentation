@@ -1,1 +1,0 @@
-import"./CustomElements-DbbelDKw.js";function e(){let e=document.createElement(`content-page`);return e.Init(),e.Configure(`Oops! You shouldn't be seeing this!`,`Navigation Error`),e}export{e as t};

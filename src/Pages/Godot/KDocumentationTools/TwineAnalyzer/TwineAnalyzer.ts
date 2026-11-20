@@ -7,7 +7,10 @@ export function Construct(): HTMLElement
 {
     const root: ContentPage = document.createElement("content-page") as ContentPage;
     root.Init();
-    root.Configure(textContent.Title, textContent.Category);
+    root.Configure(textContent.Title);
+
+    const definitions: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
+    definitions.innerHTML = textContent.Definitions;
 
     const overviewSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
     overviewSection.innerHTML = "Overview";

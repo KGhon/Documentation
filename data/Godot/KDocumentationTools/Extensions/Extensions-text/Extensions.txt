@@ -1,8 +1,8 @@
 [Title]
 Extensions
 
-[Category]
-KDocumentationTools
+[Definitions]
+<b>Category:</b> K Documentation Tools
 
 [Overview]
 Extensions are a set of classes meant to be used for creating additional documentation tools and assets within Godot.

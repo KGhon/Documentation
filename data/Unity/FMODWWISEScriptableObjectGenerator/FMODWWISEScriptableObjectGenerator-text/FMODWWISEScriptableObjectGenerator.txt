@@ -1,8 +1,8 @@
 [Title]
 FMOD-Wwise ScriptableObject Generator
 
-[Category]
-KEditorTools
+[Definitions]
+<b>Category:</b> K Editor Tools
 
 [Overview]
 These scriptable object generator scripts can be used to quickly create scriptable objects that hold references to audio events in the project soundbanks. Using a scriptable object setup can help centralize audio event references and avoid fragile strings when using Unity's animation event parameters. The scriptable object class used for generation must as least hold a public event reference. Additional data can be added to the scriptable object class to pass more parameters to an animation event.

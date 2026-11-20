@@ -1,8 +1,8 @@
 [Title]
 Twine Analyzer
 
-[Category]
-KDocumentationTools
+[Definitions]
+<b>Category:</b> K Documentation Tools
 
 [Overview]
 The Twine Analyzer is a Twine HTML parser that lets you visualize, select, and export passages to other formats. It requires that your Twine stories follow specific markup for the parsing to work.

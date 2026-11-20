@@ -5,7 +5,7 @@ import { Divider } from "./Divider.ts";
 export class TableOfContents extends HTMLElement
 {
     private root!: HTMLDivElement;
-    private pageName!: HTMLDivElement;
+    private pageName!: HTMLAnchorElement;
     private linksDiv!: HTMLDivElement;
 
     public Init()
@@ -16,9 +16,16 @@ export class TableOfContents extends HTMLElement
         this.root.classList.add("table-of-contents__root");
         this.appendChild(this.root);
 
-        this.pageName = document.createElement("div");
+        this.pageName = document.createElement("a");
         this.pageName.textContent = "Contents";
         this.pageName.classList.add("table-of-contents__name");
+        this.pageName.classList.add("fill-a");
+        this.pageName.classList.add("highlightable");
+        this.pageName.addEventListener("click", (evt) =>
+        {
+            evt.preventDefault()
+            window.scrollTo({ top: 0 });
+        });
         this.root.appendChild(this.pageName);
 
         const divider: Divider = document.createElement("divider-element") as Divider;

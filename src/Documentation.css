@@ -38,14 +38,14 @@ ul li::marker{
     margin-top: 1rem;
     font-family: inherit;
     font-size: 2rem;
-    color: #C97CFC;
+    color: #BF5EFF;
 }
 
 .c2 {
     margin-top: 0.5rem;
     font-family: inherit;
     font-size: 1.5rem;
-    color: #E4C0FC;
+    color: #E1B3FF;
 }
 
 .c3 {
@@ -96,6 +96,11 @@ ul li::marker{
 .drawer-c2 * {
     font-family: inherit;
     font-size: 1rem;
+}
+
+b, strong {
+    color: #FFD24D;
+    letter-spacing: 0.05em;
 }
 
 a {

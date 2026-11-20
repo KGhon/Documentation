@@ -1,8 +1,9 @@
 [Title]
 UKAudioSystemStatics
 
-[Category]
-K Audio System
+[Definitions]
+<b>Inherits:</b> UBlueprintFunctionLibrary
+<b>Category:</b> K Audio System
 
 [Inheritance]
 UBlueprintFunctionLibrary
