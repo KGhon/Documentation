@@ -2,6 +2,7 @@
 Placeholder Voiceover Generator
 
 [Definitions]
+<b>Type:</b> WinForm
 <b>Category:</b> Standalone Program
 
 [Overview]

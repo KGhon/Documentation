@@ -1,0 +1,5 @@
+{
+  "Title": "UAudioEvent",
+  "Definitions": "<b>Type:</b> Class\r\n<b>Inherits:</b> UDataAsset\r\n<b>Category:</b> K Audio System",
+  "Overview": "An <a href='/Documentation/Pages/UnrealEngine/#AudioEvent'>AudioEvent</a> allows designers to create premade lists of <a href='/Documentation/Pages/UnrealEngine/#AudioEventCommand'>AudioEventCommands</a> that do multiple things within the KAudioSystem by triggering a single <a href='/Documentation/Pages/UnrealEngine/#AudioEvent'>AudioEvent</a>. <a href='/Documentation/Pages/UnrealEngine/#AudioEvent'>AudioEvents</a> can be executed using the ExecuteAudioEvent() function from <a href='/Documentation/Pages/UnrealEngine/#KAudioSystemStatics'>KAudioSystemStatics</a>."
+}

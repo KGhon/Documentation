@@ -1,0 +1,3 @@
+[TObjectPtr,#4EC9B0]
+[UAudioGroupParameter,#4EC9B0]
+"TObjectPtr<UAudioGroupParameter> group","A reference to the AudioGroupParameter this switch is associated with."

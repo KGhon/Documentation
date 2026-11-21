@@ -1,6 +1,6 @@
 {
   "Title": "Extensions",
-  "Definitions": "<b>Category:</b> K Documentation Tools",
+  "Definitions": "<b>Type:</b> Godot Plugin\r\n<b>Category:</b> K Documentation Tools",
   "Overview": "Extensions are a set of classes meant to be used for creating additional documentation tools and assets within Godot.",
   "Dependencies": "<li>Godot 4.6.3 with C# support</li>",
   "Guide": "Extensions are Resources. Use extensions by opening the create Resource window and selecting an extension class (inherits from KDTExtensionResourceBase). You can create multiple files based on the extension that each hold separate, unique data. To view and modify the data in the extension, simply double click the Resource file to open it in a new tab in the KDT Extension Editor. Extensions can also be viewed on Boards using the Extension Reference widget. It's recommended that extensions be read only when viewed in Boards.\r\n\r\nExtension windows are split up into two sections. On the left is the extension UI and on the right a section for editing inspectable UI elements, toggling between viewing as an embedded tab or window, and a notes area. Based on how the extension is set up, selecting UI elements can populate the inspectable area to allow nesting data inside the UI element.",

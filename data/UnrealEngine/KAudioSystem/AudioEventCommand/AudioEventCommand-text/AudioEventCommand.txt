@@ -1,0 +1,9 @@
+[Title]
+FAudioEventCommand
+
+[Definitions]
+<b>Type:</b> Struct
+<b>Category:</b> K Audio System
+
+[Overview]
+Used in AudioEvents to define what happens when the event is executed.

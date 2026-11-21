@@ -1,0 +1,10 @@
+[Title]
+UAudioGroupParameter
+
+[Definitions]
+<b>Type:</b> Class
+<b>Inherits:</b> UDataAsset
+<b>Category:</b> K Audio System
+
+[Overview]
+Used to define a set of AudioSwitchParameters. Within a group, only one switch can be active per actor or in the global scope (states) at a time.

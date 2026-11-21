@@ -3,7 +3,7 @@
 }
 
 html {
-    font-family: Lato;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1rem;
     scroll-behavior: smooth;
     overscroll-behavior: none;

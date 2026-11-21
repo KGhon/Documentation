@@ -2,6 +2,7 @@
 FMOD-Wwise ScriptableObject Generator
 
 [Definitions]
+<b>Type:</b> Class
 <b>Category:</b> K Editor Tools
 
 [Overview]

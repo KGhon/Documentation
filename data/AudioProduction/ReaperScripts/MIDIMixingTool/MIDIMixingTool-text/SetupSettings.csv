@@ -1,0 +1,9 @@
+"MIDI Range Bottom","The MIDI note to assign that starts the range. Wrapping when the number of imported files exceeds the MIDI range will return to this value."
+
+"MIDI Range Top","The highest MIDI note to assign before wrapping back to the bottom."
+
+"Auto Arm Import Tracks","Automatically arm new tracks to receive MIDI input."
+
+"Reassign Selection","Reassigns the MIDI notes of selected tracks sequentially. Note that MIDI assignment obeys folderization. This means tracks in folders will start their assignments from the MIDI Range Bottom."
+
+"Reassign Folder","Reassigns the MIDI notes for all child tracks of a folder."

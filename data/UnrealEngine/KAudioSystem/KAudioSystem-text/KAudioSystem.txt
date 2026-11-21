@@ -2,6 +2,7 @@
 K Audio System
 
 [Definitions]
+<b>Type:</b> Unreal Engine Plugin
 <b>Category:</b> K Audio System
 
 [Overview]

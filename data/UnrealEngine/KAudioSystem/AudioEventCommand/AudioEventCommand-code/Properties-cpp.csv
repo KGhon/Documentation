@@ -1,0 +1,21 @@
+[EAudioEventCommandType,#4EC9B0]
+[EAudioEventCommandScope,#4EC9B0]
+[TSubclassOf,#4EC9B0]
+[UAudioSuperComponentBase,#4EC9B0]
+[FName,#4EC9B0]
+[TObjectPtr,#4EC9B0]
+[UAudioSwitchParameter,#4EC9B0]
+[UAudioFloatParameter,#4EC9B0]
+"EAudioEventCommandType command","This value determines what the event will do."
+
+"EAudioEventCommandScope scope","This value determines whether the event will be applied to global or local scope."
+
+"TSubclassOf<UAudioSuperComponentBase>","The {UnrealEngine/#AudioSuperComponent,sound class} to use."
+
+"FName customTriggerName","The name to match against a custom trigger on the sound."
+
+"TObjectPtr<UAudioSwitchParameter> discreteValue","The global {UnrealEngine/#AudioSwitchParameter,state} or local {UnrealEngine/#AudioSwitchParameter,switch} value to set."
+
+"TObjectPtr<UAudioFloatParameter> floatParameter","The global or local {UnrealEngine/#AudioFloatParameter,float parameter} to set."
+
+"float numericValue","The float value to set for the '{UnrealEngine/#AudioFloatParameter,floatParameter}'."

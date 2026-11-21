@@ -1,6 +1,46 @@
 {
+  "AffixSettings": [
+    [
+      "Affix",
+      "The text to either add as a prefix or suffix to the selected track names."
+    ]
+  ],
+  "GenerateMarkersFromCSVSettings": [
+    [
+      "Start Row",
+      "The row of the CSV to start with (1 indexed)."
+    ],
+    [
+      "Frame Rate",
+      "The frame rate of the video that is synched to the CSV timecodes."
+    ],
+    [
+      "Name Column",
+      "Choose what column of the CSV has the name values for the markers."
+    ],
+    [
+      "Time Column",
+      "Choose what column of the CSV has the timecode values for the markers."
+    ]
+  ],
+  "GenerateRegionsSettings": [
+    [
+      "Pad Region Start",
+      "Pad the generated regions to start sooner than the earliest media item."
+    ],
+    [
+      "Pad Region End",
+      "Pad the generated regions to end later than the latest media item."
+    ]
+  ],
+  "GenerateTracksFromCSVSettings": [
+    [
+      "Column",
+      "Choose what column of the CSV to read."
+    ]
+  ],
   "Title": "Project Setup Helpers",
-  "Definitions": "<b>Category:</b> Reaper Scripts",
+  "Definitions": "<b>Type:</b> Script\r\n<b>Category:</b> Reaper Scripts",
   "Overview": "A collection of helper tools to automate project setup for different uses.",
   "Dependencies": "<li>Reaper v7.76+</li>\r\n<li>The GUIToolkit_Kevin.lua file must be in the same location as any Reascript that wants to use it.</li>",
   "GenerateTracksFromCSV": "Batch generate tracks by reading from a CSV file. The tracks will be named after each CSV entry.",
@@ -9,5 +49,11 @@
   "GenerateVOTracksFromCSV": "Batch generate tracks by reading from a CSV file. The tracks will be named after each CSV entry.",
   "Affix": "Modify selected track names by applying prefix or suffix.",
   "RemoveAffix": "Modify selected track names by removing the prefix or suffix if it exists.",
-  "VoiceoverFileSplittingTip": "When splitting a combined voiceover file into individual voice line files, use 'Generate Tracks From CSV' to create a unique track named after each of the file names you've pulled from your documentation spreadsheet. Use 'Prefix/Suffix Selected Track Names' to add a prefix or suffix if you want to differentiate the names of the files you're about to render (ie. 'raw_'). Move each clipped voice line onto its respective track. When rendering, set 'Selected media items' as the source. Then use the '$track' wildcard for the file name. Render.\r\n\r\nIf you are importing to do further processing on the individual voice line files, Reaper will automatically name tracks after the file name. If you added a prefix or suffix, use 'Remove Prefix/Suffix From Selected Track Names'. You can then use 'Generate Regions' from the Sound Design section get create regions for batch rendering processed voice lines."
+  "VoiceoverFileSplittingTip": "When splitting a combined voiceover file into individual voice line files, use 'Generate Tracks From CSV' to create a unique track named after each of the file names you've pulled from your documentation spreadsheet. Use 'Prefix/Suffix Selected Track Names' to add a prefix or suffix if you want to differentiate the names of the files you're about to render (ie. 'raw_'). Move each clipped voice line onto its respective track. When rendering, set 'Selected media items' as the source. Then use the '$track' wildcard for the file name. Render.\r\n\r\nIf you are importing to do further processing on the individual voice line files, Reaper will automatically name tracks after the file name. If you added a prefix or suffix, use 'Remove Prefix/Suffix From Selected Track Names'. You can then use 'Generate Regions' from the Sound Design section get create regions for batch rendering processed voice lines.",
+  "RemoveAffixSettings": [
+    [
+      "Affix",
+      "The text prefix or suffix to remove from the selected track names."
+    ]
+  ]
 }

@@ -19,7 +19,7 @@ export function Construct(): HTMLElement
     const overview: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     overview.innerHTML = textContent.Overview;
 
-    const publicFunctionsSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
+    const publicFunctionsSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
     publicFunctionsSection.innerHTML = "Public Functions";
 
     const publicFunctions: Table = root.appendChild(document.createElement("table-element")) as Table;

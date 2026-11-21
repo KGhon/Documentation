@@ -1,0 +1,8 @@
+{
+  "Properties": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">TArray</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">FAudioEventCommand</span><span style=\"color:#D4D4D4\">> </span><span style=\"color:#9CDCFE\">commandList</span></span></code>",
+      "Add <a href='/Documentation/Pages/UnrealEngine/#AudioEventCommand'>AudioEventCommands</a> to this list to be executed when the <a href='/Documentation/Pages/UnrealEngine/#AudioEvent'>AudioEvent</a> is executed."
+    ]
+  ]
+}

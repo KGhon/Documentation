@@ -2,7 +2,6 @@ import "../../../Documentation.css"
 import { ContentPage } from "../../../Templates/ContentPage.ts";
 import { Table, ColumnSpacing } from "../../../Templates/Table.ts";
 import * as textContent from "../../../../generated/MIDIMixingTool-text-generated.json"
-import * as content from "../../../../data/AudioProduction/ReaperScripts/MIDIMixingTool/MIDIMixingTool.json";
 
 export function Construct(): HTMLElement
 {
@@ -39,7 +38,7 @@ export function Construct(): HTMLElement
 
     const setupTable: Table = root.appendChild(Object.assign(document.createElement("table-element"), { className: "c4" })) as Table;
     setupTable.Init();
-    setupTable.Configure(content.Setup, ColumnSpacing.Compact);
+    setupTable.Configure(textContent.SetupSettings, ColumnSpacing.Compact);
 
     const helpersSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
     helpersSection.innerHTML = "Helpers";
@@ -49,7 +48,7 @@ export function Construct(): HTMLElement
 
     const helpersTable: Table = root.appendChild(Object.assign(document.createElement("table-element"), { className: "c4" })) as Table;
     helpersTable.Init();
-    helpersTable.Configure(content.Helpers, ColumnSpacing.Compact);
+    helpersTable.Configure(textContent.HelpersSettings, ColumnSpacing.Compact);
 
     const midiGenerationSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
     midiGenerationSection.innerHTML = "MIDI Generation";
@@ -59,7 +58,7 @@ export function Construct(): HTMLElement
 
     const midiGenerationTable: Table = root.appendChild(Object.assign(document.createElement("table-element"), { className: "c4" })) as Table;
     midiGenerationTable.Init();
-    midiGenerationTable.Configure(content.MIDIGeneration, ColumnSpacing.Compact);
+    midiGenerationTable.Configure(textContent.MIDIGenerationSettings, ColumnSpacing.Compact);
 
     const exportStrategiesSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
     exportStrategiesSection.innerHTML = "Export Strategies";

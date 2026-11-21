@@ -2,7 +2,6 @@ import "../../../Documentation.css"
 import { ContentPage } from "../../../Templates/ContentPage.ts";
 import { Table, ColumnSpacing } from "../../../Templates/Table.ts";
 import * as textContent from "../../../../generated/ProjectSetupHelpers-text-generated.json";
-import * as content from "../../../../data/AudioProduction/ReaperScripts/ProjectSetupHelpers/ProjrectSetupHelpers.json";
 
 export function Construct(): HTMLElement
 {
@@ -39,7 +38,7 @@ export function Construct(): HTMLElement
 
     const generateTracksFromCSVTable: Table = root.appendChild(Object.assign(document.createElement("table-element"), { className: "c4" })) as Table;
     generateTracksFromCSVTable.Init();
-    generateTracksFromCSVTable.Configure(content.GenerateTracksFromCSV, ColumnSpacing.Compact);
+    generateTracksFromCSVTable.Configure(textContent.GenerateTracksFromCSVSettings, ColumnSpacing.Compact);
 
     const generateRegionsSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
     generateRegionsSection.innerHTML = "Generate Regions";
@@ -49,7 +48,7 @@ export function Construct(): HTMLElement
 
     const generateRegionsTable: Table = root.appendChild(Object.assign(document.createElement("table-element"), { className: "c4" })) as Table;
     generateRegionsTable.Init();
-    generateRegionsTable.Configure(content.GenerateRegions, ColumnSpacing.Compact);
+    generateRegionsTable.Configure(textContent.GenerateRegionsSettings, ColumnSpacing.Compact);
 
     const generalSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
     generalSection.innerHTML = "General";
@@ -62,7 +61,7 @@ export function Construct(): HTMLElement
 
     const generateMarkersFromCSVTable: Table = root.appendChild(Object.assign(document.createElement("table-element"), { className: "c4" })) as Table;
     generateMarkersFromCSVTable.Init();
-    generateMarkersFromCSVTable.Configure(content.GenerateMarkersFromCSV, ColumnSpacing.Compact);
+    generateMarkersFromCSVTable.Configure(textContent.GenerateMarkersFromCSVSettings, ColumnSpacing.Compact);
 
     const voiceoverSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
     voiceoverSection.innerHTML = "Voiceover";
@@ -75,7 +74,7 @@ export function Construct(): HTMLElement
 
     const generateVOTracksFromCSVTable: Table = root.appendChild(Object.assign(document.createElement("table-element"), { className: "c4" })) as Table;
     generateVOTracksFromCSVTable.Init();
-    generateVOTracksFromCSVTable.Configure(content.GenerateTracksFromCSV, ColumnSpacing.Compact);
+    generateVOTracksFromCSVTable.Configure(textContent.GenerateTracksFromCSVSettings, ColumnSpacing.Compact);
 
     const affixSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
     affixSection.innerHTML = "Affix Selected Track Names";
@@ -85,7 +84,7 @@ export function Construct(): HTMLElement
 
     const affixTable: Table = root.appendChild(Object.assign(document.createElement("table-element"), { className: "c4" })) as Table;
     affixTable.Init();
-    affixTable.Configure(content.Affix, ColumnSpacing.Compact);
+    affixTable.Configure(textContent.AffixSettings, ColumnSpacing.Compact);
 
     const removeAffixSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
     removeAffixSection.innerHTML = "Remove Affix From Selected Track Names";
@@ -95,7 +94,7 @@ export function Construct(): HTMLElement
 
     const removeAffixTable: Table = root.appendChild(Object.assign(document.createElement("table-element"), { className: "c4" })) as Table;
     removeAffixTable.Init();
-    removeAffixTable.Configure(content.RemoveAffix, ColumnSpacing.Compact);
+    removeAffixTable.Configure(textContent.RemoveAffixSettings, ColumnSpacing.Compact);
 
     const voiceoverFileSplittingTipSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c3" })) as HTMLParagraphElement;
     voiceoverFileSplittingTipSection.innerHTML = "Voiceover File Splitting Tip";

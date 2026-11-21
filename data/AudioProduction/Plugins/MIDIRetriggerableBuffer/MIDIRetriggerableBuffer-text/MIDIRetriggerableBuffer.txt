@@ -2,6 +2,7 @@
 MIDI Retriggerable Buffer
 
 [Definitions]
+<b>Type:</b> Audio Plugin
 <b>Category:</b> Plugins
 
 [Overview]

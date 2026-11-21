@@ -1,0 +1,1 @@
+"float Priority","Inherited property from the audio volume parent class. This is used for both the AudioEnvironment and native audio volume priority evaluation. If an AudioAgent queries multiple environments, the highest priority will apply its game parameters and the others will be ignored. Order is not guaranteed for matching priorities."

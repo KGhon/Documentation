@@ -2,6 +2,7 @@
 GUI Toolkit
 
 [Definitions]
+<b>Type:</b> Script
 <b>Category:</b> Reaper Scripts
 
 [Overview]

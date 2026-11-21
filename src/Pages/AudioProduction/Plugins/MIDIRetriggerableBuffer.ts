@@ -2,7 +2,6 @@ import "../../../Documentation.css"
 import { ContentPage } from "../../../Templates/ContentPage.ts";
 import { Table, ColumnSpacing } from "../../../Templates/Table.ts";
 import * as textContent from "../../../../generated/MIDIRetriggerableBuffer-text-generated.json";
-import * as content from "../../../../data/AudioProduction/Plugins/MIDIRetriggerableBuffer/MIDIRetriggerableBuffer.json"
 
 export function Construct(): HTMLElement
 {
@@ -35,7 +34,7 @@ export function Construct(): HTMLElement
 
     const settingsTable: Table = root.appendChild(Object.assign(document.createElement("table-element"), { className: "c4" })) as Table;
     settingsTable.Init();
-    settingsTable.Configure(content.Settings, ColumnSpacing.Compact);
+    settingsTable.Configure(textContent.Settings, ColumnSpacing.Compact);
 
     return root;
 }

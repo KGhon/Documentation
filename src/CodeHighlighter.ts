@@ -8,8 +8,30 @@ import darkplus from "@shikijs/themes/dark-plus";
 import csharp from "@shikijs/langs/csharp";
 import cpp from "@shikijs/langs/cpp";
 import lua from "@shikijs/langs/lua";
+import { Hyperlinks } from "./Hyperlinks.ts";
 
 let highlighter: HighlighterCore | null = null;
+
+const customTheme = {
+    ...darkplus,
+    tokenColors: [
+        ...(darkplus.tokenColors || []),
+        {
+            scope: [
+                "storage.modifier.pointer",
+                "storage.modifier.reference",
+                "keyword.operator.address",
+                "keyword.operator.dereference",
+                "keyword.operator.pointer",
+                "keyword.operator.reference",
+                "keyword.operator.cpp",
+            ],
+            settings: {
+                foreground: "#D4D4D4"
+            }
+        }
+    ]
+}
 
 async function GetHighlighter(): Promise<HighlighterCore>
 {
@@ -64,6 +86,20 @@ async function ProcessDirectory(dirPath: string): Promise<void>
     const jsonPath = path.join("generated", `${folderName}-generated.json`);
     const fileRecord: Record<string, any> = {};
 
+    const links: Map<string, string> = new Map<string, string>();
+    const searchWords: string[] = [];
+    for (const [link, words] of Hyperlinks)
+    {
+        for (const word of words)
+        {
+            links.set(word, link);
+            searchWords.push(word);
+        }
+    }
+    searchWords.sort((a, b) => b.length - a.length)
+    const pattern = searchWords.join("|");
+    const hyperlinkRegex = new RegExp(`(?:<a\\b[^>]*>[\\s\\S]*?<\\/a>)|\\b(${pattern})\\b`, "g");
+
     for (const file of targetFiles)
     {
         const filePath = path.join(dirPath, file.name);
@@ -86,7 +122,7 @@ async function ProcessDirectory(dirPath: string): Promise<void>
 
         if (file.name.endsWith(".txt"))
         {
-            let htmlOutput = await (await GetHighlighter()).codeToHtml(content.trim(), { lang: language, theme: 'dark-plus' });
+            let htmlOutput = await (await GetHighlighter()).codeToHtml(content.trim(), { lang: language, theme: customTheme });
             htmlOutput = htmlOutput.replace('<pre class="shiki', '<pre style="margin: 0; padding: 20px; tab-size: 4;" class="shiki');
 
             for (const highlight of postHighlights)
@@ -96,11 +132,6 @@ async function ProcessDirectory(dirPath: string): Promise<void>
                     return `<span style="color:${highlight[1]}">${highlight[0]}</span>`;
                 });
             }
-
-            htmlOutput = htmlOutput.replace(new RegExp(`<span\\s+style\\s*=\\s*["'][^"']*color\\s*:\\s*[^"'>]*?["']>(\\s*[*]\\s*)<\\/span>`, "g"), (_fullMatch: string, _capturedTerm: string) =>
-            {
-                return `<span style="color:#D4D4D4">*</span>`;
-            });
 
             fileRecord[match[1]] = htmlOutput;
         }
@@ -112,9 +143,24 @@ async function ProcessDirectory(dirPath: string): Promise<void>
             {
                 if (row.length > 0)
                 {
-                    row[0] = await (await GetHighlighter()).codeToHtml(row[0].trim(), { lang: language, theme: "dark-plus" });
+                    row[0] = await (await GetHighlighter()).codeToHtml(row[0].trim(), { lang: language, theme: customTheme });
                     row[0] = row[0].replace(/^<pre[^>]*><code>([\s\S]*)<\/code><\/pre>$/, "$1");
                     row[0] = `<code style="white-space: pre-wrap; word-break: break-word;">${row[0]}</code>`;
+
+                    row[1] = row[1].replace(/\{\s*([^,\s}]+)\s*,\s*([^,}\s]+(?:\s+[^,}\s]+)*)\s*\}/g, (_fullLine: string, url: string, display: string) =>
+                    {
+                        return `<a href='/Documentation/Pages/${url}'>${display}</a>`;
+                    });
+
+                    row[1] = row[1].replace(hyperlinkRegex, (fullLine: string, display: string) =>
+                    {
+                        if (display != null)
+                        {
+                            return `<a href='/Documentation/Pages/${links.get(display)}'>${display}</a>`;
+                        }
+
+                        return fullLine;
+                    });
                 }
             }
 
@@ -127,14 +173,6 @@ async function ProcessDirectory(dirPath: string): Promise<void>
                         return `<span style="color:${highlight[1]}">${highlight[0]}</span>`;
                     });
                 }
-            }
-
-            for (const row of (data as string[][]))
-            {
-                row[0] = row[0].replace(new RegExp(`<span\\s+style\\s*=\\s*["'][^"']*color\\s*:\\s*[^"'>]*?["']>(\\s*[*]\\s*)<\\/span>`, "g"), (_fullMatch: string, _capturedTerm: string) =>
-                {
-                    return `<span style="color:#D4D4D4">*</span>`;
-                });
             }
 
             fileRecord[match[1]] = data;

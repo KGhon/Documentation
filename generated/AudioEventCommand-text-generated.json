@@ -1,0 +1,5 @@
+{
+  "Title": "FAudioEventCommand",
+  "Definitions": "<b>Type:</b> Struct\r\n<b>Category:</b> K Audio System",
+  "Overview": "Used in <a href='/Documentation/Pages/UnrealEngine/#AudioEvent'>AudioEvents</a> to define what happens when the event is executed."
+}

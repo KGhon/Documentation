@@ -1,0 +1,32 @@
+{
+  "Properties": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">EAudioEventCommandType</span><span style=\"color:#9CDCFE\"> command</span></span></code>",
+      "This value determines what the event will do."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">EAudioEventCommandScope</span><span style=\"color:#9CDCFE\"> scope</span></span></code>",
+      "This value determines whether the event will be applied to global or local scope."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">TSubclassOf</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">UAudioSuperComponentBase</span><span style=\"color:#D4D4D4\">></span></span></code>",
+      "The <a href='/Documentation/Pages/UnrealEngine/#AudioSuperComponent'>sound class</a> to use."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">FName</span><span style=\"color:#9CDCFE\"> customTriggerName</span></span></code>",
+      "The name to match against a custom trigger on the sound."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">TObjectPtr</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">UAudioSwitchParameter</span><span style=\"color:#D4D4D4\">> </span><span style=\"color:#9CDCFE\">discreteValue</span></span></code>",
+      "The global <a href='/Documentation/Pages/UnrealEngine/#AudioSwitchParameter'>state</a> or local <a href='/Documentation/Pages/UnrealEngine/#AudioSwitchParameter'>switch</a> value to set."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">TObjectPtr</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">UAudioFloatParameter</span><span style=\"color:#D4D4D4\">> </span><span style=\"color:#9CDCFE\">floatParameter</span></span></code>",
+      "The global or local <a href='/Documentation/Pages/UnrealEngine/#AudioFloatParameter'>float parameter</a> to set."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">float</span><span style=\"color:#9CDCFE\"> numericValue</span></span></code>",
+      "The float value to set for the '<a href='/Documentation/Pages/UnrealEngine/#AudioFloatParameter'>floatParameter</a>'."
+    ]
+  ]
+}

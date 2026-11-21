@@ -1,6 +1,7 @@
 import path from "node:path";
 import fsPromises from "node:fs/promises";
 import { parse } from "csv-parse/sync";
+import { Hyperlinks } from "./Hyperlinks.ts";
 
 async function GetDirectories(dir: string): Promise<string[]>
 {
@@ -43,6 +44,20 @@ async function ProcessDirectory(dirPath: string): Promise<void>
 
     const fileRecord: Record<string, any> = {};
 
+    const links: Map<string, string> = new Map<string, string>();
+    const searchWords: string[] = [];
+    for (const [link, words] of Hyperlinks)
+    {
+        for (const word of words)
+        {
+            links.set(word, link);
+            searchWords.push(word);
+        }
+    }
+    searchWords.sort((a, b) => b.length - a.length)
+    const pattern = searchWords.join("|");
+    const hyperlinkRegex = new RegExp(`(?:<a\\b[^>]*>[\\s\\S]*?<\\/a>)|\\b(${pattern})\\b`, "g");
+
     for (const file of targetFiles)
     {
         const filePath = path.join(dirPath, file.name);
@@ -54,9 +69,19 @@ async function ProcessDirectory(dirPath: string): Promise<void>
         }
 
         let content = await fsPromises.readFile(filePath, "utf-8");
-        content = content.replace(/\{\s*([^,\s}]+)\s*,\s*([^,\s}]+)\s*\}/g, (_fullLine: string, url: string, display: string) =>
+        content = content.replace(/\{\s*([^,\s}]+)\s*,\s*([^,}\s]+(?:\s+[^,}\s]+)*)\s*\}/g, (_fullLine: string, url: string, display: string) =>
         {
-            return `<a href='/Documentation/Pages/${url}''>${display}</a>`;
+            return `<a href='/Documentation/Pages/${url}'>${display}</a>`;
+        });
+
+        content = content.replace(hyperlinkRegex, (fullLine: string, display: string) =>
+        {
+            if (display != null)
+            {
+                return `<a href='/Documentation/Pages/${links.get(display)}'>${display}</a>`;
+            }
+
+            return fullLine;
         });
 
         if (file.name.endsWith(".txt"))

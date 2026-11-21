@@ -1,0 +1,32 @@
+{
+  "Properties": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">bool</span><span style=\"color:#9CDCFE\"> useMin</span></span></code>",
+      "If true, the value cannot be set lower than the 'minValue' (useDefaultBelowMin overrides this)."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">bool</span><span style=\"color:#9CDCFE\"> useMax</span></span></code>",
+      "If true, the value cannot be set higher than the 'maxValue' (useDefaultAboveMax overrides this)."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">bool</span><span style=\"color:#9CDCFE\"> useDefaultBelowMin</span></span></code>",
+      "If true, trying to set a value below the 'minValue' will override with the 'defaultValue'."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">bool</span><span style=\"color:#9CDCFE\"> useDefaultAboveMax</span></span></code>",
+      "If true, trying to set a value below the 'maxValue' will override with the 'defaultValue'."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">float</span><span style=\"color:#9CDCFE\"> defaultValue</span></span></code>",
+      "The default value for this parameter."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">float</span><span style=\"color:#9CDCFE\"> minValue</span></span></code>",
+      "The minimum value for this parameter."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">float</span><span style=\"color:#9CDCFE\"> maxValue</span></span></code>",
+      "The maximum value for this parameter."
+    ]
+  ]
+}

@@ -2,6 +2,7 @@
 Twine Analyzer
 
 [Definitions]
+<b>Type:</b> Godot Plugin
 <b>Category:</b> K Documentation Tools
 
 [Overview]

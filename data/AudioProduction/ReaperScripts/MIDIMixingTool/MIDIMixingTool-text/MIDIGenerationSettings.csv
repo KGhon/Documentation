@@ -1,0 +1,9 @@
+"Refresh Global MIDI Bus","If a track named 'Global MIDI Bus' does not already exist in the project, one is created. The bus is then automatically configured to send MIDI to all currently existing tracks. If more tracks are added, simply click this button to set up MIDI sends to all tracks again."
+
+"Generation Range Bottom","The lowest MIDI note that will be generated."
+
+"Generation Range Top","The highest MIDI note that will be generated."
+
+"Note Order","<ul><li>Random - Notes will be generated in any order.</li><li>Sequential - Notes will be generated from lowest to highest.</li></ul>"
+
+"Timing","<ul><li>Random - Any time within the MIDI item is considered valid and all MIDI will be generated within the boundaries of the MIDI item.</li><li>Interval - All MIDI notes will be spaced exactly the same distance from each other by the Interval Min value (and the MIDI item will be extended if it is too short).</li><li>Range - Each MIDI note will be spaced at a random distance between the Interval Min and Interval Max from its neighbors.</li></ul>"

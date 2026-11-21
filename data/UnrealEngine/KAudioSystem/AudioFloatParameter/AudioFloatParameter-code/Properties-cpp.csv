@@ -1,0 +1,13 @@
+"bool useMin","If true, the value cannot be set lower than the 'minValue' (useDefaultBelowMin overrides this)."
+
+"bool useMax","If true, the value cannot be set higher than the 'maxValue' (useDefaultAboveMax overrides this)."
+
+"bool useDefaultBelowMin","If true, trying to set a value below the 'minValue' will override with the 'defaultValue'."
+
+"bool useDefaultAboveMax","If true, trying to set a value below the 'maxValue' will override with the 'defaultValue'."
+
+"float defaultValue","The default value for this parameter."
+
+"float minValue","The minimum value for this parameter."
+
+"float maxValue","The maximum value for this parameter."

@@ -9,3 +9,73 @@ Pauses either the first or all matching sound(s) linked to the calling actor."
 
 "void RequestUnpauseSound(UObject* WorldContext, AActor* actor, TSubclassOf<UAudioSuperComponentBase> sound, bool includAll)","BlueprintCallable
 Unpauses either the first or all matching sound(s) linked to the calling actor."
+
+"void RequestNextSound(UObject* WorldContext, AActor* actor, TSubclassOf<UAudioSuperComponentBase> sound, bool includeAll)","BlueprintCallable
+Calls the Next() function on either the first or all matching sound(s) linked to the calling actor."
+
+"void RequestPreviousSound(UObject* WorldContext, AActor* actor, TSubclassOf<UAudioSuperComponentBase> sound, bool includeAll)","BlueprintCallable
+Calls the Previous() function on either the first or all matching sound(s) linked to the calling actor."
+
+"void RequestResetSound(UObject* WorldContext, AActor* actor, TSubclassOf<UAudioSuperComponentBase> sound, bool includeAll)","BlueprintCallable
+Calls the Reset() function on either the first or all matching sound(s) linked to the calling actor."
+
+"void RequestCustomTriggerSound(UObject* WorldContext, AActor* actor, TSubclassOf<UAudioSuperComponentBase> sound, const FName& name, bool includeAll)","BlueprintCallable
+Calls the CustomTrigger() function on either the first or all matching sound(s) linked to the calling actor."
+
+"void RequestRetriggerSound(UObject* WorldContext, AActor* actor, TSubclassOf<UAudioSuperComponentBase> sound)","BlueprintCallable
+Calls the Retrigger() function on either the first or all matching sound(s) linked to the calling actor."
+
+"void RequestRetriggerOrPlaySound(UObject* WorldContext, AActor* actor, TSubclassOf<UAudioSuperComponentBase> sound, FVector location, FRotator rotation, bool attach, USceneComponent* attachTarget)","BlueprintCallable
+Calls the Retrigger() function on either the first or all matching sound(s) linked to the calling actor. If one isn't found, the sound will be played instead."
+
+"void StopAllSoundsForActor(UObject* WorldContext, AActor* actor, EAudioStopBehavior stopBehavior, float fadeOutDuration)","BlueprintCallable
+Stops all sounds linked to the calling actor."
+
+"void PauseAllSoundsForActor(UObject* WorldContext, AActor* actor)","BlueprintCallable
+Pauses all sounds linked to the calling actor."
+
+"void UnpauseAllSoundsForActor(UObject* WorldContext, AActor* actor)","BlueprintCallable
+Unpauses all sounds linked to the calling actor."
+
+"void NextAllSoundsForActor(UObject* WorldContext, AActor* actor)","BlueprintCallable
+Calls the Next() function on all sounds linked to the calling actor."
+
+"void PreviousAllSoundsForActor(UObject* WorldContext, AActor* actor)","BlueprintCallable
+Calls the Previous() function on all sounds linked to the calling actor."
+
+"void ResetAllSoundsForActor(UObject* WorldContext, AActor* actor)","BlueprintCallable
+Calls the Reset() function on all sounds linked to the calling actor."
+
+"void CustomTriggerAllSoundsForActor(UObject* WorldContext, AActor* actor, const FName& name)","BlueprintCallable
+Calls the CustomTrigger() function on all sounds linked to the calling actor."
+
+"UAudioSuperComponentBase* SpawnSound(UObject* WorldContext, TSubclassOf<UAudioSuperComponentBase> sound, FVector location, FRotator, rotation, bool attach, USceneComponent* attachTarget)","BlueprintCallable
+Creates an instance of the input sound regardless of sound limiting settings in the KAudioSystem. This instance is not be tracked or linked within the KAudioSystem, does not contribute to sound limiting, and needs to be manually managed and controlled."
+
+"void ExecuteAudioEvent(UObject* WorldContext, AActor*, UAudioEvent* event, FVector location, FRotator rotation, bool attach, USceneComponent* attachTarget)","BlueprintCallable
+Executes all AudioEventCommands on the input AudioEvent. Sound commands use the request functions and therefore follow the same constraints."
+
+"void SetSwitchParameter(UObject* WorldContext, AActor* actor, UAudioSwitchParameter* value)","BlueprintCallable
+Sets the local AudioSwitchParameter of an AudioGroupParameter for the calling actor."
+
+"void SetFloatParameter(UObject* WorldContext, AActor* actor, UAudioFloatParameter* parameter, float value)","BlueprintCallable
+Sets the local float value of an AudioFloatParameter for the calling actor."
+
+"void SetStateParameter(UObject* WorldContext, UAudioSwitchParameter* value)","BlueprintCallable
+Sets the global state AudioSwitchParameter value of an AudioGroupParameter."
+
+"void SetGlobalFloatParameter(UObject* WorldContext, UAudioFloatParameter* parameter, float value)","BlueprintCallable
+Sets the global float value of an AudioFloatParameter."
+
+"UAudioSwitchParameter* GetSwitchParameter(UObject* WorldContext, AActor* actor, UAudioGroupParameter* group, bool& OutputPins)","BlueprintCallable
+Gets the local AudioSwitchParameter of an AudioGroupParameter for the calling actor. Return value can be nullptr, use OutputPins to account for this."
+
+"float GetFloatParameter(UObject* WorldContext, AActor* actor, UAudioFloatParameter* parameter, bool& OutputPins)","BlueprintCallable
+Gets the local float value of an AudioFloatParameter for the calling actor. Returns default value if float parameter has not been set on the Actor, use OutputPins to account for this."
+
+"UAudioSwitchParameter* GetStateParameter(UObject* WorldContext, UAudioGroupParameter* group, bool& OutputPins)","BlueprintCallable
+Gets the global state AudioSwitchParameter value of an AudioGroupParameter. Return value can be nullptr, use OutputPins to account for this."
+
+"float GetGlobalFloatParameter(UObject* WorldContext, UAudioFloatParameter* parameter, bool& OutputPins)","BlueprintCallable
+Gets the global float value of an AudioFloatParameter. Returns default value if float parameter has not been set on the Actor, use OutputPins to account for this."
+

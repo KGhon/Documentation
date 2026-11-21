@@ -1,0 +1,15 @@
+"Toggle Note Names","Toggles the assigned note names on the tracks. The note names are added as visual aids, but when exporting using the track names they need to be removed so exported files maintain the same file name."
+
+"Select Child Tracks","When selecting a folder track, selects all child tracks. Helpful when Exporting With Tails."
+
+"Select Child Media Items","When selecting a folder track, selects all child media items. Helpful when Exporting Without Tails."
+
+"Arm Child Tracks","When selecting a folder track, arms all child tracks to receive MIDI input."
+
+"Disarm Child Tracks","When selecting a folder track, disarms all child tracks so they don't receive MIDI input."
+
+"Set Selection Obey Note-Offs","Setting obey note-offs on means a sampler will stop playing the sound file when the MIDI key is released. This is especially helpful for long sound files that you don't want to play for the full length every time you trigger them (ie. ambiances)."
+
+"Set Selection Loop","Setting loop on means a sampler will loop the sound file. This also automatically turns obey note-offs on as well."
+
+"Set Selection Max Concurrent Voices","By default, each sampler only allows one instance of the sound file to play and will stop and restart when retriggering the same MIDI note. If you want your sound triggers to be able to overlap, you can set the value to greater than 1."

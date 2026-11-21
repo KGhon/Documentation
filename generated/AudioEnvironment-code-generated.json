@@ -1,0 +1,8 @@
+{
+  "Properties": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">float</span><span style=\"color:#9CDCFE\"> Priority</span></span></code>",
+      "Inherited property from the audio volume parent class. This is used for both the AudioEnvironment and native audio volume priority evaluation. If an <a href='/Documentation/Pages/UnrealEngine/#AudioAgent'>AudioAgent</a> queries multiple environments, the highest priority will apply its game parameters and the others will be ignored. Order is not guaranteed for matching priorities."
+    ]
+  ]
+}

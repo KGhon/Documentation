@@ -1,0 +1,8 @@
+{
+  "Properties": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">TObjectPtr</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">UAudioGroupParameter</span><span style=\"color:#D4D4D4\">> </span><span style=\"color:#9CDCFE\">group</span></span></code>",
+      "A reference to the <a href='/Documentation/Pages/UnrealEngine/#AudioGroupParameter'>AudioGroupParameter</a> this switch is associated with."
+    ]
+  ]
+}
