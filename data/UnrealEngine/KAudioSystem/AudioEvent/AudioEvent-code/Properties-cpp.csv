@@ -1,3 +1,4 @@
 [TArray,#4EC9B0]
 [FAudioEventCommand,#4EC9B0]
+
 "TArray<FAudioEventCommand> commandList","Add AudioEventCommands to this list to be executed when the AudioEvent is executed."

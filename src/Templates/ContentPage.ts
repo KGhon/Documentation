@@ -1,5 +1,6 @@
 import "../Documentation.css";
 import "./ContentPage.css";
+import sanitizeHtml from "sanitize-html";
 import { Divider } from "./Divider.ts";
 
 export class ContentPage extends HTMLElement
@@ -24,7 +25,7 @@ export class ContentPage extends HTMLElement
 
     public Configure(pageTitle: string)
     {
-        this.pageName.textContent = pageTitle;
+        this.pageName.textContent = sanitizeHtml(pageTitle, { allowedTags: [], allowedAttributes: {} });
     }
 
     public override appendChild<T extends Node>(node: T): T

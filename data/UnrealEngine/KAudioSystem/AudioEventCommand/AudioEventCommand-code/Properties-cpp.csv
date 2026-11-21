@@ -6,6 +6,7 @@
 [TObjectPtr,#4EC9B0]
 [UAudioSwitchParameter,#4EC9B0]
 [UAudioFloatParameter,#4EC9B0]
+
 "EAudioEventCommandType command","This value determines what the event will do."
 
 "EAudioEventCommandScope scope","This value determines whether the event will be applied to global or local scope."

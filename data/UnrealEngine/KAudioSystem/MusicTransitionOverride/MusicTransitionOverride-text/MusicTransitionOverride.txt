@@ -1,0 +1,11 @@
+[Title]
+FMusicTransitionOverride
+
+[Definitions]
+<b>Type:</b> Struct
+<b>Category:</b> K Audio System
+
+[Overview]
+MusicTransitionOverrides contain the data that define how a MusicLayout horizontally transitions between MusicSegments in one-off scenarios. They are only used when using the QueueMusicTransitionOverride() function on a MusicLayout, which ignores the transition rules and only uses the MusicTransitionOverride. 
+
+NOTE: The word "music" in this context refers to the sound asset reference held by a MusicSegment.

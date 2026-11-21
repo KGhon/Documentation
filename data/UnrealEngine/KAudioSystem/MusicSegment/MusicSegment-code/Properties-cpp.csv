@@ -1,0 +1,5 @@
+"float bpm","The beats per minute of this MusicSegment used for transition timing."
+
+"int timeSignatureNumerator","The number of beats within a measure used for transition timing."
+
+"int timeSignatureDenominator","Notcurrently used for anything."

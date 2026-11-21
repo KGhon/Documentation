@@ -1,0 +1,29 @@
+[TObjectPtr,#4EC9B0]
+[UMusicSegmentBase,#4EC9B0]
+[EMusicTransitionCue,#4EC9B0]
+[EMusicOutgoingStopBehavior,#4EC9B0]
+[EAudioFaderCurve,#4EC9B0]
+
+"TObjectPtr<UMusicSegmentBase> incomingMusic","A reference to the music to transition to.
+
+NOTE: Null is valid as a transition to silence."
+
+"EMusicTransitionCue cueType","Defines what timing the transition should be synchronized with."
+
+"float cueTimeOffset","Compensates for timing of the transition if the incoming music needs to synchronize with entree time. When cueTime = 0, the transition is timed so the beginning of the incoming music plays exactly on the transition. Add cueTime modifies the transition so it synchronizes the cueTime exactly on the transition (ie. If cueTime = 1 second, the incoming music will play 1 second early to synchronize the incoming music's 1 second mark with the transition)."
+
+"int measureDivision","Defines when a transition will happen based on measure groupings starting from the start of the music (ie. If measureDivision = 4, the transition can happen on beat 1 of measures 5, 9, 13, etc)."
+
+"int beat","If cueType = OnExactBeat, this defines the beat counted from the start of the music to transition on. If cueType = OnExactBeatAndMeasure or OnMeasureBeat, this defines the beat within the current music time signature to transition on."
+
+"int measure","Defines the measure counted continuously from the start of the music to transition on."
+
+"EMusicOutgoingStopBehavior outgoingStopBehavior","Defines what should happen to the outgoing music when the transition occurs."
+
+"float fadeOutTime","If outgoingStopBehavior = FadeOut, this is the amount of time over which the outgoing music will fade out."
+
+"EAudioFaderCurve fadeOutCurve","If outgoingStopBehavior = FadeOut and fadeOutTime != 0, this curve will be used as the shape of the fade out."
+
+"float fadeInTime","This is the amount of time over which the incoming music will fade in. Does not effect transition timing."
+
+"EAudioFaderCurve fadeInCurve","If fadeInTime != 0, this curve will be used as the shape of the fade in."

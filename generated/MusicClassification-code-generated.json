@@ -1,0 +1,8 @@
+{
+  "Properties": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">int</span><span style=\"color:#9CDCFE\"> priority</span></span></code>",
+      "Sets the priority for the classification. When classifications are added and removed from the <a href='/Documentation/Pages/UnrealEngine/#MusicManager'>MusicManager</a> hierarchy, the highest priority classification will have its <a href='/Documentation/Pages/UnrealEngine/#MusicLayout'>MusicLayout</a> played."
+    ]
+  ]
+}

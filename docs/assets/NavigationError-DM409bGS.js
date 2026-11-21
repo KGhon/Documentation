@@ -1,0 +1,1 @@
+import"./CustomElements-GlIlUR1m.js";function e(){let e=document.createElement(`content-page`);return e.Init(),e.Configure(`Oops! You shouldn't be seeing this!`),e}export{e as t};

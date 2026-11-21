@@ -1,4 +1,4 @@
-import"./CustomElements-Bu9z9HL6.js";import{t as e}from"./Unity-pages-BOOHW1-H.js";import{t}from"./NavigationError-BPPcV47q.js";var n=`FMOD-Wwise ScriptableObject Generator`,r=`<b>Type:</b> Class\r
+import"./CustomElements-GlIlUR1m.js";import{t as e}from"./Unity-pages-BOOHW1-H.js";import{t}from"./NavigationError-DM409bGS.js";var n=`FMOD-Wwise ScriptableObject Generator`,r=`<b>Type:</b> Class\r
 <b>Category:</b> K Editor Tools`,i=`These scriptable object generator scripts can be used to quickly create scriptable objects that hold references to audio events in the project soundbanks. Using a scriptable object setup can help centralize audio event references and avoid fragile strings when using Unity's animation event parameters. The scriptable object class used for generation must as least hold a public event reference. Additional data can be added to the scriptable object class to pass more parameters to an animation event.`,a=`<li>Unity 6000.3.13f1+</li>`,o=`Import the scripts that matches the audio middleware being used in the project:\r
 \r
 <ul>\r

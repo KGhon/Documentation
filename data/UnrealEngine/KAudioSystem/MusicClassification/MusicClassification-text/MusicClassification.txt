@@ -1,0 +1,12 @@
+[Title]
+UMusicClassification
+
+[Definitions]
+<b>Type:</b> Class
+<b>Inherits:</b> UDataAsset
+<b>Category:</b> K Audio System
+
+[Overview]
+MusicClassifications are used by the MusicManager to hierarchically manage multiple MusicLayouts. The MusicManager can have one MusicLayout loaded per classification. Adding and removing classifications from the hierarchy triggers transitions to the next highest priority classification. Classifications can also be activated and deactivated in the hierarchy.
+
+An example: In Metroid games, areas will typically have music associated with them. However, when the self-destruct sequence starts, only the self-destruct music plays no matter what area you enter. MusicClassifications would allow you to classify the self-destruct music as higher priority and would therefore override the default area music. If the self-destruct sequence ends, you can also revert to the area music because the triggers were still cached.

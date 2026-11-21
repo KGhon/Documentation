@@ -1,0 +1,14 @@
+[Title]
+AMusicLayoutBase
+
+[Definitions]
+<b>Type:</b> Class
+<b>Inherits:</b> AActor
+<b>Category:</b> K Audio System
+
+[Overview]
+MusicSegments along with MetaSound should be primarily used to control vertical music mixing within one piece of horizontal music. They have all the features and functionality of AudioSuperComponents. The only differences are that MusicSegments receive game parameter data from the MusicLayout they are attached to, they include extra BPM and time signature properties, and they never auto destroy themselves on stop.
+
+NOTE: When used within the music system, MusicSegments will automatically listen for game parameters regardless of "Class Default" settings inheritted from AudioSuperComponent.
+
+NOTE: The base MusicSegment class can be reused in MusicLayouts if custom code is not required (ie. the MusicSegment just plays a MetaSound). The "Class Defaults" of any base MusicSegment can be modified per instance just like any other component that gets attached and has configurable properties.

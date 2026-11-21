@@ -32,6 +32,7 @@ ul li::marker{
 .c0 {
     font-family: inherit;
     font-size: 2rem;
+    overflow-wrap: break-word
 }
 
 .c1 {
@@ -39,6 +40,7 @@ ul li::marker{
     font-family: inherit;
     font-size: 2rem;
     color: #BF5EFF;
+    overflow-wrap: break-word
 }
 
 .c2 {
@@ -46,12 +48,14 @@ ul li::marker{
     font-family: inherit;
     font-size: 1.5rem;
     color: #E1B3FF;
+    overflow-wrap: break-word
 }
 
 .c3 {
     margin-top: 0.5rem;
     font-family: inherit;
     font-size: 1.25rem;
+    overflow-wrap: break-word
 }
 
 .c4 {

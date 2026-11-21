@@ -1,1 +1,26 @@
+[TObjectPtr,#4EC9B0]
+[TArray,#4EC9B0]
+[TMap,#4EC9B0]
+[UAudioGroupParameter,#4EC9B0]
+[UAudioSwitchParameter,#4EC9B0]
+[UAudioFloatParameter,#4EC9B0]
+
 "float Priority","Inherited property from the audio volume parent class. This is used for both the AudioEnvironment and native audio volume priority evaluation. If an AudioAgent queries multiple environments, the highest priority will apply its game parameters and the others will be ignored. Order is not guaranteed for matching priorities."
+
+"bool forceEnvironmentQueryOnExit","Force an AudioAgent to query any overlapping AudioEnvironments when it exits this environment. This is useful when AudioEnvironments are contained within larger AudioEnvironments."
+
+"TArray<TObjectPtr<UAudioSwitchParameter>> enterAudioSwitches","Set what local AudioSwitchParameter values for a set of AudioGroupParameters to apply when an AudioAgent enters the AudioEnvironment."
+
+"TMap<TObjectPtr<UAudioFloatParameter>, float> enterAudioFloats","Set what local float values for a set of AudioFloatParameters to apply when an AudioAgent enters the AudioEnvironment."
+
+"TArray<TObjectPtr<UAudioSwitchParameter>> enterAudioStates","Set what global state AudioSwitchParameters for a set of AudioGroupParameters to apply when the AudioListener enters the AudioEnvironment."
+
+"<TMap<TObjectPtr<UAudioFloatParameter>, float> enterGlobalAudioFloats","Set what global float values for a set of AudioFloatParameters to apply when the AudioListener enters the AudioEnvironment."
+
+"TArray<TObjectPtr<UAudioSwitchParameter>> exitAudioSwitches","Set what local AudioSwitchParameter values for a set of AudioGroupParameters to apply when an AudioAgent exits the AudioEnvironment."
+
+"TMap<TObjectPtr<UAudioFloatParameter>, float> exitAudioFloats","Set what local float values for a set of AudioFloatParameters to apply an AudioAgent exits the AudioEnvironment."
+
+"TArray<TObjectPtr<UAudioSwitchParameter>> exitAudioStates","Set what global state AudioSwitchParameters for a set of AudioGroupParameters to apply when the AudioListener exits the AudioEnvironment."
+
+"TMap<TObjectPtr<UAudioFloatParameter>, float> exitGlobalAudioFloats","Set what global float values for a set of AudioFloatParameters to apply when the AudioListener exits the AudioEnvironment."

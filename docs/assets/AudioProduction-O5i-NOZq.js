@@ -1,4 +1,4 @@
-import{n as e}from"./CustomElements-Bu9z9HL6.js";import{t}from"./AudioProduction-pages-Drx7ZTWh.js";import{t as n}from"./NavigationError-BPPcV47q.js";var r=`GUI Toolkit`,i=`<b>Type:</b> Script\r
+import{n as e}from"./CustomElements-GlIlUR1m.js";import{t}from"./AudioProduction-pages-Drx7ZTWh.js";import{t as n}from"./NavigationError-DM409bGS.js";var r=`GUI Toolkit`,i=`<b>Type:</b> Script\r
 <b>Category:</b> Reaper Scripts`,a=`This GUI Toolkit provides classes to create simple GUIs for ReaScripts using native gfx code in Lua. UIs are built by constructing parent-child trees using the toolkit classes.`,o=`<li>Reaper v7.76+</li>\r
 <li>The GUIToolkit_Kevin.lua file must be in the same location as any Reascript that wants to use it.</li>`,s=`Below is a simple example of a GUI that positions two button that when pressed change some text.\r
 \r

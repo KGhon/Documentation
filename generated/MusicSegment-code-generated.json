@@ -1,0 +1,30 @@
+{
+  "Properties": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">float</span><span style=\"color:#9CDCFE\"> bpm</span></span></code>",
+      "The beats per minute of this <a href='/Documentation/Pages/UnrealEngine/#MusicSegment'>MusicSegment</a> used for transition timing."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">int</span><span style=\"color:#9CDCFE\"> timeSignatureNumerator</span></span></code>",
+      "The number of beats within a measure used for transition timing."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">int</span><span style=\"color:#9CDCFE\"> timeSignatureDenominator</span></span></code>",
+      "Notcurrently used for anything."
+    ]
+  ],
+  "PublicFunctions": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">float</span><span style=\"color:#DCDCAA\"> Get_BPM</span><span style=\"color:#D4D4D4\">()</span></span></code>",
+      "BlueprintPure\r\nReturns the bpm value."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">int</span><span style=\"color:#DCDCAA\"> Get_TimeSignatureNumerator</span><span style=\"color:#D4D4D4\">()</span></span></code>",
+      "BlueprintPure\r\nReturns the time signature numerator value."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">int</span><span style=\"color:#DCDCAA\"> Get_TimeSignatureDenominator</span><span style=\"color:#D4D4D4\">()</span></span></code>",
+      "BlueprintPure\r\nReturns the time signature denominator value."
+    ]
+  ]
+}

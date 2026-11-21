@@ -7,4 +7,4 @@ AAudioEnvironment
 <b>Category:</b> K Audio System
 
 [Overview]
-AudioEnvironments inherit from Unreal Engine's built-in audio volume class. They can be placed just like audio volumes to apply parameters and effects changes using both the native audio system and the KAudioSystem. AudioEnvironments only respond to AudioAgents, but the audio volume will always apply its native functionality.
+AudioEnvironments inherit from Unreal Engine's built-in audio volume class. They can be placed just like audio volumes to apply parameters and effects changes using both the native audio system and the KAudioSystem. They only respond to AudioAgents, but the audio volume will always apply its native functionality.

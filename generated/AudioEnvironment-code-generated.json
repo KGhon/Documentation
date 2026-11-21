@@ -2,7 +2,43 @@
   "Properties": [
     [
       "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">float</span><span style=\"color:#9CDCFE\"> Priority</span></span></code>",
-      "Inherited property from the audio volume parent class. This is used for both the AudioEnvironment and native audio volume priority evaluation. If an <a href='/Documentation/Pages/UnrealEngine/#AudioAgent'>AudioAgent</a> queries multiple environments, the highest priority will apply its game parameters and the others will be ignored. Order is not guaranteed for matching priorities."
+      "Inherited property from the audio volume parent class. This is used for both the <a href='/Documentation/Pages/UnrealEngine/#AudioEnvironment'>AudioEnvironment</a> and native audio volume priority evaluation. If an <a href='/Documentation/Pages/UnrealEngine/#AudioAgent'>AudioAgent</a> queries multiple environments, the highest priority will apply its game parameters and the others will be ignored. Order is not guaranteed for matching priorities."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">bool</span><span style=\"color:#9CDCFE\"> forceEnvironmentQueryOnExit</span></span></code>",
+      "Force an <a href='/Documentation/Pages/UnrealEngine/#AudioAgent'>AudioAgent</a> to query any overlapping <a href='/Documentation/Pages/UnrealEngine/#AudioEnvironment'>AudioEnvironments</a> when it exits this environment. This is useful when <a href='/Documentation/Pages/UnrealEngine/#AudioEnvironment'>AudioEnvironments</a> are contained within larger <a href='/Documentation/Pages/UnrealEngine/#AudioEnvironment'>AudioEnvironments</a>."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">TArray</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">TObjectPtr</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">UAudioSwitchParameter</span><span style=\"color:#D4D4D4\">>> </span><span style=\"color:#9CDCFE\">enterAudioSwitches</span></span></code>",
+      "Set what local <a href='/Documentation/Pages/UnrealEngine/#AudioSwitchParameter'>AudioSwitchParameter</a> values for a set of <a href='/Documentation/Pages/UnrealEngine/#AudioGroupParameter'>AudioGroupParameters</a> to apply when an <a href='/Documentation/Pages/UnrealEngine/#AudioAgent'>AudioAgent</a> enters the <a href='/Documentation/Pages/UnrealEngine/#AudioEnvironment'>AudioEnvironment</a>."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">TMap</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">TObjectPtr</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">UAudioFloatParameter</span><span style=\"color:#D4D4D4\">>, </span><span style=\"color:#569CD6\">float</span><span style=\"color:#D4D4D4\">> </span><span style=\"color:#9CDCFE\">enterAudioFloats</span></span></code>",
+      "Set what local float values for a set of <a href='/Documentation/Pages/UnrealEngine/#AudioFloatParameter'>AudioFloatParameters</a> to apply when an <a href='/Documentation/Pages/UnrealEngine/#AudioAgent'>AudioAgent</a> enters the <a href='/Documentation/Pages/UnrealEngine/#AudioEnvironment'>AudioEnvironment</a>."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">TArray</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">TObjectPtr</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">UAudioSwitchParameter</span><span style=\"color:#D4D4D4\">>> </span><span style=\"color:#9CDCFE\">enterAudioStates</span></span></code>",
+      "Set what global state <a href='/Documentation/Pages/UnrealEngine/#AudioSwitchParameter'>AudioSwitchParameters</a> for a set of <a href='/Documentation/Pages/UnrealEngine/#AudioGroupParameter'>AudioGroupParameters</a> to apply when the <a href='/Documentation/Pages/UnrealEngine/#AudioListener'>AudioListener</a> enters the <a href='/Documentation/Pages/UnrealEngine/#AudioEnvironment'>AudioEnvironment</a>."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">TMap</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">TObjectPtr</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">UAudioFloatParameter</span><span style=\"color:#D4D4D4\">>, </span><span style=\"color:#569CD6\">float</span><span style=\"color:#D4D4D4\">> </span><span style=\"color:#9CDCFE\">enterGlobalAudioFloats</span></span></code>",
+      "Set what global float values for a set of <a href='/Documentation/Pages/UnrealEngine/#AudioFloatParameter'>AudioFloatParameters</a> to apply when the <a href='/Documentation/Pages/UnrealEngine/#AudioListener'>AudioListener</a> enters the <a href='/Documentation/Pages/UnrealEngine/#AudioEnvironment'>AudioEnvironment</a>."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">TArray</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">TObjectPtr</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">UAudioSwitchParameter</span><span style=\"color:#D4D4D4\">>> </span><span style=\"color:#9CDCFE\">exitAudioSwitches</span></span></code>",
+      "Set what local <a href='/Documentation/Pages/UnrealEngine/#AudioSwitchParameter'>AudioSwitchParameter</a> values for a set of <a href='/Documentation/Pages/UnrealEngine/#AudioGroupParameter'>AudioGroupParameters</a> to apply when an <a href='/Documentation/Pages/UnrealEngine/#AudioAgent'>AudioAgent</a> exits the <a href='/Documentation/Pages/UnrealEngine/#AudioEnvironment'>AudioEnvironment</a>."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">TMap</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">TObjectPtr</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">UAudioFloatParameter</span><span style=\"color:#D4D4D4\">>, </span><span style=\"color:#569CD6\">float</span><span style=\"color:#D4D4D4\">> </span><span style=\"color:#9CDCFE\">exitAudioFloats</span></span></code>",
+      "Set what local float values for a set of <a href='/Documentation/Pages/UnrealEngine/#AudioFloatParameter'>AudioFloatParameters</a> to apply an <a href='/Documentation/Pages/UnrealEngine/#AudioAgent'>AudioAgent</a> exits the <a href='/Documentation/Pages/UnrealEngine/#AudioEnvironment'>AudioEnvironment</a>."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">TArray</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">TObjectPtr</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">UAudioSwitchParameter</span><span style=\"color:#D4D4D4\">>> </span><span style=\"color:#9CDCFE\">exitAudioStates</span></span></code>",
+      "Set what global state <a href='/Documentation/Pages/UnrealEngine/#AudioSwitchParameter'>AudioSwitchParameters</a> for a set of <a href='/Documentation/Pages/UnrealEngine/#AudioGroupParameter'>AudioGroupParameters</a> to apply when the <a href='/Documentation/Pages/UnrealEngine/#AudioListener'>AudioListener</a> exits the <a href='/Documentation/Pages/UnrealEngine/#AudioEnvironment'>AudioEnvironment</a>."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">TMap</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">TObjectPtr</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">UAudioFloatParameter</span><span style=\"color:#D4D4D4\">>, </span><span style=\"color:#569CD6\">float</span><span style=\"color:#D4D4D4\">> </span><span style=\"color:#9CDCFE\">exitGlobalAudioFloats</span></span></code>",
+      "Set what global float values for a set of <a href='/Documentation/Pages/UnrealEngine/#AudioFloatParameter'>AudioFloatParameters</a> to apply when the <a href='/Documentation/Pages/UnrealEngine/#AudioListener'>AudioListener</a> exits the <a href='/Documentation/Pages/UnrealEngine/#AudioEnvironment'>AudioEnvironment</a>."
     ]
   ]
 }

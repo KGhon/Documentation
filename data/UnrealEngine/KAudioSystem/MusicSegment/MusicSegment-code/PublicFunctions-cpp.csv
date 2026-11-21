@@ -1,0 +1,8 @@
+"float Get_BPM()","BlueprintPure
+Returns the bpm value."
+
+"int Get_TimeSignatureNumerator()","BlueprintPure
+Returns the time signature numerator value."
+
+"int Get_TimeSignatureDenominator()","BlueprintPure
+Returns the time signature denominator value."
