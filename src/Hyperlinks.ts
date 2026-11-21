@@ -1,4 +1,9 @@
 export const Hyperlinks: [string, string[]][] = [
+    ["UnrealEngine/#KAudioMixDesk", ["KAudioMixDesk"]],
+    ["UnrealEngine/#MixConsole", ["MixConsole", "Mix Console"]],
+    ["UnrealEngine/#SoundBoard", ["SoundBoard", "Sound Board"]],
+
+    ["UnrealEngine/#KAudioSystem", ["KAudioSystem"]],
     ["UnrealEngine/#AudioAgent", ["AudioAgent", "AudioAgents", "AAudioAgent"]],
     ["UnrealEngine/#AudioEnvironment", ["AudioEnvironment", "AudioEnvironments", "AAudioEnvironment"]],
     ["UnrealEngine/#AudioEvent", ["AudioEvent", "AudioEvents"]],

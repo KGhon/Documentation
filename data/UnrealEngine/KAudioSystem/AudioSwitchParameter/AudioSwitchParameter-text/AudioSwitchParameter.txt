@@ -4,7 +4,7 @@ UAudioSwitchParameter
 [Definitions]
 <b>Type:</b> Class
 <b>Inherits:</b> UDataAsset
-<b>Category:</b> K Audio System
+<b>Category:</b> KAudioSystem
 
 [Overview]
 Used as values for an AudioGroupParameter. Each switch should be assigned to a group. Only one switch can be set in a group per Actor.

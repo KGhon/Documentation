@@ -4,7 +4,7 @@ AAudioAgent
 [Definitions]
 <b>Type:</b> Class
 <b>Inherits:</b> AActor
-<b>Category:</b> K Audio System
+<b>Category:</b> KAudioSystem
 
 [Overview]
 An AudioAgent is the window into the game world for an AudioSuperComponent. Because AudioSuperComponents are components, Unreal Engine requires an actor for them to be attached to. AudioAgents fulfill this role while also acting as the bridge to pass AudioEnvironment game parameters to environment aware AudioSuperComponents. AudioAgents are automatically pooled and assigned when using KAudioSystemStatics to interact with the KAudioSystem. The AudioAgent pool acts as the global KAudioSystem sound instance limiter and is set in 

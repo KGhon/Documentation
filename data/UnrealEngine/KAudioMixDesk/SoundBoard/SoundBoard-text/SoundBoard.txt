@@ -1,0 +1,13 @@
+[Title]
+Sound Board
+
+[Definitions]
+<b>Type:</b> Menu
+<b>Category:</b> KAudioMixDesk
+
+[Overview]
+The mix console gathers all USoundClass and generates a hierarchical mixer that matches the inheritance structure (aka bus routing in audio terms) of your Sound Classes. You can then use the faders to adjust the volume of any USoundClass for mixing. These changes will be reflected in realtime.
+
+If your USoundClass has a Default Submix, a meter will appear that allows you to montior the output of the submix.
+
+NOTE: Because this widget is self-generating when initialized, if you update what assets exist in your project you'll need to restart the widget. Not doing so may be unsafe and could cause errors or crashes.

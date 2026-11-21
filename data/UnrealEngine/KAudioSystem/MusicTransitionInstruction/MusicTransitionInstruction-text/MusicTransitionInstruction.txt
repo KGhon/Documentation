@@ -3,7 +3,7 @@ FMusicTransitionInstruction
 
 [Definitions]
 <b>Type:</b> Struct
-<b>Category:</b> K Audio System
+<b>Category:</b> KAudioSystem
 
 [Overview]
 MusicTransitionInstructions contain the data that define how a MusicLayout horizontally transitions between MusicSegments. They are mainly constructed as part of a MusicLayout's 'Class Defaults' and should only reference sound assets that will be used within MusicSegments that the layout uses.

@@ -40,6 +40,7 @@ export class Folder extends HTMLElement
     public Configure(headerName: string, headerLink: HTMLAnchorElement | null)
     {
         this.headerButton = document.createElement("button");
+        this.headerButton.classList.add("folder__button");
         if (headerLink != null)
         {
             this.headerButton.innerHTML = "";
@@ -49,7 +50,6 @@ export class Folder extends HTMLElement
         else
         {
             this.headerButton.textContent = headerName;
-            this.headerButton.classList.add("folder__button");
             this.headerButton.addEventListener("click", () =>
             {
                 this.Toggle();

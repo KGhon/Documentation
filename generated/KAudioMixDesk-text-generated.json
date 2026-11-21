@@ -1,0 +1,15 @@
+{
+  "Title": "<a href='/Documentation/Pages/UnrealEngine/#KAudioMixDesk'>KAudioMixDesk</a>",
+  "Definitions": "<b>Type:</b> Unreal Engine Plugin\r\n<b>Category:</b> <a href='/Documentation/Pages/UnrealEngine/#KAudioMixDesk'>KAudioMixDesk</a>",
+  "Overview": "The <a href='/Documentation/Pages/UnrealEngine/#KAudioMixDesk'>KAudioMixDesk</a> plugin provides convenient Editor Utility Widgets for audio mixing. They can be run and docked in the editor and some will automatically connect during Play-In-Editor. These tools populate automatically from assets present in the project and can modify assets properties.\r\n\r\nTo run these widgets, with the main Level Editor open, open the \"KPlugins\" dropdown and select the widget you want.",
+  "Menus": [
+    [
+      "<a href='/Documentation/Pages/UnrealEngine/#MixConsole'>Mix Console</a>",
+      "The mix console gathers all USoundClass and generates a hierarchical mixer."
+    ],
+    [
+      "<a href='/Documentation/Pages/UnrealEngine/#SoundBoard'>Sound Board</a>",
+      "The soundboard gathers all assets inheriting from Unreal's USoundWave class into the sound list for selection, modification, and preview play in the editor."
+    ]
+  ]
+}

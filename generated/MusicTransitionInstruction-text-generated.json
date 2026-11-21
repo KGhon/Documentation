@@ -1,5 +1,5 @@
 {
   "Title": "FMusicTransitionInstruction",
-  "Definitions": "<b>Type:</b> Struct\r\n<b>Category:</b> K Audio System",
+  "Definitions": "<b>Type:</b> Struct\r\n<b>Category:</b> <a href='/Documentation/Pages/UnrealEngine/#KAudioSystem'>KAudioSystem</a>",
   "Overview": "<a href='/Documentation/Pages/UnrealEngine/#MusicTransitionInstruction'>MusicTransitionInstructions</a> contain the data that define how a <a href='/Documentation/Pages/UnrealEngine/#MusicLayout'>MusicLayout</a> horizontally transitions between <a href='/Documentation/Pages/UnrealEngine/#MusicSegment'>MusicSegments</a>. They are mainly constructed as part of a <a href='/Documentation/Pages/UnrealEngine/#MusicLayout'>MusicLayout</a>'s 'Class Defaults' and should only reference sound assets that will be used within <a href='/Documentation/Pages/UnrealEngine/#MusicSegment'>MusicSegments</a> that the layout uses.\r\n\r\nNOTE: The word 'music' in this context refers to the sound asset reference held by a <a href='/Documentation/Pages/UnrealEngine/#MusicSegment'>MusicSegment</a>."
 }

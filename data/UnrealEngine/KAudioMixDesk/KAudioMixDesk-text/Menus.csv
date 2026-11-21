@@ -1,0 +1,2 @@
+"Mix Console","The mix console gathers all USoundClass and generates a hierarchical mixer."
+"Sound Board","The soundboard gathers all assets inheriting from Unreal's USoundWave class into the sound list for selection, modification, and preview play in the editor."

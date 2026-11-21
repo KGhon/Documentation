@@ -1,5 +1,5 @@
 {
   "Title": "<a href='/Documentation/Pages/UnrealEngine/#AudioEnvironment'>AAudioEnvironment</a>",
-  "Definitions": "<b>Type:</b> Class\r\n<b>Inherits:</b> AAudioVolume\r\n<b>Category:</b> K Audio System",
-  "Overview": "<a href='/Documentation/Pages/UnrealEngine/#AudioEnvironment'>AudioEnvironments</a> inherit from Unreal Engine's built-in audio volume class. They can be placed just like audio volumes to apply parameters and effects changes using both the native audio system and the KAudioSystem. They only respond to <a href='/Documentation/Pages/UnrealEngine/#AudioAgent'>AudioAgents</a>, but the audio volume will always apply its native functionality."
+  "Definitions": "<b>Type:</b> Class\r\n<b>Inherits:</b> AAudioVolume\r\n<b>Category:</b> <a href='/Documentation/Pages/UnrealEngine/#KAudioSystem'>KAudioSystem</a>",
+  "Overview": "<a href='/Documentation/Pages/UnrealEngine/#AudioEnvironment'>AudioEnvironments</a> inherit from Unreal Engine's built-in audio volume class. They can be placed just like audio volumes to apply parameters and effects changes using both the native audio system and the <a href='/Documentation/Pages/UnrealEngine/#KAudioSystem'>KAudioSystem</a>. They only respond to <a href='/Documentation/Pages/UnrealEngine/#AudioAgent'>AudioAgents</a>, but the audio volume will always apply its native functionality."
 }

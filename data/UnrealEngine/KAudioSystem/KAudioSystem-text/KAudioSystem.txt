@@ -3,7 +3,7 @@ K Audio System
 
 [Definitions]
 <b>Type:</b> Unreal Engine Plugin
-<b>Category:</b> K Audio System
+<b>Category:</b> KAudioSystem
 
 [Overview]
 The KAudioSystem's main focus is providing a streamlined development workflow for implementing interactive audio behaviors. The system is written to allow audio designers to author gamaplay responsive audio with a combination of Blueprints and MetaSound while keeping audio implementation separate from other game systems. This system sits alongside Unreal Engine's built-in audio system and does not replace it.

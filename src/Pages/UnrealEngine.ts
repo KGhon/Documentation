@@ -4,6 +4,11 @@ import "../CustomElements.ts";
 import { DocPage } from "../Templates/DocPage.ts";
 import pages from "../../data/UnrealEngine/UnrealEngine-pages.json";
 import * as NavigationError from "./NavigationError.ts";
+
+import * as KAudioMixDesk from "./UnrealEngine/KAudioMixDesk/KAudioMixDesk.ts";
+import * as MixConsole from "./UnrealEngine/KAudioMixDesk/MixConsole.ts";
+import * as SoundBoard from "./UnrealEngine/KAudioMixDesk/SoundBoard.ts";
+
 import * as KAudioSystem from "./UnrealEngine/KAudioSystem/KAudioSystem.ts";
 import * as AudioAgent from "./UnrealEngine/KAudioSystem/AudioAgent.ts";
 import * as AudioEnvironment from "./UnrealEngine/KAudioSystem/AudioEnvironment.ts";
@@ -51,6 +56,11 @@ window.addEventListener("hashchange", () =>
 });
 
 spa.AddContentPage("NavigationError", NavigationError.Construct());
+
+spa.AddContentPage("KAudioMixDesk", KAudioMixDesk.Construct());
+spa.AddContentPage("MixConsole", MixConsole.Construct());
+spa.AddContentPage("SoundBoard", SoundBoard.Construct());
+
 spa.AddContentPage("KAudioSystem", KAudioSystem.Construct());
 spa.AddContentPage("AudioAgent", AudioAgent.Construct());
 spa.AddContentPage("AudioEnvironment", AudioEnvironment.Construct());

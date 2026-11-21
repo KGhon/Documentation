@@ -1,5 +1,5 @@
 {
   "Title": "UKAudioSystemStatics",
-  "Definitions": "<b>Type:</b> Class\r\n<b>Inherits:</b> UBlueprintFunctionLibrary\r\n<b>Category:</b> K Audio System",
-  "Overview": "These static functions are the main way other game systems interact with the KAudioSystem."
+  "Definitions": "<b>Type:</b> Class\r\n<b>Inherits:</b> UBlueprintFunctionLibrary\r\n<b>Category:</b> <a href='/Documentation/Pages/UnrealEngine/#KAudioSystem'>KAudioSystem</a>",
+  "Overview": "These static functions are the main way other game systems interact with the <a href='/Documentation/Pages/UnrealEngine/#KAudioSystem'>KAudioSystem</a>."
 }

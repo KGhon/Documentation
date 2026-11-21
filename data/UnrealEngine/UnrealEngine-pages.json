@@ -1,8 +1,10 @@
 {
   "pages": [
-    [ "KAudioMixDesk", "", false, true ],
+    [ "KAudioMixDesk", "", true, true ],
+    [ "SoundBoard", "KAudioMixDesk/", true, false ],
+    [ "MixConsole", "KAudioMixDesk/", true, false ],
 
-    [ "KAudioSystem", "", false, true ],
+    [ "KAudioSystem", "", true, true ],
 
     [ "Classes", "KAudioSystem/", false, true ],
     [ "AudioAgent", "KAudioSystem/Classes/", true, false ],
