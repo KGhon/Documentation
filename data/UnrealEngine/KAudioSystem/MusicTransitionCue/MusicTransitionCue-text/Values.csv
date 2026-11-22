@@ -1,0 +1,15 @@
+"Immediate","Transition happens immediately without any timing adjustments."
+
+"Timed","Transition happens after waiting this many seconds."
+
+"OnNextBeat","Transition happens on the next beat at the tempo of the current music."
+
+"OnMeasureDivision","Transition happens on a recurring interval based on number of measures counted from the start of the music (ie. If measureDivision = 2, the transition will happen at any odd numbered measure)."
+
+"OnExactBeat","Transition happens on the exact beat counted continuously from the start of the music."
+
+"OnExactMeasure","Transition happens on the exact measure counted continuously from the start of the music."
+
+"OnExactBeatAndMeasure","Transition happens on the exact measure counted continuously from the start of the music and on the beat specified within the time signature."
+
+"OnMeasureBeat","Transition happens on the beat specified within the current music time signature at any recurrence."

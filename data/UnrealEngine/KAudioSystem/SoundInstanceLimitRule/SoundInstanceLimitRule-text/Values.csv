@@ -1,0 +1,5 @@
+"NoLimit","There will be no sound limiting for this sound (not including global limiting by the AudioManagerSubsystem)."
+
+"LimitGlobal","All instances of the sound that exist will be accounted."
+
+"LimitPerActor","Each actor has its own count of sound instances and requests to instantiate a sound only consider the actor making the request."

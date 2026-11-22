@@ -1,0 +1,19 @@
+{
+  "Title": "EMusicOutgoingStopBehavior",
+  "Definitions": "<b>Type:</b> Enum\r\n<b>Category:</b> <a href='/Documentation/Pages/UnrealEngine/#KAudioSystem'>KAudioSystem</a>",
+  "Overview": "Defines what should happen to the outgoing music when the transition occurs.",
+  "Values": [
+    [
+      "FadeOut",
+      "Fade the outgoing music out."
+    ],
+    [
+      "PlayOut",
+      "Allow the outgoing music to play to completion. This is mainly used for transitioning from transitionary segments such as a cymbal washes (do not use this on loops)."
+    ],
+    [
+      "Overlap",
+      "Allow the outgoing music to play until the next transition occurs. This is mainly used in intermediate transition instructions. In example, you have music loop 1 playing. You queue the next transition to music loop 2, which has an intermediate transition of a cymbal wash. The intermediate transition is set to overlap, which means music loop 1 will continue to play as the cymbal wash plays. Then the main transition is set to playout (the outgoing music at this point is actually the cymbal wash, not music loop 1). When the main transition triggers, music loop 1 will stop, the cymbal wash will be allowed to finish, and music loop 2 starts."
+    ]
+  ]
+}

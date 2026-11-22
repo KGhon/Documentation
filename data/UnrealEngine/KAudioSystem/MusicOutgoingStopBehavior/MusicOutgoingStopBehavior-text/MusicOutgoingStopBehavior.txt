@@ -1,0 +1,9 @@
+[Title]
+EMusicOutgoingStopBehavior
+
+[Definitions]
+<b>Type:</b> Enum
+<b>Category:</b> KAudioSystem
+
+[Overview]
+Defines what should happen to the outgoing music when the transition occurs.

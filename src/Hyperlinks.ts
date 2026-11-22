@@ -14,12 +14,21 @@ export const Hyperlinks: [string, string[]][] = [
     ["UnrealEngine/#AudioSuperComponent", ["AudioSuperComponent", "AudioSuperComponents", "UAudioSuperComponent"]],
     ["UnrealEngine/#AudioSwitchParameter", ["AudioSwitchParameter", "AudioSwitchParameters"]],
     ["UnrealEngine/#KAudioSystemStatics", ["KAudioSystemStatics"]],
-    ["UnrealEngine/#MusicClassification", ["MusicClassification", "MusicClassifications"]],
     ["UnrealEngine/#MusicLayout", ["MusicLayout", "MusicLayouts"]],
     ["UnrealEngine/#MusicManager", ["MusicManager", "MusicManagers"]],
     ["UnrealEngine/#MusicSegment", ["MusicSegment", "MusicSegments"]],
+
+    ["UnrealEngine/#MusicClassification", ["MusicClassification", "MusicClassifications"]],
     ["UnrealEngine/#MusicTransitionInstruction", ["MusicTransitionInstruction", "MusicTransitionInstructions"]],
     ["UnrealEngine/#MusicTransitionOverride", ["MusicTransitionOverride", "MusicTransitionOverrides"]],
+
+    ["UnrealEngine/#SoundInstanceLimitRule", ["SoundInstanceLimitRule"]],
+    ["UnrealEngine/#SoundLimitResponse", ["SoundLimitResponse"]],
+    ["UnrealEngine/#SoundStealRule", ["SoundStealRule"]],
+    ["UnrealEngine/#MusicTransitionCue", ["MusicTransitionCue"]],
+    ["UnrealEngine/#MusicOutgoingStopBehavior", ["MusicOutgoingStopBehavior"]],
+    ["UnrealEngine/#AudioEventCommandScope", ["AudioEventCommandScope"]],
+    ["UnrealEngine/#AudioStopBehavior", ["AudioStopBehavior"]],
 
     ["UnrealEngine/#KDebutTools", ["KDebugTools"]],
     ["UnrealEngine/#KBlueprintConsoleCommands", ["KBlueprintConsoleCommands"]],
@@ -28,4 +37,17 @@ export const Hyperlinks: [string, string[]][] = [
     ["UnrealEngine/#KDebugToolsStatics", ["KDebugToolsStatics"]],
     ["UnrealEngine/#KDebugWidget", ["KDebugWidget", "KDebugWidgets"]],
     ["UnrealEngine/#KEditorUtilityWidget", ["KEditorUtilityWidget"]],
+
+    ["UnrealEngine/#KDialogueSystem", ["KDialogueSystem"]],
+    ["UnrealEngine/#DialogueBranch", ["DialogueBranch", "DialogueBranches"]],
+    ["UnrealEngine/#DialogueManagerSubsystem", ["DialogueManagerSubsystem"]],
+    ["UnrealEngine/#DialoguePath", ["DialoguePath", "DialoguePaths"]],
+    ["UnrealEngine/#DialogueStep", ["DialogueStep", "DialogueSteps"]],
+    ["UnrealEngine/#DialogueTree", ["DialogueTree", "DialogueTrees"]],
+
+    ["UnrealEngine/#DialogueChoice", ["DialogueChoice", "DialogueChoices"]],
+    ["UnrealEngine/#DialogueInstruction", ["DialogueInstruction", "DialogueInstructions"]],
+
+    ["UnrealEngine/#DialogueResponse", ["DialogueResponse"]],
+
 ]

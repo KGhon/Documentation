@@ -1,0 +1,9 @@
+[Title]
+EAudioEventCommandScope
+
+[Definitions]
+<b>Type:</b> Enum
+<b>Category:</b> KAudioSystem
+
+[Overview]
+Defines the scope of an AudioEvent.

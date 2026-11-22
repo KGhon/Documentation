@@ -1,0 +1,3 @@
+"Local","Uses the actor executed the AudioEvent."
+
+"Global","Uses the AudioManagerSubsystem."

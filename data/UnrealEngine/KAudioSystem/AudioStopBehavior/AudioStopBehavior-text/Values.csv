@@ -1,0 +1,5 @@
+"Immediate","The AudioSuperComponent will stop immediately (will trigger 'autoDestroy' if bool is true on component)."
+
+"Fade","The AudioSuperComponent will stop after fading to silence (will trigger 'autoDestroy' if bool is true on component)."
+
+"Custom","The AudioSuperComponent will call the CustomStop() function. When using this option you need to manually call Stop()."

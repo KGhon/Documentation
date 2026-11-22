@@ -1,0 +1,9 @@
+[Title]
+EMusicTransitionCue
+
+[Definitions]
+<b>Type:</b> Enum
+<b>Category:</b> KAudioSystem
+
+[Overview]
+Defines what timing the transition should be synchronized with.

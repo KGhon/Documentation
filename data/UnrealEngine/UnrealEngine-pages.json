@@ -29,13 +29,13 @@
     [ "MusicTransitionOverride", "KAudioSystem/Structs/", true, false ],
 
     [ "Enums", "KAudioSystem/", false, true ],
-    [ "SoundInstanceLimitRule", "KAudioSystem/Enums/", false, false ],
-    [ "SoundLimitResponse", "KAudioSystem/Enums/", false, false ],
-    [ "SoundStealRule", "KAudioSystem/Enums/", false, false ],
-    [ "MusicTransitionCue", "KAudioSystem/Enums/", false, false ],
-    [ "MusicOutgoingStopBehavior", "KAudioSystem/Enums/", false, false ],
-    [ "AudioEventCommandScope", "KAudioSystem/Enums/", false, false ],
-    [ "AudioStopBehavior", "KAudioSystem/Enums/", false, false ],
+    [ "SoundInstanceLimitRule", "KAudioSystem/Enums/", true, false ],
+    [ "SoundLimitResponse", "KAudioSystem/Enums/", true, false ],
+    [ "SoundStealRule", "KAudioSystem/Enums/", true, false ],
+    [ "MusicTransitionCue", "KAudioSystem/Enums/", true, false ],
+    [ "MusicOutgoingStopBehavior", "KAudioSystem/Enums/", true, false ],
+    [ "AudioEventCommandScope", "KAudioSystem/Enums/", true, false ],
+    [ "AudioStopBehavior", "KAudioSystem/Enums/", true, false ],
 
     [ "KDebugTools", "", true, true ],
 
@@ -47,22 +47,21 @@
     [ "KDebugWidget", "KDebugTools/Classes/", true, false ],
     [ "KEditorUtilityWidget", "KDebugTools/Classes/", true, false ],
 
-    [ "KDialogueSystem", "", false, true ],
+    [ "KDialogueSystem", "", true, true ],
 
     [ "Classes", "KDialogueSystem/", false, true ],
-    [ "DialogueBranch", "KDialogueSystem/Classes/", false, false ],
-    [ "DialogueManagerSubsystem", "KDialogueSystem/Classes/", false, false ],
-    [ "DialoguePath", "KDialogueSystem/Classes/", false, false ],
-    [ "DialogueStep", "KDialogueSystem/Classes/", false, false ],
-    [ "DialogueTree", "KDialogueSystem/Classes/", false, false ],
-    [ "KCameraDirector", "KDialogueSystem/Classes/", false, false ],
+    [ "DialogueBranch", "KDialogueSystem/Classes/", true, false ],
+    [ "DialogueManagerSubsystem", "KDialogueSystem/Classes/", true, false ],
+    [ "DialoguePath", "KDialogueSystem/Classes/", true, false ],
+    [ "DialogueStep", "KDialogueSystem/Classes/", true, false ],
+    [ "DialogueTree", "KDialogueSystem/Classes/", true, false ],
 
     [ "Structs", "KDialogueSystem/", false, true ],
-    [ "DialogueChoice", "KDialogueSystem/Structs/", false, false ],
-    [ "DialogueInstruction", "KDialogueSystem/Structs/", false, false ],
+    [ "DialogueChoice", "KDialogueSystem/Structs/", true, false ],
+    [ "DialogueInstruction", "KDialogueSystem/Structs/", true, false ],
 
     [ "Enums", "KDialogueSystem/", false, true ],
-    [ "DialogueResponse", "KDialogueSystem/Enums/", false, false ],
+    [ "DialogueResponse", "KDialogueSystem/Enums/", true, false ],
 
     [ "KFundamentals", "", false, true ],
 
