@@ -27,6 +27,14 @@ import * as MusicSegment from "./UnrealEngine/KAudioSystem/MusicSegment.ts";
 import * as MusicTransition from "./UnrealEngine/KAudioSystem/MusicTransitionInstruction.ts";
 import * as MusicTransitionOverride from "./UnrealEngine/KAudioSystem/MusicTransitionOverride.ts";
 
+import * as KDebugTools from "./UnrealEngine/KDebugTools/KDebugTools.ts";
+import * as KBlueprintConsoleCommands from "./UnrealEngine/KDebugTools/KBlueprintConsoleCommands.ts";
+import * as KDebugDocker from "./UnrealEngine/KDebugTools/KDebugDocker.ts";
+import * as KDebugManagerSubsystem from "./UnrealEngine/KDebugTools/KDebugManagerSubsystem.ts";
+import * as KDebugToolsStatics from "./UnrealEngine/KDebugTools/KDebugToolsStatics.ts";
+import * as KDebugWidget from "./UnrealEngine/KDebugTools/KDebugWidget.ts";
+import * as KEditorUtilityWidget from "./UnrealEngine/KDebugTools/KEditorUtilityWidget.ts";
+
 const spa: DocPage = document.createElement("doc-page") as DocPage;
 spa.Init();
 spa.SetNavigationPageName("Unreal Engine");
@@ -78,6 +86,14 @@ spa.AddContentPage("MusicManager", MusicManager.Construct());
 spa.AddContentPage("MusicSegment", MusicSegment.Construct());
 spa.AddContentPage("MusicTransitionInstruction", MusicTransition.Construct());
 spa.AddContentPage("MusicTransitionOverride", MusicTransitionOverride.Construct());
+
+spa.AddContentPage("KDebugTools", KDebugTools.Construct());
+spa.AddContentPage("KBlueprintConsoleCommands", KBlueprintConsoleCommands.Construct());
+spa.AddContentPage("KDebugDocker", KDebugDocker.Construct());
+spa.AddContentPage("KDebugManagerSubsystem", KDebugManagerSubsystem.Construct());
+spa.AddContentPage("KDebugToolsStatics", KDebugToolsStatics.Construct());
+spa.AddContentPage("KDebugWidget", KDebugWidget.Construct());
+spa.AddContentPage("KEditorUtilityWidget", KEditorUtilityWidget.Construct());
 
 const path = window.location.hash.replace("#", "");
 if (path)

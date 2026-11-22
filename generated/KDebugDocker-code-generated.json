@@ -1,0 +1,44 @@
+{
+  "Properties": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#9CDCFE\">int32</span><span style=\"color:#9CDCFE\"> windowWidth</span></span></code>",
+      "The default width for popout windows created by the docker."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#9CDCFE\">int32</span><span style=\"color:#9CDCFE\"> windowHeight</span></span></code>",
+      "The default height for popout windows created by the docker."
+    ]
+  ],
+  "ProtectedFunctions": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> TransferToPopoutWindow</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#569CD6\">const</span><span style=\"color:#4EC9B0\"> FName</span><span style=\"color:#D4D4D4\">&#x26; </span><span style=\"color:#9CDCFE\">name</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#4EC9B0\">UKDebugWidget</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#9CDCFE\">windowWidget</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nCall this function to transfer an existing widget to a popout window. The 'name' is the identifier used to destroy the window."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">UKDebugWidget</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#DCDCAA\">CreatePopoutWindow</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#569CD6\">const</span><span style=\"color:#4EC9B0\"> FName</span><span style=\"color:#D4D4D4\">&#x26; </span><span style=\"color:#9CDCFE\">name</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#4EC9B0\">TSubclassOf</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">UKDebugWidget</span><span style=\"color:#D4D4D4\">> </span><span style=\"color:#9CDCFE\">windowWidget</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nCall this function to create a new widget instance as a popout window. The 'name' is the identifier used to destroy the window."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> DestroyPopoutWindow</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#569CD6\">const</span><span style=\"color:#4EC9B0\"> FName</span><span style=\"color:#D4D4D4\">&#x26; </span><span style=\"color:#9CDCFE\">name</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nCall this function to destroy a popout window. The 'name' needs to match the 'name' set in TransferToPopoutWindow()/CreatePopoutWindow()."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> DestroyAllPopoutWindows</span><span style=\"color:#D4D4D4\">()</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nCall this function to destroy all popout windows."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> ReceiveOnWindowClosed</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#569CD6\">const</span><span style=\"color:#4EC9B0\"> FName</span><span style=\"color:#D4D4D4\">&#x26; </span><span style=\"color:#9CDCFE\">name</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">Overrideable</span>\r\nOverride this function to update UI when a window is closed. The 'name' passed to this function will match a 'name' set in TransferToPopoutWindow()/CreatePopoutWindow()."
+    ]
+  ],
+  "PublicFunctions": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">UKDebugWidget</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#DCDCAA\">RegisterMenuOption</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#569CD6\">const</span><span style=\"color:#4EC9B0\"> FName</span><span style=\"color:#D4D4D4\">&#x26; </span><span style=\"color:#9CDCFE\">category_underscore_menuname</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#4EC9B0\">TSubclassOf</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">UKDebugWidget</span><span style=\"color:#D4D4D4\">>, </span><span style=\"color:#4EC9B0\">menu</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#4EC9B0\">UObject</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#9CDCFE\">dataObject</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">Overrideable</span>\r\nOverride this function to implement making a menu available for selection on the UI. 'category_underscore_menuname' can be parsed to sort the menu into the docker (ie. MyCategoryName_MyDebugMenuName)."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> CollectBorderDocks</span><span style=\"color:#D4D4D4\">()</span></span></code>",
+      "<span style=\"color:#FF756E\">Overrideable</span>\r\nOverride to gather borders you want selectable as docks for menus."
+    ]
+  ]
+}

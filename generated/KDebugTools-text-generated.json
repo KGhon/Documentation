@@ -1,0 +1,38 @@
+{
+  "BuiltInDebugMenus": [
+    [
+      "KTerminal",
+      "The KTerminal is a secondary runtime console command entry menu that is also meant to print data in response to your commands. The input field runs any console command, but data will only be printed if using your own console command that you explicitly call the <a href='/Documentation/Pages/UnrealEngine/#KDebugManagerSubsystem'>KDebugManagerSubsystem</a> to log something to the terminal.\r\n\r\nThe KTerminal is available as a runtime debug widget only. To open it, enter the console command 'k.debug'. At the top of the screen a debug menu selector will appear. Here, you can select the KTerminal under '<a href='/Documentation/Pages/UnrealEngine/#KDebutTools'>KDebugTools</a>' and open it either in the game window by clicking the name or as a popout window by clicking the dark area on the right side."
+    ],
+    [
+      "UE Log Clone",
+      "The UE Log Clone exposes a duplicate of Unreal Engine's native log that can also be viewed in game builds (except for shipping builds where logging is stripped out)."
+    ]
+  ],
+  "Title": "<a href='/Documentation/Pages/UnrealEngine/#KDebutTools'>KDebugTools</a>",
+  "Definitions": "<b>Type:</b> Unreal Engine Plugin\r\n<b>Category:</b> <a href='/Documentation/Pages/UnrealEngine/#KDebutTools'>KDebugTools</a>",
+  "Overview": "<a href='/Documentation/Pages/UnrealEngine/#KDebutTools'>KDebugTools</a> provides an easy way to register and display debug menus at runtime, synchronized between editor and Play-In-Editor, popout windows, and expose console commands for Blueprint.",
+  "SettingsLocation": "<i>Project Settings > Plugins > KDebug Tools Settings</i>",
+  "QuickReference": [
+    [
+      "<a href='/Documentation/Pages/UnrealEngine/#KDebugManagerSubsystem'>KDebugManagerSubsystem</a>",
+      "The <a href='/Documentation/Pages/UnrealEngine/#KDebugManagerSubsystem'>KDebugManagerSubsystem</a> is the main access point for registering debug menus using <a href='/Documentation/Pages/UnrealEngine/#KDebutTools'>KDebugTools</a>. It has a built-in console command for opening the default debug menu where registered menus will appear for selection and use at runtime. It also handles passing data to the KTerminal and is responsible for instantiating the <a href='/Documentation/Pages/UnrealEngine/#KBlueprintConsoleCommands'>KBlueprintConsoleCommands</a> object."
+    ],
+    [
+      "<a href='/Documentation/Pages/UnrealEngine/#KDebugWidget'>KDebugWidget</a>",
+      "The <a href='/Documentation/Pages/UnrealEngine/#KDebugWidget'>KDebugWidget</a> is a premade UUserWidget class that has overrideable functions for passing an event-focused data object that the widget can initialize and subscribe to. This class is generally meant to be used with the <a href='/Documentation/Pages/UnrealEngine/#KDebugManagerSubsystem'>KDebugManagerSubsystem</a> and KEditorUtilityWidgets. This class is also able to create popout windows."
+    ],
+    [
+      "<a href='/Documentation/Pages/UnrealEngine/#KEditorUtilityWidget'>KEditorUtilityWidget</a>",
+      "The <a href='/Documentation/Pages/UnrealEngine/#KEditorUtilityWidget'>KEditorUtilityWidget</a> class is a wrapper that includes built-in synchronization with entering and exiting Play-In-Editor. These editor widgets allow hooking into subsystems before BeginPlay() and pass the world context. These can contain both UUserWidgets and UEditorUtilityWidgets when designing the widget."
+    ],
+    [
+      "<a href='/Documentation/Pages/UnrealEngine/#KDebugToolsStatics'>KDebugToolsStatics</a>",
+      "<a href='/Documentation/Pages/UnrealEngine/#KDebugToolsStatics'>KDebugToolsStatics</a> provide helper functions that can be used to do things like filter strings, spawn actors using world context, and getting a world position based on the mouse screen position."
+    ],
+    [
+      "<a href='/Documentation/Pages/UnrealEngine/#KBlueprintConsoleCommands'>KBlueprintConsoleCommands</a>",
+      "<a href='/Documentation/Pages/UnrealEngine/#KBlueprintConsoleCommands'>KBlueprintConsoleCommands</a> is a simple class that receives a predefined console command with additional args that exposes console command creation to Blueprint users."
+    ]
+  ]
+}

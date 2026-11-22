@@ -9,7 +9,7 @@
       "An <a href='/Documentation/Pages/UnrealEngine/#AudioSuperComponent'>AudioSuperComponent</a> inherits from the built-in audio component class provided by Unreal Engine and extends the class to be able to receive game parameters from the audio system. These are the main building blocks of the audio system logic for audio implementors and they should be thought of as decision-makers that determine what to do when game parameter information is received."
     ]
   ],
-  "Title": "K Audio System",
+  "Title": "<a href='/Documentation/Pages/UnrealEngine/#KAudioSystem'>KAudioSystem</a>",
   "Definitions": "<b>Type:</b> Unreal Engine Plugin\r\n<b>Category:</b> <a href='/Documentation/Pages/UnrealEngine/#KAudioSystem'>KAudioSystem</a>",
   "Overview": "The <a href='/Documentation/Pages/UnrealEngine/#KAudioSystem'>KAudioSystem</a>'s main focus is providing a streamlined development workflow for implementing interactive audio behaviors. The system is written to allow audio designers to author gamaplay responsive audio with a combination of Blueprints and MetaSound while keeping audio implementation separate from other game systems. This system sits alongside Unreal Engine's built-in audio system and does not replace it."
 }

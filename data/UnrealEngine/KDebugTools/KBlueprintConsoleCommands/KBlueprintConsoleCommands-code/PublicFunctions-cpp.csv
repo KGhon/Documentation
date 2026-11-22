@@ -1,0 +1,2 @@
+"void ConsoleCommand(const TArray<FString>& parameters, UWorld* WorldContext)","Overrideable
+Override this function and parse the string array indexes 1+ to run blueprint logic in response to console commands that start with 'kk'."

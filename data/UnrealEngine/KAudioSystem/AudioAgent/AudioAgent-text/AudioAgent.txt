@@ -9,6 +9,6 @@ AAudioAgent
 [Overview]
 An AudioAgent is the window into the game world for an AudioSuperComponent. Because AudioSuperComponents are components, Unreal Engine requires an actor for them to be attached to. AudioAgents fulfill this role while also acting as the bridge to pass AudioEnvironment game parameters to environment aware AudioSuperComponents. AudioAgents are automatically pooled and assigned when using KAudioSystemStatics to interact with the KAudioSystem. The AudioAgent pool acts as the global KAudioSystem sound instance limiter and is set in 
 
-<i>Project Settings > Plugins > KAudioSystem Settings</i>
+<i>Project Settings > Plugins > KAudio System Settings</i>
 
 NOTE: Using the SpawnSound() function on the KAudioSystemStatics instantiates an AudioSuperComponent to be manually controlled and managed. An AudioAgent is also spawned and assigned to this sound, but it is not taken from the AudioAgent pool.

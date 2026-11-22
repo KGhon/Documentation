@@ -1,0 +1,17 @@
+"void PushMessageNotification(EKMessageType type, EKMessageLogCategory, const FString& function, const FString& message, bool logBlueprintCallstack)","BlueprintCallable
+Send a message the Unreal Engine's native Message Log."
+
+"void LogBlueprintCallStack(EKMessageLogCategory messageLogCategory, FString message, int stackDepth, UObject* WorldContext)","BlueprintCallable
+Print the Blueprint callstack to the Message Log."
+
+"void FilterByLine(const FString& str, const FString& filter, FString& out_str)","BlueprintCallable
+This function will output all lines within a string that contain the filter string."
+
+"void FormatLimitedLog(UTextBlock* textBlock, bool lineLimitReached, FString& modify_text, const FString& appendText, const FString& filter, FString& filterText)","BlueprintCallable
+This function will append a string as a new line on an existing string and remove older line entries if the 'lineLimitReached' bool is true."
+
+"AActor* SpawnActorFromDragAndDrop(UObject* WorldContext, TSubclassOf<AActor> actorClass, float lineTraceLength, float noHitSpawnDistance, FVector2D screenPosition)","BlueprintCallable
+This function is mainly used to spawn an actor given a world context and mouse screen position."
+
+"FVector CalculateWorldPositionFromScreenPositionTrace(UObject* WorldContext, float lineTraceLength, float fallbackDistance, FVector2D screenPosition)","BlueprintCallable
+This function will calculate a world position based on a screen position (absolute) and a visibilty trace of the desired length."

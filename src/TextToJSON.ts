@@ -2,6 +2,7 @@ import path from "node:path";
 import fsPromises from "node:fs/promises";
 import { parse } from "csv-parse/sync";
 import { Hyperlinks } from "./Hyperlinks.ts";
+import { AutoColors } from "./AdditionalAutoColors.ts";
 
 async function GetDirectories(dir: string): Promise<string[]>
 {
@@ -58,6 +59,20 @@ async function ProcessDirectory(dirPath: string): Promise<void>
     const pattern = searchWords.join("|");
     const hyperlinkRegex = new RegExp(`(?:<a\\b[^>]*>[\\s\\S]*?<\\/a>)|\\b(${pattern})\\b`, "g");
 
+    const autoColors: Map<string, string> = new Map<string, string>();
+    const autoColorWords: string[] = [];
+    for (const [color, words] of AutoColors)
+    {
+        for (const word of words)
+        {
+            autoColors.set(word, color);
+            autoColorWords.push(word);
+        }
+    }
+    autoColorWords.sort((a, b) => b.length - a.length)
+    const autoColorPattern = autoColorWords.join("|");
+    const autoColorRegex = new RegExp(`\\b(${autoColorPattern})\\b`, "g");
+
     for (const file of targetFiles)
     {
         const filePath = path.join(dirPath, file.name);
@@ -79,6 +94,16 @@ async function ProcessDirectory(dirPath: string): Promise<void>
             if (display != null)
             {
                 return `<a href='/Documentation/Pages/${links.get(display)}'>${display}</a>`;
+            }
+
+            return fullLine;
+        });
+
+        content = content.replace(autoColorRegex, (fullLine: string, display: string) =>
+        {
+            if (display != null)
+            {
+                return `<span style="color:${autoColors.get(display)}">${display}</span>`;
             }
 
             return fullLine;

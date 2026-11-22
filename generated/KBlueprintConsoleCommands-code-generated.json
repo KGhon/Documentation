@@ -1,0 +1,8 @@
+{
+  "PublicFunctions": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> ConsoleCommand</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#569CD6\">const</span><span style=\"color:#4EC9B0\"> TArray</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">FString</span><span style=\"color:#D4D4D4\">>&#x26; </span><span style=\"color:#9CDCFE\">parameters</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#4EC9B0\">UWorld</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#9CDCFE\">WorldContext</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">Overrideable</span>\r\nOverride this function and parse the string array indexes 1+ to run blueprint logic in response to console commands that start with 'kk'."
+    ]
+  ]
+}

@@ -1,0 +1,8 @@
+"void InitializeHooks(UObject* dataObject)","BlueprintCallable, Overideable
+Override this function to receive an object to hook into for monitoring data when the debug widget is instantiated through the KDebugManagerSubsystem. This function is also commonly used when the widget is included in KEditorUtilityWidgets which we handle getting and passing the needed object reference when Play-In-Editor begins."
+
+"void Unhook(UObject* dataObject)","BlueprintCallable, Overrideable
+Override this function to unhook your widget from the object it is listening to from InitializeHooks(). This function is required when your widget exists inside a KEditorUtilityWidget that you might close during PIE and therefore needs to unsubscribe from events."
+
+"void ResetWidget()","BlueprintCallable, Overrideable
+Override this function to reset data and references on your widget that shouldn't persist between Play-In-Editor sessions when used inside a KEditorUtilityWidget. Not doing so may lead to errors and crashes."

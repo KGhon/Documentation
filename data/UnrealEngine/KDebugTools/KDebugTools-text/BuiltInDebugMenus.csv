@@ -1,0 +1,5 @@
+"KTerminal","The KTerminal is a secondary runtime console command entry menu that is also meant to print data in response to your commands. The input field runs any console command, but data will only be printed if using your own console command that you explicitly call the KDebugManagerSubsystem to log something to the terminal.
+
+The KTerminal is available as a runtime debug widget only. To open it, enter the console command 'k.debug'. At the top of the screen a debug menu selector will appear. Here, you can select the KTerminal under 'KDebugTools' and open it either in the game window by clicking the name or as a popout window by clicking the dark area on the right side."
+
+"UE Log Clone","The UE Log Clone exposes a duplicate of Unreal Engine's native log that can also be viewed in game builds (except for shipping builds where logging is stripped out)."

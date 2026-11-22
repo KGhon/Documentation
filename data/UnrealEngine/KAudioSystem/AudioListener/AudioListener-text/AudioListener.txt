@@ -9,4 +9,4 @@ AAudioListenerBase
 [Overview]
 The AudioListener is an actor that automatically claims Unreal Engine's built-in audio listener and can be modified to add custom code. The AudioListener can receive game parameters from AudioEnvironments and is the only class that is allowed to set states and global floats in response to overlap with AudioEnvironments. By default, the AudioManagerSubsystem spawns the base AudioListener class. When you inherit from this class to add your custom functionality you will need to configure the KAudioSystem settings to use your derived class reference in
 
-<i>Project Settings > Plugins > KAudioSystemSettings > Audio Listener Class</i>
+<i>Project Settings > Plugins > KAudio System Settings > Audio Listener Class</i>

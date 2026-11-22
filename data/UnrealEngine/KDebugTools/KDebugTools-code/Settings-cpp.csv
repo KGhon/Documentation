@@ -1,0 +1,10 @@
+[TSubclassOf,#4EC9B0]
+[UKBlueprintConsoleCommands,#4EC9B0]
+[UKDebugDocker,#4EC9B0]
+[UUserWidget,#4EC9B0]
+
+"TSubclassOf<UKBlueprintConsoleCommands> blueprintConsoleCommandsClass","Set the KBlueprintConsoleCommands class used by the debug tooling. This allows you to author console commands using Blueprints."
+
+"TSubclassOf<UKDebugDocker> debugDockerClass","Can be used to set a custom KDebugDocker class to use when with the 'k.debug' console command."
+
+"TSubclassOf<UUserWidget> developerMenuClass","Set the widget to show on screen when using the 'k.dev' console command."

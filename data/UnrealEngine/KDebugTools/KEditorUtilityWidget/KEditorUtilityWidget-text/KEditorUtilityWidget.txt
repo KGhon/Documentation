@@ -1,0 +1,10 @@
+[Title]
+UKEditorUtilityWidget
+
+[Definitions]
+<b>Type:</b> Class
+<b>Inherits:</b> UEditorUtilityWidget
+<b>Category:</b> KDebugTools
+
+[Overview]
+The KEditorUtilityWidget class provides overrideable functions to hook in and out of Play-In-Editor mode so your Editor Utility Widget can access objects in the correct world. You can use this as the basis for an Editor Utility Widget or use it to be able to reuse normal widgets within Editor Utility Widgets. In the latter case, you need to pass the PIE world to the normal widget and you need to be careful that functions where world context matters (ie. getting or interacting with runtime references) have world context exposed to be used which may require C++.

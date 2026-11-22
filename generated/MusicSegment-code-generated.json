@@ -16,15 +16,15 @@
   "PublicFunctions": [
     [
       "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">float</span><span style=\"color:#DCDCAA\"> Get_BPM</span><span style=\"color:#D4D4D4\">()</span></span></code>",
-      "BlueprintPure\r\nReturns the bpm value."
+      "<span style=\"color:#FF756E\">BlueprintPure</span>\r\nReturns the bpm value."
     ],
     [
       "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">int</span><span style=\"color:#DCDCAA\"> Get_TimeSignatureNumerator</span><span style=\"color:#D4D4D4\">()</span></span></code>",
-      "BlueprintPure\r\nReturns the time signature numerator value."
+      "<span style=\"color:#FF756E\">BlueprintPure</span>\r\nReturns the time signature numerator value."
     ],
     [
       "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">int</span><span style=\"color:#DCDCAA\"> Get_TimeSignatureDenominator</span><span style=\"color:#D4D4D4\">()</span></span></code>",
-      "BlueprintPure\r\nReturns the time signature denominator value."
+      "<span style=\"color:#FF756E\">BlueprintPure</span>\r\nReturns the time signature denominator value."
     ]
   ]
 }

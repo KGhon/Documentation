@@ -19,5 +19,13 @@ export const Hyperlinks: [string, string[]][] = [
     ["UnrealEngine/#MusicManager", ["MusicManager", "MusicManagers"]],
     ["UnrealEngine/#MusicSegment", ["MusicSegment", "MusicSegments"]],
     ["UnrealEngine/#MusicTransitionInstruction", ["MusicTransitionInstruction", "MusicTransitionInstructions"]],
-    ["UnrealEngine/#MusicTransitionOverride", ["MusicTransitionOverride", "MusicTransitionOverrides"]]
+    ["UnrealEngine/#MusicTransitionOverride", ["MusicTransitionOverride", "MusicTransitionOverrides"]],
+
+    ["UnrealEngine/#KDebutTools", ["KDebugTools"]],
+    ["UnrealEngine/#KBlueprintConsoleCommands", ["KBlueprintConsoleCommands"]],
+    ["UnrealEngine/#KDebugDocker", ["KDebugDocker"]],
+    ["UnrealEngine/#KDebugManagerSubsystem", ["KDebugManagerSubsystem"]],
+    ["UnrealEngine/#KDebugToolsStatics", ["KDebugToolsStatics"]],
+    ["UnrealEngine/#KDebugWidget", ["KDebugWidget", "KDebugWidgets"]],
+    ["UnrealEngine/#KEditorUtilityWidget", ["KEditorUtilityWidget"]],
 ]

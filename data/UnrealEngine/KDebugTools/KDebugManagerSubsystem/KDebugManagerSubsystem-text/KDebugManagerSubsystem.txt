@@ -1,0 +1,10 @@
+[Title]
+UKDebugManagerSubsystem
+
+[Definitions]
+<b>Type:</b> Class
+<b>Inherits:</b> UGameInstanceSubsystem
+<b>Category:</b> KDebugTools
+
+[Overview]
+The KDebugManagerSubsystem handles registering and displaying debug widgets within KPlugins. It is also responsible for instantiating the KBlueprintConsoleCommands object and handles passing data to log in the KTerminal.

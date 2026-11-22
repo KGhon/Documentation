@@ -1,0 +1,12 @@
+{
+  "PublicFunctions": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> RegisterDebugMenuOption</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#569CD6\">const</span><span style=\"color:#4EC9B0\"> FName</span><span style=\"color:#D4D4D4\">&#x26; </span><span style=\"color:#9CDCFE\">category_underscore_menuname</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#4EC9B0\">TSubclassOf</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">UKDebugWidget</span><span style=\"color:#D4D4D4\">> </span><span style=\"color:#9CDCFE\">menu</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#4EC9B0\">UObject</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#9CDCFE\">dataObject</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nCall this function to spawn a debug menu that can be accessed using the 'k.debug' console command and pass your menu a data object it can use for initialization. 'category_underscore_menuname' can be parsed to sort the menu into the <a href='/Documentation/Pages/UnrealEngine/#KDebugDocker'>KDebugDocker</a> (ie. MyCategoryName_MyDebugMenuName)."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> LogToTerminal</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#569CD6\">const</span><span style=\"color:#4EC9B0\"> FString</span><span style=\"color:#D4D4D4\">&#x26; </span><span style=\"color:#9CDCFE\">command</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#569CD6\">const</span><span style=\"color:#4EC9B0\"> FString</span><span style=\"color:#D4D4D4\">&#x26; </span><span style=\"color:#9CDCFE\">log</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nCall this function to print data to the KTerminal debug widget. Mainly used when you add commands that can be used in the terminal that you want to return information."
+    ]
+  ]
+}

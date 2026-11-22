@@ -1,0 +1,3 @@
+"int32 windowWidth","The default width for popout windows created by the docker."
+
+"int32 windowHeight","The default height for popout windows created by the docker."

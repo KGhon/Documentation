@@ -31,7 +31,7 @@ export class NavigationColumn extends HTMLElement
     {
         for (const [name, path, isLink, isFolder] of items)
         {
-            const spacedName = name.replace(/([a-z0-9])([A-Z])|([A-Z]+)([A-Z][a-z])/g, "$1$3 $2$4");
+            const spacedName = name;//.replace(/([a-z0-9])([A-Z])|([A-Z]+)([A-Z][a-z])/g, "$1$3 $2$4");
             let folder: Folder;
 
             const container: HTMLDivElement = document.createElement("div");
@@ -71,7 +71,7 @@ export class NavigationColumn extends HTMLElement
                     if (isLink)
                     {
                         newFolder = document.createElement("folder-element") as Folder;
-                        newFolder.classList.add("highlightable");
+                        link.classList.add("highlightable");
                         newFolder.Init();
                         newFolder.Configure(spacedName, link);
                     }
@@ -98,7 +98,7 @@ export class NavigationColumn extends HTMLElement
                     if (isLink)
                     {
                         newFolder = document.createElement("folder-element") as Folder;
-                        newFolder.classList.add("highlightable");
+                        link.classList.add("highlightable");
                         newFolder.Init();
                         newFolder.Configure(spacedName, link);
                     }

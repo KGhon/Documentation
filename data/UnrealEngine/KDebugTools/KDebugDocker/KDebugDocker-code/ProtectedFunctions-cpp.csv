@@ -1,0 +1,14 @@
+"void TransferToPopoutWindow(const FName& name, UKDebugWidget* windowWidget)","BlueprintCallable
+Call this function to transfer an existing widget to a popout window. The 'name' is the identifier used to destroy the window."
+
+"UKDebugWidget* CreatePopoutWindow(const FName& name, TSubclassOf<UKDebugWidget> windowWidget)","BlueprintCallable
+Call this function to create a new widget instance as a popout window. The 'name' is the identifier used to destroy the window."
+
+"void DestroyPopoutWindow(const FName& name)","BlueprintCallable
+Call this function to destroy a popout window. The 'name' needs to match the 'name' set in TransferToPopoutWindow()/CreatePopoutWindow()."
+
+"void DestroyAllPopoutWindows()","BlueprintCallable
+Call this function to destroy all popout windows."
+
+"void ReceiveOnWindowClosed(const FName& name)","Overrideable
+Override this function to update UI when a window is closed. The 'name' passed to this function will match a 'name' set in TransferToPopoutWindow()/CreatePopoutWindow()."

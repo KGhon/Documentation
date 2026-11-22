@@ -1,0 +1,12 @@
+{
+  "ProtectedFunctions": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> OnBeginPIE</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#4EC9B0\">UWorld</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#9CDCFE\">world</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">Overrideable</span>\r\nOverride this function to receive the Play-In-Editor world context to pass to widgets that need it. Also used for initializing on PIE if needed."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> OnEndPIE</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#569CD6\">const</span><span style=\"color:#569CD6\"> bool</span><span style=\"color:#9CDCFE\"> IsSimulating</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">Overrideable</span>\r\nOverride this function to clean up when Play-In-Editor ends. Make sure to clear all runtime references including the world context if widgets were using it."
+    ]
+  ]
+}

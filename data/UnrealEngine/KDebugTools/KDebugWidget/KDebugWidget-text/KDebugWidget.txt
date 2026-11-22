@@ -1,0 +1,12 @@
+[Title]
+UKDebugWidget
+
+[Definitions]
+<b>Type:</b> Class
+<b>Inherits:</b> UUserWidget
+<b>Category:</b> KDebugTools
+
+[Overview]
+The KDebugWidget provides a few built-in functions for coordinating with the KDebugManagerSubsystem and KEditorUtilityWidgets. Similar to the KDebugDocker, KDebugWidgets can spawn and manage their own popout windows for separating debug menus from the game window.
+
+Note that a normal UUserWidgets that exists in any EditorUtilityWidget will not be able to get the Play-In-Editor world context automatically even though the "WorldContext" input pin is hidden on all Blueprint nodes. This means anything on the widget that references the game world like spawning actors or drawing line traces will need to have the WorldContext pin exposed via C++. The world context can be received from the KEditorUtilityWidget. This is only a problem if you want to reuse normal UUserWidgets for both runtime menus and EditorUtilityWidget menus.

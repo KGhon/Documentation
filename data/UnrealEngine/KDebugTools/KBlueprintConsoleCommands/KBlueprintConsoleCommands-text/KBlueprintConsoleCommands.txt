@@ -1,0 +1,12 @@
+[Title]
+UKBlueprintConsoleCommands
+
+[Definitions]
+<b>Type:</b> Class
+<b>Inherits:</b> UObject
+<b>Category:</b> KDebutTools
+
+[Overview]
+Inherit from this class to add console commands using the Blueprint editor that will respond to commands starting with "kk". Assign your custom KBlueprintConsoleCommands class in 
+
+<i>Project Settings > Plugins > KDebug Tools Settings > Blueprint Console Command Class</i>

@@ -37,14 +37,15 @@
     [ "AudioEventCommandScope", "KAudioSystem/Enums/", false, false ],
     [ "AudioStopBehavior", "KAudioSystem/Enums/", false, false ],
 
-    [ "KDebugTools", "", false, true ],
+    [ "KDebugTools", "", true, true ],
 
     [ "Classes", "KDebugTools/", false, true ],
-    [ "KBlueprintConsoleCommands", "KDebugTools/Classes/", false, false ],
-    [ "KDebugDocker", "KDebugTools/Classes/", false, false ],
-    [ "KEditorUtilityWidget", "KDebugTools/Classes/", false, false ],
-    [ "KDebugManagerSubsystem", "KDebugTools/Classes/", false, false ],
-    [ "KDebugWidget", "KDebugTools/Classes/", false, false ],
+    [ "KBlueprintConsoleCommands", "KDebugTools/Classes/", true, false ],
+    [ "KDebugDocker", "KDebugTools/Classes/", true, false ],
+    [ "KDebugManagerSubsystem", "KDebugTools/Classes/", true, false ],
+    [ "KDebugToolsStatics", "KDebugTools/Classes/", true, false ],
+    [ "KDebugWidget", "KDebugTools/Classes/", true, false ],
+    [ "KEditorUtilityWidget", "KDebugTools/Classes/", true, false ],
 
     [ "KDialogueSystem", "", false, true ],
 

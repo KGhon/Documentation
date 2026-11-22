@@ -1,0 +1,5 @@
+"UKDebugWidget* RegisterMenuOption(const FName& category_underscore_menuname, TSubclassOf<UKDebugWidget>, menu, UObject* dataObject)","Overrideable
+Override this function to implement making a menu available for selection on the UI. 'category_underscore_menuname' can be parsed to sort the menu into the docker (ie. MyCategoryName_MyDebugMenuName)."
+
+"void CollectBorderDocks()","Overrideable
+Override to gather borders you want selectable as docks for menus."

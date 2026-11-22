@@ -1,0 +1,10 @@
+[Title]
+UKDebutToolsStatics
+
+[Definitions]
+<b>Type:</b> Class
+<b>Inherits:</b> UBlueprintFunctionLibrary
+<b>Category:</b> KDebugTools
+
+[Overview]
+Helper functions.

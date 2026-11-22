@@ -1,0 +1,5 @@
+{
+  "Title": "UKDebugDocker",
+  "Definitions": "<b>Type:</b> Class\r\n<b>Inherits:</b> UUserWidget\r\n<b>Category:</b> <a href='/Documentation/Pages/UnrealEngine/#KDebutTools'>KDebugTools</a>",
+  "Overview": "A <a href='/Documentation/Pages/UnrealEngine/#KDebugDocker'>KDebugDocker</a> is a premade class made to present menus in the KDebug system to users at runtime. It is also able to create popout windows for separating debug menus from the game window. A default DebugDocker already exists, but the class is available for creating your own version of the widget if desired. Apply any custom DebugDocker in \r\n\r\n<i>Project Settings > Plugins > KDebug Tools Settings > Debug Docker</i>"
+}

@@ -1,0 +1,5 @@
+"void OnBeginPIE(UWorld* world)","Overrideable
+Override this function to receive the Play-In-Editor world context to pass to widgets that need it. Also used for initializing on PIE if needed."
+
+"void OnEndPIE(const bool IsSimulating)","Overrideable
+Override this function to clean up when Play-In-Editor ends. Make sure to clear all runtime references including the world context if widgets were using it."

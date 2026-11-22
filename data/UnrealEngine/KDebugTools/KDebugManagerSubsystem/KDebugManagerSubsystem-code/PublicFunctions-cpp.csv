@@ -1,0 +1,5 @@
+"void RegisterDebugMenuOption(const FName& category_underscore_menuname, TSubclassOf<UKDebugWidget> menu, UObject* dataObject)","BlueprintCallable
+Call this function to spawn a debug menu that can be accessed using the 'k.debug' console command and pass your menu a data object it can use for initialization. 'category_underscore_menuname' can be parsed to sort the menu into the KDebugDocker (ie. MyCategoryName_MyDebugMenuName)."
+
+"void LogToTerminal(const FString& command, const FString& log)","BlueprintCallable
+Call this function to print data to the KTerminal debug widget. Mainly used when you add commands that can be used in the terminal that you want to return information."

@@ -1,0 +1,16 @@
+{
+  "Settings": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">TSubclassOf</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">UKBlueprintConsoleCommands</span><span style=\"color:#D4D4D4\">> </span><span style=\"color:#9CDCFE\">blueprintConsoleCommandsClass</span></span></code>",
+      "Set the <a href='/Documentation/Pages/UnrealEngine/#KBlueprintConsoleCommands'>KBlueprintConsoleCommands</a> class used by the debug tooling. This allows you to author console commands using Blueprints."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">TSubclassOf</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">UKDebugDocker</span><span style=\"color:#D4D4D4\">> </span><span style=\"color:#9CDCFE\">debugDockerClass</span></span></code>",
+      "Can be used to set a custom <a href='/Documentation/Pages/UnrealEngine/#KDebugDocker'>KDebugDocker</a> class to use when with the 'k.debug' console command."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">TSubclassOf</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">UUserWidget</span><span style=\"color:#D4D4D4\">> </span><span style=\"color:#9CDCFE\">developerMenuClass</span></span></code>",
+      "Set the widget to show on screen when using the 'k.dev' console command."
+    ]
+  ]
+}

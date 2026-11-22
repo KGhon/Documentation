@@ -1,0 +1,9 @@
+"KDebugManagerSubsystem","The KDebugManagerSubsystem is the main access point for registering debug menus using KDebugTools. It has a built-in console command for opening the default debug menu where registered menus will appear for selection and use at runtime. It also handles passing data to the KTerminal and is responsible for instantiating the KBlueprintConsoleCommands object."
+
+"KDebugWidget","The KDebugWidget is a premade UUserWidget class that has overrideable functions for passing an event-focused data object that the widget can initialize and subscribe to. This class is generally meant to be used with the KDebugManagerSubsystem and KEditorUtilityWidgets. This class is also able to create popout windows."
+
+"KEditorUtilityWidget","The KEditorUtilityWidget class is a wrapper that includes built-in synchronization with entering and exiting Play-In-Editor. These editor widgets allow hooking into subsystems before BeginPlay() and pass the world context. These can contain both UUserWidgets and UEditorUtilityWidgets when designing the widget."
+
+"KDebugToolsStatics","KDebugToolsStatics provide helper functions that can be used to do things like filter strings, spawn actors using world context, and getting a world position based on the mouse screen position."
+
+"KBlueprintConsoleCommands","KBlueprintConsoleCommands is a simple class that receives a predefined console command with additional args that exposes console command creation to Blueprint users."

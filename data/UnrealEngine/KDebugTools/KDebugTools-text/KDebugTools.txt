@@ -1,0 +1,12 @@
+[Title]
+KDebugTools
+
+[Definitions]
+<b>Type:</b> Unreal Engine Plugin
+<b>Category:</b> KDebugTools
+
+[Overview]
+KDebugTools provides an easy way to register and display debug menus at runtime, synchronized between editor and Play-In-Editor, popout windows, and expose console commands for Blueprint.
+
+[SettingsLocation]
+<i>Project Settings > Plugins > KDebug Tools Settings</i>
