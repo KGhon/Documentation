@@ -42,19 +42,14 @@ import * as KDebugManagerSubsystem from "./UnrealEngine/KDebugTools/KDebugManage
 import * as KDebugToolsStatics from "./UnrealEngine/KDebugTools/KDebugToolsStatics.ts";
 import * as KDebugWidget from "./UnrealEngine/KDebugTools/KDebugWidget.ts";
 import * as KEditorUtilityWidget from "./UnrealEngine/KDebugTools/KEditorUtilityWidget.ts";
-/*
+
 import * as KDialogueSystem from "./UnrealEngine/KDialogueSystem/KDialogueSystem.ts";
-import * as DialogueBranch from "./UnrealEngine/KDialogueSystem/DialogueBranch.ts";
-import * as DialogueManagerSubsystem from "./UnrealEngine/KDialogueSystem/DialogueManagerSubsystem.ts";
-import * as DialoguePath from "./UnrealEngine/KDialogueSystem/DialoguePath.ts";
-import * as DialogueStep from "./UnrealEngine/KDialogueSystem/DialogueStep.ts";
 import * as DialogueTree from "./UnrealEngine/KDialogueSystem/DialogueTree.ts";
 
 import * as DialogueChoice from "./UnrealEngine/KDialogueSystem/DialogueChoice.ts";
-import * as DialogueInstruction from "./UnrealEngine/KDialougeSystem/DialogueInstruction.ts";
+import * as DialogueInstruction from "./UnrealEngine/KDialogueSystem/DialogueInstruction.ts";
 
 import * as DialogueResponse from "./UnrealEngine/KDialogueSystem/DialogueResponse.ts";
-*/
 
 const spa: DocPage = document.createElement("doc-page") as DocPage;
 spa.Init();
@@ -124,19 +119,15 @@ spa.AddContentPage("KDebugManagerSubsystem", KDebugManagerSubsystem.Construct())
 spa.AddContentPage("KDebugToolsStatics", KDebugToolsStatics.Construct());
 spa.AddContentPage("KDebugWidget", KDebugWidget.Construct());
 spa.AddContentPage("KEditorUtilityWidget", KEditorUtilityWidget.Construct());
-/*
+
 spa.AddContentPage("KDialogueSystem", KDialogueSystem.Construct());
-spa.AddContentPage("DialogueBranch", DialogueBranch.Construct());
 spa.AddContentPage("DialogueChoice", DialogueChoice.Construct());
-spa.AddContentPage("DialoguePath", DialoguePath.Construct());
-spa.AddContentPage("DialogueStep", DialogueStep.Construct());
 spa.AddContentPage("DialogueTree", DialogueTree.Construct());
 
 spa.AddContentPage("DialogueInstruction", DialogueInstruction.Construct());
-spa.AddContentPage("DialogueManagerSubsystem", DialogueManagerSubsystem.Construct());
 
 spa.AddContentPage("DialogueResponse", DialogueResponse.Construct());
-*/
+
 const path = window.location.hash.replace("#", "");
 if (path)
 {

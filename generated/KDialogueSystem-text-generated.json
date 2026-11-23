@@ -1,0 +1,25 @@
+{
+  "BuiltInDebugMenus": [
+    [
+      "Tree Tester",
+      "For limited testing of <a href='/Documentation/Pages/UnrealEngine/#DialogueTree'>DialogueTree</a> functionality and progression, the Tree Tester widget provides a quick way to step through any tree and display text. To use the Tree Tester as an Editor Utility Widget, open the 'KPlugins' dropdown toolbar at the top of the main Level Editor window and select 'Tree Tester'."
+    ]
+  ],
+  "Title": "<a href='/Documentation/Pages/UnrealEngine/#KDialogueSystem'>KDialogueSystem</a>",
+  "Definitions": "<b>Type:</b> Unreal Engine Plugin\r\n<b>Category:</b> <a href='/Documentation/Pages/UnrealEngine/#KDialogueSystem'>KDialogueSystem</a>",
+  "Overview": "This system provides a workflow for creating branching dialogue trees as Blueprints.",
+  "QuickReference": [
+    [
+      "<a href='/Documentation/Pages/UnrealEngine/#DialogueTree'>DialogueTree</a>",
+      "A <a href='/Documentation/Pages/UnrealEngine/#DialogueTree'>DialogueTree</a> is a Blueprintable class that provides built-in functions to construct traversable branching dialogue structures. <a href='/Documentation/Pages/UnrealEngine/#DialogueTree'>DialogueTrees</a> are built within the Blueprint editor using 5 functions: Root(), Step(), Path(), Branch(), and Subtree(). Each function takes a set of input parameters, the main one being <a href='/Documentation/Pages/UnrealEngine/#DialogueInstruction'>DialogueInstructions</a>. All <a href='/Documentation/Pages/UnrealEngine/#DialogueTree'>DialogueTrees</a> can be nested as subtrees within other trees."
+    ],
+    [
+      "<a href='/Documentation/Pages/UnrealEngine/#DialogueInstruction'>DialogueInstruction</a>",
+      ""
+    ],
+    [
+      "<a href='/Documentation/Pages/UnrealEngine/#DialogueChoice'>DialogueChoice</a>",
+      ""
+    ]
+  ]
+}

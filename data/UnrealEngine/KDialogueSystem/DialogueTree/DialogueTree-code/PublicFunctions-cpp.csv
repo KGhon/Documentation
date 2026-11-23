@@ -1,0 +1,8 @@
+"void EnterDialogue()","BlueprintCallable
+Call this function to enter the DialogueTree."
+
+"void ExitDialogue(int choice)","BlueprintCallable
+Call this function to exit the DialogueTree."
+
+"void ReceiveInput(int choice)","BlueprintCallable
+Call this function to send input to the DialogueTree."

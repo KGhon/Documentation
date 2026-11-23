@@ -1,0 +1,5 @@
+{
+  "Title": "FDialogueInstruction",
+  "Definitions": "<b>Type:</b> Struct\r\n<b>Category:</b> <a href='/Documentation/Pages/UnrealEngine/#KDialogueSystem'>KDialogueSystem</a>",
+  "Overview": "This struct is created and used while setting up a <a href='/Documentation/Pages/UnrealEngine/#DialogueTree'>DialogueTree</a>. The Path(), Branch(), and Step() functions will pass the <a href='/Documentation/Pages/UnrealEngine/#DialogueInstruction'>DialogueInstruction</a> to their corresponding nodes at runtime."
+}

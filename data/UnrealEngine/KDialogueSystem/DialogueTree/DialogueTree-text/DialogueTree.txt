@@ -1,0 +1,10 @@
+[Title]
+UDialogueTree
+
+[Definitions]
+<b>Type:</b> Class
+<b>Inherits:</b> UObject
+<b>Category:</b> KDialogueSystem
+
+[Overview]
+A DialogueTree is used to create branching dialogue utilizing the Blueprint graph and several built-in functions to construct a flow graph.

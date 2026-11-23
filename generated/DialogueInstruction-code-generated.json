@@ -1,0 +1,20 @@
+{
+  "Properties": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">FText</span><span style=\"color:#9CDCFE\"> dialogueKey</span></span></code>",
+      "This is the key used to find the dialogue text from the associated string table when making the struct in the Blueprint editor."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">EDialogueResponse</span><span style=\"color:#9CDCFE\"> response</span></span></code>",
+      "This enum indicates what the dialogue tree node should do when it reaches the end of an instruction."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">bool</span><span style=\"color:#9CDCFE\"> skippable</span></span></code>",
+      "Only for DialoguePath or DialogueStep. This bool indicates that a dialogue instruction can skip to the next <a href='/Documentation/Pages/UnrealEngine/#DialogueInstruction'>DialogueInstruction</a> if input is received when response = Auto."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">float</span><span style=\"color:#9CDCFE\"> waitTime</span></span></code>",
+      "How long to wait before auto continuing if 'response' = Timed."
+    ]
+  ]
+}

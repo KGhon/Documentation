@@ -1,8 +1,8 @@
 import "../../../Documentation.css"
 import { ContentPage } from "../../../Templates/ContentPage.ts";
-import { Table } from "../../../Templates/Table.ts";
+//import { Table } from "../../../Templates/Table.ts";
 import * as textContent from "../../../../generated/MusicSegment-text-generated.json";
-import * as code from "../../../../generated/MusicSegment-code-generated.json";
+//import * as code from "../../../../generated/MusicSegment-code-generated.json";
 
 export function Construct(): HTMLElement
 {
@@ -18,20 +18,6 @@ export function Construct(): HTMLElement
     
     const overview: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     overview.innerHTML = textContent.Overview;
-
-    const propertiesSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
-    propertiesSection.innerHTML = "Properties";
-
-    const properties: Table = root.appendChild(document.createElement("table-element")) as Table;
-    properties.Init();
-    properties.Configure(code.Properties);
-
-    const publicFunctionsSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
-    publicFunctionsSection.innerHTML = "Public Functions";
-
-    const publicFunctions: Table = root.appendChild(document.createElement("table-element")) as Table;
-    publicFunctions.Init();
-    publicFunctions.Configure(code.PublicFunctions);
 
     return root;
 }

@@ -1,0 +1,12 @@
+{
+  "Properties": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">bool</span><span style=\"color:#9CDCFE\"> visible</span></span></code>",
+      "This bool checks a condition to decide at runtime if a choice should be sent to the DialogueManagerSubsystem to broadcast for presentation through the OnDialogueChoices() event. If false, the array of choices sent will include an empty string in whichever array element this <a href='/Documentation/Pages/UnrealEngine/#DialogueChoice'>DialogueChoice</a> is."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">FText</span><span style=\"color:#9CDCFE\"> dialogueKey</span></span></code>",
+      "This is the key used to find the dialogue text from the associated string table when making the struct in the Blueprint editor."
+    ]
+  ]
+}

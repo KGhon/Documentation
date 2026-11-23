@@ -50,10 +50,6 @@
     [ "KDialogueSystem", "", true, true ],
 
     [ "Classes", "KDialogueSystem/", false, true ],
-    [ "DialogueBranch", "KDialogueSystem/Classes/", true, false ],
-    [ "DialogueManagerSubsystem", "KDialogueSystem/Classes/", true, false ],
-    [ "DialoguePath", "KDialogueSystem/Classes/", true, false ],
-    [ "DialogueStep", "KDialogueSystem/Classes/", true, false ],
     [ "DialogueTree", "KDialogueSystem/Classes/", true, false ],
 
     [ "Structs", "KDialogueSystem/", false, true ],

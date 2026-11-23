@@ -1,0 +1,5 @@
+{
+  "Title": "UDialogueTree",
+  "Definitions": "<b>Type:</b> Class\r\n<b>Inherits:</b> UObject\r\n<b>Category:</b> <a href='/Documentation/Pages/UnrealEngine/#KDialogueSystem'>KDialogueSystem</a>",
+  "Overview": "A <a href='/Documentation/Pages/UnrealEngine/#DialogueTree'>DialogueTree</a> is used to create branching dialogue utilizing the Blueprint graph and several built-in functions to construct a flow graph."
+}

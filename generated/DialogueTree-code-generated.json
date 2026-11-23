@@ -1,0 +1,52 @@
+{
+  "BindableEvents": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#D4D4D4\">OnDialogueNext</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">EDialogueNodeType</span><span style=\"color:#9CDCFE\"> nodeType</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#4EC9B0\">FText</span><span style=\"color:#9CDCFE\"> speaker</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#4EC9B0\">FText</span><span style=\"color:#9CDCFE\"> message</span><span style=\"color:#D4D4D4\">></span></span></code>",
+      "Bind to this event to receive every time <a href='/Documentation/Pages/UnrealEngine/#DialogueInstruction'>DialogueInstruction</a> is process by the <a href='/Documentation/Pages/UnrealEngine/#DialogueTree'>DialogueTree</a>."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#D4D4D4\">OnDialogueChoices</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#569CD6\">const</span><span style=\"color:#4EC9B0\">TArray</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">FText</span><span style=\"color:#D4D4D4\">>&#x26; </span><span style=\"color:#9CDCFE\">choices</span><span style=\"color:#D4D4D4\">></span></span></code>",
+      "Bind to this event to receive an array of choices any time a branch node is reached."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#D4D4D4\">OnDialogueExit</span><span style=\"color:#D4D4D4\">&#x3C;></span></span></code>",
+      "Bind to this event to be notified when the <a href='/Documentation/Pages/UnrealEngine/#DialogueTree'>DialogueTree</a> exits."
+    ]
+  ],
+  "ProtectedFunctions": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> Root</span><span style=\"color:#D4D4D4\">()</span></span></code>",
+      "<span style=\"color:#FF756E\">Overrideable</span>\r\nOverride this function to set the entree logic and nodes for the <a href='/Documentation/Pages/UnrealEngine/#DialogueTree'>DialogueTree</a>."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> Step</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#569CD6\">const</span><span style=\"color:#4EC9B0\"> FDialogueInstruction</span><span style=\"color:#D4D4D4\">&#x26; </span><span style=\"color:#9CDCFE\">instruction</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#569CD6\">const</span><span style=\"color:#4EC9B0\"> FOnDialogueNodeFinish</span><span style=\"color:#D4D4D4\">&#x26; </span><span style=\"color:#9CDCFE\">onFinish</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nCall this function from within the <a href='/Documentation/Pages/UnrealEngine/#DialogueTree'>DialogueTree</a> to create a single dialogue step."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> Path</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#569CD6\">const</span><span style=\"color:#4EC9B0\"> TArray</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">FDialogueInstruction</span><span style=\"color:#D4D4D4\">>&#x26; </span><span style=\"color:#9CDCFE\">instructions</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#569CD6\">const</span><span style=\"color:#4EC9B0\"> FOnDialogueNodeFinish</span><span style=\"color:#D4D4D4\">&#x26; </span><span style=\"color:#9CDCFE\">onFinish</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nCall this function from within the <a href='/Documentation/Pages/UnrealEngine/#DialogueTree'>DialogueTree</a> to create a sequence of dialogue steps."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> Branch</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#569CD6\">const</span><span style=\"color:#4EC9B0\"> FDialogueInstruction</span><span style=\"color:#D4D4D4\">&#x26; </span><span style=\"color:#9CDCFE\">instruction</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#569CD6\">const</span><span style=\"color:#4EC9B0\"> TArray</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">FDialogueChoice</span><span style=\"color:#D4D4D4\">>&#x26; </span><span style=\"color:#9CDCFE\">choiceKeys</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#569CD6\">const</span><span style=\"color:#4EC9B0\"> FOnDialogueNodeFinish</span><span style=\"color:#D4D4D4\">&#x26; </span><span style=\"color:#9CDCFE\">onFinish</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nCall this function from within the <a href='/Documentation/Pages/UnrealEngine/#DialogueTree'>DialogueTree</a> to create a node that takes input and outputs different options depending on the input."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> Subtree</span><span style=\"color:#D4D4D4\">()</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nCall this function from within the <a href='/Documentation/Pages/UnrealEngine/#DialogueTree'>DialogueTree</a> to use another <a href='/Documentation/Pages/UnrealEngine/#DialogueTree'>DialogueTree</a> as a subtree within this <a href='/Documentation/Pages/UnrealEngine/#DialogueTree'>DialogueTree</a>."
+    ]
+  ],
+  "PublicFunctions": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> EnterDialogue</span><span style=\"color:#D4D4D4\">()</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nCall this function to enter the <a href='/Documentation/Pages/UnrealEngine/#DialogueTree'>DialogueTree</a>."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> ExitDialogue</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#569CD6\">int</span><span style=\"color:#9CDCFE\"> choice</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nCall this function to exit the <a href='/Documentation/Pages/UnrealEngine/#DialogueTree'>DialogueTree</a>."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> ReceiveInput</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#569CD6\">int</span><span style=\"color:#9CDCFE\"> choice</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nCall this function to send input to the <a href='/Documentation/Pages/UnrealEngine/#DialogueTree'>DialogueTree</a>."
+    ]
+  ]
+}

@@ -1,0 +1,5 @@
+"Auto","Automatically continue. Behaves as Input if no dialogue audio or level sequence plays."
+
+"Input","Wait for input."
+
+"Timed","Wait a set amount of time before auto progressing."

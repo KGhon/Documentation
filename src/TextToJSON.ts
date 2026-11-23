@@ -1,6 +1,6 @@
 import path from "node:path";
 import fsPromises from "node:fs/promises";
-import { parse } from "csv-parse/sync";
+import { parse, CsvError } from "csv-parse/sync";
 import { Hyperlinks } from "./Hyperlinks.ts";
 import { AutoColors } from "./AdditionalAutoColors.ts";
 
@@ -119,7 +119,20 @@ async function ProcessDirectory(dirPath: string): Promise<void>
         }
         else if (file.name.endsWith(".csv"))
         {
-            const data: string[][] = parse(content, { skipEmptyLines: true });
+            let data: string[][] = [];
+            try
+            {
+                data = parse(content, { skipEmptyLines: true });
+            }
+            catch(error)
+            {
+                if (error instanceof CsvError)
+                {
+                    console.error(`Incorrect csv line format\nFile: ${filePath}\nLine: ${error.line}`);
+                    throw error;
+                }
+            }
+
             fileRecord[file.name.substring(0, file.name.length - 4)] = data;
         }
     }

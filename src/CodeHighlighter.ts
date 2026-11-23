@@ -1,6 +1,6 @@
 import path from "node:path";
 import fsPromises from "node:fs/promises";
-import { parse } from "csv-parse/sync";
+import { parse, CsvError } from "csv-parse/sync";
 import { createHighlighterCore } from "shiki/core";
 import type { HighlighterCore } from "shiki/core";
 import { createOnigurumaEngine } from "shiki/engine/oniguruma"
@@ -152,7 +152,19 @@ async function ProcessDirectory(dirPath: string): Promise<void>
         }
         else if (file.name.endsWith(".csv"))
         {
-            const data: string[][] = parse(content, { skipEmptyLines: true });
+            let data: string[][] = [];
+            try
+            {
+                data = parse(content, { skipEmptyLines: true });
+            }
+            catch (error)
+            {
+                if (error instanceof CsvError)
+                {
+                    console.error(`Incorrect csv line format\nFile: ${filePath}\nLine: ${error.lines}`);
+                    throw error;
+                }
+            }
 
             for (const row of data)
             {

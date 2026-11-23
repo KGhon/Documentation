@@ -1,0 +1,11 @@
+[TObjectPtr,#4EC9B0]
+[FText,#4EC9B0]
+[EDialogueResponse,#4EC9B0]
+
+"FText dialogueKey","This is the key used to find the dialogue text from the associated string table when making the struct in the Blueprint editor."
+
+"EDialogueResponse response","This enum indicates what the dialogue tree node should do when it reaches the end of an instruction."
+
+"bool skippable","Only for DialoguePath or DialogueStep. This bool indicates that a dialogue instruction can skip to the next DialogueInstruction if input is received when response = Auto."
+
+"float waitTime","How long to wait before auto continuing if 'response' = Timed."

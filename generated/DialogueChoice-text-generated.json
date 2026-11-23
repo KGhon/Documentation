@@ -1,0 +1,5 @@
+{
+  "Title": "FDialogueChoice",
+  "Definitions": "<b>Type:</b> Struct\r\n<b>Category:</b> <a href='/Documentation/Pages/UnrealEngine/#KDialogueSystem'>KDialogueSystem</a>",
+  "Overview": "The <a href='/Documentation/Pages/UnrealEngine/#DialogueChoice'>DialogueChoice</a> struct is created and used while setting up a <a href='/Documentation/Pages/UnrealEngine/#DialogueTree'>DialogueTree</a>. The Branch() function will pass the <a href='/Documentation/Pages/UnrealEngine/#DialogueChoice'>DialogueChoice</a> to its corresponding nodes at runtime. The text for this struct is used as this individual choice's text."
+}

@@ -1,0 +1,14 @@
+"void Root()","Overrideable
+Override this function to set the entree logic and nodes for the DialogueTree."
+
+"void Step(const FDialogueInstruction& instruction, const FOnDialogueNodeFinish& onFinish)","BlueprintCallable
+Call this function from within the DialogueTree to create a single dialogue step."
+
+"void Path(const TArray<FDialogueInstruction>& instructions, const FOnDialogueNodeFinish& onFinish)","BlueprintCallable
+Call this function from within the DialogueTree to create a sequence of dialogue steps."
+
+"void Branch(const FDialogueInstruction& instruction, const TArray<FDialogueChoice>& choiceKeys, const FOnDialogueNodeFinish& onFinish)","BlueprintCallable
+Call this function from within the DialogueTree to create a node that takes input and outputs different options depending on the input."
+
+"void Subtree()","BlueprintCallable
+Call this function from within the DialogueTree to use another DialogueTree as a subtree within this DialogueTree."

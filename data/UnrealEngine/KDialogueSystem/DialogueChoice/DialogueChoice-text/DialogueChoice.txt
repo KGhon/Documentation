@@ -1,0 +1,9 @@
+[Title]
+FDialogueChoice
+
+[Definitions]
+<b>Type:</b> Struct
+<b>Category:</b> KDialogueSystem
+
+[Overview]
+The DialogueChoice struct is created and used while setting up a DialogueTree. The Branch() function will pass the DialogueChoice to its corresponding nodes at runtime. The text for this struct is used as this individual choice's text.

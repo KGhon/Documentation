@@ -39,10 +39,6 @@ export const Hyperlinks: [string, string[]][] = [
     ["UnrealEngine/#KEditorUtilityWidget", ["KEditorUtilityWidget"]],
 
     ["UnrealEngine/#KDialogueSystem", ["KDialogueSystem"]],
-    ["UnrealEngine/#DialogueBranch", ["DialogueBranch", "DialogueBranches"]],
-    ["UnrealEngine/#DialogueManagerSubsystem", ["DialogueManagerSubsystem"]],
-    ["UnrealEngine/#DialoguePath", ["DialoguePath", "DialoguePaths"]],
-    ["UnrealEngine/#DialogueStep", ["DialogueStep", "DialogueSteps"]],
     ["UnrealEngine/#DialogueTree", ["DialogueTree", "DialogueTrees"]],
 
     ["UnrealEngine/#DialogueChoice", ["DialogueChoice", "DialogueChoices"]],
