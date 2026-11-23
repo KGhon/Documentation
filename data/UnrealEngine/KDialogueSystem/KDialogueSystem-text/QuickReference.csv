@@ -1,5 +1,5 @@
 "DialogueTree","A DialogueTree is a Blueprintable class that provides built-in functions to construct traversable branching dialogue structures. DialogueTrees are built within the Blueprint editor using 5 functions: Root(), Step(), Path(), Branch(), and Subtree(). Each function takes a set of input parameters, the main one being DialogueInstructions. All DialogueTrees can be nested as subtrees within other trees."
 
-"DialogueInstruction",""
+"DialogueInstruction","DialogueInstructions are structs used to pass dialogue content into the core Step(), Path(), and Branch() functions within a DialogueTree."
 
-"DialogueChoice",""
+"DialogueChoice","A DialogueChoice is text paired with a settable bool that determines if the choice is included when processing a Branch()."

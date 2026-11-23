@@ -15,11 +15,11 @@
     ],
     [
       "<a href='/Documentation/Pages/UnrealEngine/#DialogueInstruction'>DialogueInstruction</a>",
-      ""
+      "<a href='/Documentation/Pages/UnrealEngine/#DialogueInstruction'>DialogueInstructions</a> are structs used to pass dialogue content into the core Step(), Path(), and Branch() functions within a <a href='/Documentation/Pages/UnrealEngine/#DialogueTree'>DialogueTree</a>."
     ],
     [
       "<a href='/Documentation/Pages/UnrealEngine/#DialogueChoice'>DialogueChoice</a>",
-      ""
+      "A <a href='/Documentation/Pages/UnrealEngine/#DialogueChoice'>DialogueChoice</a> is text paired with a settable bool that determines if the choice is included when processing a Branch()."
     ]
   ]
 }
