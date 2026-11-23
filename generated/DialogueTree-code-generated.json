@@ -1,15 +1,15 @@
 {
   "BindableEvents": [
     [
-      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#D4D4D4\">OnDialogueNext</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">EDialogueNodeType</span><span style=\"color:#9CDCFE\"> nodeType</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#4EC9B0\">FText</span><span style=\"color:#9CDCFE\"> speaker</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#4EC9B0\">FText</span><span style=\"color:#9CDCFE\"> message</span><span style=\"color:#D4D4D4\">></span></span></code>",
-      "Bind to this event to receive every time <a href='/Documentation/Pages/UnrealEngine/#DialogueInstruction'>DialogueInstruction</a> is process by the <a href='/Documentation/Pages/UnrealEngine/#DialogueTree'>DialogueTree</a>."
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> OnDialogueNext</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#569CD6\">const</span><span style=\"color:#4EC9B0\"> FDialogueInstruction</span><span style=\"color:#D4D4D4\">&#x26; </span><span style=\"color:#9CDCFE\">instruction</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Bind to this event to receive every time a <a href='/Documentation/Pages/UnrealEngine/#DialogueInstruction'>DialogueInstruction</a> is process by the <a href='/Documentation/Pages/UnrealEngine/#DialogueTree'>DialogueTree</a>."
     ],
     [
-      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#D4D4D4\">OnDialogueChoices</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#569CD6\">const</span><span style=\"color:#4EC9B0\">TArray</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">FText</span><span style=\"color:#D4D4D4\">>&#x26; </span><span style=\"color:#9CDCFE\">choices</span><span style=\"color:#D4D4D4\">></span></span></code>",
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> OnDialogueChoices</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#569CD6\">const</span><span style=\"color:#4EC9B0\"> TArray</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">FText</span><span style=\"color:#D4D4D4\">>&#x26; </span><span style=\"color:#9CDCFE\">choices</span><span style=\"color:#D4D4D4\">)</span></span></code>",
       "Bind to this event to receive an array of choices any time a branch node is reached."
     ],
     [
-      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#D4D4D4\">OnDialogueExit</span><span style=\"color:#D4D4D4\">&#x3C;></span></span></code>",
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> OnDialogueExit</span><span style=\"color:#D4D4D4\">()</span></span></code>",
       "Bind to this event to be notified when the <a href='/Documentation/Pages/UnrealEngine/#DialogueTree'>DialogueTree</a> exits."
     ]
   ],

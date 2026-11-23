@@ -1,12 +1,5 @@
-[OnDialogueNext,#D4D4D4]
-[OnDialogueChoices,#D4D4D4]
-[OnDialogueExit,#D4D4D4]
-[EDialogueNodeType,#4EC9B0]
-[FText,#4EC9B0]
-[TArray,#4EC9B0]
+"void OnDialogueNext(const FDialogueInstruction& instruction)","Bind to this event to receive every time a DialogueInstruction is process by the DialogueTree."
 
-"OnDialogueNext<EDialogueNodeType nodeType, FText speaker, FText message>","Bind to this event to receive every time DialogueInstruction is process by the DialogueTree."
+"void OnDialogueChoices(const TArray<FText>& choices)","Bind to this event to receive an array of choices any time a branch node is reached."
 
-"OnDialogueChoices<const TArray<FText>& choices>","Bind to this event to receive an array of choices any time a branch node is reached."
-
-"OnDialogueExit<>","Bind to this event to be notified when the DialogueTree exits."
+"void OnDialogueExit()","Bind to this event to be notified when the DialogueTree exits."
