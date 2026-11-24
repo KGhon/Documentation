@@ -1,0 +1,14 @@
+{
+  "ProtectedFunctions": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> OnLoadSnapshot</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#4EC9B0\">UKSaveGame</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#9CDCFE\">snapshot</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">Overrideable</span>\r\nOverride this function to extend what data is transferred from a SaveSnapshot to the <a href='/Documentation/Pages/UnrealEngine/#KSaveGame'>KSaveGame</a>. Always call parent implementation."
+    ]
+  ],
+  "PublicFunctions": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> LoadSnapshot</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#4EC9B0\">TSubclassOf</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">UKSaveGame</span><span style=\"color:#D4D4D4\">> </span><span style=\"color:#9CDCFE\">snapshot</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nCall this function to copy data from a SaveSnapshot to the <a href='/Documentation/Pages/UnrealEngine/#KSaveGame'>KSaveGame</a>."
+    ]
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "Properties": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">bool</span><span style=\"color:#9CDCFE\"> disableWhenSpawned</span></span></code>",
+      "Sets if instances of the <a href='/Documentation/Pages/UnrealEngine/#SaveAgent'>SaveAgent</a> should save if their owning Actor was spawned at runtime."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">bool</span><span style=\"color:#9CDCFE\"> saveOnEndPlay</span></span></code>",
+      "Sets if the <a href='/Documentation/Pages/UnrealEngine/#SaveAgent'>SaveAgent</a> will save on EndPlay() (getting destroyed)."
+    ]
+  ],
+  "ProtectedFunctions": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">bool</span><span style=\"color:#DCDCAA\"> CheckSaveConditions</span><span style=\"color:#D4D4D4\">()</span></span></code>",
+      "<span style=\"color:#FF756E\">Overrideable</span>\r\nOverride this function to check conditions that determine if the class should save."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">bool</span><span style=\"color:#DCDCAA\"> CheckLoadConditions</span><span style=\"color:#D4D4D4\">()</span></span></code>",
+      "<span style=\"color:#FF756E\">Overrideable</span>\r\nOverride this function to check conditions that determine if the class should load."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">UKSaveGame</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#DCDCAA\">GetSaveData</span><span style=\"color:#D4D4D4\">()</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nCalls this function to get the currently loaded save game in the <a href='/Documentation/Pages/UnrealEngine/#SaveManagerSubsystem'>SaveManagerSubsystem</a>."
+    ]
+  ],
+  "PublicFunctions": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> SaveData</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#4EC9B0\">UKSaveGame</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#9CDCFE\">saveGame</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">Overrideable</span>\r\nOverride this function to implement saving data unique to the class the <a href='/Documentation/Pages/UnrealEngine/#SaveAgent'>SaveAgent</a> is attached to. Always make sure to call the parent function and pass the save game object up the inheritance tree when overriding."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> LoadData</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#4EC9B0\">UKSaveGame</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#9CDCFE\">saveGame</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">Overrideable</span>\r\nOverride this function to implement loading data unique to the class the <a href='/Documentation/Pages/UnrealEngine/#SaveAgent'>SaveAgent</a> is attached to. Always make sure to call the parent function and pass the save game object up the inheritance tree when overriding."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> RemoveData</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#4EC9B0\">UKSaveGame</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#9CDCFE\">saveGame</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">Overrideable</span>\r\nOverride this function to implement removing save data when it is no longer needed."
+    ]
+  ]
+}

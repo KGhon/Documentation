@@ -46,4 +46,17 @@ export const Hyperlinks: [string, string[]][] = [
 
     ["UnrealEngine/#DialogueResponse", ["DialogueResponse"]],
 
+    ["UnrealEngine/#GameManagement", ["GameManagement"]],
+    ["UnrealEngine/#GameManagerSubsystem", ["GameManagerSubsystem"]],
+    ["UnrealEngine/#GameStateInterface", ["GameStateInterface"]],
+    ["UnrealEngine/#KGameState", ["KGameState"]],
+
+    ["UnrealEngine/#LevelManagement", ["LevelManagement"]],
+    ["UnrealEngine/#LevelManagerSubsystem", ["LevelManagerSubsystem"]],
+
+    ["UnrealEngine/#SaveSystem", ["SaveSystem"]],
+    ["UnrealEngine/#KSaveGame", ["KSaveGame", "KSaveGames"]],
+    ["UnrealEngine/#SaveAgent", ["SaveAgent", "SaveAgents"]],
+    ["UnrealEngine/#SaveInterface", ["SaveInterface"]],
+    ["UnrealEngine/#SaveManagerSubsystem", ["SaveManagerSubsystem"]],
 ]

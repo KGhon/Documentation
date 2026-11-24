@@ -1,0 +1,3 @@
+"bool disableWhenSpawned","Sets if instances of the SaveAgent should save if their owning Actor was spawned at runtime."
+
+"bool saveOnEndPlay","Sets if the SaveAgent will save on EndPlay() (getting destroyed)."

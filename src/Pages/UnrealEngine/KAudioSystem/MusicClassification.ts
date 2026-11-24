@@ -1,6 +1,6 @@
 import "../../../Documentation.css"
 import { ContentPage } from "../../../Templates/ContentPage.ts";
-import { Table } from "../../../Templates/Table.ts";
+import { Table, ColumnSpacing } from "../../../Templates/Table.ts";
 import * as textContent from "../../../../generated/MusicClassification-text-generated.json";
 import * as code from "../../../../generated/MusicClassification-code-generated.json";
 
@@ -24,7 +24,7 @@ export function Construct(): HTMLElement
 
     const properties: Table = root.appendChild(document.createElement("table-element")) as Table;
     properties.Init();
-    properties.Configure(code.Properties);
+    properties.Configure(code.Properties, ColumnSpacing.Compact);
 
     return root;
 }

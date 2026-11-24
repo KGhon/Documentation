@@ -1,0 +1,5 @@
+"void OnEnter()","Overrideable
+Override this function to define what happens when entering the state."
+
+"void OnExit()","Overrideable
+Override this function to define what happens when exiting the state."

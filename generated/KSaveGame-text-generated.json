@@ -1,0 +1,5 @@
+{
+  "Title": "UKSaveGame",
+  "Definitions": "<b>Type:</b> Class\r\n<b>Inherits:</b> USaveGame\r\n<b>Category:</b> KGameFramework",
+  "Overview": "The <a href='/Documentation/Pages/UnrealEngine/#KSaveGame'>KSaveGame</a> derives from Unreal Engine's built-in save game class. It by default supports saving data for Level Management, the Quest System, and the Inventory System. To add additional data to be saved, create a Blueprint with this as the parent class and add variables or structs to store data at runtime. Assign the extended <a href='/Documentation/Pages/UnrealEngine/#KSaveGame'>KSaveGame</a> Blueprint in Project Settings > Plugins > KGameFramework Settings > Save Class. You can then use <a href='/Documentation/Pages/UnrealEngine/#SaveAgent'>SaveAgents</a>  or implement the <a href='/Documentation/Pages/UnrealEngine/#SaveInterface'>SaveInterface</a> to update and retreive data from the <a href='/Documentation/Pages/UnrealEngine/#KSaveGame'>KSaveGame</a> once it has been loaded through the <a href='/Documentation/Pages/UnrealEngine/#SaveManagerSubsystem'>SaveManagerSubsystem</a>."
+}

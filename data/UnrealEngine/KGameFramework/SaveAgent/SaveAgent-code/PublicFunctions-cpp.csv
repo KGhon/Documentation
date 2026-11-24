@@ -1,0 +1,8 @@
+"void SaveData(UKSaveGame* saveGame)","Overrideable
+Override this function to implement saving data unique to the class the SaveAgent is attached to. Always make sure to call the parent function and pass the save game object up the inheritance tree when overriding."
+
+"void LoadData(UKSaveGame* saveGame)","Overrideable
+Override this function to implement loading data unique to the class the SaveAgent is attached to. Always make sure to call the parent function and pass the save game object up the inheritance tree when overriding."
+
+"void RemoveData(UKSaveGame* saveGame)","Overrideable
+Override this function to implement removing save data when it is no longer needed."

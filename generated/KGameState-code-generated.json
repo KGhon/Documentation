@@ -1,0 +1,12 @@
+{
+  "PublicFunctions": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> OnEnter</span><span style=\"color:#D4D4D4\">()</span></span></code>",
+      "<span style=\"color:#FF756E\">Overrideable</span>\r\nOverride this function to define what happens when entering the state."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> OnExit</span><span style=\"color:#D4D4D4\">()</span></span></code>",
+      "<span style=\"color:#FF756E\">Overrideable</span>\r\nOverride this function to define what happens when exiting the state."
+    ]
+  ]
+}

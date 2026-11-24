@@ -1,6 +1,6 @@
 import "../../../Documentation.css"
 import { ContentPage } from "../../../Templates/ContentPage.ts";
-import { Table } from "../../../Templates/Table.ts";
+import { Table, ColumnSpacing } from "../../../Templates/Table.ts";
 import * as textContent from "../../../../generated/KAudioMixDesk-text-generated.json";
 
 export function Construct(): HTMLElement
@@ -23,7 +23,7 @@ export function Construct(): HTMLElement
 
     const menus: Table = root.appendChild(document.createElement("table-element")) as Table;
     menus.Init();
-    menus.Configure(textContent.Menus);
+    menus.Configure(textContent.Menus, ColumnSpacing.Compact);
 
     return root;
 }

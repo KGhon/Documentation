@@ -1,0 +1,10 @@
+[Title]
+UGameManagerSubsystem
+
+[Definitions]
+<b>Type:</b> Class
+<b>Inherits:</b> UGameInstanceSubsystem
+<b>Category:</b> KGameFramework
+
+[Overview]
+The GameManagerSubsystem is a simple state machine that allows orderly control over the game program. Use it to guarantee order of operations between systems and make global changes to actors in the world based on the game state.

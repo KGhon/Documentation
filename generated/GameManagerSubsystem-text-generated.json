@@ -1,0 +1,5 @@
+{
+  "Title": "UGameManagerSubsystem",
+  "Definitions": "<b>Type:</b> Class\r\n<b>Inherits:</b> UGameInstanceSubsystem\r\n<b>Category:</b> KGameFramework",
+  "Overview": "The <a href='/Documentation/Pages/UnrealEngine/#GameManagerSubsystem'>GameManagerSubsystem</a> is a simple state machine that allows orderly control over the game program. Use it to guarantee order of operations between systems and make global changes to actors in the world based on the game state."
+}

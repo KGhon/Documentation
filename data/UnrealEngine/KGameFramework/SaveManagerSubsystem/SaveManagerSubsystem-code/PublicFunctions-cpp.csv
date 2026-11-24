@@ -1,0 +1,38 @@
+"bool CreateNewProfile(const FString& profileName)","BlueprintCallable
+Create a new profile if the name doesn't already exist."
+
+"void SetProfile(const FString& profileName)","BlueprintCallable
+Set the active save profile."
+
+"bool DeleteProfile(const FString& profileName)","BlueprintCallable
+Deletes the profile if a matching profile name is found."
+
+"TArray<FString> GetAllProfileNames()","BlueprintCallable
+Gets all existing profile names."
+
+"FSaveProfile GetProfile(const FString& profileName, bool& OutputPins)","BlueprintCallable
+Gets the profile that matches the name if it exists."
+
+"void SetSaveSlot(int saveSlot)","BlueprintCallable
+Sets the active save slot."
+
+"bool DeleteSaveSlot(const FString& profile, saveSlot)","BlueprintCallable
+Deletes a save slot."
+
+"bool SaveGame(FString saveName, bool isNewSlot, bool isAutosave)","BlueprintCallable
+Call this function to call save on all registered SaveAgents and write the data of the KSaveGame object to disk. This function uses the active profile and active save slot and will overwrite data at that location if it already exists unless 'isNewSlot' equals true."
+
+"UKSaveGame* LoadGame()","BlueprintCallable
+Call this function to load a KSaveGame from disk. This function uses the active profile and active save slot."
+
+"void AutosaveGame()","BlueprintCallable
+Call this function to save using an autosave slot. Autosaves automatically add a new save and will delete old autosaves when the max autosave limit (default 10) is reached."
+
+"void LoadSaveListeners()","BlueprintCallable
+Call this function when the game is ready to mass call Load() on all registered SaveAgents."
+
+"UKSaveGame* GetActiveSaveGame()","BlueprintCallable
+Gets the active save game currently loaded."
+
+"void SetSaveGameSessionStartTime()","BlueprintCallable
+Call this function every time you enter gameplay after loading a save to track a saves play time."

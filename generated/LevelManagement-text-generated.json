@@ -1,0 +1,11 @@
+{
+  "Title": "Level Management",
+  "Definitions": "<b>Type:</b> System\r\n<b>Category:</b> KGameFramework",
+  "Overview": "The level management system provides a <a href='/Documentation/Pages/UnrealEngine/#LevelManagerSubsystem'>LevelManagerSubsystem</a> that can load and unload levels and automatically communicates with the Quest System for loading dynamic sublevels when needed for quests and the Save System to reload the static levels that were loaded at the time of saving.\r\n\r\nLevels should be conceptually divided into two types:<ul>\r\n<li>Static: These are the main levels that are loaded through the level management system. They are static because they should only contain actors that are not meant to change, such as environments. The Level management system uses these levels to determine when dynamic sublevels should be loaded.</li>\r\n<li>Dynamic: AKA sublevels, dynamic levels contain actors that are situationally loaded into static levels. They should be systematically loaded depending on things like quest progress, game state, current static levels loaded, etc.. All dynamic levels should be developed with a static level dependence in mind.</li></ul>",
+  "QuickReference": [
+    [
+      "<a href='/Documentation/Pages/UnrealEngine/#LevelManagerSubsystem'>LevelManagerSubsystem</a>",
+      "The <a href='/Documentation/Pages/UnrealEngine/#LevelManagerSubsystem'>LevelManagerSubsystem</a> provides functions for loading and unloading levels within the KGameFramework that coordinates with the Quest System and Save System."
+    ]
+  ]
+}

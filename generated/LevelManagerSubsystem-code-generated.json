@@ -1,0 +1,38 @@
+{
+  "BindableEvents": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#D4D4D4\">OnLoadComplete</span></span></code>",
+      "Subscribe to be notified when the <a href='/Documentation/Pages/UnrealEngine/#LevelManagerSubsystem'>LevelManagerSubsystem</a> is finished loading a game (from save)."
+    ]
+  ],
+  "PublicFunctions": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> LoadGame</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#569CD6\">const</span><span style=\"color:#4EC9B0\"> TArray</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">TSoftObjectPtr</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">UWorld</span><span style=\"color:#D4D4D4\">>>&#x26; </span><span style=\"color:#9CDCFE\">levels</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nCall this function to load a set of levels and signal when all levels in the set have finished loading. This function should only be used for dedicated loading KGameStates when loading from a save file. Use GetSaveData() on the <a href='/Documentation/Pages/UnrealEngine/#SaveManagerSubsystem'>SaveManagerSubsystem</a> to retrieve what levels were loaded when the save file was written.\r\n\r\nNOTE: Make sure to subscribe to the <a href='/Documentation/Pages/UnrealEngine/#LevelManagerSubsystem'>LevelManagerSubsystem</a>'s OnLoadComplete event to wait for and resume once loading is complete."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> UnloadGame</span><span style=\"color:#D4D4D4\">()</span></span></code>",
+      "Unloads all levels in the game (not including persistent level)."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> QueueLevelLoad</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#4EC9B0\">TSoftObjectPtr</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">UWorld</span><span style=\"color:#D4D4D4\">> </span><span style=\"color:#9CDCFE\">level</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nAdds level to the load queue so multiple levels can be loaded together by calling ProcessLevelLoadQueue()."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> ProcessLevelLoadQueue</span><span style=\"color:#D4D4D4\">()</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nLoads all levels in the level queue."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> ClearLevelLoadQueue</span><span style=\"color:#D4D4D4\">()</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nClears all levels in the level queue."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> LoadLevel</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#4EC9B0\">TSoftObjectPtr</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">UWorld</span><span style=\"color:#D4D4D4\">> </span><span style=\"color:#9CDCFE\">level</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nCall this function to load a static level."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> UnloadLevel</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#4EC9B0\">TSoftObjectPtr</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">UWorld</span><span style=\"color:#D4D4D4\">> </span><span style=\"color:#9CDCFE\">level</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "Call this function to unload a static level (and all sublevels associated with it)."
+    ]
+  ]
+}

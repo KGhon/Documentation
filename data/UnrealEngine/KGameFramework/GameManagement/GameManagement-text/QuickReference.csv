@@ -1,0 +1,5 @@
+"GameManagerSubsystem","The GameManagerSubsystem is a simple state machine intended to organize the flow of game states."
+
+"GameStateInterface","The GameStateInterface can be added to any class to receive signals when the game state on the GameManagerSubsystem changes. This allows classes to be synchronized with the game state, especially when order of operations matters."
+
+"KGameState","KGameStates are states that can be used by the GameManagerSubsystem. A game state can be used to guarantee an order of operations between manager classes, creating dedicated loading states that finish before actors initialize, locking actors into certain global states etc."

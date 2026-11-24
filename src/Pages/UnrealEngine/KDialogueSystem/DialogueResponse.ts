@@ -1,6 +1,6 @@
 import "../../../Documentation.css"
 import { ContentPage } from "../../../Templates/ContentPage.ts";
-import { Table } from "../../../Templates/Table.ts";
+import { Table, ColumnSpacing } from "../../../Templates/Table.ts";
 import * as textContent from "../../../../generated/DialogueResponse-text-generated.json";
 
 export function Construct(): HTMLElement
@@ -23,7 +23,7 @@ export function Construct(): HTMLElement
 
     const properties: Table = root.appendChild(document.createElement("table-element")) as Table;
     properties.Init();
-    properties.Configure(textContent.Values);
+    properties.Configure(textContent.Values, ColumnSpacing.Compact);
 
     return root;
 }

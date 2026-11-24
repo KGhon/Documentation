@@ -1,0 +1,23 @@
+{
+  "QuickReference": [
+    [
+      "<a href='/Documentation/Pages/UnrealEngine/#SaveManagerSubsystem'>SaveManagerSubsystem</a>",
+      "The <a href='/Documentation/Pages/UnrealEngine/#SaveManagerSubsystem'>SaveManagerSubsystem</a> is responsible for managing the saving and loading of data from disk as well as managing profiles and save slots. It uses Unreal Engine's built-in save and load functionality and supports game profiles with separate save slots for each profile."
+    ],
+    [
+      "<a href='/Documentation/Pages/UnrealEngine/#KSaveGame'>KSaveGame</a>",
+      "The <a href='/Documentation/Pages/UnrealEngine/#KSaveGame'>KSaveGame</a> is a premade class using Unreal Engine's built-in save game class. By default it can save data from Level Management, the Quest System and Inventory System. Use this class to extend what data can be saved."
+    ],
+    [
+      "<a href='/Documentation/Pages/UnrealEngine/#SaveInterface'>SaveInterface</a>",
+      "The <a href='/Documentation/Pages/UnrealEngine/#SaveInterface'>SaveInterface</a> can be added to any class to configure save and load functionality for the class. If the class inherits from Actor, consider using a <a href='/Documentation/Pages/UnrealEngine/#SaveAgent'>SaveAgent</a>."
+    ],
+    [
+      "<a href='/Documentation/Pages/UnrealEngine/#SaveAgent'>SaveAgent</a>",
+      "<a href='/Documentation/Pages/UnrealEngine/#SaveAgent'>SaveAgents</a> are components that register an actor with the save system. Every class that needs to save data between game sessions should have its own version of <a href='/Documentation/Pages/UnrealEngine/#SaveAgent'>SaveAgent</a> for handling saving and loading data specific to that class."
+    ]
+  ],
+  "Title": "Save System",
+  "Definitions": "<b>Type:</b> System\r\n<b>Category:</b> KGameFramework",
+  "Overview": "The save system provides a streamlined workflow for designers to implement saving and loading game data between sessions. The system primarily uses <a href='/Documentation/Pages/UnrealEngine/#SaveAgent'>SaveAgents</a> for Blueprints that can attach actor components, but examples of implementation for UObjects in C++ can also be seen in the Quest System. This save system utilizes Unreal Engine's built-in save functionality. This system supports actors placed in a level during development as well as runtime spawned actors depending on <a href='/Documentation/Pages/UnrealEngine/#SaveAgent'>SaveAgent</a> configuration."
+}

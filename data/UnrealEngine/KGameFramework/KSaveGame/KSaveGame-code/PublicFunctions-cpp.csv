@@ -1,0 +1,2 @@
+"void LoadSnapshot(TSubclassOf<UKSaveGame> snapshot)","BlueprintCallable
+Call this function to copy data from a SaveSnapshot to the KSaveGame."

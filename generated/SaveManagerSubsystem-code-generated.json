@@ -1,0 +1,56 @@
+{
+  "PublicFunctions": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">bool</span><span style=\"color:#DCDCAA\"> CreateNewProfile</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#569CD6\">const</span><span style=\"color:#4EC9B0\"> FString</span><span style=\"color:#D4D4D4\">&#x26; </span><span style=\"color:#9CDCFE\">profileName</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nCreate a new profile if the name doesn't already exist."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> SetProfile</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#569CD6\">const</span><span style=\"color:#4EC9B0\"> FString</span><span style=\"color:#D4D4D4\">&#x26; </span><span style=\"color:#9CDCFE\">profileName</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nSet the active save profile."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">bool</span><span style=\"color:#DCDCAA\"> DeleteProfile</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#569CD6\">const</span><span style=\"color:#4EC9B0\"> FString</span><span style=\"color:#D4D4D4\">&#x26; </span><span style=\"color:#9CDCFE\">profileName</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nDeletes the profile if a matching profile name is found."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">TArray</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">FString</span><span style=\"color:#D4D4D4\">> </span><span style=\"color:#DCDCAA\">GetAllProfileNames</span><span style=\"color:#D4D4D4\">()</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nGets all existing profile names."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">FSaveProfile</span><span style=\"color:#DCDCAA\"> GetProfile</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#569CD6\">const</span><span style=\"color:#4EC9B0\"> FString</span><span style=\"color:#D4D4D4\">&#x26; </span><span style=\"color:#9CDCFE\">profileName</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#569CD6\">bool</span><span style=\"color:#D4D4D4\">&#x26; </span><span style=\"color:#9CDCFE\">OutputPins</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nGets the profile that matches the name if it exists."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> SetSaveSlot</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#569CD6\">int</span><span style=\"color:#9CDCFE\"> saveSlot</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nSets the active save slot."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">bool</span><span style=\"color:#DCDCAA\"> DeleteSaveSlot</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#569CD6\">const</span><span style=\"color:#4EC9B0\"> FString</span><span style=\"color:#D4D4D4\">&#x26; </span><span style=\"color:#9CDCFE\">profile</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#4EC9B0\">saveSlot</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nDeletes a save slot."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">bool</span><span style=\"color:#DCDCAA\"> SaveGame</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#4EC9B0\">FString</span><span style=\"color:#9CDCFE\"> saveName</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#569CD6\">bool</span><span style=\"color:#9CDCFE\"> isNewSlot</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#569CD6\">bool</span><span style=\"color:#9CDCFE\"> isAutosave</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nCall this function to call save on all registered <a href='/Documentation/Pages/UnrealEngine/#SaveAgent'>SaveAgents</a> and write the data of the <a href='/Documentation/Pages/UnrealEngine/#KSaveGame'>KSaveGame</a> object to disk. This function uses the active profile and active save slot and will overwrite data at that location if it already exists unless 'isNewSlot' equals true."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">UKSaveGame</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#DCDCAA\">LoadGame</span><span style=\"color:#D4D4D4\">()</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nCall this function to load a <a href='/Documentation/Pages/UnrealEngine/#KSaveGame'>KSaveGame</a> from disk. This function uses the active profile and active save slot."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> AutosaveGame</span><span style=\"color:#D4D4D4\">()</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nCall this function to save using an autosave slot. Autosaves automatically add a new save and will delete old autosaves when the max autosave limit (default 10) is reached."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> LoadSaveListeners</span><span style=\"color:#D4D4D4\">()</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nCall this function when the game is ready to mass call Load() on all registered <a href='/Documentation/Pages/UnrealEngine/#SaveAgent'>SaveAgents</a>."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">UKSaveGame</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#DCDCAA\">GetActiveSaveGame</span><span style=\"color:#D4D4D4\">()</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nGets the active save game currently loaded."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> SetSaveGameSessionStartTime</span><span style=\"color:#D4D4D4\">()</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nCall this function every time you enter gameplay after loading a save to track a saves play time."
+    ]
+  ]
+}

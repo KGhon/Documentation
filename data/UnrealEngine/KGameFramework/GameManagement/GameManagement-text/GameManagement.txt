@@ -1,0 +1,9 @@
+[Title]
+Game Management
+
+[Definitions]
+<b>Type:</b> System
+<b>Category:</b> KGameFramework
+
+[Overview]
+The game management system provides the GameManagerSubsystem with Blueprintable KGameStates for a simple extendedable state machine to control global game state flow.

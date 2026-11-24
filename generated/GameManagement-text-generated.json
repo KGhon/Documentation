@@ -1,0 +1,19 @@
+{
+  "Title": "Game Management",
+  "Definitions": "<b>Type:</b> System\r\n<b>Category:</b> KGameFramework",
+  "Overview": "The game management system provides the <a href='/Documentation/Pages/UnrealEngine/#GameManagerSubsystem'>GameManagerSubsystem</a> with Blueprintable KGameStates for a simple extendedable state machine to control global game state flow.",
+  "QuickReference": [
+    [
+      "<a href='/Documentation/Pages/UnrealEngine/#GameManagerSubsystem'>GameManagerSubsystem</a>",
+      "The <a href='/Documentation/Pages/UnrealEngine/#GameManagerSubsystem'>GameManagerSubsystem</a> is a simple state machine intended to organize the flow of game states."
+    ],
+    [
+      "<a href='/Documentation/Pages/UnrealEngine/#GameStateInterface'>GameStateInterface</a>",
+      "The <a href='/Documentation/Pages/UnrealEngine/#GameStateInterface'>GameStateInterface</a> can be added to any class to receive signals when the game state on the <a href='/Documentation/Pages/UnrealEngine/#GameManagerSubsystem'>GameManagerSubsystem</a> changes. This allows classes to be synchronized with the game state, especially when order of operations matters."
+    ],
+    [
+      "<a href='/Documentation/Pages/UnrealEngine/#KGameState'>KGameState</a>",
+      "KGameStates are states that can be used by the <a href='/Documentation/Pages/UnrealEngine/#GameManagerSubsystem'>GameManagerSubsystem</a>. A game state can be used to guarantee an order of operations between manager classes, creating dedicated loading states that finish before actors initialize, locking actors into certain global states etc."
+    ]
+  ]
+}

@@ -1,0 +1,2 @@
+"void SetGameState(TSubclassOf<UKGameStateBase> state)","BlueprintCallable
+Call this function to set the next game state."

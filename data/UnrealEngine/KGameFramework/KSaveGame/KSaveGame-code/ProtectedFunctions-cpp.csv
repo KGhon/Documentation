@@ -1,0 +1,2 @@
+"void OnLoadSnapshot(UKSaveGame* snapshot)","Overrideable
+Override this function to extend what data is transferred from a SaveSnapshot to the KSaveGame. Always call parent implementation."

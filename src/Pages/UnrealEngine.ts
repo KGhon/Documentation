@@ -51,6 +51,20 @@ import * as DialogueInstruction from "./UnrealEngine/KDialogueSystem/DialogueIns
 
 import * as DialogueResponse from "./UnrealEngine/KDialogueSystem/DialogueResponse.ts";
 
+import * as GameManagement from "./UnrealEngine/KGameFramework/GameManagement.ts";
+import * as GameManagerSubsystem from "./UnrealEngine/KGameFramework/GameManagerSubsystem.ts";
+import * as GameStateInterface from "./UnrealEngine/KGameFramework/GameStateInterface.ts";
+import * as KGameState from "./UnrealEngine/KGameFramework/KGameState.ts";
+
+import * as LevelManagement from "./UnrealEngine/KGameFramework/LevelManagement.ts";
+import * as LevelManagerSubsystem from "./UnrealEngine/KGameFramework/LevelManagerSubsystem.ts";
+
+import * as SaveSystem from "./UnrealEngine/KGameFramework/SaveSystem.ts";
+import * as KSaveGame from "./UnrealEngine/KGameFramework/KSaveGame.ts";
+import * as SaveAgent from "./UnrealEngine/KGameFramework/SaveAgent.ts";
+import * as SaveInterface from "./UnrealEngine/KGameFramework/SaveInterface.ts";
+import * as SaveManagerSubsystem from "./UnrealEngine/KGameFramework/SaveManagerSubsystem.ts";
+
 const spa: DocPage = document.createElement("doc-page") as DocPage;
 spa.Init();
 spa.SetNavigationPageName("Unreal Engine");
@@ -127,6 +141,20 @@ spa.AddContentPage("DialogueTree", DialogueTree.Construct());
 spa.AddContentPage("DialogueInstruction", DialogueInstruction.Construct());
 
 spa.AddContentPage("DialogueResponse", DialogueResponse.Construct());
+
+spa.AddContentPage("GameManagement", GameManagement.Construct());
+spa.AddContentPage("GameManagerSubsystem", GameManagerSubsystem.Construct());
+spa.AddContentPage("GameStateInterface", GameStateInterface.Construct());
+spa.AddContentPage("KGameState", KGameState.Construct());
+
+spa.AddContentPage("LevelManagement", LevelManagement.Construct());
+spa.AddContentPage("LevelManagerSubsystem", LevelManagerSubsystem.Construct());
+
+spa.AddContentPage("SaveSystem", SaveSystem.Construct());
+spa.AddContentPage("KSaveGame", KSaveGame.Construct());
+spa.AddContentPage("SaveAgent", SaveAgent.Construct());
+spa.AddContentPage("SaveInterface", SaveInterface.Construct());
+spa.AddContentPage("SaveManagerSubsystem", SaveManagerSubsystem.Construct());
 
 const path = window.location.hash.replace("#", "");
 if (path)

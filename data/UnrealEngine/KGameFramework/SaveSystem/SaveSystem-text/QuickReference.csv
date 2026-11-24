@@ -1,0 +1,7 @@
+"SaveManagerSubsystem","The SaveManagerSubsystem is responsible for managing the saving and loading of data from disk as well as managing profiles and save slots. It uses Unreal Engine's built-in save and load functionality and supports game profiles with separate save slots for each profile."
+
+"KSaveGame","The KSaveGame is a premade class using Unreal Engine's built-in save game class. By default it can save data from Level Management, the Quest System and Inventory System. Use this class to extend what data can be saved."
+
+"SaveInterface","The SaveInterface can be added to any class to configure save and load functionality for the class. If the class inherits from Actor, consider using a SaveAgent."
+
+"SaveAgent","SaveAgents are components that register an actor with the save system. Every class that needs to save data between game sessions should have its own version of SaveAgent for handling saving and loading data specific to that class."

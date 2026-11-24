@@ -1,0 +1,2 @@
+"void ReceiveGameStateChange(TSubclassOf<UKGameStateBase> state)","Overrideable
+Override this function to receive and react to game state changes on the GameManagerSubsystem."

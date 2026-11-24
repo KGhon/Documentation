@@ -1,0 +1,20 @@
+"void LoadGame(const TArray<TSoftObjectPtr<UWorld>>& levels)","BlueprintCallable
+Call this function to load a set of levels and signal when all levels in the set have finished loading. This function should only be used for dedicated loading KGameStates when loading from a save file. Use GetSaveData() on the SaveManagerSubsystem to retrieve what levels were loaded when the save file was written.
+
+NOTE: Make sure to subscribe to the LevelManagerSubsystem's OnLoadComplete event to wait for and resume once loading is complete."
+
+"void UnloadGame()","Unloads all levels in the game (not including persistent level)."
+
+"void QueueLevelLoad(TSoftObjectPtr<UWorld> level)","BlueprintCallable
+Adds level to the load queue so multiple levels can be loaded together by calling ProcessLevelLoadQueue()."
+
+"void ProcessLevelLoadQueue()","BlueprintCallable
+Loads all levels in the level queue."
+
+"void ClearLevelLoadQueue()","BlueprintCallable
+Clears all levels in the level queue."
+
+"void LoadLevel(TSoftObjectPtr<UWorld> level)","BlueprintCallable
+Call this function to load a static level."
+
+"void UnloadLevel(TSoftObjectPtr<UWorld> level)","Call this function to unload a static level (and all sublevels associated with it)."

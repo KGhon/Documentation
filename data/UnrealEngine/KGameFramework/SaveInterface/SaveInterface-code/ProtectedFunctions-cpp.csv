@@ -1,0 +1,8 @@
+"bool CheckSaveConditions()","Overrideable
+Override this function to check conditions that determine if the class should save."
+
+"bool CheckLoadConditions()","Overrideable
+Override this function to check conditions that determine if the class should load."
+
+"UKSaveGame* GetSaveData()","BlueprintCallable
+Calls this function to get the currently loaded save game in the SaveManagerSubsystem."

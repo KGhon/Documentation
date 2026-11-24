@@ -1,0 +1,5 @@
+{
+  "Title": "ISaveInterface",
+  "Definitions": "<b>Type:</b> Interface\r\n<b>Category:</b> KGameFramework",
+  "Overview": "The <a href='/Documentation/Pages/UnrealEngine/#SaveInterface'>SaveInterface</a> can be added to any class to configure save and load functionality for the class. You will need to make sure to call RegisterSaveSystemListener()/UnregisterSaveSystemListener() in the KGameFrameworksStatics and pass the object that implements this interface. If the class is an Actor, use a <a href='/Documentation/Pages/UnrealEngine/#SaveAgent'>SaveAgent</a> instead, which provides extra configuration options and handles some setup for you."
+}
