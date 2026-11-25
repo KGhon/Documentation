@@ -1,0 +1,14 @@
+[TObjectPtr,#4EC9B0]
+[UQuestBlockID,#4EC9B0]
+[TMap,#4EC9B0]
+[FName,#4EC9B0]
+[FText,#4EC9B0]
+[TSoftObjectPtr,#4EC9B0]
+[FQuestSubLevel,#4EC9B0]
+
+"TObjectPtr<UQuestBlockID> id","The ID assigned to a QuestBlock so it can be referenced by other systems interacting with the quest system."
+
+"TMap<FName, FText> questText","Text that can be retreived using KGameFrameworkStatics functions to be displayed."
+
+"TMap<TSoftObjectPtr<FQuestSubLevel>> subLevels","Populate this map with sublevels that the QuestBlock requires to be loaded in order for it to function. The map key is used by the LevelManagerSubsystem to query the QuestBlock for levels it wants to load depending on what levels are being loaded. The FQuestSubLevel holds a soft reference to the level to load as well as a bool to define whether sublevels spawned this way should always be respawned even after completion."
+

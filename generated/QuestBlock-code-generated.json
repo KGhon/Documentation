@@ -1,0 +1,74 @@
+{
+  "BindableEvents": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#9CDCFE\">SignalBlockComplete</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">UQuestBlockID</span><span style=\"color:#D4D4D4\">*, </span><span style=\"color:#4EC9B0\">EQuestState</span><span style=\"color:#D4D4D4\">></span></span></code>",
+      "Subscribe to notify other objects when the <a href='/Documentation/Pages/UnrealEngine/#QuestBlock'>QuestBlock</a> is complete."
+    ]
+  ],
+  "Properties": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">TObjectPtr</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">UQuestBlockID</span><span style=\"color:#D4D4D4\">> </span><span style=\"color:#9CDCFE\">id</span></span></code>",
+      "The ID assigned to a <a href='/Documentation/Pages/UnrealEngine/#QuestBlock'>QuestBlock</a> so it can be referenced by other systems interacting with the quest system."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">TMap</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">FName</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#4EC9B0\">FText</span><span style=\"color:#D4D4D4\">> </span><span style=\"color:#9CDCFE\">questText</span></span></code>",
+      "Text that can be retreived using KGameFrameworkStatics functions to be displayed."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">TMap</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">TSoftObjectPtr</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">FQuestSubLevel</span><span style=\"color:#D4D4D4\">>> </span><span style=\"color:#9CDCFE\">subLevels</span></span></code>",
+      "Populate this map with sublevels that the <a href='/Documentation/Pages/UnrealEngine/#QuestBlock'>QuestBlock</a> requires to be loaded in order for it to function. The map key is used by the <a href='/Documentation/Pages/UnrealEngine/#LevelManagerSubsystem'>LevelManagerSubsystem</a> to query the <a href='/Documentation/Pages/UnrealEngine/#QuestBlock'>QuestBlock</a> for levels it wants to load depending on what levels are being loaded. The FQuestSubLevel holds a soft reference to the level to load as well as a bool to define whether sublevels spawned this way should always be respawned even after completion."
+    ]
+  ],
+  "ProtectedFunctions": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">UQuestObjectiveBase</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#DCDCAA\">CreateQuestObjective</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#4EC9B0\">TSubclassOf</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">UQuestObjectiveBase</span><span style=\"color:#D4D4D4\">> </span><span style=\"color:#9CDCFE\">objective</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#569CD6\">const</span><span style=\"color:#4EC9B0\"> FOnQuestObjectiveComplete</span><span style=\"color:#D4D4D4\">&#x26; </span><span style=\"color:#9CDCFE\">onObjectiveComplete</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nCall this function to spawn <a href='/Documentation/Pages/UnrealEngine/#QuestObjective'>QuestObjectives</a> within the <a href='/Documentation/Pages/UnrealEngine/#QuestBlock'>QuestBlock</a>."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> BlockComplete</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#4EC9B0\">EQuestState</span><span style=\"color:#9CDCFE\"> result</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nCall this function on completion of <a href='/Documentation/Pages/UnrealEngine/#QuestObjective'>QuestObjectives</a> if the conditions fulfill the requirements for completing the <a href='/Documentation/Pages/UnrealEngine/#QuestBlock'>QuestBlock</a>."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">UShareQuestDataObject</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#DCDCAA\">GetSharedQuestDataObject</span><span style=\"color:#D4D4D4\">()</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>, <span style=\"color:#FF756E\">BlueprintPure</span>\r\nGet the <a href='/Documentation/Pages/UnrealEngine/#SharedQuestDataObject'>SharedQuestDataObject</a> for modifying quest save data."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">bool</span><span style=\"color:#DCDCAA\"> CheckSaveConditions</span><span style=\"color:#D4D4D4\">()</span></span></code>",
+      "<span style=\"color:#FF756E\">Overrideable</span>\r\nOverride this function to check conditions that determine if the class should save."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">bool</span><span style=\"color:#DCDCAA\"> CheckLoadConditions</span><span style=\"color:#D4D4D4\">()</span></span></code>",
+      "<span style=\"color:#FF756E\">Overrideable</span>\r\nOverride this function to check conditions that determine if the class should load."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">UKSaveGame</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#DCDCAA\">GetSaveData</span><span style=\"color:#D4D4D4\">()</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nCalls this function to get the currently loaded save game in the <a href='/Documentation/Pages/UnrealEngine/#SaveManagerSubsystem'>SaveManagerSubsystem</a>."
+    ]
+  ],
+  "PublicFunctions": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> Initialize</span><span style=\"color:#D4D4D4\">()</span></span></code>",
+      "<span style=\"color:#FF756E\">Overrideable</span>\r\nOverride this function and call CreateQuestObjective() to populate this quest block with <a href='/Documentation/Pages/UnrealEngine/#QuestObjective'>QuestObjectives</a>."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">TMap</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">TSoftObjectPtr</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">UWorld</span><span style=\"color:#D4D4D4\">>, </span><span style=\"color:#4EC9B0\">FQuestSubLevel</span><span style=\"color:#D4D4D4\">>&#x26; </span><span style=\"color:#DCDCAA\">GetSublevels</span><span style=\"color:#D4D4D4\">()</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nGet all sublevels and their corresponding levels."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">TMap</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">UQuestObjectiveID</span><span style=\"color:#D4D4D4\">*, </span><span style=\"color:#4EC9B0\">UQuestObjectiveBase</span><span style=\"color:#D4D4D4\">*>&#x26; </span><span style=\"color:#DCDCAA\">GetAllObjectives</span><span style=\"color:#D4D4D4\">()</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nGet all <a href='/Documentation/Pages/UnrealEngine/#QuestObjective'>QuestObjectives</a>."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> SaveData</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#4EC9B0\">UKSaveGame</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#9CDCFE\">saveGame</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">Overrideable</span>\r\nOverride this function to implement saving data unique to the class the <a href='/Documentation/Pages/UnrealEngine/#SaveAgent'>SaveAgent</a> is attached to. Always make sure to call the parent function and pass the save game object up the inheritance tree when overriding."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> LoadData</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#4EC9B0\">UKSaveGame</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#9CDCFE\">saveGame</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">Overrideable</span>\r\nOverride this function to implement loading data unique to the class the <a href='/Documentation/Pages/UnrealEngine/#SaveAgent'>SaveAgent</a> is attached to. Always make sure to call the parent function and pass the save game object up the inheritance tree when overriding."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> RemoveData</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#4EC9B0\">UKSaveGame</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#9CDCFE\">saveGame</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">Overrideable</span>\r\nOverride this function to implement removing save data when it is no longer needed."
+    ]
+  ]
+}

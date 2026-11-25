@@ -1,0 +1,24 @@
+{
+  "PublicFunctions": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> SpawnWidget</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#4EC9B0\">TSubclassOf</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">UUserWidget</span><span style=\"color:#4EC9B0\"> widget</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#569CD6\">const</span><span style=\"color:#4EC9B0\"> FName</span><span style=\"color:#D4D4D4\">&#x26; </span><span style=\"color:#4EC9B0\">key</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nSpawns and registers a widget."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> DestroyWidget</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#569CD6\">const</span><span style=\"color:#4EC9B0\"> FName</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#9CDCFE\">key</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nDestroys a widget if the matching key is found."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">UUserWidget</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#DCDCAA\">GetWidget</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#569CD6\">const</span><span style=\"color:#4EC9B0\"> FName</span><span style=\"color:#D4D4D4\">&#x26; </span><span style=\"color:#9CDCFE\">key</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#569CD6\">bool</span><span style=\"color:#D4D4D4\">&#x26; </span><span style=\"color:#9CDCFE\">OutputPins</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nGets a widget if a matching key is found."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> ShowWidget</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#569CD6\">const</span><span style=\"color:#4EC9B0\"> FName</span><span style=\"color:#D4D4D4\">&#x26; </span><span style=\"color:#9CDCFE\">key</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nAttaches a widget to the viewport if a matching key is found."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> HideWidget</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#569CD6\">const</span><span style=\"color:#4EC9B0\"> FName</span><span style=\"color:#D4D4D4\">&#x26; </span><span style=\"color:#9CDCFE\">key</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nDetaches a widget from the viewport if a matching key is found."
+    ]
+  ]
+}

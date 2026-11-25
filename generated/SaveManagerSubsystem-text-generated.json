@@ -1,5 +1,5 @@
 {
   "Title": "USaveManagerSubsystem",
-  "Definitions": "<b>Type:</b> Class\r\n<b>Inherits:</b> UGameInstanceSubsystem\r\n<b>Category:</b> KGameFramework",
+  "Definitions": "<b>Type:</b> Class\r\n<b>Inherits:</b> UGameInstanceSubsystem\r\n<b>Category:</b> KGameFramework > <a href='/Documentation/Pages/UnrealEngine/#SaveSystem'>SaveSystem</a>",
   "Overview": "The <a href='/Documentation/Pages/UnrealEngine/#SaveManagerSubsystem'>SaveManagerSubsystem</a> is entirely responsible for managing saving and loading profiles and save slots. The ultimate goal of any menu interfacing with the <a href='/Documentation/Pages/UnrealEngine/#SaveManagerSubsystem'>SaveManagerSubsystem</a> is to set the active save profile and active save slot. Once set, a <a href='/Documentation/Pages/UnrealEngine/#KSaveGame'>KSaveGame</a> can be loaded to store runtime data and ultimately be saved later."
 }

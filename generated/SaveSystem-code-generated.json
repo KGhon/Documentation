@@ -1,0 +1,16 @@
+{
+  "Settings": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">TSubclassOf</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">UKSaveGame</span><span style=\"color:#D4D4D4\">> </span><span style=\"color:#9CDCFE\">saveClass</span></span></code>",
+      "Set the <a href='/Documentation/Pages/UnrealEngine/#KSaveGame'>KSaveGame</a> class to be used by the save system."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">int</span><span style=\"color:#9CDCFE\"> maxManualSaves</span></span></code>",
+      "Set the max number of manual saves allowed when calling SaveGame() on the <a href='/Documentation/Pages/UnrealEngine/#SaveManagerSubsystem'>SaveManagerSubsystem</a> and isNewSlot = true."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">int</span><span style=\"color:#9CDCFE\"> maxAutosaves</span></span></code>",
+      "Set the max number of autosaves before the <a href='/Documentation/Pages/UnrealEngine/#SaveManagerSubsystem'>SaveManagerSubsystem</a> starts replacing the oldest autosave."
+    ]
+  ]
+}

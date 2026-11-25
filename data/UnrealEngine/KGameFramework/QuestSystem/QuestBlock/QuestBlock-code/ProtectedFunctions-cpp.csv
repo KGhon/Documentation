@@ -1,0 +1,17 @@
+"UQuestObjectiveBase* CreateQuestObjective(TSubclassOf<UQuestObjectiveBase> objective, const FOnQuestObjectiveComplete& onObjectiveComplete)","BlueprintCallable
+Call this function to spawn QuestObjectives within the QuestBlock."
+
+"void BlockComplete(EQuestState result)","BlueprintCallable
+Call this function on completion of QuestObjectives if the conditions fulfill the requirements for completing the QuestBlock."
+
+"UShareQuestDataObject* GetSharedQuestDataObject()","BlueprintCallable, BlueprintPure
+Get the SharedQuestDataObject for modifying quest save data."
+
+"bool CheckSaveConditions()","Overrideable
+Override this function to check conditions that determine if the class should save."
+
+"bool CheckLoadConditions()","Overrideable
+Override this function to check conditions that determine if the class should load."
+
+"UKSaveGame* GetSaveData()","BlueprintCallable
+Calls this function to get the currently loaded save game in the SaveManagerSubsystem."

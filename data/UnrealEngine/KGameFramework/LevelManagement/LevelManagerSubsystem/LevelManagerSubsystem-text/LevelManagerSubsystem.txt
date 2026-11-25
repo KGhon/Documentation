@@ -1,0 +1,10 @@
+[Title]
+ULevelManagerSubsystem
+
+[Definitions]
+<b>Type:</b> Class
+<b>Inherits:</b> UGameInstanceSubsystem
+<b>Category:</b> KGameFramework > LevelManagement
+
+[Overview]
+The LevelManagerSubsystem is responsible for loading (by streaming) all levels. The system is primarily exposes the ability to load static levels and account for dynamic sublevels that also need to be loaded for the Quest System.

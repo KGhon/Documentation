@@ -51,19 +51,36 @@ import * as DialogueInstruction from "./UnrealEngine/KDialogueSystem/DialogueIns
 
 import * as DialogueResponse from "./UnrealEngine/KDialogueSystem/DialogueResponse.ts";
 
-import * as GameManagement from "./UnrealEngine/KGameFramework/GameManagement.ts";
-import * as GameManagerSubsystem from "./UnrealEngine/KGameFramework/GameManagerSubsystem.ts";
-import * as GameStateInterface from "./UnrealEngine/KGameFramework/GameStateInterface.ts";
-import * as KGameState from "./UnrealEngine/KGameFramework/KGameState.ts";
+import * as GameManagement from "./UnrealEngine/KGameFramework/GameManagement/GameManagement.ts";
+import * as GameManagerSubsystem from "./UnrealEngine/KGameFramework/GameManagement/GameManagerSubsystem.ts";
+import * as GameStateInterface from "./UnrealEngine/KGameFramework/GameManagement/GameStateInterface.ts";
+import * as KGameState from "./UnrealEngine/KGameFramework/GameManagement/KGameState.ts";
 
-import * as LevelManagement from "./UnrealEngine/KGameFramework/LevelManagement.ts";
-import * as LevelManagerSubsystem from "./UnrealEngine/KGameFramework/LevelManagerSubsystem.ts";
+import * as LevelManagement from "./UnrealEngine/KGameFramework/LevelManagement/LevelManagement.ts";
+import * as LevelManagerSubsystem from "./UnrealEngine/KGameFramework/LevelManagement/LevelManagerSubsystem.ts";
 
-import * as SaveSystem from "./UnrealEngine/KGameFramework/SaveSystem.ts";
-import * as KSaveGame from "./UnrealEngine/KGameFramework/KSaveGame.ts";
-import * as SaveAgent from "./UnrealEngine/KGameFramework/SaveAgent.ts";
-import * as SaveInterface from "./UnrealEngine/KGameFramework/SaveInterface.ts";
-import * as SaveManagerSubsystem from "./UnrealEngine/KGameFramework/SaveManagerSubsystem.ts";
+import * as SaveSystem from "./UnrealEngine/KGameFramework/SaveSystem/SaveSystem.ts";
+import * as KSaveGame from "./UnrealEngine/KGameFramework/SaveSystem/KSaveGame.ts";
+import * as SaveAgent from "./UnrealEngine/KGameFramework/SaveSystem/SaveAgent.ts";
+import * as SaveInterface from "./UnrealEngine/KGameFramework/SaveSystem/SaveInterface.ts";
+import * as SaveManagerSubsystem from "./UnrealEngine/KGameFramework/SaveSystem/SaveManagerSubsystem.ts";
+/*
+import * as QuestSystem from "./UnrealEngine/KGameFramework/QuestSystem/QuestSystem.ts";
+import * as QuestBlock from "./UnrealEngine/KGameFramework/QuestSystem/QuestBlock.ts";
+import * as QuestBlockID from "./UnrealEngine/KGameFramework/QuestSystem/QuestBlockID.ts";
+import * as QuestGraph from "./UnrealEngine/KGameFramework/QuestSystem/QuestGraph.ts";
+import * as QuestGraphID from "./UnrealEngine/KGameFramework/QuestSystem/QuestGraphID.ts";
+import * as QuestManagerSubsystem from "./UnrealEngine/KGameFramework/QuestSystem/QuestManagerSubsystem.ts";
+import * as QuestObjective from "./UnrealEngine/KGameFramework/QuestSystem/QuestObjective.ts";
+import * as QuestObjectiveFloatCounter from "./UnrealEngine/KGameFramework/QuestSystem/QuestObjectiveFloatCounter.ts";
+import * as QuestObjectiveID from "./UnrealEngine/KGameFramework/QuestSystem/QuestObjectiveID.ts";
+import * as SharedQuestDataObject from "./UnrealEngine/KGameFramework/QuestSystem/SharedQuestDataObject.ts";
+
+import * as QuestState from "./UnrealEngine/KGameFramework/QuestSystem/QuestState.ts";
+*/
+import * as UISystem from "./UnrealEngine/KGameFramework/UISystem/UISystem.ts";
+import * as UIManagerSubsystem from "./UnrealEngine/KGameFramework/UISystem/UIManagerSubsystem.ts";
+
 
 const spa: DocPage = document.createElement("doc-page") as DocPage;
 spa.Init();
@@ -155,6 +172,22 @@ spa.AddContentPage("KSaveGame", KSaveGame.Construct());
 spa.AddContentPage("SaveAgent", SaveAgent.Construct());
 spa.AddContentPage("SaveInterface", SaveInterface.Construct());
 spa.AddContentPage("SaveManagerSubsystem", SaveManagerSubsystem.Construct());
+/*
+spa.AddContentPage("QuestSystem", QuestSystem.Construct());
+spa.AddContentPage("QuestBlock", QuestBlock.Construct());
+spa.AddContentPage("QuestBlockID", QuestBlockID.Construct());
+spa.AddContentPage("QuestGraph", QuestGraph.Construct());
+spa.AddContentPage("QuestGraphID", QuestGraphID.Construct());
+spa.AddContentPage("QuestManagerSubsystem", QuestManagerSubsystem.Constuct());
+spa.AddContentPage("QuestObjective", QuestObjective.Construct());
+spa.AddContentPage("QuestObjectiveFloatCounter", QuestObjectiveFloatCounter.Construct());
+spa.AddContentPage("QuestObjectiveID", QuestObjectiveID.Construct());
+spa.AddContentPage("SharedQuestDataObject", SharedQuestDataObject.Construct());
+
+spa.AddContentPage("QuestState", QuestState.Constuct());
+*/
+spa.AddContentPage("UISystem", UISystem.Construct());
+spa.AddContentPage("UIManagerSubsystem", UIManagerSubsystem.Construct());
 
 const path = window.location.hash.replace("#", "");
 if (path)

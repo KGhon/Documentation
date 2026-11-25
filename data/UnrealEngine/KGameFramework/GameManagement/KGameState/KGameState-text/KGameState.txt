@@ -1,0 +1,10 @@
+[Title]
+UKGameStateBase
+
+[Definitions]
+<b>Type:</b> Class
+<b>Inherits:</b> UObject
+<b>Category:</b> KGameFramework > GameManagement
+
+[Overview]
+KGameStates are states used with the GameManagerSubsystem to control the overall flow of the game program by defining exclusive states and transitions and sequencing order sensitive game functionality.

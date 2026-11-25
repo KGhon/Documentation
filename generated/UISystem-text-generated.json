@@ -1,0 +1,11 @@
+{
+  "QuickReference": [
+    [
+      "<a href='/Documentation/Pages/UnrealEngine/#UIManagerSubsystem'>UIManagerSubsystem</a>",
+      "Manages and provides access to registered UI menus."
+    ]
+  ],
+  "Title": "UI System",
+  "Definitions": "<b>Type:</b> System\r\n<b>Category:</b> KGameFramework",
+  "Overview": "A hub for registering, showing, and hiding UI menus."
+}

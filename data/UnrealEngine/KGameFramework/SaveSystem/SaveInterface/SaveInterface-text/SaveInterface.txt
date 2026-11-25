@@ -1,0 +1,9 @@
+[Title]
+ISaveInterface
+
+[Definitions]
+<b>Type:</b> Interface
+<b>Category:</b> KGameFramework > SaveSystem
+
+[Overview]
+The SaveInterface can be added to any class to configure save and load functionality for the class. You will need to make sure to call RegisterSaveSystemListener()/UnregisterSaveSystemListener() in the KGameFrameworksStatics and pass the object that implements this interface. If the class is an Actor, use a SaveAgent instead, which provides extra configuration options and handles some setup for you.

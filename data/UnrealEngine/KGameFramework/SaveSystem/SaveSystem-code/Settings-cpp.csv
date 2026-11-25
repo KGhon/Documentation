@@ -1,0 +1,8 @@
+[TSubclassOf,#4EC9B0]
+[UKSaveGame,#4EC9B0]
+
+"TSubclassOf<UKSaveGame> saveClass","Set the KSaveGame class to be used by the save system."
+
+"int maxManualSaves","Set the max number of manual saves allowed when calling SaveGame() on the SaveManagerSubsystem and isNewSlot = true."
+
+"int maxAutosaves","Set the max number of autosaves before the SaveManagerSubsystem starts replacing the oldest autosave."

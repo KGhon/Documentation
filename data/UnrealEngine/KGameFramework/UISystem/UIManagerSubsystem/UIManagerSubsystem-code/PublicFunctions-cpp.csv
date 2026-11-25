@@ -1,0 +1,14 @@
+"void SpawnWidget(TSubclassOf<UUserWidget widget, const FName& key)","BlueprintCallable
+Spawns and registers a widget."
+
+"void DestroyWidget(const FName* key)","BlueprintCallable
+Destroys a widget if the matching key is found."
+
+"UUserWidget* GetWidget(const FName& key, bool& OutputPins)","BlueprintCallable
+Gets a widget if a matching key is found."
+
+"void ShowWidget(const FName& key)","BlueprintCallable
+Attaches a widget to the viewport if a matching key is found."
+
+"void HideWidget(const FName& key)","BlueprintCallable
+Detaches a widget from the viewport if a matching key is found."

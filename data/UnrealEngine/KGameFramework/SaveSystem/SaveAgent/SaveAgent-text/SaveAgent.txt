@@ -1,0 +1,12 @@
+[Title]
+USaveAgent
+
+[Definitions]
+<b>Type:</b> Class
+<b>Inherits:</b> UActorComponent
+<b>Category:</b> KGameFramework > SaveSystem
+
+[Overview]
+SaveAgents are actor components that can be attached to actors to provide save and load functionality. Each SaveAgent should be Blueprinted and customized specific to the actor class it is being attached to. SaveAgents automatically register and respond to the SaveManagerSubsystem when saving to disk.
+
+NOTE: When the owning Actor is spawned at runtime and is explicitly destroyed with DestroyActor(), RemoveSaveData() is called. Override RemoveSaveData() to remove unnecessary save data.
