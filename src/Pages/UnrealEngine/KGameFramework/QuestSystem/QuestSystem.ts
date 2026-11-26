@@ -36,5 +36,12 @@ export function Construct(): HTMLElement
     quickReference.Init();
     quickReference.Configure(textContent.QuickReference, ColumnSpacing.Compact);
 
+    const builtInDebugMenusSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
+    builtInDebugMenusSection.innerHTML = "Built-In Debug Menus";
+
+    const builtInDebugMenus: Table = root.appendChild(document.createElement("table-element")) as Table;
+    builtInDebugMenus.Init();
+    builtInDebugMenus.Configure(textContent.BuiltInDebugMenus, ColumnSpacing.Compact);
+
     return root;
 }

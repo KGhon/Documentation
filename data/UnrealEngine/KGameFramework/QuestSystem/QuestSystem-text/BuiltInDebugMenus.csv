@@ -1,0 +1,13 @@
+"Quest Tracker","The Quest Tracker provides a summary of all quests with information about every QuestGraphs, QuestBlocks, and QuestObjectives. The tracker shows which are active, complete, and their completion result, what sublevels a QuestBlock will spawn when a matching static level is loaded, and any additional data that designers want to note.
+
+To use the Quest Tracker as an Editor Utility Widget, open the 'KPlugins' dropdown toolbar at the top of the main Level Editor window and select 'Quest Tracker'. This will spawn an editor window that can be docked in Unreal Engine's layout. When starting Play-In-Editor, the dropdown menu will autopopulate with all QuestGraphs that have been assigned in
+
+<i>Project Settings > Plugins > KGame Framework Settings > Quests</i>
+
+You can then select which graph you'd like to see and all it's QuestBlocks and QuestObjectives.
+
+NOTE: Quest must be loaded first before the will appear in the Quest Tracker. This will automatically happen within the structure of your game program, but if you would like the Quest Tracker to guarantee quests are loaded you can either manually click the 'Load Quests' button whenever starting PIE or enable the 'Auto' option to have it automatically happen.
+
+The Quest Tracker is also available as a runtime debug widget. To open it, enter the console command 'k.debug'. At the top of the screen a debug menu selector will appear. Here, you can select the 'Quest Tracker' under 'KGameFramework' and open it either in the game window by clicking the name or as a popout window by clicking the dark area on the right side.
+
+The Quest Tracker will always clear when exiting PIE. If you want to conveniently return to the same quest you had selected before, enable the 'Restore' option if using the Editor Utility Widget version (assuming quests are loaded with PIE begins, turn on 'Auto' if you want to guarantee this)."

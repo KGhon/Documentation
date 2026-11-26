@@ -1,8 +1,8 @@
 "void ObjectiveComplete(EQuestState result)","BlueprintCallable
 Call this function if you are overriding the UpdateObjective() function with your own implementation."
 
-"UShareQuestDataObject* GetSharedQuestDataObject()","BlueprintCallable, BlueprintPure
-Get the SharedQuestDataObject for modifying quest save data."
+"void WriteObjectiveData(const FName& key, FString data)","BlueprintCallable
+Use this function to store data that other systems can read/access using KGameFrameworkStatics."
 
 "bool CheckSaveConditions()","Overrideable
 Override this function to check conditions that determine if the class should save."

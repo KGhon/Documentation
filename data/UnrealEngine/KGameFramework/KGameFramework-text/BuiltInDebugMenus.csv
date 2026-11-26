@@ -1,0 +1,5 @@
+"Game Dashboard","The Game Dashboard displays useful information from the KGameFramework including the current game state, save profile, save slot, all loaded levels, and any levels currently queued to load.
+
+To use the Game Dashboard as an Editor Utility Widget, open the 'KPlugins' dropdown toolbar at the top of the main Level Editor window and select 'Game Dashboard'. This will spawn an editor window that can be docked in Unreal Engine's layout. 
+
+The Game Dashboard is also available as a runtime debug widget. To open it, enter the console command 'k.debug'. At the top of the screen a debug menu selector will appear. Here, you can select the 'Game Dashboard' under 'KGameFramework' and open it either in the game window by clicking the name or as a popout window by clicking the dark area on the right side."

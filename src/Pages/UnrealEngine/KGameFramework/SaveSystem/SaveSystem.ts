@@ -1,6 +1,6 @@
 import "../../../../Documentation.css"
 import { ContentPage } from "../../../../Templates/ContentPage.ts";
-import { Table } from "../../../../Templates/Table.ts";
+import { Table, ColumnSpacing } from "../../../../Templates/Table.ts";
 import * as textContent from "../../../../../generated/SaveSystem-text-generated.json";
 import * as code from "../../../../../generated/SaveSystem-code-generated.json";
 
@@ -35,6 +35,13 @@ export function Construct(): HTMLElement
     const quickReference: Table = root.appendChild(document.createElement("table-element")) as Table;
     quickReference.Init();
     quickReference.Configure(textContent.QuickReference);
+
+    const builtInDebugMenusSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
+    builtInDebugMenusSection.innerHTML = "Built-In Debug Menus";
+
+    const builtInDebugMenus: Table = root.appendChild(document.createElement("table-element")) as Table;
+    builtInDebugMenus.Init();
+    builtInDebugMenus.Configure(textContent.BuiltInDebugMenus, ColumnSpacing.Compact);
 
     return root;
 }

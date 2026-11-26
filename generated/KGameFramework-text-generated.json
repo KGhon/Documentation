@@ -1,7 +1,37 @@
 {
-  "BuiltInDebugMenus": [],
+  "BuiltInDebugMenus": [
+    [
+      "Game Dashboard",
+      "The Game Dashboard displays useful information from the <a href='/Documentation/Pages/UnrealEngine/#KGameFramework'>KGameFramework</a> including the current game state, save profile, save slot, all loaded levels, and any levels currently queued to load.\r\n\r\nTo use the Game Dashboard as an Editor Utility Widget, open the 'KPlugins' dropdown toolbar at the top of the main Level Editor window and select 'Game Dashboard'. This will spawn an editor window that can be docked in Unreal Engine's layout. \r\n\r\nThe Game Dashboard is also available as a runtime debug widget. To open it, enter the console command 'k.debug'. At the top of the screen a debug menu selector will appear. Here, you can select the 'Game Dashboard' under '<a href='/Documentation/Pages/UnrealEngine/#KGameFramework'>KGameFramework</a>' and open it either in the game window by clicking the name or as a popout window by clicking the dark area on the right side."
+    ]
+  ],
   "Title": "<a href='/Documentation/Pages/UnrealEngine/#KGameFramework'>KGameFramework</a>",
   "Definitions": "<b>Type:</b> Plugin\r\n<b>Category:</b> Unreal Engine",
-  "Overview": "overview",
-  "QuickReference": []
+  "Overview": "A game framework that provides a foundational systems for game management, loading/unloading levels, save/load, quest tracking, UI management, and inventory.",
+  "QuickReference": [
+    [
+      "<a href='/Documentation/Pages/UnrealEngine/#GameManagement'>GameManagement</a>",
+      ""
+    ],
+    [
+      "<a href='/Documentation/Pages/UnrealEngine/#LevelManagement'>LevelManagement</a>",
+      ""
+    ],
+    [
+      "<a href='/Documentation/Pages/UnrealEngine/#SaveSystem'>SaveSystem</a>",
+      ""
+    ],
+    [
+      "<a href='/Documentation/Pages/UnrealEngine/#QuestSystem'>QuestSystem</a>",
+      ""
+    ],
+    [
+      "<a href='/Documentation/Pages/UnrealEngine/#UISystem'>UISystem</a>",
+      ""
+    ],
+    [
+      "InventorySystem",
+      ""
+    ]
+  ]
 }

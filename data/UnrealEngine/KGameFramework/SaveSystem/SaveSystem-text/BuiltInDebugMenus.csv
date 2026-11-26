@@ -1,0 +1,5 @@
+"Save Menu","The Save Menu provides quick access to managing save profiles and save slots for testing. You can:<ul>
+<li>Create or delete profiles</li>
+<li>Create, delete, load or overwrite save slots</li>
+<li>Load save snapshots authored in the editor</li></ul>
+The Save Menu is available as a runtime debug widget only. To open it, enter the console command 'k.debug'. At the top of the screen a debug menu selector will appear. Here, you can select the 'Save Menu' under 'KGameFramework' and open it either in the game window by clicking the name or as a popout window by clicking the dark area on the right side."

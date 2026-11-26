@@ -12,9 +12,6 @@ NOTE: This function is only called when quests are activated for the first time 
 "void GraphComplete(EQuestState result)","BlueprintCallable
 Call this function to mark the QuestGraph as complete and prevent it from being further updated."
 
-"UShareQuestDataObject* GetSharedQuestDataObject()","BlueprintCallable, BlueprintPure
-Get the SharedQuestDataObject for modifying quest save data."
-
 "bool CheckSaveConditions()","Overrideable
 Override this function to check conditions that determine if the class should save."
 

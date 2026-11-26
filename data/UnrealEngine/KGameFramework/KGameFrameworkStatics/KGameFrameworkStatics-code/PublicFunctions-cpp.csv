@@ -1,0 +1,41 @@
+"void RegisterSaveSystemListener(UObject* listener)","BlueprintCallable
+Call this function when your class implements the SaveInterface to register it to receive save and load signals from the SaveManagerSubsystem."
+
+"void UnregisterSaveSystemListener(UObject* listener)","BlueprintCallable
+Call this function when your class implements the SaveInterface to unregister it from receiving save and load signals from the SaveManagerSubsystem."
+
+"void Save(UObject* target)","BlueprintCallable
+Call this function when your class implements the SaveInterface to save data from your object. Calls CheckSaveConditions() and if passes, calls SaveData()."
+
+"void Load(UObject* target)","BlueprintCallable
+Call this function when your class implements the SaveInterface to load data to your object. Calls CheckLoadConditions() and if passes, calls LoadData()."
+
+"void RegisterGameStateListener(UObject* listener)","BlueprintCallable
+Call this function when your class implements the GameStateInterface to register it to receive game state changes on the GameManagerSubsystem."
+
+"void UnregisterGameStateListener(UObject* listener)","BlueprintCallable
+Call this function when your class implements the GameStateInterface to unregister it from receiving game state changes on the GameManagerSubsystem."
+
+"UKGameStateBase* GetGameState(UObject* WorldContext)","BlueprintCallable
+Gets the current game state from the GameManagerSubsystem."
+
+"void ActivateQuest(UObject* WorldContext, FName graphId)","BlueprintCallable
+Activates a QuestGraph on the QuestManagerSubsystem if it is not already active."
+
+"void UpdateQuest(UObject* WorldContext, FName graphId, FName blockId, FName objectiveId, EQuestObjectiveType type, bool boolValue, float floatValue, const FString& stringValue)","BlueprintCallable
+Updates a QuestObjective owned by a QuestBlock within a QuestGraph."
+
+"USharedQuestDataObject* GetSharedQuestData(UObject* WorldContext, TSubclassOf<USharedQuestDataObject> returnType)","BlueprintCallable
+Gets the SharedQuestDataObject. 'returnType' changes the output pin to match the class (must be inherit from SharedQuestDataObject)."
+
+"EQuestState GetQuestGraphState(UObject* WorldContext, FName graphId)","BlueprintCallable
+Gets the current state of a QuestGraph."
+
+"EQuestState GetQuestBlockState(UObject* WorldContext, FName blockId)","BlueprintCallable
+Gets the current state of a QuestBlock."
+
+"EQuestState GetQuestObjectiveState(UObject* WorldContext, FName objectiveId)","BlueprintCallable
+Gets the current state of a QuestObjective."
+
+"FString GetQuestObjectiveData(UObject* WorldContext, FName, objectiveId, const FName& key)","BlueprintCallable
+Searches for data stored as FStrings on a QuestObjective. QuestObjectives store data with the WriteObjectiveData() function."

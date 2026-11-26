@@ -17,8 +17,8 @@
       "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nCall this function if you are overriding the UpdateObjective() function with your own implementation."
     ],
     [
-      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">UShareQuestDataObject</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#DCDCAA\">GetSharedQuestDataObject</span><span style=\"color:#D4D4D4\">()</span></span></code>",
-      "<span style=\"color:#FF756E\">BlueprintCallable</span>, <span style=\"color:#FF756E\">BlueprintPure</span>\r\nGet the <a href='/Documentation/Pages/UnrealEngine/#SharedQuestDataObject'>SharedQuestDataObject</a> for modifying quest save data."
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> WriteObjectiveData</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#569CD6\">const</span><span style=\"color:#4EC9B0\"> FName</span><span style=\"color:#D4D4D4\">&#x26; </span><span style=\"color:#9CDCFE\">key</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#4EC9B0\">FString</span><span style=\"color:#9CDCFE\"> data</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nUse this function to store data that other systems can read/access using <a href='/Documentation/Pages/UnrealEngine/#KGameFrameworkStatics'>KGameFrameworkStatics</a>."
     ],
     [
       "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">bool</span><span style=\"color:#DCDCAA\"> CheckSaveConditions</span><span style=\"color:#D4D4D4\">()</span></span></code>",

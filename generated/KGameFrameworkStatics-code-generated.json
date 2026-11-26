@@ -1,3 +1,60 @@
 {
-  "PublicFunctions": []
+  "PublicFunctions": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> RegisterSaveSystemListener</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#4EC9B0\">UObject</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#9CDCFE\">listener</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nCall this function when your class implements the <a href='/Documentation/Pages/UnrealEngine/#SaveInterface'>SaveInterface</a> to register it to receive save and load signals from the <a href='/Documentation/Pages/UnrealEngine/#SaveManagerSubsystem'>SaveManagerSubsystem</a>."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> UnregisterSaveSystemListener</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#4EC9B0\">UObject</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#9CDCFE\">listener</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nCall this function when your class implements the <a href='/Documentation/Pages/UnrealEngine/#SaveInterface'>SaveInterface</a> to unregister it from receiving save and load signals from the <a href='/Documentation/Pages/UnrealEngine/#SaveManagerSubsystem'>SaveManagerSubsystem</a>."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> Save</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#4EC9B0\">UObject</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#9CDCFE\">target</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nCall this function when your class implements the <a href='/Documentation/Pages/UnrealEngine/#SaveInterface'>SaveInterface</a> to save data from your object. Calls CheckSaveConditions() and if passes, calls SaveData()."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> Load</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#4EC9B0\">UObject</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#9CDCFE\">target</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nCall this function when your class implements the <a href='/Documentation/Pages/UnrealEngine/#SaveInterface'>SaveInterface</a> to load data to your object. Calls CheckLoadConditions() and if passes, calls LoadData()."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> RegisterGameStateListener</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#4EC9B0\">UObject</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#9CDCFE\">listener</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nCall this function when your class implements the <a href='/Documentation/Pages/UnrealEngine/#GameStateInterface'>GameStateInterface</a> to register it to receive game state changes on the <a href='/Documentation/Pages/UnrealEngine/#GameManagerSubsystem'>GameManagerSubsystem</a>."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> UnregisterGameStateListener</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#4EC9B0\">UObject</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#9CDCFE\">listener</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nCall this function when your class implements the <a href='/Documentation/Pages/UnrealEngine/#GameStateInterface'>GameStateInterface</a> to unregister it from receiving game state changes on the <a href='/Documentation/Pages/UnrealEngine/#GameManagerSubsystem'>GameManagerSubsystem</a>."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">UKGameStateBase</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#DCDCAA\">GetGameState</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#4EC9B0\">UObject</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#9CDCFE\">WorldContext</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nGets the current game state from the <a href='/Documentation/Pages/UnrealEngine/#GameManagerSubsystem'>GameManagerSubsystem</a>."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> ActivateQuest</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#4EC9B0\">UObject</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#9CDCFE\">WorldContext</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#4EC9B0\">FName</span><span style=\"color:#9CDCFE\"> graphId</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nActivates a <a href='/Documentation/Pages/UnrealEngine/#QuestGraph'>QuestGraph</a> on the <a href='/Documentation/Pages/UnrealEngine/#QuestManagerSubsystem'>QuestManagerSubsystem</a> if it is not already active."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> UpdateQuest</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#4EC9B0\">UObject</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#9CDCFE\">WorldContext</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#4EC9B0\">FName</span><span style=\"color:#9CDCFE\"> graphId</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#4EC9B0\">FName</span><span style=\"color:#9CDCFE\"> blockId</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#4EC9B0\">FName</span><span style=\"color:#9CDCFE\"> objectiveId</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#4EC9B0\">EQuestObjectiveType</span><span style=\"color:#9CDCFE\"> type</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#569CD6\">bool</span><span style=\"color:#9CDCFE\"> boolValue</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#569CD6\">float</span><span style=\"color:#9CDCFE\"> floatValue</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#569CD6\">const</span><span style=\"color:#4EC9B0\"> FString</span><span style=\"color:#D4D4D4\">&#x26; </span><span style=\"color:#9CDCFE\">stringValue</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nUpdates a <a href='/Documentation/Pages/UnrealEngine/#QuestObjective'>QuestObjective</a> owned by a <a href='/Documentation/Pages/UnrealEngine/#QuestBlock'>QuestBlock</a> within a <a href='/Documentation/Pages/UnrealEngine/#QuestGraph'>QuestGraph</a>."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">USharedQuestDataObject</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#DCDCAA\">GetSharedQuestData</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#4EC9B0\">UObject</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#9CDCFE\">WorldContext</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#4EC9B0\">TSubclassOf</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">USharedQuestDataObject</span><span style=\"color:#D4D4D4\">> </span><span style=\"color:#9CDCFE\">returnType</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nGets the <a href='/Documentation/Pages/UnrealEngine/#SharedQuestDataObject'>SharedQuestDataObject</a>. 'returnType' changes the output pin to match the class (must be inherit from <a href='/Documentation/Pages/UnrealEngine/#SharedQuestDataObject'>SharedQuestDataObject</a>)."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">EQuestState</span><span style=\"color:#DCDCAA\"> GetQuestGraphState</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#4EC9B0\">UObject</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#9CDCFE\">WorldContext</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#4EC9B0\">FName</span><span style=\"color:#9CDCFE\"> graphId</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nGets the current state of a <a href='/Documentation/Pages/UnrealEngine/#QuestGraph'>QuestGraph</a>."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">EQuestState</span><span style=\"color:#DCDCAA\"> GetQuestBlockState</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#4EC9B0\">UObject</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#9CDCFE\">WorldContext</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#4EC9B0\">FName</span><span style=\"color:#9CDCFE\"> blockId</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nGets the current state of a <a href='/Documentation/Pages/UnrealEngine/#QuestBlock'>QuestBlock</a>."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">EQuestState</span><span style=\"color:#DCDCAA\"> GetQuestObjectiveState</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#4EC9B0\">UObject</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#9CDCFE\">WorldContext</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#4EC9B0\">FName</span><span style=\"color:#9CDCFE\"> objectiveId</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nGets the current state of a <a href='/Documentation/Pages/UnrealEngine/#QuestObjective'>QuestObjective</a>."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">FString</span><span style=\"color:#DCDCAA\"> GetQuestObjectiveData</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#4EC9B0\">UObject</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#9CDCFE\">WorldContext</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#4EC9B0\">FName</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#4EC9B0\">objectiveId</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#569CD6\">const</span><span style=\"color:#4EC9B0\"> FName</span><span style=\"color:#D4D4D4\">&#x26; </span><span style=\"color:#9CDCFE\">key</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nSearches for data stored as FStrings on a <a href='/Documentation/Pages/UnrealEngine/#QuestObjective'>QuestObjective</a>. <a href='/Documentation/Pages/UnrealEngine/#QuestObjective'>QuestObjectives</a> store data with the WriteObjectiveData() function."
+    ]
+  ]
 }

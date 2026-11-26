@@ -4,9 +4,6 @@ Call this function to spawn QuestObjectives within the QuestBlock."
 "void BlockComplete(EQuestState result)","BlueprintCallable
 Call this function on completion of QuestObjectives if the conditions fulfill the requirements for completing the QuestBlock."
 
-"UShareQuestDataObject* GetSharedQuestDataObject()","BlueprintCallable, BlueprintPure
-Get the SharedQuestDataObject for modifying quest save data."
-
 "bool CheckSaveConditions()","Overrideable
 Override this function to check conditions that determine if the class should save."
 

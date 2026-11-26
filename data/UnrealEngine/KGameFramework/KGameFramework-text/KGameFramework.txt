@@ -6,4 +6,4 @@ KGameFramework
 <b>Category:</b> Unreal Engine
 
 [Overview]
-overview
+A game framework that provides a foundational systems for game management, loading/unloading levels, save/load, quest tracking, UI management, and inventory.

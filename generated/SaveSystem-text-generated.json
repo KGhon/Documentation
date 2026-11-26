@@ -1,4 +1,10 @@
 {
+  "BuiltInDebugMenus": [
+    [
+      "Save Menu",
+      "The Save Menu provides quick access to managing save profiles and save slots for testing. You can:<ul>\r\n<li>Create or delete profiles</li>\r\n<li>Create, delete, load or overwrite save slots</li>\r\n<li>Load save snapshots authored in the editor</li></ul>\r\nThe Save Menu is available as a runtime debug widget only. To open it, enter the console command 'k.debug'. At the top of the screen a debug menu selector will appear. Here, you can select the 'Save Menu' under '<a href='/Documentation/Pages/UnrealEngine/#KGameFramework'>KGameFramework</a>' and open it either in the game window by clicking the name or as a popout window by clicking the dark area on the right side."
+    ]
+  ],
   "QuickReference": [
     [
       "<a href='/Documentation/Pages/UnrealEngine/#SaveManagerSubsystem'>SaveManagerSubsystem</a>",

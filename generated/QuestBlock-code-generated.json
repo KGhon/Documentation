@@ -25,10 +25,6 @@
       "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nCall this function on completion of <a href='/Documentation/Pages/UnrealEngine/#QuestObjective'>QuestObjectives</a> if the conditions fulfill the requirements for completing the <a href='/Documentation/Pages/UnrealEngine/#QuestBlock'>QuestBlock</a>."
     ],
     [
-      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">UShareQuestDataObject</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#DCDCAA\">GetSharedQuestDataObject</span><span style=\"color:#D4D4D4\">()</span></span></code>",
-      "<span style=\"color:#FF756E\">BlueprintCallable</span>, <span style=\"color:#FF756E\">BlueprintPure</span>\r\nGet the <a href='/Documentation/Pages/UnrealEngine/#SharedQuestDataObject'>SharedQuestDataObject</a> for modifying quest save data."
-    ],
-    [
       "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">bool</span><span style=\"color:#DCDCAA\"> CheckSaveConditions</span><span style=\"color:#D4D4D4\">()</span></span></code>",
       "<span style=\"color:#FF756E\">Overrideable</span>\r\nOverride this function to check conditions that determine if the class should save."
     ],
