@@ -3,7 +3,7 @@ EDialogueResponse
 
 [Definitions]
 <b>Type:</b> Enum
-<b>Category:</b> KDialogueSystem
+<b>Category:</b> Unreal Engine > KDialogueSystem
 
 [Overview]
 This enum indicates what the dialogue tree node should do when it reaches the end of an instruction. NOTE: Auto only works if there is dialogue audio or a level sequence that can start and finish. Otherwise it will function as if response was set to Input.

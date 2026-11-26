@@ -1,5 +1,5 @@
 {
   "Title": "UUIManagerSubsystem",
-  "Definitions": "<b>Type:</b> Class\r\n<b>Inherits:</b> UGameInstanceSubsystem\r\n<b>Category:</b> KGameFramework > <a href='/Documentation/Pages/UnrealEngine/#UISystem'>UISystem</a>",
+  "Definitions": "<b>Type:</b> Class\r\n<b>Inherits:</b> UGameInstanceSubsystem\r\n<b>Category:</b> Unreal Engine > <a href='/Documentation/Pages/UnrealEngine/#KGameFramework'>KGameFramework</a> > <a href='/Documentation/Pages/UnrealEngine/#UISystem'>UISystem</a>",
   "Overview": "The <a href='/Documentation/Pages/UnrealEngine/#UIManagerSubsystem'>UIManagerSubsystem</a> helps with tracking, displaying, hiding, and interacting with widgets."
 }

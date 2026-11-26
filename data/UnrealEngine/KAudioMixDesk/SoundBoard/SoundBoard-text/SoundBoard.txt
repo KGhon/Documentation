@@ -3,7 +3,7 @@ Sound Board
 
 [Definitions]
 <b>Type:</b> Menu
-<b>Category:</b> KAudioMixDesk
+<b>Category:</b> Unreal Engine > KAudioMixDesk
 
 [Overview]
 The mix console gathers all USoundClass and generates a hierarchical mixer that matches the inheritance structure (aka bus routing in audio terms) of your Sound Classes. You can then use the faders to adjust the volume of any USoundClass for mixing. These changes will be reflected in realtime.

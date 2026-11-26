@@ -4,7 +4,7 @@ AMusicManager
 [Definitions]
 <b>Type:</b> Class
 <b>Inherits:</b> AActor
-<b>Category:</b> KAudioSystem
+<b>Category:</b> Unreal Engine > KAudioSystem
 
 [Overview]
 The MusicManager is a premade system for handling background music within the KAudioSystem. It is designed to load one MusicLayout per MusicClassification at a time and passes game parameters automatically to this layout. Every time PlayMusic() is called, the MusicManager will evaluate loaded MusicLayouts and play the layout with the highest classification. This also allows the music system to support reversion when neutral music is overriden based on game state. The MusicManager contains all functions needed to indirectly interact with the MusicLayout and can be gotten from the AudioManagerSubsystem. It also broadcasts tempo-synchronized events for any other game system to subscribe and listen to.

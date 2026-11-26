@@ -4,7 +4,7 @@ UAudioEvent
 [Definitions]
 <b>Type:</b> Class
 <b>Inherits:</b> UDataAsset
-<b>Category:</b> KAudioSystem
+<b>Category:</b> Unreal Engine > KAudioSystem
 
 [Overview]
 An AudioEvent allows designers to create premade lists of AudioEventCommands that do multiple things within the KAudioSystem by triggering a single AudioEvent. AudioEvents can be executed using the ExecuteAudioEvent() function from KAudioSystemStatics.

@@ -3,7 +3,7 @@ FMusicTransitionOverride
 
 [Definitions]
 <b>Type:</b> Struct
-<b>Category:</b> KAudioSystem
+<b>Category:</b> Unreal Engine > KAudioSystem
 
 [Overview]
 MusicTransitionOverrides contain the data that define how a MusicLayout horizontally transitions between MusicSegments in one-off scenarios. They are only used when using the QueueMusicTransitionOverride() function on a MusicLayout, which ignores the transition rules and only uses the MusicTransitionOverride. 

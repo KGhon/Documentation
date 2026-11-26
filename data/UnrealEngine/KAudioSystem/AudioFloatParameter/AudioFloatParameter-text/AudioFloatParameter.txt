@@ -4,7 +4,7 @@ UAudioFloatParameter
 [Definitions]
 <b>Type:</b> Class
 <b>Inherits:</b> UDataAsset
-<b>Category:</b> KAudioSystem
+<b>Category:</b> Unreal Engine > KAudioSystem
 
 [Overview]
 AudioFloatParameters define a parameter that uses float as its data type. They also have extra additional properties that can be accessed for handling the range of the float. Interpolation between values at runtime should be handled either by the setter or the receiver of the parameter. The "useDefaultBelowMin" and "useDefaultAboveMax" bools govern values allowed to be passed and received through the KAudioSystem. However, if you need to handle value ranges situationally then clamping the values on the receiver might be better.

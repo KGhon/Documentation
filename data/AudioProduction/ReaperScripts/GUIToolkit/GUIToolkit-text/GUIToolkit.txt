@@ -3,7 +3,7 @@ GUI Toolkit
 
 [Definitions]
 <b>Type:</b> Script
-<b>Category:</b> Reaper Scripts
+<b>Category:</b> Audio Production > Reaper Scripts
 
 [Overview]
 This GUI Toolkit provides classes to create simple GUIs for ReaScripts using native gfx code in Lua. UIs are built by constructing parent-child trees using the toolkit classes.

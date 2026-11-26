@@ -1,5 +1,5 @@
 {
   "Title": "UKDebugManagerSubsystem",
-  "Definitions": "<b>Type:</b> Class\r\n<b>Inherits:</b> UGameInstanceSubsystem\r\n<b>Category:</b> <a href='/Documentation/Pages/UnrealEngine/#KDebutTools'>KDebugTools</a>",
+  "Definitions": "<b>Type:</b> Class\r\n<b>Inherits:</b> UGameInstanceSubsystem\r\n<b>Category:</b> Unreal Engine > <a href='/Documentation/Pages/UnrealEngine/#KDebutTools'>KDebugTools</a>",
   "Overview": "The <a href='/Documentation/Pages/UnrealEngine/#KDebugManagerSubsystem'>KDebugManagerSubsystem</a> handles registering and displaying debug widgets within KPlugins. It is also responsible for instantiating the <a href='/Documentation/Pages/UnrealEngine/#KBlueprintConsoleCommands'>KBlueprintConsoleCommands</a> object and handles passing data to log in the KTerminal."
 }

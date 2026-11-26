@@ -4,7 +4,7 @@ USharedQuestDataObject
 [Definitions]
 <b>Type:</b> Class
 <b>Inherits:</b> UObject
-<b>Category:</b> KGameFramework > QuestSystem
+<b>Category:</b> Unreal Engine > KGameFramework > QuestSystem
 
 [Overview]
 The SharedQuestDataObject is used to store quest related data that can be accessed by any quest or object. To add the data you want to store and save create a Blueprint with this as the parent class and assign it to be used in Project Settings > Plugins > KGameFramework Settings > Shared Quest Data Class. You will also need to follow the save system guide for saving in derived classes that already implement save and load functionality (the SharedQuestDataObject is its own SaveAgent).

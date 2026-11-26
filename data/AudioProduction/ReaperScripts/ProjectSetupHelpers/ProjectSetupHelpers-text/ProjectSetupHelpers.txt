@@ -3,7 +3,7 @@ Project Setup Helpers
 
 [Definitions]
 <b>Type:</b> Script
-<b>Category:</b> Reaper Scripts
+<b>Category:</b> Audio Production > Reaper Scripts
 
 [Overview]
 A collection of helper tools to automate project setup for different uses.

@@ -3,7 +3,7 @@ UI System
 
 [Definitions]
 <b>Type:</b> System
-<b>Category:</b> KGameFramework
+<b>Category:</b> Unreal Engine > KGameFramework
 
 [Overview]
 A hub for registering, showing, and hiding UI menus.

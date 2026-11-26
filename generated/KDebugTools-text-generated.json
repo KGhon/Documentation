@@ -10,7 +10,7 @@
     ]
   ],
   "Title": "<a href='/Documentation/Pages/UnrealEngine/#KDebutTools'>KDebugTools</a>",
-  "Definitions": "<b>Type:</b> Unreal Engine Plugin\r\n<b>Category:</b> <a href='/Documentation/Pages/UnrealEngine/#KDebutTools'>KDebugTools</a>",
+  "Definitions": "<b>Type:</b> Plugin\r\n<b>Category:</b> Unreal Engine",
   "Overview": "<a href='/Documentation/Pages/UnrealEngine/#KDebutTools'>KDebugTools</a> provides an easy way to register and display debug menus at runtime, synchronized between editor and Play-In-Editor, popout windows, and expose console commands for Blueprint.",
   "SettingsLocation": "<i>Project Settings > Plugins > KDebug Tools Settings</i>",
   "QuickReference": [

@@ -40,7 +40,7 @@
     ]
   ],
   "Title": "Project Setup Helpers",
-  "Definitions": "<b>Type:</b> Script\r\n<b>Category:</b> Reaper Scripts",
+  "Definitions": "<b>Type:</b> Script\r\n<b>Category:</b> Audio Production > Reaper Scripts",
   "Overview": "A collection of helper tools to automate project setup for different uses.",
   "Dependencies": "<li>Reaper v7.76+</li>\r\n<li>The GUIToolkit_Kevin.lua file must be in the same location as any Reascript that wants to use it.</li>",
   "GenerateTracksFromCSV": "Batch generate tracks by reading from a CSV file. The tracks will be named after each CSV entry.",

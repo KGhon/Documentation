@@ -4,7 +4,7 @@ UKDebutToolsStatics
 [Definitions]
 <b>Type:</b> Class
 <b>Inherits:</b> UBlueprintFunctionLibrary
-<b>Category:</b> KDebugTools
+<b>Category:</b> Unreal Engine > KDebugTools
 
 [Overview]
 Helper functions.

@@ -3,7 +3,7 @@ Mix Console
 
 [Definitions]
 <b>Type:</b> Menu
-<b>Category:</b> KAudioMixDesk
+<b>Category:</b> Unreal Engine > KAudioMixDesk
 
 [Overview]
 The soundboard gathers all assets inheriting from Unreal's USoundWave class into the sound list. Natively, this includes sound waves, sound cues, and MetaSound sources. These assets can then be selected, modified, and preview played in the editor. Sounds can also be played simultaneously for relative volume balance. Changes will be reflected in realtime during playback both in the editor and any instances in PIE. A list of sounds currently playing in the editor is also kept so you can manage playback of sounds you are previewing. Note that this list does not include PIE instances. You can also open assets if you need to edit more directly.

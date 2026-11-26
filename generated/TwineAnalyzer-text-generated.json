@@ -1,6 +1,6 @@
 {
   "Title": "Twine Analyzer",
-  "Definitions": "<b>Type:</b> Godot Plugin\r\n<b>Category:</b> K Documentation Tools",
+  "Definitions": "<b>Type:</b> Plugin\r\n<b>Category:</b> Godot > KDocumentationTools",
   "Overview": "The Twine Analyzer is a Twine HTML parser that lets you visualize, select, and export passages to other formats. It requires that your Twine stories follow specific markup for the parsing to work.",
   "Dependencies": "<li>Godot 4.6.3 with C# support</li>",
   "Navigation": "The Twine Analyzer exists as a main screen plugin you can swap to at the top of Godot's editor window. Twine analyses can be opened in 3 ways in a Godot project:<ul>\r\n<li>Create a new KDTTwineAnalysis resource. Double-clicking any resource will open a Twine analysis that also saves the Twine HTMLs you import into that resource.</li>\r\n<li>Right-click a Twine HTML file and select at the bottom of the context menu \"View In Twine Analyzer\". This will create a temporary Twine analysis that does not save any data.</li>\r\n<li>The TwineAnalysisWidget can be embedded inside of a Board which can link to either a KDTTwineAnalysis resource or Twine HTML file. Opening a resource will save data, opening a Twine HTML will be temporary and not save anything.</li></ul>",

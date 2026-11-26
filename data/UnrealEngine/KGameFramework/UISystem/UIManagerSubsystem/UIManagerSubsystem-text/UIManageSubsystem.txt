@@ -4,7 +4,7 @@ UUIManagerSubsystem
 [Definitions]
 <b>Type:</b> Class
 <b>Inherits:</b> UGameInstanceSubsystem
-<b>Category:</b> KGameFramework > UISystem
+<b>Category:</b> Unreal Engine > KGameFramework > UISystem
 
 [Overview]
 The UIManagerSubsystem helps with tracking, displaying, hiding, and interacting with widgets.

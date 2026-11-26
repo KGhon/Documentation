@@ -1,5 +1,5 @@
 {
   "Title": "IGameStateInterface",
-  "Definitions": "<b>Type:</b> Interface\r\n<b>Category:</b> KGameFramework > <a href='/Documentation/Pages/UnrealEngine/#GameManagement'>GameManagement</a>",
+  "Definitions": "<b>Type:</b> Interface\r\n<b>Category:</b> Unreal Engine > <a href='/Documentation/Pages/UnrealEngine/#KGameFramework'>KGameFramework</a> > <a href='/Documentation/Pages/UnrealEngine/#GameManagement'>GameManagement</a>",
   "Overview": "The <a href='/Documentation/Pages/UnrealEngine/#GameStateInterface'>GameStateInterface</a> can be added to any class to receive game state change signals from the <a href='/Documentation/Pages/UnrealEngine/#GameManagerSubsystem'>GameManagerSubsystem</a>. Make sure to call RegisterGameStateListener()/UnregisterGameStateListener() from <a href='/Documentation/Pages/UnrealEngine/#KGameFrameworkStatics'>KGameFrameworkStatics</a>."
 }

@@ -14,40 +14,23 @@ export function Construct(): HTMLElement
 
     const overviewSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
     overviewSection.innerHTML = "Overview";
-    
+
     const overview: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     overview.innerHTML = textContent.Overview;
 
-    const guideSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
-    guideSection.innerHTML = "Guide";
+    const quickReferenceSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
+    quickReferenceSection.innerHTML = "Quick Reference";
 
-    const gameplayParametersSystemSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
-    gameplayParametersSystemSection.innerHTML = "Gameplay Parameters System";
+    const quickReference: Table = root.appendChild(document.createElement("table-element")) as Table;
+    quickReference.Init();
+    quickReference.Configure(textContent.QuickReference, ColumnSpacing.Compact);
 
-    const gameplayParametersSystemClasses: Table = root.appendChild(document.createElement("table-element")) as Table;
-    gameplayParametersSystemClasses.Init();
-    gameplayParametersSystemClasses.Configure(textContent.GameplayParametersSystemClasses, ColumnSpacing.Compact);
-    /*
-    const dependenciesSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
-    dependenciesSection.innerHTML = "Dependencies";
+    const builtInDebugMenusSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
+    builtInDebugMenusSection.innerHTML = "Built-In Debug Menus";
 
-    const dependencies: HTMLUListElement = root.appendChild(Object.assign(document.createElement("ul"), { className: "c4", style: "white-space: normal" })) as HTMLUListElement;
-    dependencies.innerHTML = textContent.Dependencies;
+    const builtInDebugMenus: Table = root.appendChild(document.createElement("table-element")) as Table;
+    builtInDebugMenus.Init();
+    builtInDebugMenus.Configure(textContent.BuiltInDebugMenus, ColumnSpacing.Compact);
 
-    const guideSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
-    guideSection.innerHTML = "Guide";
-
-    const setupSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
-    setupSection.innerHTML = "Setup";
-
-    const setup: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
-    setup.innerHTML = textContent.Setup;
-
-    const usageSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c2" })) as HTMLParagraphElement;
-    usageSection.innerHTML = "Usage";
-
-    const usage: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
-    usage.innerHTML = textContent.Usage;
-    */
     return root;
 }

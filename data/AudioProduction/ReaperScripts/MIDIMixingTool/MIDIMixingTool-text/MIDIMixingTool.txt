@@ -3,7 +3,7 @@ MIDI Mixing Tool
 
 [Definitions]
 <b>Type:</b> Script
-<b>Category:</b> Reaper Scripts
+<b>Category:</b> Audio Production > Reaper Scripts
 
 [Overview]
 This tool is used to set up and manage a Reaper project for the purpose of streamlining the importing, mixing, and exporting of large amounts of sound files. It is primarily used for clean up, pre-mixing before implementation, or when implementation does not provide adequate tooling for mixing and the mix needs to be baked into the sound files themselves.

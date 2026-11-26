@@ -1,5 +1,5 @@
 {
   "Title": "UAudioFloatParameter",
-  "Definitions": "<b>Type:</b> Class\r\n<b>Inherits:</b> UDataAsset\r\n<b>Category:</b> <a href='/Documentation/Pages/UnrealEngine/#KAudioSystem'>KAudioSystem</a>",
+  "Definitions": "<b>Type:</b> Class\r\n<b>Inherits:</b> UDataAsset\r\n<b>Category:</b> Unreal Engine > <a href='/Documentation/Pages/UnrealEngine/#KAudioSystem'>KAudioSystem</a>",
   "Overview": "<a href='/Documentation/Pages/UnrealEngine/#AudioFloatParameter'>AudioFloatParameters</a> define a parameter that uses float as its data type. They also have extra additional properties that can be accessed for handling the range of the float. Interpolation between values at runtime should be handled either by the setter or the receiver of the parameter. The \"useDefaultBelowMin\" and \"useDefaultAboveMax\" bools govern values allowed to be passed and received through the <a href='/Documentation/Pages/UnrealEngine/#KAudioSystem'>KAudioSystem</a>. However, if you need to handle value ranges situationally then clamping the values on the receiver might be better.\r\n\r\nNOTE: If using an <a href='/Documentation/Pages/UnrealEngine/#AudioSuperComponent'>AudioSuperComponent</a> that is not connected to the <a href='/Documentation/Pages/UnrealEngine/#KAudioSystem'>KAudioSystem</a>, min-max-default values will need to be handled manually."
 }

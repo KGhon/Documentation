@@ -3,7 +3,7 @@ FDialogueInstruction
 
 [Definitions]
 <b>Type:</b> Struct
-<b>Category:</b> KDialogueSystem
+<b>Category:</b> Unreal Engine > KDialogueSystem
 
 [Overview]
 This struct is created and used while setting up a DialogueTree. The Path(), Branch(), and Step() functions will pass the DialogueInstruction to their corresponding nodes at runtime.

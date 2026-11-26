@@ -2,8 +2,8 @@
 Boards
 
 [Definitions]
-<b>Type:</b> Godot Plugin
-<b>Category:</b> K Documentation Tools
+<b>Type:</b> Plugin
+<b>Category:</b> Godot > KDocumentationTools
 
 [Overview]
 Boards provides a whiteboard workspace within Godot utilizing its built-in GraphEdit, GraphNode, and UI tools. Create Board assets and populate them with widgets on an infinite grid for planning and documentation. Boards can also be extended with custom widgets.

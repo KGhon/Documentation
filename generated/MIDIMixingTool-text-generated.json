@@ -56,7 +56,7 @@
     ]
   ],
   "Title": "MIDI Mixing Tool",
-  "Definitions": "<b>Type:</b> Script\r\n<b>Category:</b> Reaper Scripts",
+  "Definitions": "<b>Type:</b> Script\r\n<b>Category:</b> Audio Production > Reaper Scripts",
   "Overview": "This tool is used to set up and manage a Reaper project for the purpose of streamlining the importing, mixing, and exporting of large amounts of sound files. It is primarily used for clean up, pre-mixing before implementation, or when implementation does not provide adequate tooling for mixing and the mix needs to be baked into the sound files themselves.",
   "Dependencies": "<li>Reaper v7.76+</li>\r\n<li>The GUIToolkit_Kevin.lua file must be in the same location as any Reascript that wants to use it.</li>",
   "Guide": "The MIDIMixingTool is built to allow you to mix any number of sound files by triggering them using a MIDI keyboard. This removes the need to manually import, reposition, and sequence sound files in the project. By triggering everything using MIDI, you can easily simulate the soundscape of gameplay.\r\n\r\nEach sound file is given its own track. You can add whatever processing you want per track and therefore per sound file. Note that you can also manually folderize tracks to organize them, BUT the tool only supports one level of folderization for its helper functions. If you want to process multiple tracks with the same processing, use routing to busses instead of folders.",

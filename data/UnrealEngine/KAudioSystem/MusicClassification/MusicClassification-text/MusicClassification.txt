@@ -4,7 +4,7 @@ UMusicClassification
 [Definitions]
 <b>Type:</b> Class
 <b>Inherits:</b> UDataAsset
-<b>Category:</b> KAudioSystem
+<b>Category:</b> Unreal Engine > KAudioSystem
 
 [Overview]
 MusicClassifications are used by the MusicManager to hierarchically manage multiple MusicLayouts. The MusicManager can have one MusicLayout loaded per classification. Adding and removing classifications from the hierarchy triggers transitions to the next highest priority classification. Classifications can also be activated and deactivated in the hierarchy.

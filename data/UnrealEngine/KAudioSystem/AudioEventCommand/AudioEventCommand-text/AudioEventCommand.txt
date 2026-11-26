@@ -3,7 +3,7 @@ FAudioEventCommand
 
 [Definitions]
 <b>Type:</b> Struct
-<b>Category:</b> KAudioSystem
+<b>Category:</b> Unreal Engine > KAudioSystem
 
 [Overview]
 Used in AudioEvents to define what happens when the event is executed.

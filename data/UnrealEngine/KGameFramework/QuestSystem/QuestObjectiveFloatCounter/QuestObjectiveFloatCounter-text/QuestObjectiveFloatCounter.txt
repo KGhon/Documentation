@@ -4,7 +4,7 @@ UQuestObjectiveFloatCounter
 [Definitions]
 <b>Type:</b> Class
 <b>Inherits:</b> UObject
-<b>Category:</b> KGameFramework > QuestSystem
+<b>Category:</b> Unreal Engine > KGameFramework > QuestSystem
 
 [Overview]
 A premade QuestObjective that counts to a threshhold to complete.

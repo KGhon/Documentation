@@ -51,6 +51,8 @@ import * as DialogueInstruction from "./UnrealEngine/KDialogueSystem/DialogueIns
 
 import * as DialogueResponse from "./UnrealEngine/KDialogueSystem/DialogueResponse.ts";
 
+import * as KGameFramework from "./UnrealEngine/KGameFramework/KGameFramework.ts";
+
 import * as GameManagement from "./UnrealEngine/KGameFramework/GameManagement/GameManagement.ts";
 import * as GameManagerSubsystem from "./UnrealEngine/KGameFramework/GameManagement/GameManagerSubsystem.ts";
 import * as GameStateInterface from "./UnrealEngine/KGameFramework/GameManagement/GameStateInterface.ts";
@@ -157,6 +159,8 @@ spa.AddContentPage("DialogueTree", DialogueTree.Construct());
 spa.AddContentPage("DialogueInstruction", DialogueInstruction.Construct());
 
 spa.AddContentPage("DialogueResponse", DialogueResponse.Construct());
+
+spa.AddContentPage("KGameFramework", KGameFramework.Construct());
 
 spa.AddContentPage("GameManagement", GameManagement.Construct());
 spa.AddContentPage("GameManagerSubsystem", GameManagerSubsystem.Construct());

@@ -64,7 +64,7 @@
     [ "Classes", "KFundamentals/", false, true ],
     [ "BlueprintSingleton", "KFundamentals/Classes/", false, false ],
 
-    [ "KGameFramework", "", false, true ],
+    [ "KGameFramework", "", true, true ],
 
     [ "GameManagement", "KGameFramework/", true, true ],
     [ "Classes", "KGameFramework/GameManagement/", false, true ],

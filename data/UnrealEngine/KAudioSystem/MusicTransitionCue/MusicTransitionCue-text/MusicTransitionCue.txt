@@ -3,7 +3,7 @@ EMusicTransitionCue
 
 [Definitions]
 <b>Type:</b> Enum
-<b>Category:</b> KAudioSystem
+<b>Category:</b> Unreal Engine > KAudioSystem
 
 [Overview]
 Defines what timing the transition should be synchronized with.

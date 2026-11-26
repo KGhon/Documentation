@@ -4,7 +4,7 @@ UMusicSegmentBase
 [Definitions]
 <b>Type:</b> Class
 <b>Inherits:</b> UActorComponent > UAudioSuperComponent
-<b>Category:</b> KAudioSystem
+<b>Category:</b> Unreal Engine > KAudioSystem
 
 [Overview]
 MusicSegments along with MetaSound should be primarily used to control vertical music mixing within one piece of horizontal music. They have all the features and functionality of AudioSuperComponents. The only differences are that MusicSegments receive game parameter data from the MusicLayout they are attached to, they include extra BPM and time signature properties, and they never auto destroy themselves on stop.

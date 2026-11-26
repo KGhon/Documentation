@@ -4,7 +4,7 @@ UKDebugWidget
 [Definitions]
 <b>Type:</b> Class
 <b>Inherits:</b> UUserWidget
-<b>Category:</b> KDebugTools
+<b>Category:</b> Unreal Engine > KDebugTools
 
 [Overview]
 The KDebugWidget provides a few built-in functions for coordinating with the KDebugManagerSubsystem and KEditorUtilityWidgets. Similar to the KDebugDocker, KDebugWidgets can spawn and manage their own popout windows for separating debug menus from the game window.

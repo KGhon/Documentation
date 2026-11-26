@@ -4,7 +4,7 @@ UQuestManagerSubsystem
 [Definitions]
 <b>Type:</b> Class
 <b>Inherits:</b> UGameInstanceSubsystem
-<b>Category:</b> KGameFramework > QuestSystem
+<b>Category:</b> Unreal Engine > KGameFramework > QuestSystem
 
 [Overview]
 The QuestManagerSubsystem is responsible for instantiating and manager quests within the quest system. The main way to interact with the QuestManagerSubsystem and the quest system in general is through the KGameFrameworkStatics.

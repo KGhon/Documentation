@@ -3,7 +3,7 @@ KAudioMixDesk
 
 [Definitions]
 <b>Type:</b> Unreal Engine Plugin
-<b>Category:</b> KAudioMixDesk
+<b>Category:</b> Unreal Engine > KAudioMixDesk
 
 [Overview]
 The KAudioMixDesk plugin provides convenient Editor Utility Widgets for audio mixing. They can be run and docked in the editor and some will automatically connect during Play-In-Editor. These tools populate automatically from assets present in the project and can modify assets properties.

@@ -46,6 +46,8 @@ export const Hyperlinks: [string, string[]][] = [
 
     ["UnrealEngine/#DialogueResponse", ["DialogueResponse"]],
 
+    ["UnrealEngine/#KGameFramework", ["KGameFramework"]],
+
     ["UnrealEngine/#GameManagement", ["GameManagement"]],
     ["UnrealEngine/#GameManagerSubsystem", ["GameManagerSubsystem"]],
     ["UnrealEngine/#GameStateInterface", ["GameStateInterface"]],

@@ -1,5 +1,5 @@
 {
   "Title": "UKGameStateBase",
-  "Definitions": "<b>Type:</b> Class\r\n<b>Inherits:</b> UObject\r\n<b>Category:</b> KGameFramework > <a href='/Documentation/Pages/UnrealEngine/#GameManagement'>GameManagement</a>",
+  "Definitions": "<b>Type:</b> Class\r\n<b>Inherits:</b> UObject\r\n<b>Category:</b> Unreal Engine > <a href='/Documentation/Pages/UnrealEngine/#KGameFramework'>KGameFramework</a> > <a href='/Documentation/Pages/UnrealEngine/#GameManagement'>GameManagement</a>",
   "Overview": "KGameStates are states used with the <a href='/Documentation/Pages/UnrealEngine/#GameManagerSubsystem'>GameManagerSubsystem</a> to control the overall flow of the game program by defining exclusive states and transitions and sequencing order sensitive game functionality."
 }

@@ -3,7 +3,7 @@ ESoundStealRule
 
 [Definitions]
 <b>Type:</b> Enum
-<b>Category:</b> KAudioSystem
+<b>Category:</b> Unreal Engine > KAudioSystem
 
 [Overview]
 Defines how a matching sound should be stolen when an AudioSuperComponent has enough instances to reach its max instance limit. Only applies when ESoundLimitResponse = Steal.

@@ -1,5 +1,5 @@
 {
   "Title": "UKDebutToolsStatics",
-  "Definitions": "<b>Type:</b> Class\r\n<b>Inherits:</b> UBlueprintFunctionLibrary\r\n<b>Category:</b> <a href='/Documentation/Pages/UnrealEngine/#KDebutTools'>KDebugTools</a>",
+  "Definitions": "<b>Type:</b> Class\r\n<b>Inherits:</b> UBlueprintFunctionLibrary\r\n<b>Category:</b> Unreal Engine > <a href='/Documentation/Pages/UnrealEngine/#KDebutTools'>KDebugTools</a>",
   "Overview": "Helper functions."
 }

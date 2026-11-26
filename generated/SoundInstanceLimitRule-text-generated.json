@@ -1,6 +1,6 @@
 {
   "Title": "ESoundInstanceLimitRule",
-  "Definitions": "<b>Type:</b> Enum\r\n<b>Category:</b> <a href='/Documentation/Pages/UnrealEngine/#KAudioSystem'>KAudioSystem</a>",
+  "Definitions": "<b>Type:</b> Enum\r\n<b>Category:</b> Unreal Engine > <a href='/Documentation/Pages/UnrealEngine/#KAudioSystem'>KAudioSystem</a>",
   "Overview": "Defines whether an <a href='/Documentation/Pages/UnrealEngine/#AudioSuperComponent'>AudioSuperComponent</a> has a max sound instance limit. If so, should the instance limit apply locally per actor or globally.",
   "Values": [
     [

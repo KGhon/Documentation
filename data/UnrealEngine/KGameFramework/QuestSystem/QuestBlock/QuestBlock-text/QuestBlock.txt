@@ -4,7 +4,7 @@ UQuestBlockBase
 [Definitions]
 <b>Type:</b> Class
 <b>Inherits:</b> UObject
-<b>Category:</b> KGameFramework > QuestSystem
+<b>Category:</b> Unreal Engine > KGameFramework > QuestSystem
 
 [Overview]
 QuestBlocks are used within QuestGraphs to encapsulate a stage of a quest. Upon completion, QuestBlocks will call an "on complete" event meant to trigger the activation of the next QuestBlock(s) in a QuestGraph. Internally, QuestBlocks are collections of QuestObjectives and evaluate their completion state based on the results of the objectives they contain.

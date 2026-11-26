@@ -6,7 +6,7 @@
     ]
   ],
   "Title": "<a href='/Documentation/Pages/UnrealEngine/#KDialogueSystem'>KDialogueSystem</a>",
-  "Definitions": "<b>Type:</b> Unreal Engine Plugin\r\n<b>Category:</b> <a href='/Documentation/Pages/UnrealEngine/#KDialogueSystem'>KDialogueSystem</a>",
+  "Definitions": "<b>Type:</b> Plugin\r\n<b>Category:</b> Unreal Engine",
   "Overview": "This system provides a workflow for creating branching dialogue trees as Blueprints.",
   "QuickReference": [
     [

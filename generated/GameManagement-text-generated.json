@@ -1,6 +1,6 @@
 {
   "Title": "Game Management",
-  "Definitions": "<b>Type:</b> System\r\n<b>Category:</b> KGameFramework",
+  "Definitions": "<b>Type:</b> System\r\n<b>Category:</b> Unreal Engine > <a href='/Documentation/Pages/UnrealEngine/#KGameFramework'>KGameFramework</a>",
   "Overview": "The game management system provides the <a href='/Documentation/Pages/UnrealEngine/#GameManagerSubsystem'>GameManagerSubsystem</a> with Blueprintable KGameStates for a simple extendedable state machine to control global game state flow.",
   "QuickReference": [
     [

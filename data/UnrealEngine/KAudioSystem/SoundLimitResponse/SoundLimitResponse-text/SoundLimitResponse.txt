@@ -3,7 +3,7 @@ ESoundLimitResponse
 
 [Definitions]
 <b>Type:</b> Enum
-<b>Category:</b> KAudioSystem
+<b>Category:</b> Unreal Engine > KAudioSystem
 
 [Overview]
 Defines what should happen when an AudioSuperComponent has enough instances to reach its max instance limit.

@@ -2,8 +2,8 @@
 KDialogueSystem
 
 [Definitions]
-<b>Type:</b> Unreal Engine Plugin
-<b>Category:</b> KDialogueSystem
+<b>Type:</b> Plugin
+<b>Category:</b> Unreal Engine
 
 [Overview]
 This system provides a workflow for creating branching dialogue trees as Blueprints.

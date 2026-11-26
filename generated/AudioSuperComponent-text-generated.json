@@ -1,6 +1,6 @@
 {
   "Title": "<a href='/Documentation/Pages/UnrealEngine/#AudioSuperComponent'>UAudioSuperComponent</a>",
-  "Definitions": "<b>Type:</b> Class\r\n<b>Inherits:</b> UAudioComponent\r\n<b>Category:</b> <a href='/Documentation/Pages/UnrealEngine/#KAudioSystem'>KAudioSystem</a>",
+  "Definitions": "<b>Type:</b> Class\r\n<b>Inherits:</b> UAudioComponent\r\n<b>Category:</b> Unreal Engine > <a href='/Documentation/Pages/UnrealEngine/#KAudioSystem'>KAudioSystem</a>",
   "Inheritance": "UAudioComponent",
   "Overview": "overview"
 }

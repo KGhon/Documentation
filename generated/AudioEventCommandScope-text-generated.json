@@ -1,6 +1,6 @@
 {
   "Title": "EAudioEventCommandScope",
-  "Definitions": "<b>Type:</b> Enum\r\n<b>Category:</b> <a href='/Documentation/Pages/UnrealEngine/#KAudioSystem'>KAudioSystem</a>",
+  "Definitions": "<b>Type:</b> Enum\r\n<b>Category:</b> Unreal Engine > <a href='/Documentation/Pages/UnrealEngine/#KAudioSystem'>KAudioSystem</a>",
   "Overview": "Defines the scope of an <a href='/Documentation/Pages/UnrealEngine/#AudioEvent'>AudioEvent</a>.",
   "Values": [
     [

@@ -3,7 +3,7 @@ IGameStateInterface
 
 [Definitions]
 <b>Type:</b> Interface
-<b>Category:</b> KGameFramework > GameManagement
+<b>Category:</b> Unreal Engine > KGameFramework > GameManagement
 
 [Overview]
 The GameStateInterface can be added to any class to receive game state change signals from the GameManagerSubsystem. Make sure to call RegisterGameStateListener()/UnregisterGameStateListener() from KGameFrameworkStatics.
