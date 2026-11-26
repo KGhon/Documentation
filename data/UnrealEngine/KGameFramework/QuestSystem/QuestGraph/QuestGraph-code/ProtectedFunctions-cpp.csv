@@ -1,0 +1,25 @@
+"UQuestBlockBase* CreateQuestBlock(TSubclassOf<UQuestBlockBase> block, const FOnQuestBlockComplete& onBlockComplete)","BlueprintCallable
+Call this function to spawn QuestBlocks within the QuestGraph."
+
+"void EntryQuestBlocks()","Overrideable
+Override this function to activate the starting QuestBlocks for the QuestGraph."
+
+"void ActivateQuestBlock(UQuestBlockBase* block)","BlueprintCallable
+Call this function to activate a QuestBlock.
+
+NOTE: This function is only called when quests are activated for the first time through the QuestManagerSubsystem and not when an active quest is reloaded from save."
+
+"void GraphComplete(EQuestState result)","BlueprintCallable
+Call this function to mark the QuestGraph as complete and prevent it from being further updated."
+
+"UShareQuestDataObject* GetSharedQuestDataObject()","BlueprintCallable, BlueprintPure
+Get the SharedQuestDataObject for modifying quest save data."
+
+"bool CheckSaveConditions()","Overrideable
+Override this function to check conditions that determine if the class should save."
+
+"bool CheckLoadConditions()","Overrideable
+Override this function to check conditions that determine if the class should load."
+
+"UKSaveGame* GetSaveData()","BlueprintCallable
+Calls this function to get the currently loaded save game in the SaveManagerSubsystem."

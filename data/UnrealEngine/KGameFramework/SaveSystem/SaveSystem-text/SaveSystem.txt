@@ -9,4 +9,4 @@ Save System
 The save system provides a streamlined workflow for designers to implement saving and loading game data between sessions. The system primarily uses SaveAgents for Blueprints that can attach actor components, but examples of implementation for UObjects in C++ can also be seen in the Quest System. This save system utilizes Unreal Engine's built-in save functionality. This system supports actors placed in a level during development as well as runtime spawned actors depending on SaveAgent configuration.
 
 [SettingsLocation]
-<i>Project Settings > Plugins > KGameFramework
+<i>Project Settings > Plugins > KGame Framework Settings

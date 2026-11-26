@@ -1,0 +1,7 @@
+"Undetermined","Indicates the graph, block, or objective has not been completed."
+
+"Success","Indicates the graph, block, or objective completed with a result of success."
+
+"Failed","Indicates the graph, block, or objective completed with a result of failed."
+
+"Invalid","Indicates the graph, block, or objective is not one of the other three states, cannot be used, and will not be updated to any other state."

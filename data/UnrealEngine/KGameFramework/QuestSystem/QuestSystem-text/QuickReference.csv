@@ -1,0 +1,9 @@
+"QuestManagerSubsystem","The QuestManagerSubsystem is responsible for instantiating and managing quests. Game systems will mainly interact with the QuestManagerSubsystem using functions from KGameFrameworkStatics. The QuestManagerSubsystem also has several events that broadcast updates and quest completion for other systems to subscribe to."
+
+"QuestGraph","A QuestGraph is used to encapsulate a single quest. They manage and define the progression between QuestBlocks. QuestGraphs are instantiated and managed by the QuestManagerSubsystem."
+
+"QuestBlock","A QuestBlock encapsulates a single stage of a quest within a QuestGraph. QuestBlocks hold and evaluate their state based on QuestObjectives. QuestBlocks also have references to sublevels that need to be dynamically loaded for the QuestBlock to function depending on what levels are currently or being loaded."
+
+"QuestObjective","QuestObjectives are used to track progress of individual quest tasks within QuestBlocks in a modular way. When quests are updated, they are updating QuestObjectives which, upon completion, signal up to their owning QuestBlock. Based on the setup of a QuestBlock, if sufficient QuestObjectives have been completed then the QuestBlock will complete and chain signal up to the owning QuestGraph."
+
+"SharedQuestDataObject","The SharedQuestDataObject provides a base class to extend with data that needs to be stored and accessed by any quest. All QuestGraphs, QuestBlocks, and QuestObjectives can access it at any time. The SharedQuestDataObject also has saving built-in with the ability to extend what data it saves."

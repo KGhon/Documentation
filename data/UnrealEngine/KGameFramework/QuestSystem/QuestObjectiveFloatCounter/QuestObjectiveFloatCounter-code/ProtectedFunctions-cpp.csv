@@ -1,0 +1,14 @@
+"void ObjectiveComplete(EQuestState result)","BlueprintCallable
+Call this function if you are overriding the UpdateObjective() function with your own implementation."
+
+"UShareQuestDataObject* GetSharedQuestDataObject()","BlueprintCallable, BlueprintPure
+Get the SharedQuestDataObject for modifying quest save data."
+
+"bool CheckSaveConditions()","Overrideable
+Override this function to check conditions that determine if the class should save."
+
+"bool CheckLoadConditions()","Overrideable
+Override this function to check conditions that determine if the class should load."
+
+"UKSaveGame* GetSaveData()","BlueprintCallable
+Calls this function to get the currently loaded save game in the SaveManagerSubsystem."

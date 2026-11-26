@@ -1,0 +1,62 @@
+{
+  "BindableEvents": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#9CDCFE\">SignalObjectiveComplete</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">FName</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#4EC9B0\">EQuestState</span><span style=\"color:#D4D4D4\">></span></span></code>",
+      "Subscribe to notify other objects when the <a href='/Documentation/Pages/UnrealEngine/#QuestObjective'>QuestObjective</a> is complete."
+    ]
+  ],
+  "Properties": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">FName</span><span style=\"color:#9CDCFE\"> id</span></span></code>",
+      "The ID assigned to the <a href='/Documentation/Pages/UnrealEngine/#QuestObjective'>QuestObjective</a> so it can be referenced by other systems interacting with the quest system."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">float</span><span style=\"color:#9CDCFE\"> currentCount</span></span></code>",
+      "Sets the starting count for the <a href='/Documentation/Pages/UnrealEngine/#QuestObjective'>QuestObjective</a>."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">float</span><span style=\"color:#9CDCFE\"> completionThreshold</span></span></code>",
+      "Sets the value for completion when updating the <a href='/Documentation/Pages/UnrealEngine/#QuestObjective'>QuestObjective</a>."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">bool</span><span style=\"color:#9CDCFE\"> countDown</span></span></code>",
+      "If true, this <a href='/Documentation/Pages/UnrealEngine/#QuestObjective'>QuestObjective</a> will decrease the 'currentCount' on when updating instead of increase."
+    ]
+  ],
+  "ProtectedFunctions": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> ObjectiveComplete</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#4EC9B0\">EQuestState</span><span style=\"color:#9CDCFE\"> result</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nCall this function if you are overriding the UpdateObjective() function with your own implementation."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">UShareQuestDataObject</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#DCDCAA\">GetSharedQuestDataObject</span><span style=\"color:#D4D4D4\">()</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>, <span style=\"color:#FF756E\">BlueprintPure</span>\r\nGet the <a href='/Documentation/Pages/UnrealEngine/#SharedQuestDataObject'>SharedQuestDataObject</a> for modifying quest save data."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">bool</span><span style=\"color:#DCDCAA\"> CheckSaveConditions</span><span style=\"color:#D4D4D4\">()</span></span></code>",
+      "<span style=\"color:#FF756E\">Overrideable</span>\r\nOverride this function to check conditions that determine if the class should save."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">bool</span><span style=\"color:#DCDCAA\"> CheckLoadConditions</span><span style=\"color:#D4D4D4\">()</span></span></code>",
+      "<span style=\"color:#FF756E\">Overrideable</span>\r\nOverride this function to check conditions that determine if the class should load."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">UKSaveGame</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#DCDCAA\">GetSaveData</span><span style=\"color:#D4D4D4\">()</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nCalls this function to get the currently loaded save game in the <a href='/Documentation/Pages/UnrealEngine/#SaveManagerSubsystem'>SaveManagerSubsystem</a>."
+    ]
+  ],
+  "PublicFunctions": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> SaveData</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#4EC9B0\">UKSaveGame</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#9CDCFE\">saveGame</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">Overrideable</span>\r\nOverride this function to implement saving data unique to the class the <a href='/Documentation/Pages/UnrealEngine/#SaveAgent'>SaveAgent</a> is attached to. Always make sure to call the parent function and pass the save game object up the inheritance tree when overriding."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> LoadData</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#4EC9B0\">UKSaveGame</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#9CDCFE\">saveGame</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">Overrideable</span>\r\nOverride this function to implement loading data unique to the class the <a href='/Documentation/Pages/UnrealEngine/#SaveAgent'>SaveAgent</a> is attached to. Always make sure to call the parent function and pass the save game object up the inheritance tree when overriding."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> RemoveData</span><span style=\"color:#D4D4D4\">(</span><span style=\"color:#4EC9B0\">UKSaveGame</span><span style=\"color:#D4D4D4\">* </span><span style=\"color:#9CDCFE\">saveGame</span><span style=\"color:#D4D4D4\">)</span></span></code>",
+      "<span style=\"color:#FF756E\">Overrideable</span>\r\nOverride this function to implement removing save data when it is no longer needed."
+    ]
+  ]
+}

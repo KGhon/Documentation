@@ -62,17 +62,16 @@ export const Hyperlinks: [string, string[]][] = [
 
     ["UnrealEngine/#QuestSystem", ["QuestSystem"]],
     ["UnrealEngine/#QuestBlock", ["QuestBlock", "QuestBlocks"]],
-    ["UnrealEngine/#QuestBlockID", ["QuestBlockID", "QuestBlockIDs"]],
     ["UnrealEngine/#QuestGraph", ["QuestGraph", "QuestGraphs"]],
-    ["UnrealEngine/#QuestGraphID", ["QuestGraphID", "QuestGraphIDs"]],
     ["UnrealEngine/#QuestManagerSubsystem", ["QuestManagerSubsystem"]],
     ["UnrealEngine/#QuestObjective", ["QuestObjective", "QuestObjectives"]],
     ["UnrealEngine/#QuestObjectiveFloatCounter", ["QuestObjectiveFloatCounter"]],
-    ["UnrealEngine/#QuestObjectiveID", ["QuestObjectiveID", "QuestObjectiveIDs"]],
     ["UnrealEngine/#SharedQuestDataObject", ["SharedQuestDataObject", "SharedQuestDataObjects"]],
 
     ["UnrealEngine/#QuestState", ["QuestState", "QuestStates"]],
 
     ["UnrealEngine/#UISystem", ["UISystem"]],
     ["UnrealEngine/#UIManagerSubsystem", ["UIManagerSubsystem"]],
+
+    ["UnrealEngine/#KGameFrameworkStatics", ["KGameFrameworkStatics"]],
 ]

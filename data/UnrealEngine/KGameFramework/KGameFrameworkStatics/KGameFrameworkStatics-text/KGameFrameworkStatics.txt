@@ -1,0 +1,10 @@
+[Title]
+UKGameFrameworkStatics
+
+[Definitions]
+<b>Type:</b> Class
+<b>Inherits:</b> UBlueprintFunctionLibrary
+<b>Category:</b> KGameFramework
+
+[Overview]
+These static functions provide common functions for using the KGameFramework. Some crucial functions can only be found on the manager classes so usage is more explicit.

@@ -1,0 +1,14 @@
+[Title]
+UQuestObjectiveFloatCounter
+
+[Definitions]
+<b>Type:</b> Class
+<b>Inherits:</b> UObject
+<b>Category:</b> KGameFramework > QuestSystem
+
+[Overview]
+A premade QuestObjective that counts to a threshhold to complete.
+
+NOTE: This premade QuestObjective automatically saves all data needed for the class to function. If you require saving additional information there are two options:<ul>
+<li>Store the data on the SharedQuestDataObject and handle saving within that class.</li>
+<li>Follow the save system guide for saving in derived classes that already implement save and load functionality (QuestObjectives are their own SaveAgent).</li></ul>

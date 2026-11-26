@@ -1,0 +1,6 @@
+"void LoadQuestData()","BlueprintCallable
+Call this function to load all QuestGraphs assigned in 
+
+<i>Project Settings > Plugins > KGame Framework Settings > Quests</i>
+
+This should only be called after a save file has been loaded."

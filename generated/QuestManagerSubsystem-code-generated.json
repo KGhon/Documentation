@@ -1,0 +1,30 @@
+{
+  "BindableEvents": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#9CDCFE\">SignalQuestBlockActivation</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">FName</span><span style=\"color:#9CDCFE\"> graphId</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#4EC9B0\">FName</span><span style=\"color:#9CDCFE\"> blockId</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#9CDCFE\">TArray</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">FName</span><span style=\"color:#D4D4D4\">> </span><span style=\"color:#9CDCFE\">objectiveIds</span><span style=\"color:#D4D4D4\">></span></span></code>",
+      "Subscribe to this event to be notified when a <a href='/Documentation/Pages/UnrealEngine/#QuestBlock'>QuestBlock</a> has been activated."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#9CDCFE\">SignalQuestUpdate</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">FName</span><span style=\"color:#9CDCFE\"> graphIds</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#4EC9B0\">FName</span><span style=\"color:#9CDCFE\"> blockId</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#4EC9B0\">FName</span><span style=\"color:#9CDCFE\"> objectiveId</span><span style=\"color:#D4D4D4\">></span></span></code>",
+      "Subscribe to this event to be notified anytime a <a href='/Documentation/Pages/UnrealEngine/#QuestObjective'>QuestObjective</a> within a <a href='/Documentation/Pages/UnrealEngine/#QuestBlock'>QuestBlock</a> within a <a href='/Documentation/Pages/UnrealEngine/#QuestGraph'>QuestGraph</a> is updated."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#9CDCFE\">SignalQuestGraphComplete</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">FName</span><span style=\"color:#9CDCFE\"> graphId</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#4EC9B0\">EQuestState</span><span style=\"color:#9CDCFE\"> result</span><span style=\"color:#D4D4D4\">></span></span></code>",
+      "Subscribe to this event to be notified when a <a href='/Documentation/Pages/UnrealEngine/#QuestGraph'>QuestGraph</a> has been completed."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#9CDCFE\">SignalQuestBlockComplete</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">FName</span><span style=\"color:#9CDCFE\"> blockId</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#4EC9B0\">EQuestState</span><span style=\"color:#9CDCFE\"> result</span><span style=\"color:#D4D4D4\">></span></span></code>",
+      "Subscribe to this event to be notified when a <a href='/Documentation/Pages/UnrealEngine/#QuestBlock'>QuestBlock</a> has been completed."
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#9CDCFE\">SignalQuestObjectiveComplete</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">FName</span><span style=\"color:#9CDCFE\"> objectiveId</span><span style=\"color:#D4D4D4\">, </span><span style=\"color:#4EC9B0\">EQuestState</span><span style=\"color:#9CDCFE\"> result</span><span style=\"color:#D4D4D4\">></span></span></code>",
+      "Subscribe to this event to be notified when a <a href='/Documentation/Pages/UnrealEngine/#QuestObjective'>QuestObjective</a> has been completed."
+    ]
+  ],
+  "PublicFunctions": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#569CD6\">void</span><span style=\"color:#DCDCAA\"> LoadQuestData</span><span style=\"color:#D4D4D4\">()</span></span></code>",
+      "<span style=\"color:#FF756E\">BlueprintCallable</span>\r\nCall this function to load all <a href='/Documentation/Pages/UnrealEngine/#QuestGraph'>QuestGraphs</a> assigned in \r\n\r\n<i>Project Settings > Plugins > KGame Framework Settings > Quests</i>\r\n\r\nThis should only be called after a save file has been loaded."
+    ]
+  ]
+}

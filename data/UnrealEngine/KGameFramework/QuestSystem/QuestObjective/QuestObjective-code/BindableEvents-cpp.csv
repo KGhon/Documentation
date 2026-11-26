@@ -1,0 +1,4 @@
+[FName,#4EC9B0]
+[EQuestState,#4EC9B0]
+
+"SignalObjectiveComplete<FName, EQuestState>","Subscribe to notify other objects when the QuestObjective is complete."

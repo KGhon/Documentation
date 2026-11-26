@@ -1,0 +1,12 @@
+[FName,#4EC9B0]
+[EQuestState,#4EC9B0]
+
+"SignalQuestBlockActivation<FName graphId, FName blockId, TArray<FName> objectiveIds>","Subscribe to this event to be notified when a QuestBlock has been activated."
+
+"SignalQuestUpdate<FName graphIds, FName blockId, FName objectiveId>","Subscribe to this event to be notified anytime a QuestObjective within a QuestBlock within a QuestGraph is updated."
+
+"SignalQuestGraphComplete<FName graphId, EQuestState result>","Subscribe to this event to be notified when a QuestGraph has been completed."
+
+"SignalQuestBlockComplete<FName blockId, EQuestState result>","Subscribe to this event to be notified when a QuestBlock has been completed."
+
+"SignalQuestObjectiveComplete<FName objectiveId, EQuestState result>","Subscribe to this event to be notified when a QuestObjective has been completed."

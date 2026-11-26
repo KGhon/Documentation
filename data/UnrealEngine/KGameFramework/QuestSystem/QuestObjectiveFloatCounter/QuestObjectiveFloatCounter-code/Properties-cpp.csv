@@ -1,0 +1,9 @@
+[FName,#4EC9B0]
+
+"FName id","The ID assigned to the QuestObjective so it can be referenced by other systems interacting with the quest system."
+
+"float currentCount","Sets the starting count for the QuestObjective."
+
+"float completionThreshold","Sets the value for completion when updating the QuestObjective."
+
+"bool countDown","If true, this QuestObjective will decrease the 'currentCount' on when updating instead of increase."

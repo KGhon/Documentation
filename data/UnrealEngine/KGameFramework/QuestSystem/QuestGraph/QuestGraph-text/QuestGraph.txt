@@ -1,0 +1,14 @@
+[Title]
+UQuestGraphBase
+
+[Definitions]
+<b>Type:</b> Class
+<b>Inherits:</b> UObject
+<b>Category:</b> KGameFramework > QuestSystem
+
+[Overview]
+A QuestGraph is used to encapsulate a single quest. They are built using QuestBlocks and define the logic by which a quest traverses from block to block both linearly and with branching.
+
+NOTE: QuestGraphs automatically save all data needed for the base class to function. If your QuestGraph requires saving additional information there are two options:<ul>
+<li>Store the data on the SharedQuestDataObject and handle saving within that class.</li>
+<li>Follow the save system guide for saving in derived classes that already implement save and load functionality (QuestGraphs are their own SaveAgent).</li></ul>

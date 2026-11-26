@@ -64,7 +64,7 @@
     [ "Classes", "KFundamentals/", false, true ],
     [ "BlueprintSingleton", "KFundamentals/Classes/", false, false ],
 
-    [ "KGameFramework", "", true, true ],
+    [ "KGameFramework", "", false, true ],
 
     [ "GameManagement", "KGameFramework/", true, true ],
     [ "Classes", "KGameFramework/GameManagement/", false, true ],
@@ -86,13 +86,10 @@
     [ "QuestSystem", "KGameFramework/", true, true ],
     [ "Classes", "KGameFramework/QuestSystem/", false, true ],
     [ "QuestBlock", "KGameFramework/QuestSystem/Classes/", true, false ],
-    [ "QuestBlockID", "KGameFramework/QuestSystem/Classes/", true, false ],
     [ "QuestGraph", "KGameFramework/QuestSystem/Classes/", true, false ],
-    [ "QuestGraphID", "KGameFramework/QuestSystem/", true, false ],
     [ "QuestManagerSubsystem", "KGameFramework/QuestSystem/Classes/", true, false ],
     [ "QuestObjective", "KGameFramework/QuestSystem/Classes/", true, false ],
     [ "QuestObjectiveFloatCounter", "KGameFramework/QuestSystem/Classes/", true, false ],
-    [ "QuestObjectiveID", "KGameFramework/QuestSystem/Classes/", true, false ],
     [ "SharedQuestDataObject", "KGameFramework/QuestSystem/Classes/", true, false ],
 
     [ "Enums", "KGameFramework/QuestSystem/", false, true ],
@@ -101,10 +98,11 @@
     [ "InventorySystem", "KGameFramework/", false, true ],
     [ "Classes", "KGameFramework/InventorySystem/", false, true ],
 
-
     [ "UISystem", "KGameFramework/", true, true ],
     [ "Classes", "KGameFramework/UISystem/", false, true ],
     [ "UIManagerSubsystem", "KGameFramework/UISystem/Classes/", true, false ],
+
+    [ "KGameFrameworkStatics", "KGameFramework/", true, false],
 
     [ "KMotionSandbox", "", false, true ],
     [ "Classes", "KMotionSandbox/", false, true ],

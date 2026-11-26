@@ -1,0 +1,5 @@
+{
+  "Title": "UQuestManagerSubsystem",
+  "Definitions": "<b>Type:</b> Class\r\n<b>Inherits:</b> UGameInstanceSubsystem\r\n<b>Category:</b> KGameFramework > <a href='/Documentation/Pages/UnrealEngine/#QuestSystem'>QuestSystem</a>",
+  "Overview": "The <a href='/Documentation/Pages/UnrealEngine/#QuestManagerSubsystem'>QuestManagerSubsystem</a> is responsible for instantiating and manager quests within the quest system. The main way to interact with the <a href='/Documentation/Pages/UnrealEngine/#QuestManagerSubsystem'>QuestManagerSubsystem</a> and the quest system in general is through the <a href='/Documentation/Pages/UnrealEngine/#KGameFrameworkStatics'>KGameFrameworkStatics</a>."
+}

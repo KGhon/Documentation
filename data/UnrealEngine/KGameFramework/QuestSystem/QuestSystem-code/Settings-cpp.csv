@@ -1,0 +1,8 @@
+[TSubclassOf,#4EC9B0]
+[USharedQuestDataObject,#4EC9B0]
+[TArray,#4EC9B0]
+[UQuestGraphBase,#4EC9B0]
+
+"TSubclassOf<USharedQuestDataObject> sharedQuestDataObject","Set the SharedQuestDataObject class to use your derived class with custom variables. "
+
+"TArray<TSubclassOf<UQuestGraphBase> quests","Add all QuestGraphs for every quest in the game to this array."

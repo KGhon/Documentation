@@ -1,0 +1,12 @@
+{
+  "Settings": [
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">TSubclassOf</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">USharedQuestDataObject</span><span style=\"color:#D4D4D4\">> </span><span style=\"color:#9CDCFE\">sharedQuestDataObject</span></span></code>",
+      "Set the <a href='/Documentation/Pages/UnrealEngine/#SharedQuestDataObject'>SharedQuestDataObject</a> class to use your derived class with custom variables. "
+    ],
+    [
+      "<code style=\"white-space: pre-wrap; word-break: break-word;\"><span class=\"line\"><span style=\"color:#4EC9B0\">TArray</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">TSubclassOf</span><span style=\"color:#D4D4D4\">&#x3C;</span><span style=\"color:#4EC9B0\">UQuestGraphBase</span><span style=\"color:#D4D4D4\">> </span><span style=\"color:#9CDCFE\">quests</span></span></code>",
+      "Add all <a href='/Documentation/Pages/UnrealEngine/#QuestGraph'>QuestGraphs</a> for every quest in the game to this array."
+    ]
+  ]
+}

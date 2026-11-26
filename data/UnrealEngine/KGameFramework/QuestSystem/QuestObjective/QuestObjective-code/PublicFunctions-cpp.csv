@@ -1,0 +1,11 @@
+"void UpdateObjective(bool boolValue, float floatValue, const FString& stringValue)","Overrideable
+Override this function if completion of the QuestObjective requires custom implementation. The base class by default only uses a single bool check. For counting, QuestObjectiveFloatCounter has already been made."
+
+"void SaveData(UKSaveGame* saveGame)","Overrideable
+Override this function to implement saving data unique to the class the SaveAgent is attached to. Always make sure to call the parent function and pass the save game object up the inheritance tree when overriding."
+
+"void LoadData(UKSaveGame* saveGame)","Overrideable
+Override this function to implement loading data unique to the class the SaveAgent is attached to. Always make sure to call the parent function and pass the save game object up the inheritance tree when overriding."
+
+"void RemoveData(UKSaveGame* saveGame)","Overrideable
+Override this function to implement removing save data when it is no longer needed."

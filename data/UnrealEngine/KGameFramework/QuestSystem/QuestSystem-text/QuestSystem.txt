@@ -1,0 +1,12 @@
+[Title]
+Quest System
+
+[Definitions]
+<b>Type:</b> System
+<b>Category:</b> KGameFramework
+
+[Overview]
+The quest system provides a way to build and manage quests that are integrated with the KGameFramework save system. From top down, the quest system uses QuestGraphs, QuestBlocks, and QuestObjectives to construct a quest. The KGameFrameworkStatics can then be used by other game systems to update quests.
+
+[SettingsLocation]
+<i>Project Settings > Plugins > KGame Framework Settings

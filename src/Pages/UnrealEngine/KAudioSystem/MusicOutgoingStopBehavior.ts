@@ -18,12 +18,12 @@ export function Construct(): HTMLElement
     const overview: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c4" })) as HTMLParagraphElement;
     overview.innerHTML = textContent.Overview;
 
-    const propertiesSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
-    propertiesSection.innerHTML = "Values";
+    const valuesSection: HTMLParagraphElement = root.appendChild(Object.assign(document.createElement("p"), { className: "c1" })) as HTMLParagraphElement;
+    valuesSection.innerHTML = "Values";
 
-    const properties: Table = root.appendChild(document.createElement("table-element")) as Table;
-    properties.Init();
-    properties.Configure(textContent.Values, ColumnSpacing.Compact);
+    const values: Table = root.appendChild(document.createElement("table-element")) as Table;
+    values.Init();
+    values.Configure(textContent.Values, ColumnSpacing.Compact);
 
     return root;
 }
